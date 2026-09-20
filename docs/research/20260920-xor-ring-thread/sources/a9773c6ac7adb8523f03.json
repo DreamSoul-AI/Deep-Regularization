@@ -1,0 +1,563 @@
+{
+  "status": "pass",
+  "validated_checkpoints": 48,
+  "independent_datasets": 8,
+  "reference_checkpoints": 48,
+  "metric_sets_recomputed": 96,
+  "epoch_observations": 9648,
+  "exact_first_stage_prefixes": 48,
+  "warm_boundaries": 192,
+  "records": [
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "aa53619c33fd80831c017ad426dda3574ccdae0abafaba68ac988359a3f0dd68"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "1d52b76b3cef487bdd3f6809e967ed6bae6243c62366a4de1c033136be986718"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "7fa74717e624164ba9bda9bed11e4ec277fd029714dc56aec784e0bb228819ad"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "f73bf1e0b8cc771809f1d9e241a954fe75033a80856dbf950fab247a2cd0995b"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "abd2061a7a0b1842b1828e83f823ae6cc75470d646fc66b63682e450edd72d19"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "907938d0bed119adb8d664cd6bb1966910732083e469e7a05827bcfb3ce47807"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "300b89da7d4d4047a45a805be7ee96533b2a94df9c08656f2a17a4dd19d6b677"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "ff6d9b9de7e6d166416c37f848ac014624cf5366a1ebb108cca9188d99f1ee6c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "576504c2b709581c2096d12db48c0d14eb4479913e8c4ece38c0b665c8da7534"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "048d12e6acc2b7ecea417450e5685ef1e67cfcc16ca38dc2fa3c45359a3dd40f"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "382d55de7b452798e576c7877086cc47f326c3a101656fee19bed74907cf4a5d"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "a71e4bbe21429c7523bc0000b9d6042e0543b4decf99b2901e50fb556bf3516a"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "424a94516f3514a803c27bb0811d773d4fdf863084d88f597b5d19dd90ff7e3e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "030a7a5ae3b26d42c13953710f59979b8c53e776b14c14f0876df4925122ee34"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "199b47c77cf2d729c3ef7996a6972d8f00d77c8d2c612a4b4352f0fc29a8ac6a"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "74f879273b29e6cc20d94e25653cb347cd42cf155eca7d84d276d84486c672dc"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "06274a414ca7b75cde4b5fce35a54801c0a3e2a63685773b53dcfb94030d9cc0"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "23c19a370eeea06df89b2c70ea2e9a838288b0e7557a8ed4d90fb4652f36209e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "b094c2be4316788af05c29d492a578d1d668fa8756f9eee13da1e7efafcfaf75"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "9471d10ee80e05b2216a02eceeae6775d9a36bc4d809ba42ce8b2917f7753cee"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "9b0683e890e125707a6efa48e350c89536916d514e269780ddda75b7bffe44c3"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "babb9b8e15e2ebcdecae3d616cab817d7d17109b347f6f326bf840d02c033c0e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "0517a5a0233d78e5f30bffca1cc581f74f5a753aa63acc2aaadcd134730a8499"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "b38e989a8d1593ab605ffc223ae9c5007dd51dd9882c46bdf303b0f315bca59d"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "cb4834132efa25310c0b4e6e991d6275f0d8dfc6a8e9dd2c4e1d26bb24c79461"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "e5f257f1e14589376ad5f10130e7f17ed02686b9d893232986dc4497e588a2b4"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "02e03d00fdba3c0a7c865644c43be305d2e72f66d72066fc0f022528fe07877f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "0912548407517d4a4fbb166708460e22de5f2a829f289977ff72548f80e8425e"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "bf1a6b72b3278c603b25cf16ec2d390fa8b5ebd6f18a2a9d3653d101a41309c5"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "fac62d93eeb9a64622c2184efbddd5e338efca7870b63b9d271ab8830b9340f0"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "82708b9f18803cc31da8bfe3e544b79d3f451d63ba2c5453f2c83b0fe7bff154"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "a1fcdf463b9c41db2d1d17d73c02ec0f414a4af755733386f8431445299dbfa8"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "d29d6591911aeed06a26b7450f2a703f4f36be9bdcb7ca857653cf95969ab865"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "cd6a67838a015629ff278b5449577ea2defa8dd101629e606f185a9467e6679f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "836f8a217c384b6645bc1de41eac3e1863c9fecf95d34169d7c68295e927d084"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "dc2017ae4a87045a8ef6b76596ac62484c12d58e4b3bd347393089104ecd7d8c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "56569b7c70136c787b28cac4f01c1296bb6414611e83846df4ed90baeac4878c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "313cb041cbe2a6d0ca9ad9c184bfb3ed65179fb6c12754dc4333d0f84b175979"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "2e50bc0906ac62d0a6da3d707c6dfdec3c61df3d7069731a060a3bc3fb6efd1e"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "621c212cdf3d9cdded37d1cbdfa47dd7b59f5d914f5e1c7d829f8a0562f22372"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "a858c710730f10bca3628d232ea44988c98595ca55fde7ea6fb8c5005327ed63"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "1bb287198bc103444dc9309818b54d659a75c976ec68f25634112cce8a0d212b"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "2c09b479699f0ff5024a5673d8634fa7adc6347e9de6c9b42cf7b8497fb1fcb4"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "83873b67d2498aafab6b877cda2f319cd7db8c66131b5206751fc5e0a733f82f"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "0e8eaa5d042ca631a37b2a93e99ec0a5fa769608c496aa709ce842af9539ae73"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "9563332e0bf4a8d42b00bfcecc670e01b65ce7b17cb53533f2c2cb36e1ae2789"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "73c7238a5fc4413e7858dcc48a9fe2dfce3e2052efd5f4789849d04a9c5dd3b5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "StageWarm20"
+      ],
+      "checkpoint_sha256": "fdc74489e7ea2fe214addd0a21b3c08fd0cc0511dd30d087d3821f9ecb6c6a6b"
+    }
+  ],
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "source_hashes": {
+    "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "experiments/ablation/five_version_transfer_r61.py": "c505e8ec42398f6f07ae2bf58e4967b1ac1477d1e268f097652409e9feb8545a",
+    "experiments/ablation/r61_initialization_audit.py": "2e3d39ccf05cae315df5dadc403197a1e29911cf469576afb1e9a0dbc437f198",
+    "experiments/ablation/run_five_version_transfer_r61.py": "914ec79620bbcb636cd38c7c40913d911e3dc4d2044c8f05b348ed920176d7d9",
+    "experiments/ablation/verify_five_version_transfer_r61.py": "102b2a714767b39681e79baccb635d50e4fb5c6aff0e3d95393ff4a75a5b5817",
+    "experiments/utils/audit_five_version_transfer_r61.py": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+    "experiments/ablation/five_version_full_grid_r62.py": "cfd7803a2b7f8135d3cd4fd234148e067c60ee32c1885886b93dd9d9f27464f6",
+    "experiments/ablation/run_five_version_full_grid_r62.py": "bddff10660fda182415644ec1e6e16024e6d285db3b80d17af9f890de073f0a8",
+    "experiments/ablation/verify_five_version_full_grid_r62.py": "c38daf5362c173cdb77ebae8a72de309bb56997e662067c7fdbe2e3be91037c3",
+    "experiments/utils/audit_five_version_full_grid_r62.py": "d54f3e7cb8b83a28a1b1bc718c6b65a7fccf27fa125075a167c3bfa92954bb38",
+    "experiments/ablation/empirical_combinations_r67.py": "34d0f1f3824b874b4a3cf92f87ee2e8fe667d6f9ed9ceca14e6684a7fa3df009",
+    "experiments/ablation/run_empirical_combinations_r67.py": "ae645e69014b0abd0b0ae188bb21d359bc78f96a2bde23556a9b34190611a232",
+    "experiments/utils/audit_empirical_combinations_r67.py": "de4ca549eae0ebadf8087c440a3e8879a3d9925ecae89d9ece9b8c6f73eca775",
+    "experiments/ablation/five_forward_ladder_r68.py": "99abf8a15f2741e041a55f7141e66769aca4a102983ccc7266c2840c91eb42f7",
+    "experiments/ablation/run_five_forward_ladder_r68.py": "2a387d60c4db584199b84fecd405d499ad5326d37fa3949e4ec6b8d7571ae43d",
+    "experiments/utils/audit_five_forward_ladder_r68.py": "c99ae074901829de39474d6ef48ec804151e022cadc7a3d52d65a9177107bbd1",
+    "experiments/utils/report_five_forward_ladder_r68.py": "61ff4c4d8828e5d990947f3a48df2140f1365449276b1c7aef2e48d2e57103ec",
+    "experiments/ablation/legacy_adam_phase_restart.py": "0aaa1f20a22581c6b8ac339f9156b6970a44879518ab30f109c970426e037ea3",
+    "experiments/ablation/legacy_zu_phase_restart.py": "579b34432352660f025f1b9f29765284a548e0e06013c5b49fdb824fca9db339",
+    "experiments/ablation/five_stage_state_r69.py": "86a4093dee04f75378269deb9a7727a64bcc15e17a656e985afe2e7d9864cd3c",
+    "experiments/ablation/run_five_stage_state_r69.py": "30b752123328ac73ad13ac0253b8ca06930ef4ed969fd8035d2d15988207a676",
+    "experiments/utils/audit_five_stage_state_r69.py": "141a59fc8135e3b0b531dc22581986dfd9c0ad9a2f8d3ca9c6dd0b3b65ee4871",
+    "experiments/utils/report_five_stage_state_r69.py": "63c4c7b17060d988fd5b6cca333bd083a9fe852a4150c684ba5400aec659775b",
+    "experiments/ablation/five_stage_warmup_r70.py": "7dc8648f74590a5c087b6e257e05a421167dc436496c1d292dc62bfe20f84141",
+    "experiments/ablation/run_five_stage_warmup_r70.py": "2e6ea6893216894ac4f691931dd0fe3396609eee3f0d1c54f0e2ae0fe2fd3b1d",
+    "experiments/utils/audit_five_stage_warmup_r70.py": "6ace4f293f25e23240d903e916f8ca219507e537f9716ec4162dcf7e8c58c405",
+    "experiments/utils/report_five_stage_warmup_r70.py": "5e8b03418a049ceb99e840535c27dea5d9f84e6e7888c4baae3f9a3e59740f13",
+    "docs/plans/PLAN_20260918_FIVE_STAGE_WARMUP_R70.md": "83edff0278794bc0dfe671168ddb588c4b950a84a11e2d6f10452a0e0d3393c3"
+  },
+  "contract_sha256": "1172b334ba46ceb2fa168b4e331d861e189f70c531252383c5b2e5ad617e3be7",
+  "summary_sha256": "dcfc34a8a0aac698915d2808df0e0ed0d7d205e17601ce4c0f6e335a52eeb979",
+  "jsonl_sha256": "a654f403e1d51f63894e607d33585605880363c7adbd89f12ec0f4832b51e1c0"
+}

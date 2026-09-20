@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "new_trajectories": 96,
+  "results": {
+    "aggregate": {
+      "W20_immediate": {
+        "xor": {
+          "coordinates": 24,
+          "opportunities": 24,
+          "exact_folds": 12,
+          "mean_test_auroc": 0.6524572351302229
+        },
+        "ring": {
+          "coordinates": 23,
+          "opportunities": 24,
+          "exact_folds": 11,
+          "mean_test_auroc": 0.6207197879052418
+        }
+      },
+      "W20_after_warmup": {
+        "xor": {
+          "coordinates": 24,
+          "opportunities": 24,
+          "exact_folds": 12,
+          "mean_test_auroc": 0.9781327649886541
+        },
+        "ring": {
+          "coordinates": 1,
+          "opportunities": 24,
+          "exact_folds": 0,
+          "mean_test_auroc": 0.52844007099586
+        }
+      },
+      "W40_immediate": {
+        "xor": {
+          "coordinates": 24,
+          "opportunities": 24,
+          "exact_folds": 12,
+          "mean_test_auroc": 0.6838639137394628
+        },
+        "ring": {
+          "coordinates": 23,
+          "opportunities": 24,
+          "exact_folds": 11,
+          "mean_test_auroc": 0.6240310059896212
+        }
+      },
+      "W40_after_warmup": {
+        "xor": {
+          "coordinates": 24,
+          "opportunities": 24,
+          "exact_folds": 12,
+          "mean_test_auroc": 0.9861274361888244
+        },
+        "ring": {
+          "coordinates": 4,
+          "opportunities": 24,
+          "exact_folds": 0,
+          "mean_test_auroc": 0.5378914981879026
+        }
+      }
+    },
+    "original_four_task_gate_evaluated": false,
+    "boundary": "Paired mechanism diagnostic on two tasks; no default promotion, global minimality or noninferiority claim"
+  }
+}

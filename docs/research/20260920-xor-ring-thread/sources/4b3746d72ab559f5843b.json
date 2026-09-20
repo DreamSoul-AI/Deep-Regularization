@@ -1,0 +1,112 @@
+{
+  "status": "partial_observation_failed",
+  "manifest_status": "diagnostic",
+  "gate_waived": false,
+  "new_training": false,
+  "formal_trajectories": 4,
+  "formal_training_epochs": 1000,
+  "validated_mechanism_arms": [
+    "score"
+  ],
+  "unvalidated_observation_arms": [
+    "uniform"
+  ],
+  "current_method_changed": false,
+  "audit_script_sha256": "815dd45393aded65cb82f0de545e41b6e0d5d706d982990aef20dd8d88541e27",
+  "arms": {
+    "score": {
+      "historical_check": {
+        "passed": true,
+        "failures": []
+      },
+      "strict_noninterference": {
+        "passed": true,
+        "epochs": 250,
+        "boundaries": 11
+      },
+      "epoch_rows_equal": true,
+      "post_initialization_boundaries_equal": true,
+      "final_results_equal": true,
+      "initialization_fields_equal": {
+        "model": true,
+        "training": true,
+        "optimizer": true,
+        "z": true,
+        "u": true,
+        "rng": true
+      },
+      "initialization_rng_fields_equal": {
+        "python": true,
+        "numpy": true,
+        "torch_cpu": true,
+        "torch_cuda": true
+      },
+      "initialization_cuda_rng_lengths": [
+        1,
+        1
+      ],
+      "result_sha256": {
+        "reference": "eda896b7c3120f0ce521b336322c6e147e44b229b347a55373f7fd1ce2748788",
+        "observed": "eda896b7c3120f0ce521b336322c6e147e44b229b347a55373f7fd1ce2748788"
+      },
+      "epoch_payloads": 250,
+      "minibatch_payloads": 1400,
+      "use": "validated observational accounting",
+      "numerical_replay": {
+        "epoch_replays_passed": 250,
+        "dense_batches": 1400,
+        "batch_replays_passed": 1400,
+        "windows": [
+          "100_to_150",
+          "150_to_200",
+          "200_to_250",
+          "0_to_250"
+        ]
+      }
+    },
+    "uniform": {
+      "historical_check": {
+        "passed": true,
+        "failures": []
+      },
+      "strict_noninterference": {
+        "passed": false,
+        "error": "observer_noninterference_failed: boundaries"
+      },
+      "epoch_rows_equal": true,
+      "post_initialization_boundaries_equal": true,
+      "final_results_equal": true,
+      "initialization_fields_equal": {
+        "model": true,
+        "training": true,
+        "optimizer": true,
+        "z": true,
+        "u": true,
+        "rng": false
+      },
+      "initialization_rng_fields_equal": {
+        "python": true,
+        "numpy": true,
+        "torch_cpu": true,
+        "torch_cuda": false
+      },
+      "initialization_cuda_rng_lengths": [
+        0,
+        1
+      ],
+      "result_sha256": {
+        "reference": "db0258966b3b503c1d7ac3ba4d024ab73d230c3285cdd560b13701abe726a537",
+        "observed": "db0258966b3b503c1d7ac3ba4d024ab73d230c3285cdd560b13701abe726a537"
+      },
+      "epoch_payloads": 250,
+      "minibatch_payloads": 1400,
+      "use": "reference endpoints only; observed trajectory quarantined in place",
+      "numerical_replay": "not run after strict boundary gate failed",
+      "diagnosis": "Continuation starts a fresh process without environment() device initialization. Its first pre-device model snapshot has no initialized CUDA RNG; the second has one. Model and CPU/Python/NumPy RNG match, as do all later states. The frozen exact initialization gate nevertheless failed and is not waived."
+    }
+  },
+  "retained_failures": {
+    "failure.json": "6217438ab9c9ff62decc6009fa4cd2ef2e5ce7f011f69eb6127f8b08a7e9e0be",
+    "continuation_failure.json": "658d16921ba95bb5d0fd15d65813f3826c12b648434572b2dfa3073c74e6f8a6"
+  }
+}

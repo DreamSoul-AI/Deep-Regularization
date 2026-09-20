@@ -1,0 +1,245 @@
+{
+  "table": [
+    {
+      "arm": "SlowPath",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 3,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 2
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5298846495647732,
+      "training_seconds": 773.0453526000492
+    },
+    {
+      "arm": "SlowPath",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.49618449080927157,
+      "training_seconds": 951.5856895000325
+    },
+    {
+      "arm": "SlowPath",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 17,
+        "exact_folds": 5,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 10
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.7201792353178935,
+      "training_seconds": 827.6837974000955
+    },
+    {
+      "arm": "SlowPath",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 23,
+        "exact_folds": 11,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 12,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.9659329144014954,
+      "training_seconds": 954.9840255000745
+    },
+    {
+      "arm": "EarlySlowPath",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.4927557349586416,
+      "training_seconds": 757.1242606001906
+    },
+    {
+      "arm": "EarlySlowPath",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.48575094973249766,
+      "training_seconds": 933.4559247000143
+    },
+    {
+      "arm": "EarlySlowPath",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 15,
+        "exact_folds": 3,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 8
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.7413383221208024,
+      "training_seconds": 803.2522578999633
+    },
+    {
+      "arm": "EarlySlowPath",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 16,
+        "exact_folds": 4,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 7
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.7951037249645632,
+      "training_seconds": 930.4774386000354
+    }
+  ],
+  "decisions": {
+    "SlowPath": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    },
+    "EarlySlowPath": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    }
+  },
+  "selected_for_fresh_confirmation": null,
+  "trajectories": 96,
+  "epochs": 49200,
+  "gradient_updates": 688800,
+  "default_promoted": false,
+  "empirical_screen_only": true,
+  "lassonet_comparison": "R63 has different fit split; not a paired comparison"
+}

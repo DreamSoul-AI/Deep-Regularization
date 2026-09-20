@@ -1,0 +1,109 @@
+{
+  "status": "completed",
+  "new_trajectories": 96,
+  "results": {
+    "aggregate": {
+      "Base": {
+        "xor": {
+          "coordinates": 24,
+          "opportunities": 24,
+          "recall": 1.0,
+          "exact_folds": 12,
+          "instance_recalls": [
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 1,
+          "opportunities": 24,
+          "recall": 0.041666666666666664,
+          "exact_folds": 0,
+          "instance_recalls": [
+            0.08333333333333333,
+            0.0
+          ]
+        },
+        "ring+xor": {
+          "coordinates": 16,
+          "opportunities": 48,
+          "recall": 0.3333333333333333,
+          "exact_folds": 0,
+          "instance_recalls": [
+            0.2916666666666667,
+            0.375
+          ]
+        },
+        "ring+xor+sum": {
+          "coordinates": 18,
+          "opportunities": 72,
+          "recall": 0.25,
+          "exact_folds": 0,
+          "instance_recalls": [
+            0.19444444444444445,
+            0.3055555555555556
+          ]
+        }
+      },
+      "Candidate": {
+        "xor": {
+          "coordinates": 22,
+          "opportunities": 24,
+          "recall": 0.9166666666666666,
+          "exact_folds": 10,
+          "instance_recalls": [
+            0.9166666666666666,
+            0.9166666666666666
+          ]
+        },
+        "ring": {
+          "coordinates": 20,
+          "opportunities": 24,
+          "recall": 0.8333333333333334,
+          "exact_folds": 8,
+          "instance_recalls": [
+            1.0,
+            0.6666666666666666
+          ]
+        },
+        "ring+xor": {
+          "coordinates": 25,
+          "opportunities": 48,
+          "recall": 0.5208333333333334,
+          "exact_folds": 0,
+          "instance_recalls": [
+            0.4583333333333333,
+            0.5833333333333334
+          ]
+        },
+        "ring+xor+sum": {
+          "coordinates": 44,
+          "opportunities": 72,
+          "recall": 0.6111111111111112,
+          "exact_folds": 0,
+          "instance_recalls": [
+            0.6388888888888888,
+            0.5833333333333334
+          ]
+        }
+      }
+    },
+    "cue_only_diagnostic": {},
+    "checks": {
+      "ring_recall_floor": true,
+      "ring_exact_floor": true,
+      "ring_gain_at_least_one_sixth": true,
+      "xor_floor": true,
+      "xor_coordinate_protection": false,
+      "xor_exact_protection": false,
+      "ring_coordinate_protection": true,
+      "ring_exact_protection": true,
+      "ring+xor_coordinate_protection": true,
+      "ring+xor_exact_protection": true,
+      "ring+xor+sum_coordinate_protection": true,
+      "ring+xor+sum_exact_protection": true
+    },
+    "confirmation_pass": false,
+    "boundary": "Observed fixed-budget confirmation, not statistical noninferiority, global minimality, convergence, or high-dimensional superiority"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "table": [
+    {
+      "arm": "LegacyC",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "previous": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "coordinate_delta_from_previous": -1,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.5291292333039251,
+      "training_seconds": 167.41246469999896
+    },
+    {
+      "arm": "LegacyC",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "previous": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "coordinate_delta_from_previous": -1,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.48808030890766424,
+      "training_seconds": 194.12648530001752
+    },
+    {
+      "arm": "LegacyC",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5677161669723878,
+      "training_seconds": 168.60723209992284
+    },
+    {
+      "arm": "LegacyC",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 21,
+        "exact_folds": 9,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "coordinate_delta_from_previous": 3,
+      "exact_delta_from_previous": 3,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5696408436707875,
+      "training_seconds": 193.82414749998134
+    },
+    {
+      "arm": "LegacyCStage50",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "previous": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "coordinate_delta_from_previous": 1,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.518618300075749,
+      "training_seconds": 385.2599794999114
+    },
+    {
+      "arm": "LegacyCStage50",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "previous": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.4910881711913914,
+      "training_seconds": 454.0543306999607
+    },
+    {
+      "arm": "LegacyCStage50",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 19,
+        "exact_folds": 7,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 8,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "coordinate_delta_from_previous": 1,
+      "exact_delta_from_previous": 1,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5897285129982471,
+      "training_seconds": 387.19924060004996
+    },
+    {
+      "arm": "LegacyCStage50",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 20,
+        "exact_folds": 8,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 10
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "previous": {
+        "coordinates": 21,
+        "exact_folds": 9,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 11
+        }
+      },
+      "coordinate_delta_from_previous": -1,
+      "exact_delta_from_previous": -1,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.7599185865179018,
+      "training_seconds": 453.5129667999572
+    }
+  ],
+  "decisions": {
+    "LegacyC": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    },
+    "LegacyCStage50": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    }
+  },
+  "selected_for_fresh_confirmation": null,
+  "trajectories": 96,
+  "epochs": 18720,
+  "gradient_updates": 262080,
+  "default_promoted": false,
+  "empirical_screen_only": true,
+  "cumulative_order": [
+    "Five-v1",
+    "LegacyC",
+    "LegacyCStage50"
+  ],
+  "lassonet_comparison": "Paused; R63 uses a different fit split"
+}

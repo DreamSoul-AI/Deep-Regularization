@@ -1,0 +1,2282 @@
+{
+  "config": {
+    "id": "R66",
+    "status": "diagnostic_readonly",
+    "authorization": "好的，同意整个计划，你就按照计划运行吧",
+    "no_training": true,
+    "no_inference": true,
+    "no_new_benchmark_data": true,
+    "no_Ring_baseline_rerun_or_dedicated_analysis": true,
+    "selector_ledger": 3744
+  },
+  "historical": {
+    "inputs": [
+      {
+        "path": "results/main/synthetic_m_sweep_weightnorm_current_1000_highdim_xor_m512_base.json",
+        "sha256": "bdf9cd01086d61f35b0afe3f8a5301fd4c2a985b8f9f8a8c1099ecfeb4df2793",
+        "bytes": 1455
+      },
+      {
+        "path": "logs/highdim_xor_m512_base_20260504_113257.out.log",
+        "sha256": "0ab0d6319d59ccf79ba01ea642253177e3b881a3ba25357dcd41ffaddcc82055",
+        "bytes": 1023
+      },
+      {
+        "path": "results/main/synthetic_m_sweep_weightnorm_current_1000_highdim_xor_m512_legacywn.json",
+        "sha256": "5792eff12f67385de54d4086dacec47d78926ccb0684c1867ba20adbf2b38592",
+        "bytes": 1460
+      },
+      {
+        "path": "logs/highdim_xor_m512_legacywn_20260504_115001.out.log",
+        "sha256": "9831475dbab4614e5b783a8dba1e0d658b5573844c683e2c649e55452ca69a07",
+        "bytes": 1043
+      },
+      {
+        "path": "results/main/synthetic_m_sweep_weightnorm_current_1000_highdim_xor_m512_long100_40.json",
+        "sha256": "3835446dab2e2d36e13b2bf7dd9ad50974b32a5d1f81e00ccaa4165b6838333e",
+        "bytes": 1456
+      },
+      {
+        "path": "logs/highdim_xor_m512_long100_40_20260504_113802.out.log",
+        "sha256": "11fa91ba9a37527d108b09a27b221acd9eeb13107098d1b5de6c27f3003d5c9d",
+        "bytes": 1053
+      },
+      {
+        "path": "results/main/synthetic_m_sweep_weightnorm_current_1000_highdim_xor_threshold_gate.json",
+        "sha256": "0a8dfc0338f08fd1f01e437a7f9dbd0053d93cdfe50d6f8c674717057405e7c7",
+        "bytes": 1464
+      },
+      {
+        "path": "logs/highdim_xor_threshold_gate_20260504_112909.out.log",
+        "sha256": "a4a41860f097359d9713204bb6804c7de50458dbb5978f2d4cafd58e6d5a0ebd",
+        "bytes": 412
+      },
+      {
+        "path": "results/main/synthetic_m_sweep_weightnorm_current_1000_legacywn_highm.json",
+        "sha256": "3b9482c6b236535a9dd252733cb590b83a30123ad36edbbbed57a7756afec4d2",
+        "bytes": 20650
+      },
+      {
+        "path": "logs/synthetic_m_sweep_legacywn_highm_20260504_115718.out.log",
+        "sha256": "b6cc02336a73e62d32a32930671b797a4ac00c4b1af5a07af7b521365bcc001c",
+        "bytes": 7370
+      }
+    ],
+    "metadata": {
+      "highdim_xor_m512_base": {
+        "timestamp": "20260504_113303",
+        "n_samples": 1000,
+        "m_values": [
+          512
+        ],
+        "datasets": [
+          "xor"
+        ],
+        "seed": 42,
+        "model": "SADMM-FS-WN",
+        "epochs_per_phase": 50,
+        "warmup_epochs": 20,
+        "feat_drop": 0.0,
+        "soft_prune_update": "mask_by_z_final",
+        "c_schedule": "0.1,0.2,0.5,1.0,2.0",
+        "auto_scale_c": true,
+        "min_z_support": "0"
+      },
+      "highdim_xor_m512_legacywn": {
+        "timestamp": "20260504_115006",
+        "n_samples": 1000,
+        "m_values": [
+          512
+        ],
+        "datasets": [
+          "xor"
+        ],
+        "seed": 42,
+        "model": "SADMM-FS-WN",
+        "epochs_per_phase": 50,
+        "warmup_epochs": 20,
+        "feat_drop": 0.0,
+        "soft_prune_update": "mask_by_z_final",
+        "c_schedule": "0.1,0.2,0.5,1.0,2.0",
+        "auto_scale_c": true,
+        "min_z_support": "0",
+        "wn_mode": "legacy"
+      },
+      "highdim_xor_m512_long100_40": {
+        "timestamp": "20260504_113808",
+        "n_samples": 1000,
+        "m_values": [
+          512
+        ],
+        "datasets": [
+          "xor"
+        ],
+        "seed": 42,
+        "model": "SADMM-FS-WN",
+        "epochs_per_phase": 100,
+        "warmup_epochs": 40,
+        "feat_drop": 0.0,
+        "soft_prune_update": "mask_by_z_final",
+        "c_schedule": "0.1,0.2,0.5,1.0,2.0",
+        "auto_scale_c": true,
+        "min_z_support": "0"
+      },
+      "highdim_xor_threshold_gate": {
+        "timestamp": "20260504_112923",
+        "n_samples": 1000,
+        "m_values": [
+          512,
+          1024
+        ],
+        "datasets": [
+          "xor"
+        ],
+        "seed": 42,
+        "model": "SADMM-FS-WN",
+        "epochs_per_phase": 50,
+        "warmup_epochs": 20,
+        "feat_drop": 0.0,
+        "soft_prune_update": "threshold_gate",
+        "c_schedule": "0.1,0.2,0.5,1.0,2.0",
+        "auto_scale_c": true,
+        "min_z_support": "0"
+      },
+      "legacywn_highm": {
+        "timestamp": "20260504_115729",
+        "n_samples": 1000,
+        "m_values": [
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "datasets": [
+          "xor",
+          "ring",
+          "ring+xor",
+          "ring+xor+sum"
+        ],
+        "seed": 42,
+        "model": "SADMM-FS-WN-legacy",
+        "epochs_per_phase": 50,
+        "warmup_epochs": 20,
+        "feat_drop": 0.0,
+        "soft_prune_update": "mask_by_z_final",
+        "c_schedule": "0.1,0.2,0.5,1.0,2.0",
+        "auto_scale_c": true,
+        "min_z_support": "0",
+        "wn_mode": "legacy"
+      }
+    },
+    "cells": [
+      {
+        "case": "highdim_xor_m512_base",
+        "task": "xor",
+        "p": 512,
+        "hits": 1,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.5080872182481628
+      },
+      {
+        "case": "highdim_xor_m512_legacywn",
+        "task": "xor",
+        "p": 512,
+        "hits": 10,
+        "denominator": 12,
+        "exact_folds": 5,
+        "fold_hits": [
+          2,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "auc": 0.9148397078337153
+      },
+      {
+        "case": "highdim_xor_m512_long100_40",
+        "task": "xor",
+        "p": 512,
+        "hits": 2,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.4751452247603652
+      },
+      {
+        "case": "highdim_xor_threshold_gate",
+        "task": "xor",
+        "p": 512,
+        "hits": 1,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.5192915993238089
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "xor",
+        "p": 128,
+        "hits": 12,
+        "denominator": 12,
+        "exact_folds": 6,
+        "fold_hits": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "auc": 0.9999521897112258
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "xor",
+        "p": 256,
+        "hits": 12,
+        "denominator": 12,
+        "exact_folds": 6,
+        "fold_hits": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "auc": 0.9996560672732713
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "xor",
+        "p": 512,
+        "hits": 10,
+        "denominator": 12,
+        "exact_folds": 5,
+        "fold_hits": [
+          2,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "auc": 0.9148397078337153
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "xor",
+        "p": 1024,
+        "hits": 2,
+        "denominator": 12,
+        "exact_folds": 1,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "auc": 0.5599083251051219
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "xor",
+        "p": 2048,
+        "hits": 0,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.5202209990970293
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring",
+        "p": 128,
+        "hits": 3,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "auc": 0.54720946231567
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring",
+        "p": 256,
+        "hits": 1,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "auc": 0.4940764353979761
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring",
+        "p": 512,
+        "hits": 0,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.49408325687853166
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring",
+        "p": 1024,
+        "hits": 1,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.521644757481747
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring",
+        "p": 2048,
+        "hits": 0,
+        "denominator": 12,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.48733212089720457
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor",
+        "p": 128,
+        "hits": 12,
+        "denominator": 24,
+        "exact_folds": 0,
+        "fold_hits": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "auc": 0.7627928228220333
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor",
+        "p": 256,
+        "hits": 9,
+        "denominator": 24,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "auc": 0.6753431219065019
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor",
+        "p": 512,
+        "hits": 3,
+        "denominator": 24,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          1
+        ],
+        "auc": 0.5748342001615034
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor",
+        "p": 1024,
+        "hits": 0,
+        "denominator": 24,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.5003646831849203
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor",
+        "p": 2048,
+        "hits": 0,
+        "denominator": 24,
+        "exact_folds": 0,
+        "fold_hits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auc": 0.48272012653575525
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor+sum",
+        "p": 128,
+        "hits": 14,
+        "denominator": 36,
+        "exact_folds": 0,
+        "fold_hits": [
+          3,
+          4,
+          1,
+          2,
+          2,
+          2
+        ],
+        "auc": 0.6436118367845972
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor+sum",
+        "p": 256,
+        "hits": 6,
+        "denominator": 36,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "auc": 0.6098394579578773
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor+sum",
+        "p": 512,
+        "hits": 6,
+        "denominator": 36,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "auc": 0.6396500518714755
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor+sum",
+        "p": 1024,
+        "hits": 6,
+        "denominator": 36,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "auc": 0.6401637274825827
+      },
+      {
+        "case": "legacywn_highm",
+        "task": "ring+xor+sum",
+        "p": 2048,
+        "hits": 6,
+        "denominator": 36,
+        "exact_folds": 0,
+        "fold_hits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "auc": 0.6192341610220966
+      }
+    ],
+    "verified_fold_log_pairs": 144,
+    "legacy_512_entire_result_object_identical": true,
+    "legacy_512_identity_interpretation": "not_independent_confirmation; replay_vs_reuse_unknown",
+    "base_vs_threshold_512_fold_recovery_identical": true,
+    "historical_exact_data_and_source_binding": false,
+    "base_wn_mode_recorded": false
+  },
+  "retained_semantics": {
+    "claims": {
+      "forward_norm": {
+        "path": "src/admm_input_group_wrapper.py",
+        "needle": "gate = gate * self.first_weight_norm",
+        "lines": [
+          680
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "column_norm": {
+        "path": "src/admm_input_group_wrapper.py",
+        "needle": "F.normalize(self.first_raw_weight, p=2, dim=0, eps=1e-8)",
+        "lines": [
+          592,
+          1033
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "legacy_penalty_score": {
+        "path": "src/admm_input_group_wrapper.py",
+        "needle": "if self.legacy_weight_norm:",
+        "lines": [
+          635,
+          679,
+          1065,
+          1119
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "coordinate_penalty": {
+        "path": "src/admm_input_group_wrapper.py",
+        "needle": "lam = C_ratio / score",
+        "lines": [
+          3090,
+          3898
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "sequential_shrink": {
+        "path": "src/admm_input_group_wrapper.py",
+        "needle": "v_shrunk = soft_thresholding(v, lam / rho)",
+        "lines": [
+          3904
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "warm_per_phase": {
+        "path": "Feature-Selection-Benchmark/src/core.py",
+        "needle": "warmup_per_phase=True",
+        "lines": [
+          115
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "warm_dispatch": {
+        "path": "src/gradual_admm_with_pruning.py",
+        "needle": "warmup_epochs=warmup_epochs if (warmup_per_phase or phase_idx == 0) else 0",
+        "lines": [
+          752
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "mask_dispatch": {
+        "path": "src/gradual_admm_with_pruning.py",
+        "needle": "if soft_prune_update == \"mask_by_z_final\":",
+        "lines": [
+          867
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "support_mask": {
+        "path": "src/gradual_admm_with_pruning.py",
+        "needle": "phase_end_mask = z_gate != 0",
+        "lines": [
+          902,
+          913
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "phase_threshold": {
+        "path": "Feature-Selection-Benchmark/src/core.py",
+        "needle": "prune_threshold=0.01",
+        "lines": [
+          110
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "dimension_C": {
+        "path": "src/gradual_admm_with_pruning.py",
+        "needle": "scale_factor = n_features / baseline_n",
+        "lines": [
+          54,
+          457
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "C_cap": {
+        "path": "src/gradual_admm_with_pruning.py",
+        "needle": "max_C = 5.0",
+        "lines": [
+          458
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "final_readout": {
+        "path": "Feature-Selection-Benchmark/src/core.py",
+        "needle": "selection_score = (model.gate.detach() * model.first_weight_norm.detach()).abs()",
+        "lines": [
+          140
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "fold_scaler": {
+        "path": "Feature-Selection-Benchmark/src/core.py",
+        "needle": "X_train_scaled = scaler.fit_transform(X_train)",
+        "lines": [
+          56
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "outer_split": {
+        "path": "experiments/main/run_synthetic_m_sweep_weightnorm.py",
+        "needle": "splits = list(KFold(n_splits=6).split(X))",
+        "lines": [
+          303
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "seed_rule": {
+        "path": "experiments/main/run_synthetic_m_sweep_weightnorm.py",
+        "needle": "fold_seed = seed + 1009 * (fold + 1)",
+        "lines": [
+          310
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      },
+      "legacy_topk": {
+        "path": "experiments/main/run_synthetic_m_sweep_weightnorm.py",
+        "needle": "order = np.argsort(np.abs(scores))",
+        "lines": [
+          332
+        ],
+        "evidence_level": "retained_source_only_not_May_runtime_binding"
+      }
+    },
+    "core_call_kwargs": {
+      "model_class": "GatedWeightNormMLP",
+      "model_kwargs": "model_kwargs",
+      "X_train": "X_train_model",
+      "y_train": "y_train",
+      "X_test": "X_test_model",
+      "y_test": "np.zeros(len(X_test_model), dtype=int)",
+      "n_classes": "len(set(y_train))",
+      "ground_truth": "list(range(k))",
+      "k": "k",
+      "C_schedule": "c_schedule",
+      "prune_threshold": "0.01",
+      "prune_mode": "'soft'",
+      "reweight": "False",
+      "epochs_per_phase": "epochs_per_phase",
+      "warmup_epochs": "warmup_epochs",
+      "warmup_per_phase": "True",
+      "auto_scale_C": "auto_scale_c",
+      "soft_prune_update": "soft_prune_update",
+      "min_z_support": "min_z_support",
+      "admm_weighted_gate": "admm_weighted_gate",
+      "ratio_norm_update": "ratio_norm_update",
+      "rho_init": "200.0",
+      "device": "device",
+      "verbose": "False"
+    },
+    "phase_defaults": {
+      "C_schedule": "None",
+      "global_C_schedule_per_epoch": "None",
+      "prune_threshold": "0.01",
+      "prune_mode": "'soft'",
+      "reweight": "True",
+      "reweight_mode": "'scale'",
+      "epochs_per_phase": "50",
+      "warmup_epochs": "20",
+      "warmup_per_phase": "True",
+      "auto_scale_C": "True",
+      "use_ratio_norm": "True",
+      "use_admm": "True",
+      "uniform_penalty": "False",
+      "rho_init": "200.0",
+      "write_z_to_gate": "False",
+      "soft_prune_update": "'threshold_gate'",
+      "cross_phase_state": "None",
+      "min_z_support": "None",
+      "admm_weighted_gate": "False",
+      "ratio_norm_update": "'formula_z_den'",
+      "score_update_mode": "'epoch'",
+      "ratio_norm_dim_scale": "'none'",
+      "ratio_norm_p": "1.0",
+      "ratio_norm_q": "2.0",
+      "adaptive_rho": "True",
+      "adaptive_rho_mu": "10.0",
+      "adaptive_rho_tau": "2.0",
+      "adaptive_rho_min": "None",
+      "adaptive_rho_max": "10000.0",
+      "auto_C_gamma": "None",
+      "auto_C_support": "0",
+      "adaptive_C": "False",
+      "adaptive_C_target": "0",
+      "adaptive_C_update_interval": "5",
+      "adaptive_C_low_ratio": "0.75",
+      "adaptive_C_high_ratio": "1.5",
+      "adaptive_C_mult": "1.25",
+      "adaptive_C_min": "1e-08",
+      "adaptive_C_max": "1000.0",
+      "dynamic_C_mode": "'none'",
+      "dynamic_C_update_interval": "5",
+      "dynamic_C_ema": "0.8",
+      "dynamic_C_min_factor": "0.1",
+      "dynamic_C_max_factor": "10.0",
+      "dynamic_C_kappa": "1.0",
+      "dynamic_C_quantile": "0.9",
+      "dynamic_C_continuation_gamma": "1.5",
+      "dynamic_C_stability_patience": "2",
+      "dynamic_C_support_tol": "0.02",
+      "dynamic_C_residual_tol": "0.1",
+      "dynamic_C_loss_tol": "0.02",
+      "dynamic_C_cap_seed": "None",
+      "dynamic_C_support_parent_low": "0",
+      "dynamic_C_support_parent_high": "0",
+      "dynamic_C_support_term_low": "0",
+      "dynamic_C_support_term_high": "0",
+      "dynamic_C_support_up_mult": "1.25",
+      "dynamic_C_support_down_mult": "1.5",
+      "group_sparse_powers": "None",
+      "group_sparse_mode": "'none'",
+      "group_parent_support": "0",
+      "lr": "0.005",
+      "weight_decay": "0.001",
+      "g_inner_epochs": "1",
+      "lr_scheduler": "'none'",
+      "cosine_eta_min": "None",
+      "cosine_decay_fraction": "1.0",
+      "rho_follow_lr": "False",
+      "strict_neural_block_mode": "'joint_minibatch'",
+      "strict_kkt_check_interval": "0",
+      "strict_kkt_tolerance": "0.01",
+      "strict_kkt_absolute_tolerance": "0.0",
+      "strict_kkt_patience": "3",
+      "device": "'cuda'",
+      "verbose": "True",
+      "legacy_observer": "None"
+    },
+    "mask_routing_ast": "if soft_prune_update == 'mask_by_z_final':\n    phase_soft_prune_update = 'mask_by_z' if phase_idx == len(C_schedule) - 1 else 'threshold_gate'",
+    "conditional_C_paths": {
+      "256": [
+        0.2,
+        0.4,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "512": [
+        0.4,
+        0.8,
+        2.0,
+        4.0,
+        5
+      ]
+    },
+    "conditional_training_epochs": 350,
+    "not_runtime_facts": [
+      "350 total epochs",
+      "scaled C values",
+      "adaptive rho",
+      "exact optimizer/reset semantics",
+      "penalty score environment defaults"
+    ]
+  },
+  "provenance": {
+    "history_queries": [
+      {
+        "args": [
+          "log",
+          "--all",
+          "--format=%H %aI %s",
+          "--",
+          "experiments/main/run_synthetic_m_sweep_weightnorm.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "args": [
+          "log",
+          "--all",
+          "--format=%H %aI %s",
+          "-S",
+          "legacy_weight_norm",
+          "--",
+          "src/admm_input_group_wrapper.py"
+        ],
+        "returncode": 0,
+        "stdout": "70db8dca08efa5ed09430ed0f3cb41875ba4a82f 2026-08-19T18:25:08+08:00 Freeze Scheme A bridge protocol and runner\n",
+        "stderr": ""
+      },
+      {
+        "args": [
+          "log",
+          "--all",
+          "--format=%H %aI %s",
+          "-S",
+          "mask_by_z_final",
+          "--",
+          "src/gradual_admm_with_pruning.py"
+        ],
+        "returncode": 0,
+        "stdout": "70db8dca08efa5ed09430ed0f3cb41875ba4a82f 2026-08-19T18:25:08+08:00 Freeze Scheme A bridge protocol and runner\n",
+        "stderr": ""
+      },
+      {
+        "args": [
+          "log",
+          "--all",
+          "--format=%H %aI %s",
+          "--",
+          "Feature-Selection-Benchmark/src/core.py"
+        ],
+        "returncode": 0,
+        "stdout": "c15fb8aa6e6e5b5f4d35518d88a7d34f84b82bb4 2026-04-09T19:27:42+08:00 feat: push updated results and experiments\ne05f6e677d06bc6841f8857aab55d57b68ef6d8b 2026-03-25T10:59:18+08:00 refactor: checkpoint prior codebase reorganization\nb4d430ef5edf19ed1bab3c7f377c6d71b8b07a08 2026-02-22T21:07:59+08:00 Inline Feature-Selection-Benchmark into tree (remove submodule)\n",
+        "stderr": ""
+      }
+    ],
+    "pre_run_tracked_commit": "b2606e8f",
+    "pre_run_tracked_model_classes": [
+      "ColumnNormalizedLinear",
+      "FeatureSelectionMLP",
+      "GatedFeatureSelectionMLP",
+      "_Scaler"
+    ],
+    "pre_run_tracked_has_GatedWeightNormMLP": false,
+    "pre_run_blob_sha256": "ac7d118998d1d436fb2c2220a9ab67413f520fe5e806c1281490c8be68117838",
+    "runtime_hash_manifest_or_checkpoints_found_for_May_run": false,
+    "search_scope": [
+      "reachable Git history",
+      "migrated docs/logs/results",
+      "retained current source",
+      "nested retained archives and snapshot inventory"
+    ],
+    "status": "May_runtime_source_not_certified"
+  },
+  "checkpoint_arithmetic": {
+    "records": [
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 0,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f0_Base.pt",
+        "sha256": "6a288143a4c33a8b17b51cdb7f266cc09469279e030291e5f4d809ed2b6743aa",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          154,
+          35
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          154,
+          35
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 0,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f0_Five-v1.pt",
+        "sha256": "bd3b8ee8c5e6bcf1ae0390e2f5fa0c709aaec802b7da7fb50d045cbb8a2737fb",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          118,
+          23
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          118,
+          23
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 1,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f1_Base.pt",
+        "sha256": "98926d8af1dd10b43026fe213d618268434d5b641cbcef6e84f18839afb2cf96",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          171,
+          6
+        ],
+        "g_hits": 2,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          171,
+          6
+        ],
+        "masked_hits": 2,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 1,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f1_Five-v1.pt",
+        "sha256": "28236fbbe947d13df4c36e489ef6338f9d79de7b5032247dc55a5a560d996cce",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          119,
+          207
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          119,
+          207
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 2,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f2_Base.pt",
+        "sha256": "05000d2b4add7a80c6b19bef3c32769adc413febf0dd097936763abcd06786db",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          171,
+          204
+        ],
+        "g_hits": 1,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          171,
+          204
+        ],
+        "masked_hits": 1,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 2,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f2_Five-v1.pt",
+        "sha256": "907f75c85cce54fb6ed5f6e4753a7fcf4c478820583fb78376907dd5f1a885b8",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          1,
+          221
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          1,
+          221
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 3,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f3_Base.pt",
+        "sha256": "7039f039090999034b366e6d47d7ccb65137b6e4120bb4121281c562e3504629",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          171,
+          6
+        ],
+        "g_hits": 2,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          171,
+          6
+        ],
+        "masked_hits": 2,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 3,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f3_Five-v1.pt",
+        "sha256": "aea05aec76cdf49615dd5c0a346fcbbb896eed0f367faabb438385380a73ffdf",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          52,
+          211
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          52,
+          211
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 4,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f4_Base.pt",
+        "sha256": "c4d1130aaaf3833b529a2f0f095bf926bae4924c129a62da8c57940568b779dd",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          171,
+          6
+        ],
+        "g_hits": 2,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          171,
+          6
+        ],
+        "masked_hits": 2,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 4,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f4_Five-v1.pt",
+        "sha256": "fc1d2ece66e430f51c2224aed4724d024d9b9d866a829118e8883f828f6f9599",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          156,
+          239
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          156,
+          239
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 5,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f5_Base.pt",
+        "sha256": "a6912fe28abf491e67f5851bc109dfba4af198825462425c985357886e3e1cc3",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          118,
+          171
+        ],
+        "g_hits": 1,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          118,
+          171
+        ],
+        "masked_hits": 1,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 0,
+        "fold": 5,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i0_f5_Five-v1.pt",
+        "sha256": "7b19a18234dac291fec0083bb34d7021486d23c9d16a094944cd56af0fdb0c46",
+        "truth": [
+          6,
+          171
+        ],
+        "g_selected": [
+          171,
+          152
+        ],
+        "g_hits": 1,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          171,
+          152
+        ],
+        "masked_hits": 1,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 0,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f0_Base.pt",
+        "sha256": "9ecdebd079592aec6784679fc58f1fd5f72c48215d0c2007d0d57a7a73c9252f",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          120,
+          195
+        ],
+        "g_hits": 2,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          120,
+          195
+        ],
+        "masked_hits": 2,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 0,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f0_Five-v1.pt",
+        "sha256": "723b613343456f5ea83a00be466bc54bfd3b1f1c906a09a7fd960645fbae88de",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          120,
+          195
+        ],
+        "g_hits": 2,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          120,
+          195
+        ],
+        "masked_hits": 2,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 1,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f1_Base.pt",
+        "sha256": "d25a63f13a5033c67f419ee2829c4b9f915aa5c8654c3a8fa2c9d4b5fab12bdb",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          12,
+          34
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          12,
+          34
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 1,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f1_Five-v1.pt",
+        "sha256": "4fab9f6592ff23b2947b67e092afe71361728e2a8181e2ad0ba9f52679637c1a",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          245,
+          30
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          245,
+          30
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 2,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f2_Base.pt",
+        "sha256": "fe4656b18655b64413b3f7173b3f8825be25a72db92663dd0adebc0d93c8ba6b",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          44,
+          128
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          44,
+          128
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 2,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f2_Five-v1.pt",
+        "sha256": "4170262fed0a9a75e6a0a54ef306b8ab5a0d898d554f2d3e236e09a49d8fc8bd",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          102,
+          202
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          102,
+          202
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 3,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f3_Base.pt",
+        "sha256": "0825656e59c16af744b149916897c81632822563122e0f3fec0384a949c2e37a",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          10,
+          192
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          10,
+          192
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 3,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f3_Five-v1.pt",
+        "sha256": "2e82ddd69fb4d364ef6c96dcc489eee53404bc477e62b6222cf658e564249bd9",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          19,
+          157
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          19,
+          157
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 4,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f4_Base.pt",
+        "sha256": "e6ca03eee5d7af3678e3d34ceb7f71f8d3266c5d47a01cb2fa9f62dd9b1fad39",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          195,
+          183
+        ],
+        "g_hits": 1,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          195,
+          183
+        ],
+        "masked_hits": 1,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 4,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f4_Five-v1.pt",
+        "sha256": "89ba0ad2dd3cd7250fa10ebfa558c1f72d0e86944452a936fac89cf32e8b3fb3",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          215,
+          156
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          215,
+          156
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 5,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f5_Base.pt",
+        "sha256": "027087f014b5d3725e81a692cb75431c68425a7bbb021f8f87d1f18f90e51323",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          239,
+          77
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          239,
+          77
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 256,
+        "instance": 1,
+        "fold": 5,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p256_i1_f5_Five-v1.pt",
+        "sha256": "be149d431584b7d2279382299a1291a42807a21ebfee0fc852893a257aedee5e",
+        "truth": [
+          120,
+          195
+        ],
+        "g_selected": [
+          53,
+          43
+        ],
+        "g_hits": 0,
+        "z_support": 256,
+        "true_in_z": 2,
+        "g_nonzero": 256,
+        "masked_selected": [
+          53,
+          43
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 0,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f0_Base.pt",
+        "sha256": "b9353de98308b49794fe4fa9f3d24fabae2ae7f134cf6bfabcf5fc715036302a",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          94,
+          281
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          94,
+          281
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 0,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f0_Five-v1.pt",
+        "sha256": "e0ab322027368a338061a2ec7919b2e9fe8b4929ce3f536a368851711b2aeb64",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          57,
+          139
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          57,
+          139
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 1,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f1_Base.pt",
+        "sha256": "50c1fe51931857784e6d5325a0012de420a455c108cf9d34de2ad41c2a49a98f",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          172,
+          195
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          172,
+          195
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 1,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f1_Five-v1.pt",
+        "sha256": "bf0f885cfca81ec07e8e971ae3f860f3629afc57ab6ef6885172c48b6fd6b7f8",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          139,
+          362
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          139,
+          362
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 2,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f2_Base.pt",
+        "sha256": "f261ce39255ab022fde212006f3de232a12ca6e293b0929b48f8184fb07081dd",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          405,
+          458
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          405,
+          458
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 2,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f2_Five-v1.pt",
+        "sha256": "62b056c134336b8da9f5c942d164b35cfb9317439eb35e42a43748b2446afe3e",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          173,
+          251
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          173,
+          251
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 3,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f3_Base.pt",
+        "sha256": "83d19239d601759ea32dc7302242a560b1b0064b73769f8e83e5b8d30c62da06",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          420,
+          423
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          420,
+          423
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 3,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f3_Five-v1.pt",
+        "sha256": "0fc12ffde8caa3855a086af0dcfc11d2df32f646c9af88202e52c7aa5b01000b",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          24,
+          35
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          24,
+          35
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 4,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f4_Base.pt",
+        "sha256": "5390122dbc13158793be7b17fdcc016ee22afd9e27401ace730668d015b3f82c",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          211,
+          506
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          211,
+          506
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 4,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f4_Five-v1.pt",
+        "sha256": "20372a35baf152296b76145f3966af08dc625bb7016b4e3bdea14551b4e3f4a5",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          245,
+          221
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          245,
+          221
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 5,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f5_Base.pt",
+        "sha256": "f22424080016f7f9c7422ef4e2fc4a356fca14292c420e4e35f481ada69f55f2",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          251,
+          167
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          251,
+          167
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 0,
+        "fold": 5,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i0_f5_Five-v1.pt",
+        "sha256": "7d80f60d212ae2347bdf9cc7c464f9891e64f47132e19beada8a8dfd848bf6b4",
+        "truth": [
+          134,
+          260
+        ],
+        "g_selected": [
+          351,
+          458
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          351,
+          458
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 0,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f0_Base.pt",
+        "sha256": "c0a0a3435fbf0850d00d3a5daaf2d5260c49f43ecc306030cf54235181b061f4",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          36,
+          408
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          36,
+          408
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 0,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f0_Five-v1.pt",
+        "sha256": "8b2045b8e123f3379b192b494b90e2a0872159b71012f53da5ea71e5f3dd473c",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          218,
+          196
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          218,
+          196
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 1,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f1_Base.pt",
+        "sha256": "6a01a40f649766c1db8083d50085285b79f6dee48ad8408d678d3446165427e6",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          427,
+          501
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          427,
+          501
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 1,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f1_Five-v1.pt",
+        "sha256": "58bb45a9176c4cd9c64ec3c88180b385975d86fa4bcfb4cafd49111776497992",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          200,
+          166
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          200,
+          166
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 2,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f2_Base.pt",
+        "sha256": "9b322f8bdb2af917a51abd84a8a220d61202a53f28ef2c339fa8aec8dda9684b",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          291,
+          264
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          291,
+          264
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 2,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f2_Five-v1.pt",
+        "sha256": "6c503bc29b43202919da4b986681610aeb8ccdafca9bbcaa7ea43856ccc3e086",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          423,
+          293
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          423,
+          293
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 3,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f3_Base.pt",
+        "sha256": "c228b100d3a01a7e88fae9e00657f0273081d4a96434b507a021ef39eda99a65",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          15,
+          200
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          15,
+          200
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 3,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f3_Five-v1.pt",
+        "sha256": "c998787fc136e204342d68702a2725304ffab51923f9a52a99261a41da64adf3",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          419,
+          42
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          419,
+          42
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 4,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f4_Base.pt",
+        "sha256": "483f8d2dbc555382471b16c1d7de7d0a6a070ab5d5452584f61b17c277f76c2d",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          175,
+          42
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          175,
+          42
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 4,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f4_Five-v1.pt",
+        "sha256": "ddcdae853bd11db9167e95ed9f714ceaf1711ec1ae551cf62ccfb3153248e6c1",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          281,
+          419
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          281,
+          419
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 5,
+        "arm": "Base",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f5_Base.pt",
+        "sha256": "dbe73589973f0dab56386cbf3b221412fb6ed1c704cb29c8b9350e9217ce4271",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          222,
+          198
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          222,
+          198
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      },
+      {
+        "p": 512,
+        "instance": 1,
+        "fold": 5,
+        "arm": "Five-v1",
+        "path": "results/ablation/xor_lassonet_path_r63_20260915/checkpoints/xor_p512_i1_f5_Five-v1.pt",
+        "sha256": "e55b31c252a7f4c105a46a84fe52e46eefe9940b29567e6dcb614d3d7535debd",
+        "truth": [
+          271,
+          349
+        ],
+        "g_selected": [
+          26,
+          491
+        ],
+        "g_hits": 0,
+        "z_support": 512,
+        "true_in_z": 2,
+        "g_nonzero": 512,
+        "masked_selected": [
+          26,
+          491
+        ],
+        "masked_hits": 0,
+        "masked_full_top2": true
+      }
+    ],
+    "aggregates": [
+      {
+        "p": 256,
+        "arm": "Base",
+        "folds": 12,
+        "g_hits": 11,
+        "masked_hits": 11,
+        "true_surviving_z": 24,
+        "incomplete_top2_folds": 0,
+        "g_all_nonzero_folds": 12,
+        "z_support_range": [
+          256,
+          256
+        ]
+      },
+      {
+        "p": 256,
+        "arm": "Five-v1",
+        "folds": 12,
+        "g_hits": 3,
+        "masked_hits": 3,
+        "true_surviving_z": 24,
+        "incomplete_top2_folds": 0,
+        "g_all_nonzero_folds": 12,
+        "z_support_range": [
+          256,
+          256
+        ]
+      },
+      {
+        "p": 512,
+        "arm": "Base",
+        "folds": 12,
+        "g_hits": 0,
+        "masked_hits": 0,
+        "true_surviving_z": 24,
+        "incomplete_top2_folds": 0,
+        "g_all_nonzero_folds": 12,
+        "z_support_range": [
+          512,
+          512
+        ]
+      },
+      {
+        "p": 512,
+        "arm": "Five-v1",
+        "folds": 12,
+        "g_hits": 0,
+        "masked_hits": 0,
+        "true_surviving_z": 24,
+        "incomplete_top2_folds": 0,
+        "g_all_nonzero_folds": 12,
+        "z_support_range": [
+          512,
+          512
+        ]
+      }
+    ],
+    "interpretation": "terminal score arithmetic only; no model masking/forward/retraining or alternate primary readout",
+    "cannot_answer": "effect of intermediate masks on subsequent learning"
+  },
+  "sources": [
+    {
+      "path": "experiments/main/run_synthetic_m_sweep_weightnorm.py",
+      "sha256": "95689df7742d0775e3667b136f0789fb754aefcd482c5a654b25b0d8cbba98b4",
+      "snapshot_sha256": "95689df7742d0775e3667b136f0789fb754aefcd482c5a654b25b0d8cbba98b4"
+    },
+    {
+      "path": "Feature-Selection-Benchmark/src/core.py",
+      "sha256": "adb4c35b35602e039a22bbb376b5aaa307bc103fb7b324655dea67cc5f19920e",
+      "snapshot_sha256": "adb4c35b35602e039a22bbb376b5aaa307bc103fb7b324655dea67cc5f19920e"
+    },
+    {
+      "path": "Feature-Selection-Benchmark/src/data.py",
+      "sha256": "e676fa774f4b7194ae599e0508b2d2feb553ef4c76de9ea64fd9865388cdfb24",
+      "snapshot_sha256": "e676fa774f4b7194ae599e0508b2d2feb553ef4c76de9ea64fd9865388cdfb24"
+    },
+    {
+      "path": "src/admm_input_group_wrapper.py",
+      "sha256": "950f9d59a8326c53c7f2f74b195da9ea401851d61b8f676237f9eb7e2c273b2f",
+      "snapshot_sha256": "950f9d59a8326c53c7f2f74b195da9ea401851d61b8f676237f9eb7e2c273b2f"
+    },
+    {
+      "path": "src/gradual_admm_with_pruning.py",
+      "sha256": "cd4489458d12b197418dc673a77df9542fa6986e01f8ef016550928615b6479e",
+      "snapshot_sha256": "cd4489458d12b197418dc673a77df9542fa6986e01f8ef016550928615b6479e"
+    },
+    {
+      "path": "src/admm_utils.py",
+      "sha256": "2f836a8e083b6831da0a8db7a80681e2e2f7c0b1f19d0d3f08569a1503bf428b",
+      "snapshot_sha256": "2f836a8e083b6831da0a8db7a80681e2e2f7c0b1f19d0d3f08569a1503bf428b"
+    }
+  ]
+}

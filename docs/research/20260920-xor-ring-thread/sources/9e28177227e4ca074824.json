@@ -1,0 +1,583 @@
+{
+  "status": "completed",
+  "new_trajectories": 360,
+  "results": {
+    "table": [
+      {
+        "dataset": "xor",
+        "n_features": 2,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9993890710623616
+      },
+      {
+        "dataset": "xor",
+        "n_features": 4,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9992313707244088
+      },
+      {
+        "dataset": "xor",
+        "n_features": 8,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9995563147599
+      },
+      {
+        "dataset": "xor",
+        "n_features": 16,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9989645952120173
+      },
+      {
+        "dataset": "xor",
+        "n_features": 32,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.997574725258641
+      },
+      {
+        "dataset": "xor",
+        "n_features": 64,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9803729754741487
+      },
+      {
+        "dataset": "xor",
+        "n_features": 256,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 2,
+            "opportunities": 24,
+            "mean_recall": 0.08333333333333333,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.0,
+              "1": 0.16666666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.5309251942069946
+      },
+      {
+        "dataset": "xor",
+        "n_features": 1024,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 0,
+            "opportunities": 24,
+            "mean_recall": 0.0,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.0,
+              "1": 0.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.5051851173390183
+      },
+      {
+        "dataset": "ring",
+        "n_features": 2,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9993625902844628
+      },
+      {
+        "dataset": "ring",
+        "n_features": 4,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9990989807034202
+      },
+      {
+        "dataset": "ring",
+        "n_features": 8,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9985061622423221
+      },
+      {
+        "dataset": "ring",
+        "n_features": 16,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9980668110641354
+      },
+      {
+        "dataset": "ring",
+        "n_features": 32,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9940361931836413
+      },
+      {
+        "dataset": "ring",
+        "n_features": 64,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 24,
+            "opportunities": 24,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.8030419435334378
+      },
+      {
+        "dataset": "ring",
+        "n_features": 256,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 18,
+            "opportunities": 24,
+            "mean_recall": 0.75,
+            "exact_folds": 6,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.5833333333333334,
+              "1": 0.9166666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.5900555055757103
+      },
+      {
+        "dataset": "ring",
+        "n_features": 1024,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top2": {
+            "coordinates": 20,
+            "opportunities": 24,
+            "mean_recall": 0.8333333333333334,
+            "exact_folds": 8,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.9166666666666666,
+              "1": 0.75
+            }
+          }
+        },
+        "mean_test_auroc": 0.6806585686982882
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 4,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 48,
+            "opportunities": 48,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9366119061986256
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 8,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 48,
+            "opportunities": 48,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9740023681820387
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 16,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 47,
+            "opportunities": 48,
+            "mean_recall": 0.9791666666666666,
+            "exact_folds": 11,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.9583333333333334,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.9449881935567181
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 32,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 37,
+            "opportunities": 48,
+            "mean_recall": 0.7708333333333334,
+            "exact_folds": 4,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.75,
+              "1": 0.7916666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.780473885132469
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 64,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 28,
+            "opportunities": 48,
+            "mean_recall": 0.5833333333333334,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.5833333333333334,
+              "1": 0.5833333333333334
+            }
+          }
+        },
+        "mean_test_auroc": 0.6881000368151176
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 256,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 25,
+            "opportunities": 48,
+            "mean_recall": 0.5208333333333334,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.4166666666666667,
+              "1": 0.625
+            }
+          }
+        },
+        "mean_test_auroc": 0.5503164346346088
+      },
+      {
+        "dataset": "ring+xor",
+        "n_features": 1024,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top4": {
+            "coordinates": 19,
+            "opportunities": 48,
+            "mean_recall": 0.3958333333333333,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.25,
+              "1": 0.5416666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.5635662134226395
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 6,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 72,
+            "opportunities": 72,
+            "mean_recall": 1.0,
+            "exact_folds": 12,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 1.0,
+              "1": 1.0
+            }
+          }
+        },
+        "mean_test_auroc": 0.86537471354933
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 8,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 66,
+            "opportunities": 72,
+            "mean_recall": 0.9166666666666669,
+            "exact_folds": 6,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.9166666666666666,
+              "1": 0.9166666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.8400758348275336
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 16,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 58,
+            "opportunities": 72,
+            "mean_recall": 0.8055555555555557,
+            "exact_folds": 2,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.8055555555555555,
+              "1": 0.8055555555555555
+            }
+          }
+        },
+        "mean_test_auroc": 0.7963693444028438
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 32,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 48,
+            "opportunities": 72,
+            "mean_recall": 0.6666666666666666,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.638888888888889,
+              "1": 0.6944444444444443
+            }
+          }
+        },
+        "mean_test_auroc": 0.7341116515203292
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 64,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 44,
+            "opportunities": 72,
+            "mean_recall": 0.6111111111111112,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.5833333333333333,
+              "1": 0.6388888888888887
+            }
+          }
+        },
+        "mean_test_auroc": 0.6945409141829356
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 256,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 48,
+            "opportunities": 72,
+            "mean_recall": 0.6666666666666666,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.6666666666666666,
+              "1": 0.6666666666666666
+            }
+          }
+        },
+        "mean_test_auroc": 0.682773254591614
+      },
+      {
+        "dataset": "ring+xor+sum",
+        "n_features": 1024,
+        "arm": "Five-v1",
+        "metrics": {
+          "support_top6": {
+            "coordinates": 41,
+            "opportunities": 72,
+            "mean_recall": 0.5694444444444444,
+            "exact_folds": 0,
+            "folds": 12,
+            "instance_recalls": {
+              "0": 0.5555555555555555,
+              "1": 0.5833333333333334
+            }
+          }
+        },
+        "mean_test_auroc": 0.6528559938315825
+      }
+    ],
+    "new_cells": 30,
+    "new_trajectories": 360,
+    "reused_R61_cells": 12,
+    "default_promoted": false,
+    "boundary": "Descriptive full Five-v1 grid; historical baselines unpaired; p=k endpoints trivial"
+  }
+}

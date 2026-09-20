@@ -1,0 +1,912 @@
+{
+  "status": "pass",
+  "cells": [
+    {
+      "mask": 0,
+      "arm": "M00",
+      "source": "current_minimal_r1_20260907",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 1,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [],
+      "target_pass": false
+    },
+    {
+      "mask": 1,
+      "arm": "M10",
+      "source": "current_minimal_r1_20260907",
+      "metrics": {
+        "xor": {
+          "coordinates": 9,
+          "exact": 4,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.5,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 4,
+          "exact": 2,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [
+        "R"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 2,
+      "arm": "RawDefaultWeight",
+      "source": "legacy_migration_r28_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 0,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [
+        "W"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 3,
+      "arm": "SquareDefaultWeight",
+      "source": "legacy_migration_r28_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 4,
+      "arm": "Drop043",
+      "source": "current_minimal_r10_20260907",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 0,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [
+        "H"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 5,
+      "arm": "SquareDrop043",
+      "source": "current_minimal_r10_20260907",
+      "metrics": {
+        "xor": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 5,
+          "exact": 2,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "H"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 6,
+      "arm": "RawWeightHidden",
+      "source": "legacy_migration_r30_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 2,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "factors": [
+        "W",
+        "H"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 7,
+      "arm": "SquareWeightHidden",
+      "source": "legacy_migration_r30_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "H"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 9,
+      "arm": "SquareNoCenter",
+      "source": "legacy_migration_r51_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 9,
+          "exact": 4,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 3,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "remove_square_center"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 11,
+      "arm": "SquareNoCenterWeight",
+      "source": "legacy_migration_r51_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "remove_square_center"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 13,
+      "arm": "SquareNoCenterHidden",
+      "source": "legacy_migration_r54_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 6,
+          "exact": 0,
+          "fold_recalls": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "H",
+        "remove_square_center"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 15,
+      "arm": "SquareNoCenterWeightHidden",
+      "source": "legacy_migration_r54_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 10,
+          "exact": 4,
+          "fold_recalls": [
+            1.0,
+            0.5,
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "H",
+        "remove_square_center"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 17,
+      "arm": "SquareNoScale",
+      "source": "legacy_migration_r51_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 6,
+          "exact": 2,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 19,
+      "arm": "SquareNoScaleWeight",
+      "source": "legacy_migration_r51_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 21,
+      "arm": "SquareNoScaleHidden",
+      "source": "legacy_migration_r54_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 6,
+          "exact": 2,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "H",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 23,
+      "arm": "SquareNoScaleWeightHidden",
+      "source": "legacy_migration_r54_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 10,
+          "exact": 4,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            0.5,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "H",
+        "remove_square_scale"
+      ],
+      "target_pass": true
+    },
+    {
+      "mask": 25,
+      "arm": "SquareDirect",
+      "source": "legacy_migration_r44_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 9,
+          "exact": 4,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 3,
+          "exact": 0,
+          "fold_recalls": [
+            0.0,
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "remove_square_center",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 27,
+      "arm": "SquareWeightDirect",
+      "source": "legacy_migration_r44_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "remove_square_center",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 29,
+      "arm": "SquareHiddenDirect",
+      "source": "legacy_migration_r47_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 8,
+          "exact": 2,
+          "fold_recalls": [
+            0.5,
+            1.0,
+            1.0,
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "H",
+        "remove_square_center",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    },
+    {
+      "mask": 31,
+      "arm": "SquareWeightHiddenDirect",
+      "source": "legacy_migration_r47_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 10,
+          "exact": 5,
+          "fold_recalls": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 11,
+          "exact": 5,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "H",
+        "remove_square_center",
+        "remove_square_scale"
+      ],
+      "target_pass": false
+    }
+  ],
+  "source_artifacts": [
+    {
+      "folder": "current_minimal_r1_20260907",
+      "run_jsonl_sha256": "d2260cb406b5eccdcfca796c77dbc7fd08ef92d21b9d548d262a36cb03654ec8",
+      "audit_sha256": "6e6663c87e6dd3dc53696312cf71ab49962a859b9a0c8e69f2cdd81e6a4ba545",
+      "supplemental_sha256": null
+    },
+    {
+      "folder": "legacy_migration_r28_20260909",
+      "run_jsonl_sha256": "ace573abf15903d793a0a26465e520cc6f16ab29be30afa9745aee945a6e9917",
+      "audit_sha256": "a37f6e6b314f3305563e23f2c7863541c2b9140d070f553b13e2af63d647bd60",
+      "supplemental_sha256": "db75dc08e3cbc7b4f1cee64427a37c12c6b3a8e4e29dcf0304c801720950f7bb"
+    },
+    {
+      "folder": "current_minimal_r10_20260907",
+      "run_jsonl_sha256": "4d61b866dc67a8bcf2d4ad7f43677f0556a007c4d35d45952a3ffd6d776fa858",
+      "audit_sha256": "3a36a7f98347e51f509bf1647338b2e8968154f845a2749533c3dfb9266f2a8a",
+      "supplemental_sha256": null
+    },
+    {
+      "folder": "legacy_migration_r30_20260909",
+      "run_jsonl_sha256": "54b8af2c09b6d2e86eeb9963d78e30aef25a6449ed07a5a8578b2897035ea242",
+      "audit_sha256": "e1772669d536af16cdd791041067de257a39990312bb14bc63834020dbca5094",
+      "supplemental_sha256": "19527c8a94b8de668a80cc5038cffc1b95c2f97fe35358f74746832e0d89a513"
+    },
+    {
+      "folder": "legacy_migration_r44_20260909",
+      "run_jsonl_sha256": "d28824b9f7dde961a645f1b7585825e2368269cb01c985a3d9738580441898c2",
+      "audit_sha256": "b28c3cb38e6bbd8037ed08a29070fbc6d7f6501cebc4ff2850559fb89da2dfa3",
+      "supplemental_sha256": "34606cb1246fd6a7f7e983c09855963916a10b2d59c60eb439002bb6c8efb9bd"
+    },
+    {
+      "folder": "legacy_migration_r47_20260909",
+      "run_jsonl_sha256": "14c67f9e7e3b3955bea73bf50d572be269b2f8b6ad03257c6f6e873d441691d3",
+      "audit_sha256": "39d9dccab2a3cf04caaef5ed2064ae20a84e09a559ce6a5eb7ca74780c123eea",
+      "supplemental_sha256": "5fce5f5c8bebe937f0b675789678b7ff4b80bd841b06fb092b3c2d34d08e6056"
+    },
+    {
+      "folder": "legacy_migration_r51_20260909",
+      "run_jsonl_sha256": "aabe8c896dacd8dc23675de60ee5da5592beca725e7b7df18e2039a4625b5046",
+      "audit_sha256": "fc514de07aeda29a5b59acc54866abf58d021065f1d857df3dc1d5dcaa3001f0",
+      "supplemental_sha256": "bf02674883590c7ec8eb53d706c157a3308a003dca3a9297fb339cff83a808fa"
+    },
+    {
+      "folder": "legacy_migration_r54_20260909",
+      "run_jsonl_sha256": "eee037ec683fd1b7043bf8bda9adffb597b26b21f700a4e624ab5a5c23518418",
+      "audit_sha256": "0b90cd60ec152c3d0a55698bf0d58297017fae865ed895713120b36a11e4a2d3",
+      "supplemental_sha256": "48755154f6bcd35d3b2032dcdc0046f500a9b9ca65a595465fe60bccc1983085"
+    }
+  ],
+  "selected_candidate": {
+    "arm": "SquareNoScaleWeightHidden",
+    "mask": 23,
+    "factor_count": 4,
+    "proper_subsets": [
+      {
+        "mask": 0,
+        "arm": "M00",
+        "target_pass": false
+      },
+      {
+        "mask": 1,
+        "arm": "M10",
+        "target_pass": false
+      },
+      {
+        "mask": 2,
+        "arm": "RawDefaultWeight",
+        "target_pass": false
+      },
+      {
+        "mask": 3,
+        "arm": "SquareDefaultWeight",
+        "target_pass": false
+      },
+      {
+        "mask": 4,
+        "arm": "Drop043",
+        "target_pass": false
+      },
+      {
+        "mask": 5,
+        "arm": "SquareDrop043",
+        "target_pass": false
+      },
+      {
+        "mask": 6,
+        "arm": "RawWeightHidden",
+        "target_pass": false
+      },
+      {
+        "mask": 7,
+        "arm": "SquareWeightHidden",
+        "target_pass": false
+      },
+      {
+        "mask": 17,
+        "arm": "SquareNoScale",
+        "target_pass": false
+      },
+      {
+        "mask": 19,
+        "arm": "SquareNoScaleWeight",
+        "target_pass": false
+      },
+      {
+        "mask": 21,
+        "arm": "SquareNoScaleHidden",
+        "target_pass": false
+      }
+    ],
+    "duplicate_control_required": true,
+    "B_center_scale_dismantling_required": false,
+    "boundary": "Atomic center/scale removals counted separately. Minimum in this fixed20-cell family only; old RWPH and RWBP and their failed confirmations are outside this family."
+  },
+  "joint_discovery_passes": [
+    {
+      "mask": 23,
+      "arm": "SquareNoScaleWeightHidden",
+      "source": "legacy_migration_r54_20260909",
+      "metrics": {
+        "xor": {
+          "coordinates": 12,
+          "exact": 6,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ring": {
+          "coordinates": 10,
+          "exact": 4,
+          "fold_recalls": [
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            0.5,
+            1.0
+          ]
+        }
+      },
+      "factors": [
+        "R",
+        "W",
+        "H",
+        "remove_square_scale"
+      ],
+      "target_pass": true
+    }
+  ],
+  "R32_failed_confirmation_audit_sha256": "67b1178471c2c4cbd13c76e714a837e1c6c6478485f8a771b6cf836e0d3f67df",
+  "numeric_proofs": [
+    {
+      "path": "E:\\Projects\\NEW_Pruning_20251110\\results\\ablation\\current_minimal_prox_numeric_replay_20260907\\summary.json",
+      "sha256": "75f80f87de709db8a81daf5deee586bd21a78867e88ca55c9c3cbdbb5c9e7564",
+      "calls": 6000
+    },
+    {
+      "path": "E:\\Projects\\NEW_Pruning_20251110\\results\\ablation\\current_minimal_local_default_prox_replay_20260907\\summary.json",
+      "sha256": "a910436701dac6370a1ff1b189f4bf6eca979709cfb5d651b8c5bdabd3860566",
+      "calls": 1200
+    },
+    {
+      "path": "E:\\Projects\\NEW_Pruning_20251110\\results\\ablation\\legacy_hidden_dropout_prox_replay_20260909\\summary.json",
+      "sha256": "5bea0c933489a7e606151eaf7b8a9e6d63a6f7a9e41756211030350b46c3e295",
+      "calls": 2400
+    }
+  ],
+  "script_sha256": "b9a9e92807227e86ef173161ccda8fdd84593f4844d4d690eab85f45e6c5ed4a",
+  "parent_inventory_script_sha256": "a1feeffece203a17e9394964f92c6ad9afdcde1c6a8f62fa9455d90cf0c2cbe8",
+  "boundary": "All20 meaningful cells of fixed R/W/H/square-center/square-scale family. Each removal requiresR; both removals now count as two atomic changes. Other legacy families are not exhausted. R32/R53 not pooled or rerun. No arbitrary-value, globalminimality or independentconfirmation claim."
+}

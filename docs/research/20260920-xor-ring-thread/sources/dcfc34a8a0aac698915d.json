@@ -1,0 +1,131 @@
+{
+  "table": [
+    {
+      "arm": "StageWarm20",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.5322706295425043,
+      "training_seconds": 267.49624319997383
+    },
+    {
+      "arm": "StageWarm20",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.48590736354764724,
+      "training_seconds": 297.2747927001328
+    },
+    {
+      "arm": "StageWarm20",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5874169431735741,
+      "training_seconds": 266.7343539998983
+    },
+    {
+      "arm": "StageWarm20",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 21,
+        "exact_folds": 9,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.6154102556379009,
+      "training_seconds": 285.967060499941
+    }
+  ],
+  "decisions": {
+    "StageWarm20": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    }
+  },
+  "selected_for_fresh_confirmation": null,
+  "trajectories": 48,
+  "epochs": 9600,
+  "gradient_updates": 134400,
+  "default_promoted": false,
+  "empirical_screen_only": true,
+  "reference_epochs_per_selector": 120,
+  "candidate_epochs_per_selector": 200,
+  "matched_training_budget": false
+}

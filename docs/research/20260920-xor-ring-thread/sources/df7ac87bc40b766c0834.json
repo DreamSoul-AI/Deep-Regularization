@@ -1,0 +1,1026 @@
+{
+  "status": "pass",
+  "validated_checkpoints": 96,
+  "independent_datasets": 8,
+  "reference_checkpoints": 48,
+  "metric_sets_recomputed": 192,
+  "records": [
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "fd7d653e9fae54055b359ae99c825d63a64ad81cd8bc20e17587a2858f710210"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "1b590c7efb99d82c4a798badb979c8f7199421a6a7d8662d22112214f9f91850"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "02fe550b9696c345e363ca3934d5ed3fba0f5c1432837624766f04817e36a3ef"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "0bb58a1f21451b342a4ab603adc2aafd2a62a2316b11be4a12cf3685da5cd73b"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "5b8cfbdbc9dc6a9946bc8d767c169b981c22f23079c37ac94bd8ccd4c82fa651"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "96caba88fe3781f89ea7a270ce171ea1686828d454c8a9d5b41cc45745039401"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "4fa29a7e1d049359ba19d48ac1eb997f2694e0bc7f7278b3612772004287b96c"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "c07d47fadeb9bb987ca74a6a6df15d35f8b310c55c67bc08ec252c739805a8ba"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "07bda628f393817f408c3bca4a77a5a0b20185d50aa534a7ed7c8deec133301d"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b638b2bd5a673353d53c46d198a18efbf67fec260da1cea22cf7724e8cf3dacd"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "7108d5fb7fc1a87b0ea1e8f59379a29a76fd27c51c34e58d33f0a0b8cd21ee92"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "98a55215deb97b30cd4548c688298d029f94bfd3ac88787e046b7104a74c1f5a"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "4e1920bd64b42f87e6250af0f79653803619d74f60cb3f42c99ed2a8c4857617"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "8269f8e2d93b1df668cb575c3a06f39d0e393d8138eb896bc9c2198e2738b5a7"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "861d1178949cf1b63cae877630731dd8d01aa661e9317582e2ad641cad5f3d30"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b3e68edb4f64b5d4828388c52ed26abde3cd2982bba5c782915903cc36c7e389"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "f1b8afaf3ac6328564e7ed1eb03ab3394dad37b6e64fd0fa58906246ea8019db"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "fa8312042f1507d7afdf5356c8a51fd5e1154a584c23a2accf05db17f1d18bed"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "0e5c20c3446ad7947d017a3afe32683478aef61946bd487307ef988f44af2b34"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "2cda3966624195e2b159879f899b32da1f5d1dce6499ac0c36d213fda6468d01"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "1a527a87a92fdc805324adbc1ff208ecc607a521b59f1c865563c8c21ef9ff13"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "8e1135a47d3d6d66208d9285df8cc6cab23c1220fd949dd77723cf9b230bd1e2"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "629094d4469022b2f29e39bdc739e5f6160f8caba237abff9a2ba5975189c91f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "1f30931e9f1d8315efde7225d8151484d40d1654889d5ab9a489b9f0c055d725"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "6f9fcf6fee1ef3bcabe844afba90ba828c09da21aae27e743ca4815c22aebdc8"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "51b3f693d500f10bb15fc99bb46963e4832175bcc26bd16389df4b62691dcc0e"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "4a91635226eb156ce38f4138b18a97408821077c0649f9f65f3d7ad7ef896fc7"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b995de80c41992db8243ac964ab534e6cf4a5036d4bf9e326ed4930bd902ea0f"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "b5ab28fd45d43bd567a9bb041287b9024692ce04f35adeb28c4adc522974e901"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "ab8baaedefcba2168171436e2c7148382df9dbbedfc0ec53575470602dc2a81a"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "d95c1e02b81b8ecc8b9150b7d7e5a2936832d77cf255d6b0db6c0a9bde45469a"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "453b12bebdd0d9a0af5462c3188fc1f069eb2e6e10d7131de922d18d5f8bc7a4"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "99699f8f12994f380a47bc7cab462c8d2912122f70491fef7d1c3d18a026cc6b"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "6ffbd2e576c3c9cec763e426b0cb49874d2d487b2def6a918bbe51fe1336d53e"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "9b0f92b1681b973b90c94b5a4e026372bffc903960630472f02c6f6e166e9e2a"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b11d5faaed14644c73de6dc22efccf73f596ca93a97c3daf5e34d395094ada52"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "2e61a8bf1918b57833c0d041cad33c9f05d11f8b95fdd4d4bd504fff1bc6a4dc"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "06984a2aad96f233dd8433f013beac9194279848d438b80b2b24293c5300ae63"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "1d587662dd94e580231511f3d2e3e8082a4002339fefa9a37a2d86f497f6db61"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "5e5a4db2e813368782964462e8ec4e1bf182f9a637d3fd32c6e338ca63e0cf62"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "7ed6d12da75da36c826d33dac93cfe549dd6de26606f206e4df7f82063ada523"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "4a57036832525fcb96463fa9d9981401cbd2cebf53a0bd4e0d25b09f3c6f4778"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "beee65d95c22dcd19e8d21b8eb2eabb76575aa225b668b4cf03ca3e21a3ea7eb"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b010c856e0f17b16c16ab8f23863f3c665cbf0b157a455124dc096915fa2cbdf"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "902d3642d677156a568f8d1dee5506816fa7f02c5d085bfca25b2183beacee79"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "0c3b415c319ff1adc163d050674f6d9fe0d04307353f9256441c6ad308d849c5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "111cd50d25ebcf26aa355a8824e75b75a6419a6e148313decf91bffd3f038040"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "e5d3ed061bf58e4ff7265dfe4fe988ed502a4e533678fcd5fe4bd49dc0206eda"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "c00294ecc82fa0e61247556ea5bcf8e0f20d27d6208ed040b4a8667341f067e1"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "8490b2efbdd13481622feec8f43d45111a92a960589593a46fb97274d7c98df3"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "e764672c36ad39937ce659134997a4e08b4c2dfdf407fadb860f9d879870e123"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "c45b999586f33f9d885df31291e19caf048bb16ce91812cb5831b751e77589a8"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "75b6070ee4680adb0896f317851c7a5fbf9d76dfd899a57b239e5f22f284836b"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "d8298769e5da5c546f7d3a1dc49a66c8630bfc6592b004f1ca800c34881776b7"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "ad09153b02a510555fca1d435b9ac427bcd909f2a02b523ab842f3dea499c5da"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "18b3eec8bc8e0bd355a21a69c6bc29a88d6918d047c675b85c87b24d6ad55ece"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "dc2b7acc6e8f03bc9fc6221714b0bd724f750caa637fc44bdb139230e1702aec"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "1dd1117d2726535a341a7fc923e31b980eb2b20298c8cc96bb5851e6f19e3eaf"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "03f9a621b7282bd02f70788d5de7c7cb8ca3c3b207ee17d432c7d412d19c07fa"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "b9e9334e50576f4a6bba9105fe37ed51a1907444e1413fa0b5e994ed0db6dbae"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "f07a16ed40136b071c4890b333cf7b004edaa998546e56579adce9d8b2b1317e"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "e2a695fb9d07fcf8220363395b731282baebc6fb3d9814c0aca57879b5101d39"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "9c5fc064ddd94c095297955d1fb9f66dbb9f8b8f44ad026498003682fd87d9eb"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "f24e81c4403bac5fe2193585259b36c624830438f977d2a40b1ca7cc88fa8b18"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "3f4cbb04c48d10c10796aa54bd617e99aa32458e0ea10337627e67e179b836c6"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "596b6a15eb1287ef01a99fb7b5d0fc67583f1892c87654a6d10d2e2e33d81cc1"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "4555f5f55b97ddc3e92cf7ef0bd6dc7607e7d0f09e25ed9e784a32cf737cece6"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "66174b79fc6606d7f09f3c1491c9d5ad5eef9a00cd56edf8dfeb04d70571eb87"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "a0836cc7cd0dd71c1c4f6efe7b16906b3367693883115196a8bddc43e9664d0c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "639b0f9a58571bae53bd3eff93780a7a6ca79abf620c5df0c53fbf7cb5379608"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "342443354b52a92e8ee0c9b2b58e683123bbbf416846e5f4c8c0b0ae551d427a"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "621476234c5aaefe7ec2cfa8e5dc17a7840ed3c8bc6f1668a356a6dbc55257a3"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "c6ffc022370bc410f43fba36e993e2cd19b17ba86916ccab96edfcfd48f0e084"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "14cf5503661cbe5fd8a184cffe1bb4471aacd645bd6185a0b761914645005140"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "102467fae9271e2030c7c87cb24ff1d61c9bd58d24ee0a44da4cf01eb003ad82"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "8a63ee3ef20e61ff65cb3b2f891aa942092420c2d5a24e43f8a7550fd8676271"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "20d8de6598c0cf439d086b17a4563b655c19143905ec9b0532544898e0081b41"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "edabb6642f6b2ec45765319011c4ac9b7b5a0ffe3b3c4889c4c2190b4dac6a4b"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "4b2b195de422b419a276f999de2aaaa35b98ff96a3633e1d0fa005490f30a611"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "0a3aea33520d619f26dbbbab8d79dd70544b98bd7984b4452a7308fd13435385"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "1979c065595c9480ea96dce94455c6edd8a6b4aecc5a49e09517839442a3b31b"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "cc67fcd6d539840a9e36d32f96a558536cd416ae896c4f3d951f27d57aa28f86"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "2958244f54d7e19c4cbae35159ac01e0f253a60e5c3326ab34575443c83ea768"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "89ad075f5940f36f4e1401d40a12df8f905ebc8a48cb9ea0ec74be4dfa57cbda"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "538dae3f44715e87341e4c25d87b5d11d571ad749802e08054ab5c4a201601e7"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "2521418f66a19f55ffe78f32aff0e8790c847894382ad50094805a3f65392677"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "3836a4d471dc9f8da3d0bf5247385522ca740b1868d1b4339f5de4373fdf63a5"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "348381acc7ce98aefedca04b17134608eae57b31988fa5e050c6426746a2db6d"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "8fd5a9b1ddb0e52246f651648808b47fd54b92ac04fb7f8a0c9119ea2804bb4e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "90a4aeb3b67e7a3a0b6aefcf0c8423512627992c8c8020b0ab8fa2d12f4527a8"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "0758e5e9e07a465b28159bfec9177d0bf68f72a7c78378774ea9e6855185847d"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "f5b0e3e097625c5496512c8ee9c22e016977759599d7532443502ab2078f87e6"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "a1333503e87a757ef83d06e035bf4295be876ccb042ec278322811ce65b91c8e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "98e2aaa4a2c4d986ac076be97cad255fbef3d79f79aa658667e884ecb73a4b77"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "SlowPath"
+      ],
+      "checkpoint_sha256": "f89eb714e26d40c62f88a50513659eadeab42277de4585afe4b9a41347cc9496"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "EarlySlowPath"
+      ],
+      "checkpoint_sha256": "89008691b89ef0a3a7e09fc5e546a00e65cefc42e2e330dc67f3f31651bfc00c"
+    }
+  ],
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "source_hashes": {
+    "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "experiments/ablation/five_version_transfer_r61.py": "c505e8ec42398f6f07ae2bf58e4967b1ac1477d1e268f097652409e9feb8545a",
+    "experiments/ablation/r61_initialization_audit.py": "2e3d39ccf05cae315df5dadc403197a1e29911cf469576afb1e9a0dbc437f198",
+    "experiments/ablation/run_five_version_transfer_r61.py": "914ec79620bbcb636cd38c7c40913d911e3dc4d2044c8f05b348ed920176d7d9",
+    "experiments/ablation/verify_five_version_transfer_r61.py": "102b2a714767b39681e79baccb635d50e4fb5c6aff0e3d95393ff4a75a5b5817",
+    "experiments/utils/audit_five_version_transfer_r61.py": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+    "experiments/ablation/five_version_full_grid_r62.py": "cfd7803a2b7f8135d3cd4fd234148e067c60ee32c1885886b93dd9d9f27464f6",
+    "experiments/ablation/run_five_version_full_grid_r62.py": "bddff10660fda182415644ec1e6e16024e6d285db3b80d17af9f890de073f0a8",
+    "experiments/ablation/verify_five_version_full_grid_r62.py": "c38daf5362c173cdb77ebae8a72de309bb56997e662067c7fdbe2e3be91037c3",
+    "experiments/utils/audit_five_version_full_grid_r62.py": "d54f3e7cb8b83a28a1b1bc718c6b65a7fccf27fa125075a167c3bfa92954bb38",
+    "experiments/ablation/empirical_combinations_r67.py": "34d0f1f3824b874b4a3cf92f87ee2e8fe667d6f9ed9ceca14e6684a7fa3df009",
+    "experiments/ablation/run_empirical_combinations_r67.py": "ae645e69014b0abd0b0ae188bb21d359bc78f96a2bde23556a9b34190611a232",
+    "experiments/utils/audit_empirical_combinations_r67.py": "de4ca549eae0ebadf8087c440a3e8879a3d9925ecae89d9ece9b8c6f73eca775",
+    "docs/plans/PLAN_20260917_EMPIRICAL_COMBINATIONS_R67.md": "251596a21b462f47cbfdd3e35cbe67936334d30e10fb2f5bd7681c7759936258"
+  },
+  "contract_sha256": "e3b8bf23a185c4ee089509a1fee9f7b1c2bf432653d5c14a292db80a6289781a",
+  "summary_sha256": "d771b2a26239819e8a670284ad52debee73a0f4033021b6be0f13583766365fc",
+  "jsonl_sha256": "c6e828c93a446bde5d1179225ea690bd67ec50e2b1bf3dd335997012e1e8222d"
+}

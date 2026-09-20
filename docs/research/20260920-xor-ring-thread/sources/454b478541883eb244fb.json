@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "new_trajectories": 48,
+  "results": {
+    "xor": {
+      "coordinates": 23,
+      "exact_folds": 11,
+      "opportunities": 24
+    },
+    "ring": {
+      "coordinates": 0,
+      "exact_folds": 0,
+      "opportunities": 24
+    },
+    "ring+xor": {
+      "coordinates": 13,
+      "exact_folds": 0,
+      "opportunities": 48
+    },
+    "ring+xor+sum": {
+      "coordinates": 21,
+      "exact_folds": 0,
+      "opportunities": 72
+    }
+  }
+}

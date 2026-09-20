@@ -1,0 +1,184 @@
+{
+  "contract": {
+    "tasks": [
+      "xor",
+      "ring",
+      "ring+xor",
+      "ring+xor+sum"
+    ],
+    "instances": [
+      0,
+      1
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_samples": 1000,
+    "n_features": 128,
+    "endpoint": 12.8,
+    "permute_features": true,
+    "dataset_seed_base": 202609120,
+    "stage": "selection",
+    "authorization_id": "USER-APPROVED-WD-MINIMALITY-20260912",
+    "master_sha256": "24b3dee42e0089fea1bfefb8c405af221a038647ef3451754303e5b29e7b5380",
+    "selection_decision_sha256": null,
+    "new_selector_trajectories": 48,
+    "new_selector_epochs_including_warmup": 5760,
+    "arms": {
+      "Base": {
+        "warmup_epochs": 20,
+        "stage_epochs": 20,
+        "numeric_prox": "isolated_v1",
+        "mode": "raw"
+      }
+    },
+    "output_relative": "results/ablation/legacy_wd_family_r58_20260912/selection/Base",
+    "local_sources_sha256": {
+      "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+      "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+      "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+      "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+      "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+      "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+      "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+      "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+      "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+      "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+      "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+      "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+      "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+      "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+      "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+      "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+      "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+      "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+      "experiments/ablation/run_legacy_wd_family_r58.py": "c65d2597f74e6cf60f4e4e4669451838c953a273fe8bbbe86543ec915644758a",
+      "experiments/ablation/verify_legacy_wd_family_r58.py": "a39d383cb399f5aa84ca1b3a6ca935bb987d9274d474035c6b4018edf3b82ea4",
+      "experiments/utils/audit_legacy_wd_family_r58.py": "d5ae80b510cd70e950d11b75e777933ea45bda72a821b70f0b23082dfed890cb",
+      "tests/test_legacy_wd_family_r58.py": "e4b36c9d84a8c8ac69ebf12347cdb10f0bbb4ce6274c468561a543052e9d6c70",
+      "experiments/ablation/legacy_wd_family_r58_20260912.json": "24b3dee42e0089fea1bfefb8c405af221a038647ef3451754303e5b29e7b5380"
+    }
+  },
+  "contract_sha256": "76d218dd83985b73df9c9282acdc7b836609072180b9295f1726c95766e3a6fa",
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "created_at": "2026-09-13T00:01:27.106748",
+  "source_snapshots": {
+    "run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "run_legacy_wd_family_r58.py": "c65d2597f74e6cf60f4e4e4669451838c953a273fe8bbbe86543ec915644758a",
+    "verify_legacy_wd_family_r58.py": "a39d383cb399f5aa84ca1b3a6ca935bb987d9274d474035c6b4018edf3b82ea4",
+    "audit_legacy_wd_family_r58.py": "d5ae80b510cd70e950d11b75e777933ea45bda72a821b70f0b23082dfed890cb",
+    "test_legacy_wd_family_r58.py": "e4b36c9d84a8c8ac69ebf12347cdb10f0bbb4ce6274c468561a543052e9d6c70",
+    "legacy_wd_family_r58_20260912.json": "24b3dee42e0089fea1bfefb8c405af221a038647ef3451754303e5b29e7b5380"
+  },
+  "imported_sources": [
+    {
+      "path": "docs/plans/PLAN_20260825_PARENT_BLOCK_QUADRATIC_EXPANSION_V5.md",
+      "recorded_sha256": "16938c8b82046cf97982635db13b74c9a6396376324b946193003aac73c21f9d",
+      "current_sha256": "16938c8b82046cf97982635db13b74c9a6396376324b946193003aac73c21f9d"
+    },
+    {
+      "path": "docs/plans/PLAN_20260904_PARENT_BLOCK_QUADRATIC_V5_GPU_V1.md",
+      "recorded_sha256": "843294a441fcce48a89ec33111462db32a5fc0e131a2363fd6d5b872be0b23a2",
+      "current_sha256": "843294a441fcce48a89ec33111462db32a5fc0e131a2363fd6d5b872be0b23a2"
+    },
+    {
+      "path": "docs/plans/PLAN_20260904_PARENT_BLOCK_QUADRATIC_V5_GPU_V1_RUN_AUTHORIZATION.md",
+      "recorded_sha256": "6ec6e1a00dbd1ff5b44d5df34b994cb1f00bc7dc86a1f8c174201e6aa85b077a",
+      "current_sha256": "6ec6e1a00dbd1ff5b44d5df34b994cb1f00bc7dc86a1f8c174201e6aa85b077a"
+    },
+    {
+      "path": "experiments/ablation/parent_block_quadratic_v5_gpu_frozen_v1.json",
+      "recorded_sha256": "c41da86bdd82d77bc9c89ebe958eee0991429ab80f4f8b980a0b5ad2fef3030d",
+      "current_sha256": "c41da86bdd82d77bc9c89ebe958eee0991429ab80f4f8b980a0b5ad2fef3030d"
+    },
+    {
+      "path": "experiments/ablation/parent_block_quadratic_v5_gpu_run_authorization_20260904.json",
+      "recorded_sha256": "b969826ce05ab2cb1ce964c81843015ff1fbd6e853264e719b828f164a7ba511",
+      "current_sha256": "b969826ce05ab2cb1ce964c81843015ff1fbd6e853264e719b828f164a7ba511"
+    },
+    {
+      "path": "experiments/ablation/run_effective_gate_c_path_v3.py",
+      "recorded_sha256": "c948bea9ba04f4fc1da82811ac3099e17fe26dd95c612db9883adb35a0e841a0",
+      "current_sha256": "c948bea9ba04f4fc1da82811ac3099e17fe26dd95c612db9883adb35a0e841a0"
+    },
+    {
+      "path": "experiments/ablation/run_parent_block_quadratic_v5.py",
+      "recorded_sha256": "e600b0aaf8609c00abc2d1df2dd045c8aa0b982edeed609f54eb77855bd149c2",
+      "current_sha256": "e600b0aaf8609c00abc2d1df2dd045c8aa0b982edeed609f54eb77855bd149c2"
+    },
+    {
+      "path": "experiments/ablation/run_parent_block_quadratic_v5_gpu_v1.py",
+      "recorded_sha256": "295488880babb9012b2c75e3310ceac2778ea82b9daa45346384e843b00ec6db",
+      "current_sha256": "295488880babb9012b2c75e3310ceac2778ea82b9daa45346384e843b00ec6db"
+    },
+    {
+      "path": "experiments/ablation/run_scheme_abc_bridge.py",
+      "recorded_sha256": "9dda3a103ea68574428efe541d8f8c18e197ee11596e931d13700fdf25edb4d4",
+      "current_sha256": "9dda3a103ea68574428efe541d8f8c18e197ee11596e931d13700fdf25edb4d4"
+    },
+    {
+      "path": "src/admm_input_group_wrapper.py",
+      "recorded_sha256": "f52bf05d1773d87588b3da240b57c92c745e6456bbf791e69369c23c4e6527f8",
+      "current_sha256": "f52bf05d1773d87588b3da240b57c92c745e6456bbf791e69369c23c4e6527f8"
+    },
+    {
+      "path": "src/admm_utils.py",
+      "recorded_sha256": "c42881da970fe46d5a9ed326faebd4c4a50a9f0f1d88f13edb133368e8eb52ee",
+      "current_sha256": "c42881da970fe46d5a9ed326faebd4c4a50a9f0f1d88f13edb133368e8eb52ee"
+    },
+    {
+      "path": "src/data.py",
+      "recorded_sha256": "e676fa774f4b7194ae599e0508b2d2feb553ef4c76de9ea64fd9865388cdfb24",
+      "current_sha256": "e676fa774f4b7194ae599e0508b2d2feb553ef4c76de9ea64fd9865388cdfb24"
+    },
+    {
+      "path": "src/parent_block_expansion.py",
+      "recorded_sha256": "2675a88a0bebcb7b0b3ae99fa8899332af77d54a93e959acd6d4f7577c28cc60",
+      "current_sha256": "2675a88a0bebcb7b0b3ae99fa8899332af77d54a93e959acd6d4f7577c28cc60"
+    }
+  ],
+  "status": "diagnostic",
+  "xlsx_row": null
+}

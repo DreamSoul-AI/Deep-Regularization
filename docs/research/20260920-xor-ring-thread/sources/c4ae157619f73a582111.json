@@ -1,0 +1,1038 @@
+{
+  "status": "pass",
+  "validated_checkpoints": 96,
+  "independent_datasets": 8,
+  "reference_checkpoints": 48,
+  "metric_sets_recomputed": 192,
+  "epoch_observations": 11616,
+  "exact_prefix_pairs": 48,
+  "records": [
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "1ca1fbdaf300065ae7786dc53d47e7e80d1e69434798e3fccfc868dde27faea8"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "f4a9a40817947207b840681c56e69ab34e0364439a5d1059ed16cfdbad539c15"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "215ec5cfe93eec1aa1c79e798a25c3bbd2c082e54857091b92a393aa3237bda8"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "e4c5221c6a18ef8ebf928ad66b3535f4828ecbcd893c5fb81b5e162a19183ea5"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "486565730a4df435284bcc209ef7bf6a4b007c1f3dd32652f15ad82c104d3b2e"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "bbdfad93ab9a63d448e9a94fafbf40f53620c4b32cd4ace1a691ae71783f0fb0"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "19e8b6cf6136b20e7555b66d5b00c294595d063a41016f018e45bf85a24ac0ac"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "94b60c291cb5e867afc7f232f217f2ed638fbea263f6b1b60fde9501a77b5145"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "27381e659df3082195fdd4fafbb088a4ec35f190c5f94cb0678602fbd196fa0d"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "8277e874b7d4d76277e7d7e34217fd5c6aecccb79a26f8c8dc2ad57c5f1e4fe5"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "3ba9b056638c12ba65ca16be470997fd9a8c8e61a1287c043f70ea50554f3f39"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "3ec938b866f5b7cb9efa73be103dd0ce173dee6418d231e75717ea680d4ca3e3"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "01bb4d835fd0a418f65872243e55ceea8fbde49585e01c5aa0e29e0fe03f73ee"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "48665a1fcbd67c31b7edd411a47612888d492c47a80f911996f06483ee1b4baf"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "90f26084e4a180bd020251e8d59f4be2279c3a588604eea4535f22d4ed077b44"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "2f654b813feb7466282f6ed2e8193ccaea553795492322886162331fb81d970c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "073bd874584c097b31851f03059d3d22447519d7959695cb5c69d5e44fba2a0f"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "1416bc915ebe5205963bc0725e985243b7174810df9a86120f1a206b85f2ea57"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "f9f4c4db6d4349d7ac64f93a6b685196f38798d42d8ea848504562cf7690d46e"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "9e2b5dadefb3adfde58e7b0b6e4722b7938c77ea1dcfae167e94a2f83b5e5bab"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "3e2db75969a4b87eb0c46f1fe8d083f255474d2afeeed07459eb705ddad9200d"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "4341f98e40276fb3ec64205174dafbac6b98ffcf01f460b1f0a3075f3381b430"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "127b766830b111641db17931117ec0cc1961c9db2e72ac40fcec40b5ebb5846c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "5cb7ebe1109d590103b686f2389be28083a799580319194a9e2514a0b3d38522"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "f220995d23923c328e3d595dc70cbee6f80985d7233ad16258fe70483a3fb524"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "15ae9c4f5fe9d87000dfa56d52fb35c938597f56cfbac8893142a55796f2a86d"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "f88841bdf370c1843e9269759dd0ab9d1a2915139943f9d03df76b1b2bc3fdaa"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "8b375c1b216d305d1736dc6a5c0129214888245f9e1c1657f37a2cc7ab28fbbf"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "ad72c1296565b2b9dd02abbef0c3447838069dc5a1760d2cf4e7d9d2c6488b00"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "0c037ab5602cf3716fc52522bb19ed5fd6092120886a971bde3a23d25782888b"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "d5b9475173f5d60de0d1872d5bccb59284a2b66c41bf74caec5d12e01a4ab9c5"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "bcf177cbb35a67dd3e6d4d8109eb19d2b4afa666f70dd493ec44346f46933c78"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "e187eccc9ed6cceeaaf90aa2eb5e7ccab1c19127dc495dc833fbbbdd24232194"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "bbc0a94e52bb630293551b8c80c2ab66c8da41d4d0cfd5ad315e697491fb33f8"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "8675f323ecec487dd58d570bde1276f7df74dec4c7b69a5fccfd4e52a1d2b634"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "897e8d86cb8ee6660accaccca1ed07dbd0358c90aaa8ef8ecfa2b03fab6ce981"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "27a59581b2b3c1e15d31af5331e20b4f7b24dac2592d0186f416c0f28346274a"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "d1c2622a4897990a9de644bf7cb8fa049b9dee96198455008b6d33d8b43c7ea2"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "3097a091e4d43f9613c0e795bad5081adae04ce5d173940923dd5cb246d589a1"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "200fb925a660a5b97e7a5cb74fcdcff41285e1ed8ff5fa8f4da2a72a92735152"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "a0751b258eafbc4bd195a40611e6df49521aa7f1cf2747fcb7cd8c51fbd82cce"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "10b22f5da9143627672494065530f8551c36399e003f1da544e825887e803d28"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "ea91ebd17d8b59bfc2bfb1886ab2d43071db57f3bdf6d9094e3dd3bde441f982"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "a76a910a10febd1af3b4b75581e610a9032d8836363727269442b625df29f35c"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "11e351e815169a91359eadbf9770a1b67655d670dbb142445f138bd466c33a7e"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "75feca7455661c05f27c801afacb860ea9581f5e55d2c061935574b3f229b1eb"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "4b739c7fe6efb2baa0230d72a6919842712367a4b8a61740863278484f26ffd1"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "a2238fe5641afdd57fd63704fa830aecd980d40583286f6a8e706f6adf086815"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "52bdfa3d49aa3233ecd481ecbf06a2b171e57e08a37de2bfaa466ab20b82065e"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "a8bf83dcef5c26c166d50ed8e55f12000dbe7a0eb84a7474140726fd7fdc0b35"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "7a9a8bc4c4e37c6cb54649d4c67c270867fee1470ecb2bac51ae65fab0df39ea"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "ba4869de3d0738969c3637135fbfaa5de94449bb08cfb69eaced46ef41be3b5c"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "c5ff1013c2e8312e8fe757c3e3437c6707157c1251ba199b6c3e248396b894ad"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "baea6561202c5d28b0f20a01f0cd464b2cadbbb89abcf3b912b41bd16be8f9f3"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "1fdba8c5f9395142275667b57042cbf93d3a2769bf4065735f573255a0551f24"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "491f2fd736c239d2c4767645c7ed0843d3c51acdbbc315684a456d1cc3745440"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "d8ea262ffc587a350ac5e6830ba376d1c5b9e02ea70afec6a17807564aa4bb1a"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "9195f202b152ca4698e587ea37923106e371dcbc0c5b61c3bf1f017f74f945f2"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "a0d001227b089684223b8980af0be137d15125dc84e34ae52640fab140f565ea"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "1fdd5d06622eea3de868ef36939d85ba4fddb827c43a011f8c32fa8de24ba213"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "4ea1a292ff3cee6f702839fde769bfc30d6205eabf5ad9cfda15b102ca6afe75"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "2907125a5750babe2f940325712daec5bd1ba423edff806a11858d0bdc193a8f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "da478c5095e6e097d0d1c4b990eba7f05bd4f0602568f22827339be324d4e2bf"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "dc3301905dedb1817de8f9cbd9db826b90ccbcfecd8f18b843fdf366f776c287"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "ce6052edefcd90f3b849d4e5e08b64dfb68308b0d33dd57eb6cd3d4fd7ac79ff"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "84a34328294eb66472f50da1067a436316275a80d1339d3b9a37048d010abad9"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "6cf6935332eccd2b8fa0df5735a8c00e13c6906231a2d016274b379310447aad"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "b6e19ebe574ae7bbff4bfb9b0b3f13bc37d761d5e5ad81f120dfd247431f9f68"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "63d2aacbbae44aec94f9196d226ce84d1eeb2028b39c8f941897997345a74fb8"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "92486caaa9d8b047ae2410b64ce01ba9a5fe94c58092d03353eb4d9731e0720f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "165f2ab5f36b878c95f3da239b3450da999cbd91d44d9ed9d10a76723c274356"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "c485f694bc4450d633d952fbd352af544812d8da7f769a34c82997a53384c037"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "33257371202b90b9c3cce822a62065512ebaa337dcd276d09f83ed2191dac61c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "7486e01640c133bef5e7f431ef8b8a7e22bd5fd3398d9eea44a2492e2bd04ab6"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "6a0594881bd891e1798bd6a8692438823d6e54fbe0d575f7e4b9b8a69740bbdf"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "7d818457d1515b33d2d6863d38c63e2a8db863bae7f813b055be38960750fcdd"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "d6a7259c8d3e04416f4307bade4a0df8f42780d5836c275c005ee70d3daf7be0"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "7fd33fa6bbcc81c4e0d7879f40067c7de5e4df5a9482073b2733dd53e0d4d775"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "862cd039ec3236a6afaafaa6f063f46a35669fc2d6d98cebdf1a6980101d7d8f"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "e63d2b2774b545a0be8a147b68bc37b7805fc8e39b7c3f213547bcdfc28595f8"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "42197300657f362b7259c62c6c215e0888eccfc75dd11df16d5fed1a144e6f64"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "7227af8976b1125bf2122b1e9bc1db5012fa5b400f459fbb83502c3ce608a3f1"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "1df6caab502b564a4f8897611e42a7e13bb8f6a4a37c32ade4d2cc64199d66c4"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "0459613a206fe6aabbe3df31530cd91d7abeb2a9013d2d0b994ce84106096ec6"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "dc2c64c150386c72d80f171b9f475744900d50e1bfe1369874ce59a79b2be3e9"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "1b5f7ac10b1c48698b90a839ea979c09709b3f55918b279b07823753cf28b646"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "0ac3db4ea6ca6fa3a4101c0013015bb6c542dc8d24e2c8ed3c0e497e3789793c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "00a22fc6fc5aac44d05c29e11010294ae6543b9e997954507926e267ca12b43c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "cd1057c7a03c57176e27870773c7739a6a7a21f93b85ba9d027e8140103876ba"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "17fd44e1ba98cab66dd87b5a4b4b9c28f38af7843e84ec01b4745a7930df0ac5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "6c2c0092818ff884eb95bdb2bc971ff205a853ef0f6678a0b8125e325acf4f7c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "b1f47bc660b9d0606aab0d1d7ae4eeef94616566cc7a950f85ebcb0ca09e515b"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "a7b6d03811b074b08cc6ae71dbe3fd06cd1e66c5ab6c9480ec74ff2d69405103"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "4ddd744c1d7cabaec3a68d2a089f52f2771d97ef172c0f2bb8ca59d860b2486d"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "AdamReset"
+      ],
+      "checkpoint_sha256": "ab021473cf53d6eb5a254a1e2bba26281910cbe51e23704c990f9f42791175fe"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "AdamZUReset"
+      ],
+      "checkpoint_sha256": "6505ce93306ff29cbefe4721914f999fb5dffdc5c24ab004fee300168a7c0037"
+    }
+  ],
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "source_hashes": {
+    "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "experiments/ablation/five_version_transfer_r61.py": "c505e8ec42398f6f07ae2bf58e4967b1ac1477d1e268f097652409e9feb8545a",
+    "experiments/ablation/r61_initialization_audit.py": "2e3d39ccf05cae315df5dadc403197a1e29911cf469576afb1e9a0dbc437f198",
+    "experiments/ablation/run_five_version_transfer_r61.py": "914ec79620bbcb636cd38c7c40913d911e3dc4d2044c8f05b348ed920176d7d9",
+    "experiments/ablation/verify_five_version_transfer_r61.py": "102b2a714767b39681e79baccb635d50e4fb5c6aff0e3d95393ff4a75a5b5817",
+    "experiments/utils/audit_five_version_transfer_r61.py": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+    "experiments/ablation/five_version_full_grid_r62.py": "cfd7803a2b7f8135d3cd4fd234148e067c60ee32c1885886b93dd9d9f27464f6",
+    "experiments/ablation/run_five_version_full_grid_r62.py": "bddff10660fda182415644ec1e6e16024e6d285db3b80d17af9f890de073f0a8",
+    "experiments/ablation/verify_five_version_full_grid_r62.py": "c38daf5362c173cdb77ebae8a72de309bb56997e662067c7fdbe2e3be91037c3",
+    "experiments/utils/audit_five_version_full_grid_r62.py": "d54f3e7cb8b83a28a1b1bc718c6b65a7fccf27fa125075a167c3bfa92954bb38",
+    "experiments/ablation/empirical_combinations_r67.py": "34d0f1f3824b874b4a3cf92f87ee2e8fe667d6f9ed9ceca14e6684a7fa3df009",
+    "experiments/ablation/run_empirical_combinations_r67.py": "ae645e69014b0abd0b0ae188bb21d359bc78f96a2bde23556a9b34190611a232",
+    "experiments/utils/audit_empirical_combinations_r67.py": "de4ca549eae0ebadf8087c440a3e8879a3d9925ecae89d9ece9b8c6f73eca775",
+    "experiments/ablation/five_forward_ladder_r68.py": "99abf8a15f2741e041a55f7141e66769aca4a102983ccc7266c2840c91eb42f7",
+    "experiments/ablation/run_five_forward_ladder_r68.py": "2a387d60c4db584199b84fecd405d499ad5326d37fa3949e4ec6b8d7571ae43d",
+    "experiments/utils/audit_five_forward_ladder_r68.py": "c99ae074901829de39474d6ef48ec804151e022cadc7a3d52d65a9177107bbd1",
+    "experiments/utils/report_five_forward_ladder_r68.py": "61ff4c4d8828e5d990947f3a48df2140f1365449276b1c7aef2e48d2e57103ec",
+    "experiments/ablation/legacy_adam_phase_restart.py": "0aaa1f20a22581c6b8ac339f9156b6970a44879518ab30f109c970426e037ea3",
+    "experiments/ablation/legacy_zu_phase_restart.py": "579b34432352660f025f1b9f29765284a548e0e06013c5b49fdb824fca9db339",
+    "experiments/ablation/five_stage_state_r69.py": "86a4093dee04f75378269deb9a7727a64bcc15e17a656e985afe2e7d9864cd3c",
+    "experiments/ablation/run_five_stage_state_r69.py": "30b752123328ac73ad13ac0253b8ca06930ef4ed969fd8035d2d15988207a676",
+    "experiments/utils/audit_five_stage_state_r69.py": "141a59fc8135e3b0b531dc22581986dfd9c0ad9a2f8d3ca9c6dd0b3b65ee4871",
+    "experiments/utils/report_five_stage_state_r69.py": "63c4c7b17060d988fd5b6cca333bd083a9fe852a4150c684ba5400aec659775b",
+    "docs/plans/PLAN_20260918_FIVE_STAGE_STATE_R69.md": "33b2af84394d34c4b4aba509766083d5b44645f13a02a47ea7f11aa06da4be64"
+  },
+  "contract_sha256": "e14badd0b9fe17fa15834f1436cc64e0baf9f94345b8f16774bb6d1b85867f5f",
+  "summary_sha256": "adfc38a541b8b8de76c47fb235e4d8d5c3f2aa2134143bcf9c94df485d998b66",
+  "jsonl_sha256": "1a523caaddac2881649a4e8a96b2c3cc8f0bfdfa8a985a597c344939c7d866fe"
+}

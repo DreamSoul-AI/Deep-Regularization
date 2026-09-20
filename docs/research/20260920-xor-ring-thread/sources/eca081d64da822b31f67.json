@@ -1,0 +1,53 @@
+{
+  "status": "closed_audited_full_grid",
+  "completed_selector_trajectories": 360,
+  "selector_epochs": 43200,
+  "benchmark_failures": 0,
+  "retries": 0,
+  "cumulative_audited_selectors_before_R63": 3588,
+  "successful_gpu_fixture_trajectories": 10,
+  "five_grid_cells": 42,
+  "reused_R61_cells": 12,
+  "new_refits": 0,
+  "default_promoted": false,
+  "version_verification": {
+    "status": "pass",
+    "version_id": "GRN-FS-Five-v1",
+    "version_sha256": "e0b431aaa8662962cdb2dc4188e5ec0be0f9609a83899832c62b3c5c08348518",
+    "checked_files": 145,
+    "checkpoint_files": 72,
+    "preset_equals_r58_m31": true,
+    "original_gate_passed": false,
+    "new_training_trajectories": 0,
+    "default_changed": false
+  },
+  "source_contract_sha256": "df6d67700b803f699e9dad5f9c0dfbf4a4355e02125e2ed78d19c080a09a2c90",
+  "audit_sha256": "eb4725f80234fd2aa41d3abb2637766476f04741f6f76f3e01da7e6b203eadfa",
+  "independent_audit_sha256": "5e1f0b94d926d912dd54f0d39a466fdb9ed2108cfe6b47367075afa00b1e1e9e",
+  "artifacts_sha256": {
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_fs.png": "2e43f853d33d228580674fd870fbd9c60eb0e184160403b9e865e653c3287cce",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_fs.svg": "4e2fbce82205452f698c8df56468c393cb4a29f46d253deac2ab3bb3c990c322",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_fs.pdf": "2bb96e21d56300f220a89cd4d12bbc1f27aba4397d9ab498963271b25d3b705e",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_attribution.png": "7399217d44198e58f5c7168b7dce08901ec368403613dee7d1359574af9d5598",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_attribution.svg": "2e9b5c97a9ea56990adb48fc415534a6c9d114155650ba9e8982127935a55615",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid_attribution.pdf": "73b14fa4c5697699799953ca03b12afff18fe827c175d98fada3b5a7de304336",
+    "docs/analysis/FIVE_VERSION_FULL_GRID_R62_RESULT_AUDIT_20260916.md": "6579b792f9b5e37c885e7e615a68b92fd73d7599ac6ab54f6be9a5d9d914c77d",
+    "results/ablation/five_version_full_grid_r62_20260915/full_grid.json": "4682e24c0dccdb4a9053cf92a65640ccb900a0ed4be41f95248a961961f4e76f"
+  },
+  "report_source_sha256": "3c34c544abc12772bdb086a7cc79bfae222249d7019b6fb95c4a0687fb3f98de",
+  "visual_review_revision": "Legend corrected to Five-v1 (R61 + R62); initial figures and closeout retained in figure_review_v1; data unchanged",
+  "secondary_variant_footnote_revision": {
+    "time": "2026-09-16T02:37:47.008640",
+    "preserved_previous": "figure_review_v2",
+    "reason": "Restore explanation of retained CancelOut softmax secondary-variant asterisk",
+    "new_training": 0,
+    "figures": [
+      "full_grid_fs.png",
+      "full_grid_fs.svg",
+      "full_grid_fs.pdf",
+      "full_grid_attribution.png",
+      "full_grid_attribution.svg",
+      "full_grid_attribution.pdf"
+    ]
+  }
+}

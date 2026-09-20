@@ -1,0 +1,520 @@
+{
+  "status": "pass",
+  "validated_checkpoints": 24,
+  "paired_comparators": 24,
+  "run_jsonl_sha256": "27603e426c337e4fdf5ee17a3c5ed53cc791936d4a3b7173f5640e6315f52c8c",
+  "base_audit_sha256": "36abb8968abe59c5affb3e2033c3beeffdf87ca7f852e9fed421b7f1c4d0d799",
+  "auditor_sha256": "2928d160f1e2243e847d738877ede1cfae2473cba0c5b2127db510592193308e",
+  "original_base_auditor_sha256": "24bce2ff14376531c4d1422c9eb262258ee0d9913383a2d68abc7b02518dad20",
+  "private_base_audit_change": "Only expected state.weight_decay literal: 0 -> .001",
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "checks": [
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 0,
+      "checkpoint_sha256": "2a67d53417f0acfa5173f4c2122e426b57c53566267a6ed3469a53e76a9e13e0",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 0,
+      "checkpoint_sha256": "0629172887fc10dcc3b4a46f0653a3d2cf4d0a19bd450eefa182f751b30953b3",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 1,
+      "checkpoint_sha256": "6502bdd88d306e9ac3da3ba19e03779a54f5a36d756ea9853d18a3ad8fdcb64a",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 1,
+      "checkpoint_sha256": "1b50b5632872ba836c10d153542246fed00b7cd51bb9c9d34829639c261fdd3a",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 2,
+      "checkpoint_sha256": "6799759cd71ceca5a82a5a8fa919ed311c24e9e8abd61384af35fdfe057e45cd",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 2,
+      "checkpoint_sha256": "49829caea978eb447c97f37c98197d684f8dd67f730438d65ffdcf1305177d91",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 3,
+      "checkpoint_sha256": "074fb8b25a25aaa5a8f2a90ed7baf931e41cbc5feae91d02e8403fc544aafdcb",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 3,
+      "checkpoint_sha256": "971f0fd638efe175b35827b18c40d9bd2ffb6d06dc2e990044871ec9a9a2a72f",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 4,
+      "checkpoint_sha256": "bb9d091753c388117001f65e6667bdf032157fc5d525971e5c1d7cb64b07c935",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 4,
+      "checkpoint_sha256": "6be8cb4b80654ced72c6a1d4a5727422accbc3fcc43d35656c9f005db12f019c",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 5,
+      "checkpoint_sha256": "d151ded38e26733b6eea14bc626f19fb9db0a76bbe7f484e8ee1f043cfd807d6",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 5,
+      "checkpoint_sha256": "ad777393d21209d685c6edc3cc2c44d567220500531222323277c9481c786a5b",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 0,
+      "checkpoint_sha256": "528fde57490705fafc236bf7e23a03162e6e26d60c88c893ccad23118d7d7e75",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 0,
+      "checkpoint_sha256": "556ec98b39d00b3776b3922bfed2cc128c836046e112cbc8c3a62a74117a9ec0",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 1,
+      "checkpoint_sha256": "9e29525abf66a5cff6c810541f3ad9d9c44cd537d68c309c4da69396b648be84",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 1,
+      "checkpoint_sha256": "8baf3f249e87ab1e9054442c05ea14220f96832bbd2149b676280d510b4ff4ab",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 2,
+      "checkpoint_sha256": "020a7e268d9f4b84804b8c0b7983bd912202d8f3e007e3cb73769ffdf21ebc85",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 2,
+      "checkpoint_sha256": "7e0a6bbe9284ca6236491d6860a82f59aa882386a8d8daf316312af9ddc478c9",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 3,
+      "checkpoint_sha256": "8bc0563e1e3edf1be25f3f769521afe45731e2ed8327df0f97071154ae78d860",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 3,
+      "checkpoint_sha256": "161e4239e69cb53ff9bb4947cfa310db169fab81e5d5650a87f09cd280adcf67",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 4,
+      "checkpoint_sha256": "7edde0a73d9913e49cc38fbc4bb56c60158a2780961090e315040fe4f81a3a8f",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 4,
+      "checkpoint_sha256": "5d9a9ccd160df41c510f94c472aeb4c24608f091e7796525becd848ee2801379",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 5,
+      "checkpoint_sha256": "3c79015e6c5a6e500fbbe371acdaf1a059332ccc48db4f6591ebe5c39c754cbe",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 5,
+      "checkpoint_sha256": "e9d36f7aae5f7f73e75ece08cd1b5a817c1f5f2ef9a1f001ef02c8ca5248955b",
+      "data_initialization_transform_pair_exact": true,
+      "warm_unused_admm_groups_and_steps_pass": true,
+      "effective_gate_deletion_H_and_test_metrics_pass": true
+    }
+  ],
+  "paired": [
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 0,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 0,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 1,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 1,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 2,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 2,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 3,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 3,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 4,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 4,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "xor",
+      "fold": 5,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "xor",
+      "fold": 5,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 0,
+      "zero_WD_coordinates": 0,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 0,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 1,
+      "zero_WD_coordinates": 1,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 1,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 2,
+      "zero_WD_coordinates": 0,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 2,
+      "zero_WD_coordinates": 1,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 0,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 3,
+      "zero_WD_coordinates": 0,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 3,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 4,
+      "zero_WD_coordinates": 0,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 4,
+      "zero_WD_coordinates": 1,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 0,
+      "WD_exact": 1
+    },
+    {
+      "arm": "RawWD",
+      "task": "ring",
+      "fold": 5,
+      "zero_WD_coordinates": 0,
+      "WD_coordinates": 0,
+      "zero_WD_exact": 0,
+      "WD_exact": 0
+    },
+    {
+      "arm": "SquareNoScaleWeightHiddenWD",
+      "task": "ring",
+      "fold": 5,
+      "zero_WD_coordinates": 2,
+      "WD_coordinates": 2,
+      "zero_WD_exact": 1,
+      "WD_exact": 1
+    }
+  ],
+  "aggregate": {
+    "RawWD": {
+      "xor": {
+        "zero_WD_coordinates": 12,
+        "WD_coordinates": 12,
+        "zero_WD_exact": 6,
+        "WD_exact": 6,
+        "coordinate_gains_ties_losses": [
+          0,
+          6,
+          0
+        ]
+      },
+      "ring": {
+        "zero_WD_coordinates": 1,
+        "WD_coordinates": 0,
+        "zero_WD_exact": 0,
+        "WD_exact": 0,
+        "coordinate_gains_ties_losses": [
+          0,
+          5,
+          1
+        ]
+      },
+      "joint_discovery_pass": false
+    },
+    "SquareNoScaleWeightHiddenWD": {
+      "xor": {
+        "zero_WD_coordinates": 12,
+        "WD_coordinates": 12,
+        "zero_WD_exact": 6,
+        "WD_exact": 6,
+        "coordinate_gains_ties_losses": [
+          0,
+          6,
+          0
+        ]
+      },
+      "ring": {
+        "zero_WD_coordinates": 10,
+        "WD_coordinates": 12,
+        "zero_WD_exact": 4,
+        "WD_exact": 6,
+        "coordinate_gains_ties_losses": [
+          2,
+          4,
+          0
+        ]
+      },
+      "joint_discovery_pass": true
+    }
+  },
+  "boundary": "Reused discovery folds; not fresh confirmation/minimality or frozen-objective equivalence. R32/R53/R56 closed; no promotion."
+}

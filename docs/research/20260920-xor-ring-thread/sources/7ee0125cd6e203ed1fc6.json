@@ -1,0 +1,206 @@
+{
+  "protocol": "FIVE-FORWARD-LADDER-R68-20260917",
+  "status": "diagnostic",
+  "authorization": "User approved the joint empirical route and corrected direction to current Five first, adding settings incrementally on 2026-09-17",
+  "arms": {
+    "LegacyC": {
+      "warmup_epochs": 20,
+      "stage_epochs": 20,
+      "numeric_prox": "isolated_v1",
+      "mode": "local_quadratic",
+      "restore_default_weight": true,
+      "hidden_dropout": 0.043,
+      "remove_square_scale": true,
+      "legacy_weight_decay": 0.001,
+      "r68_c_path": "retained_dimension_scaled"
+    },
+    "LegacyCStage50": {
+      "warmup_epochs": 20,
+      "stage_epochs": 50,
+      "numeric_prox": "isolated_v1",
+      "mode": "local_quadratic",
+      "restore_default_weight": true,
+      "hidden_dropout": 0.043,
+      "remove_square_scale": true,
+      "legacy_weight_decay": 0.001,
+      "r68_c_path": "retained_dimension_scaled"
+    }
+  },
+  "cells": [
+    {
+      "dataset": "ring",
+      "n_features": 256,
+      "instance": 0,
+      "data_seed": 313409150
+    },
+    {
+      "dataset": "ring",
+      "n_features": 256,
+      "instance": 1,
+      "data_seed": 313419150
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "data_seed": 203709610
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "data_seed": 203719610
+    },
+    {
+      "dataset": "xor",
+      "n_features": 256,
+      "instance": 0,
+      "data_seed": 303409150
+    },
+    {
+      "dataset": "xor",
+      "n_features": 256,
+      "instance": 1,
+      "data_seed": 303419150
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "data_seed": 202709610
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "data_seed": 202719610
+    }
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_hashes": {
+    "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "experiments/ablation/five_version_transfer_r61.py": "c505e8ec42398f6f07ae2bf58e4967b1ac1477d1e268f097652409e9feb8545a",
+    "experiments/ablation/r61_initialization_audit.py": "2e3d39ccf05cae315df5dadc403197a1e29911cf469576afb1e9a0dbc437f198",
+    "experiments/ablation/run_five_version_transfer_r61.py": "914ec79620bbcb636cd38c7c40913d911e3dc4d2044c8f05b348ed920176d7d9",
+    "experiments/ablation/verify_five_version_transfer_r61.py": "102b2a714767b39681e79baccb635d50e4fb5c6aff0e3d95393ff4a75a5b5817",
+    "experiments/utils/audit_five_version_transfer_r61.py": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+    "experiments/ablation/five_version_full_grid_r62.py": "cfd7803a2b7f8135d3cd4fd234148e067c60ee32c1885886b93dd9d9f27464f6",
+    "experiments/ablation/run_five_version_full_grid_r62.py": "bddff10660fda182415644ec1e6e16024e6d285db3b80d17af9f890de073f0a8",
+    "experiments/ablation/verify_five_version_full_grid_r62.py": "c38daf5362c173cdb77ebae8a72de309bb56997e662067c7fdbe2e3be91037c3",
+    "experiments/utils/audit_five_version_full_grid_r62.py": "d54f3e7cb8b83a28a1b1bc718c6b65a7fccf27fa125075a167c3bfa92954bb38",
+    "experiments/ablation/empirical_combinations_r67.py": "34d0f1f3824b874b4a3cf92f87ee2e8fe667d6f9ed9ceca14e6684a7fa3df009",
+    "experiments/ablation/run_empirical_combinations_r67.py": "ae645e69014b0abd0b0ae188bb21d359bc78f96a2bde23556a9b34190611a232",
+    "experiments/utils/audit_empirical_combinations_r67.py": "de4ca549eae0ebadf8087c440a3e8879a3d9925ecae89d9ece9b8c6f73eca775",
+    "experiments/ablation/five_forward_ladder_r68.py": "99abf8a15f2741e041a55f7141e66769aca4a102983ccc7266c2840c91eb42f7",
+    "experiments/ablation/run_five_forward_ladder_r68.py": "2a387d60c4db584199b84fecd405d499ad5326d37fa3949e4ec6b8d7571ae43d",
+    "experiments/utils/audit_five_forward_ladder_r68.py": "c99ae074901829de39474d6ef48ec804151e022cadc7a3d52d65a9177107bbd1",
+    "experiments/utils/report_five_forward_ladder_r68.py": "61ff4c4d8828e5d990947f3a48df2140f1365449276b1c7aef2e48d2e57103ec",
+    "docs/plans/PLAN_20260917_FIVE_FORWARD_LADDER_R68.md": "a4ff8d3ea6c9a47865f27fc10d33e5c86b3d05b21006d8c06a0375db6ca902c6"
+  },
+  "references": {
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f0_Five-v1.pt": "9d48f1ea04834b5a04481682c913339cdacbe7519cf363ea334e35efc18f1d8e",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f1_Five-v1.pt": "72214f029aa6a1cb86ecd7fed76235d314b37ae13be232bf96e63e4f1810deae",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f2_Five-v1.pt": "cd5acf910a9ff31bf13b07fd8723091478d8fd92bb0caf2f08fda39655e6d607",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f3_Five-v1.pt": "62a06e794cd6a7aa650b89ff106525490cce0b3fa783712e72b1591f5ece181f",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f4_Five-v1.pt": "375ec6befc34d15c400b8f1c5fa65142d10188d97b5328119392c000a1d428a4",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i0_f5_Five-v1.pt": "8158dbae2fc1104570d1c93849099e19fb8f9eb82db181b8658402ff5b3dd904",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f0_Five-v1.pt": "eef1e2208dd42442dcd76e4f24c3dfcce30fa932edb12342ea4b478b6846578b",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f1_Five-v1.pt": "013e1c1029d200c94e5744d36c65c3ea5eb9ec88484304698e165dc856bb1fd5",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f2_Five-v1.pt": "d727e1d975325396cf3de777f60643218af0d02aac81b901c2506f22be6acde9",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f3_Five-v1.pt": "2662db45b0e01c34ff6a971dcf3725429ca162904c836dc41262f95468d7c05e",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f4_Five-v1.pt": "8e225db2788bcd9634d2395fd5bbe53251cd4f426a9f7d64c256fa85881e1c25",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/ring_p256_i1_f5_Five-v1.pt": "15a24e1624ab8dcb76568fd2c6e105dacf55d5fd52576e85ef4cb056c65dc70e",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f0_Five-v1.pt": "ed91e916fd6086b8c28ffe44ba6851bff8778d6b7c80fb24beb3039423c39b74",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f1_Five-v1.pt": "9855db41eff345daf32e7a6e2e48686f64dcf8f978f79ae5952971bebe998419",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f2_Five-v1.pt": "b44aedf739fb302208bdb6e08df3afe53a9d6f936e8d81a5fab02182ca88d307",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f3_Five-v1.pt": "775f24a84909fddc49c595e56f90546a5edc4f1d99eaa92baa88b119f97334f9",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f4_Five-v1.pt": "30d6f0ea8f95be044d6c207dd28ab43aa713bdb38064cab7ffccbd79fd7b876c",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i0_f5_Five-v1.pt": "e32180f75c74aee928c727e365bb438ec7fadc207e3498c7dd5a5ecd346c39b4",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f0_Five-v1.pt": "9887465179f88bb2d42412267d706b5c435351c96e1db1ebc6e56efabb70ddc8",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f1_Five-v1.pt": "4836731ec0743f3d804f36fe5dc200e91bc4970cf58190bd7c0511cab8c9e215",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f2_Five-v1.pt": "2d90a0e7141aaf19c650fca61d28ae936539feaa1e27bc004f73f1dd2b6a84bb",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f3_Five-v1.pt": "17a5475589b29a838303220fd27f69c8ca6b83af019024b3a8ea180fdfcb9e6b",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f4_Five-v1.pt": "10a4e73503a1000ebdec18d7fb96c3727d0decc2e07cc7499801aafa2002e6a0",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/ring_p512_i1_f5_Five-v1.pt": "704a8d20d63d4c1e97189f1e8ba33d4dff7ff7f9781d22d93d3becc4270c0a1f",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f0_Five-v1.pt": "473144eebbe67c1557828a3441590cd00726d1c1e9f19bf684e3daf3b0f3c396",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f1_Five-v1.pt": "20e634a3fc89c2847d7d28126511612043de679f214a9d5716cae1939e57db7f",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f2_Five-v1.pt": "83462ea4c6ee59ec345a06f504e522e8623d1d28887c0fee815ee83daeba45ce",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f3_Five-v1.pt": "093bfa3131f6c14288c0540695a1b15b2ca695eb0ce05a88af388c0b87c5cbfd",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f4_Five-v1.pt": "5ea6ae7c19cbb0e575c029a0b9bc2a596678573b4fb3923713aef181b3777d0e",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i0_f5_Five-v1.pt": "fbb71714a0a3e51eb220f7261bf792d10a285f5c5abb34af0f1dac761a26d7b5",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f0_Five-v1.pt": "d94d4cdb32d8cdf3721e026d0f0e467364dd97db47bd7276acb1e128125859e4",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f1_Five-v1.pt": "81c27dd31ba9cdaf91c73950e2bd81b3cd910da8ff3497011fdc5e8c78cacf82",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f2_Five-v1.pt": "475b21b88414dae2736cb61e55b76d105dca89d0c7c3781980593610fdb07338",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f3_Five-v1.pt": "3a586ab0dc6ee1c15a3d6d90d1701881ed2f42864eccb0cae081264eb988cf46",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f4_Five-v1.pt": "5298e2812025ce4ad508ddee41ffa5efaa50f45ce1e3104f2ba865e4d374c34c",
+    "results/ablation/five_version_full_grid_r62_20260915/checkpoints/xor_p256_i1_f5_Five-v1.pt": "b1c6370ebf81bce4e4aa0b1f0c3ec148abb2a0a452914606a61468bc995800ee",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f0_Five-v1.pt": "9acadbb51cd0ba078432a4faad4716a576a8337c67ccb9c8793fd46ac7f590c2",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f1_Five-v1.pt": "87e0f6dd9e7046de109a15590593473bd4e43f567b18084d802f7460922e353c",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f2_Five-v1.pt": "c9acade092f27ee82af8089d5464697ded6eef9a5ec46325a495fe7168dc17e4",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f3_Five-v1.pt": "b9d9949c0acc6219df56c1d698fa17e25f694c1bc5406c435aa05c56e168e436",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f4_Five-v1.pt": "2afc888cb83ed554e4fdfef0fa8fe324fc248811fc2b445868343a20ea091849",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i0_f5_Five-v1.pt": "e37f375638a5319843d289a41807d4576b213618ff05ef62f6bf05eb736190ce",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f0_Five-v1.pt": "1ceeae57bf4be5c82d93f41bac84d4c4c545bb4aab1f7c243053af5b3c248143",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f1_Five-v1.pt": "938f2a4d2392c118fca05702289245510728cf16ff331bda38fc938ffcceed58",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f2_Five-v1.pt": "e4d8ce3bcbc0d623ff6c6de0205991ec19869c261831a74106cc417d9934bde2",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f3_Five-v1.pt": "5c8e61fac92f566dc0bab078a5748e0e602ccfed5419ca0de7f8940b4ac8ac63",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f4_Five-v1.pt": "38b2a1b2de52bc3666518e8779d6f895b1eee1bfe8e8569714a251fd9fe9321b",
+    "results/ablation/five_version_transfer_r61_20260913/checkpoints/xor_p512_i1_f5_Five-v1.pt": "b3293a6203feeb3c44631fccfc26a1d089055a1457ff526c8accee39e53ebad4"
+  },
+  "preflight_sha256": "b8645e320bed5e8410cd14f7d64615138d2532d0ec470c932c63399c45a78b1d",
+  "trajectories": 96,
+  "epochs": 18720,
+  "gradient_updates": 262080,
+  "selector_cap_seconds": 300,
+  "batch_cap_seconds": 7200,
+  "C_values_by_dimension": {
+    "256": [
+      0.2,
+      0.4,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "512": [
+      0.4,
+      0.8,
+      2.0,
+      4.0,
+      5.0
+    ]
+  },
+  "cumulative_order": [
+    "Five-v1",
+    "LegacyC",
+    "LegacyCStage50"
+  ],
+  "primary": "final nonzero abs(effective gate) Top2; truth excluded from training",
+  "xlsx_row": null,
+  "downstream_refit": false,
+  "default_promotion": false,
+  "stopping": "fixed full grid; fail closed with preserved failure, no retries or score-based stopping"
+}

@@ -1,0 +1,153 @@
+{
+  "status": "completed",
+  "new_trajectories": 108,
+  "results": {
+    "table": [
+      {
+        "n_features": 128,
+        "arm": "Base",
+        "coordinates": 20,
+        "opportunities": 24,
+        "recall": 0.8333333333333334,
+        "exact_folds": 8,
+        "instance_recalls": {
+          "0": 0.8333333333333334,
+          "1": 0.8333333333333334
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 113.62591529998463,
+        "mean_test_auroc": 0.5737680726544424
+      },
+      {
+        "n_features": 128,
+        "arm": "Five-v1",
+        "coordinates": 24,
+        "opportunities": 24,
+        "recall": 1.0,
+        "exact_folds": 12,
+        "instance_recalls": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 143.00423589994898,
+        "mean_test_auroc": 0.6090093108151047
+      },
+      {
+        "n_features": 128,
+        "arm": "LassoNet",
+        "coordinates": 24,
+        "opportunities": 24,
+        "recall": 1.0,
+        "exact_folds": 12,
+        "instance_recalls": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "mean_epochs": 6503.416666666667,
+        "mean_gradient_steps": 71537.58333333333,
+        "total_seconds": 4657.479827999836,
+        "mean_test_auroc": 0.9931767234106225
+      },
+      {
+        "n_features": 256,
+        "arm": "Base",
+        "coordinates": 11,
+        "opportunities": 24,
+        "recall": 0.4583333333333333,
+        "exact_folds": 4,
+        "instance_recalls": {
+          "0": 0.6666666666666666,
+          "1": 0.25
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 123.04214270005468,
+        "mean_test_auroc": 0.5346674188181858
+      },
+      {
+        "n_features": 256,
+        "arm": "Five-v1",
+        "coordinates": 3,
+        "opportunities": 24,
+        "recall": 0.125,
+        "exact_folds": 1,
+        "instance_recalls": {
+          "0": 0.08333333333333333,
+          "1": 0.16666666666666666
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 154.67946269997628,
+        "mean_test_auroc": 0.5427882090400701
+      },
+      {
+        "n_features": 256,
+        "arm": "LassoNet",
+        "coordinates": 24,
+        "opportunities": 24,
+        "recall": 1.0,
+        "exact_folds": 12,
+        "instance_recalls": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "mean_epochs": 6256.083333333333,
+        "mean_gradient_steps": 68816.91666666667,
+        "total_seconds": 4296.900052800018,
+        "mean_test_auroc": 0.9949921602646962
+      },
+      {
+        "n_features": 512,
+        "arm": "Base",
+        "coordinates": 0,
+        "opportunities": 24,
+        "recall": 0.0,
+        "exact_folds": 0,
+        "instance_recalls": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 146.6875052000396,
+        "mean_test_auroc": 0.48790478024995004
+      },
+      {
+        "n_features": 512,
+        "arm": "Five-v1",
+        "coordinates": 0,
+        "opportunities": 24,
+        "recall": 0.0,
+        "exact_folds": 0,
+        "instance_recalls": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "mean_epochs": 120.0,
+        "mean_gradient_steps": 1440.0,
+        "total_seconds": 179.43962829979137,
+        "mean_test_auroc": 0.4884680091548814
+      },
+      {
+        "n_features": 512,
+        "arm": "LassoNet",
+        "coordinates": 24,
+        "opportunities": 24,
+        "recall": 1.0,
+        "exact_folds": 12,
+        "instance_recalls": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "mean_epochs": 6488.333333333333,
+        "mean_gradient_steps": 71371.66666666667,
+        "total_seconds": 4347.426740000141,
+        "mean_test_auroc": 0.9986291452744904
+      }
+    ],
+    "boundary": "Identical inner-fit/validation/test data; native optimization budgets/readouts differ; no causal isolation or default promotion"
+  }
+}

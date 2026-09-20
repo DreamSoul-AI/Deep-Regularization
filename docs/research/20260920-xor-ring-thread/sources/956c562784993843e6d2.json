@@ -1,0 +1,1032 @@
+{
+  "status": "pass",
+  "validated_checkpoints": 96,
+  "independent_datasets": 8,
+  "reference_checkpoints": 48,
+  "metric_sets_recomputed": 192,
+  "epoch_observations": 18816,
+  "exact_prefix_pairs": 48,
+  "records": [
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "2b90c4477c4eb618b290abfde4f2c41a180930578a009926a2859454d7e5f8d5"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "06c691d16cbf14e2ee5b76d52c4f02413a335bc5dc8c9cb677a3a59de9d3cd3f"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "b2459e7b62966130b3c3ad46b4230c50bfc3c8f4fa9d32e4d45937cc7bad314a"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "b817144fd6c57bcee5a7de9cea2086d8f5c89f6532006b93c2fc6e3b61e14054"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "e3109a512bdde7347cf2470e68b3f808fb54755fa637e288a5fc921b56f3505b"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "3dbbc7151c3a77a9cf672f3d705fed1fe1b7dfc6f51f88bb8a5a92915b5dcd1b"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "542a4877d0da844778d291ad9ca5121fa03f44bb62fe39c0a2b4101e3632a1a7"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "72fed66600b9db457466c65fc35caa84ba4d6355beb31309dbb80edcfcfcdf1a"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "3cac1036a963fc5fe5ac0e3e68b4687309439b7438d8ea839c4527202d7076bf"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "509f7fe78cbc36d8d4b2682c9450899fdd7ca3af66c6f4ad0cf3e74cbda39120"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "2fd4f34ca6c6e938478a75a87291a9679e78973a1fc8926589a30e020a6962e5"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        0,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "cc597fb7bbd9289c457a230b5d028499a86943c6c340f46c8ac714a6e9ed1887"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "74ea36e616a93a87e375b9dac75f834c330d408deed00e771aaac31f9cf916fd"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "d9945b195859d7b2a39cebac9bbd97e4b8439b27680b61e82638419597e6693c"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "ac5d4c1f9c4e425df45ef248e02433cd355256cb9ab48d23e08d008774015d70"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "8187f9c027c71927b37ff2dc4438d01e4b6fc08bb96b2a21e60f364d13be7b9c"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "5d4877e2f0d77ab7c77c1dad979f6cc3d4ed19fb2b8143c1ea74e670f429d487"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "1a5cf3a64f93764f52789dc14ff8e9b6be28bf759cf54f60b33be7869b88fb1b"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "ce9b3484d7c52d58dd1264e5fef5a8500b58111dd9be9e26e183603ec4fd1411"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "ed5dd849c9382549dc44039da1b93dcdfb95faa4076200b7dcdc0b0186583ab4"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "25c985fecf4fff31b8678ede8d35e287d4253c9d404848e3aca1e271fcd6f70b"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "7dbfafeb6c8907728b15e5c554c6a988fdab3b25ee0871d9466931b74019ed36"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "750348ec216f239032e6af5e35c1a8429601d546a96c81b5fac785b173184c73"
+    },
+    {
+      "identity": [
+        "ring",
+        256,
+        1,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "0134e79e23421d345570f15d0c6b0c74d2cdb5b4bb028f0966b40516d5f6bed5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "dbf1f349796f156d26bd3214a126c18f8495898e45f5a4b634d2e8dde0bce649"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "599f137e969c0af66e261c2bfd371c91fd968dbd8134e33c247f96c1bafbb26a"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "82a4cdf60c87991e5b00403bfeefe8cfd28014b30e63e5c26e45cdf42f5a302e"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "9619cc60e8d1af30f05b988d1dbe5801af7fbf4423c710ac08c6949cfb5b6640"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "5875bee81e6d3aef621ce919f7386e20d71deea8be646de2fce3624fe97407e3"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "0266e5e6679192dc52c04e13e0b9106fe5e785220e47b0b8bc5c37b78f40e0f1"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "677151366c694df1c1b6c9fd10fd88f7da1602322e9625b21074bb8dee2b9e1d"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "73a167713790c3cc06fb741887e59f60dfe65d1ce66cd63b43ff55a15f9f1d31"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "24aff5c0f17da7af0ff4ac037a0474b645b20171a2b0238bef089dd1275195e5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "89ca6fa533f9cc80f011e224f1bf6002067145170b24f9c6a02244ef541d7d0f"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "e1629134ae8a9bd939e1414017c395e5dfcefe68c162e4e509861c9739f5d8ed"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        0,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "5910991261b7c4ed1148c010a35b6fc10ab66520ca23ec50905f8567486076c8"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "d5a43214da05e92e4627f5d2129d42e6f3ebb48d7dcd293bd81f9f84c9eec929"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "c4849501eb41f21efdc00839193c2ce09f1265a0358e9ea3f045e32eecb478d8"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "02b1b11d25d0a6c50166b6765421d16c723022c1bc087bdffd1ad723cdf154eb"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "3370f5935aab2c82906d5f5fe679bfe5b55b083624f4fa4a390d303de4076cee"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "66494a0e603a9e47548adb144e54fd54bd00fff64c685fbf908141a9dc263ca9"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "91656f6ba767ccb6c794cf732a486f6606fe5a178448b31b0e21ac065036f8c3"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "67ec6bfa0955ce08a85ec31f8af0b139a1f8603017bf67726c71b9a2290fb77c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "0b27ae1eff64fd4b3880be782eed1f237e360e9407838f32abef229308ef6b9c"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "90d7c6e559536b04f7fd640976246806ee703793f70d46821bb91c650f20d1a5"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "73785515b5481b0624b2d0a703a616c1dd8ef3bd87f7c721b997fea3a4867d1e"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "15cb1bba77f5dc3c60eeaec306a80ef083a9c19ff5e37e5f5b1e517af141410d"
+    },
+    {
+      "identity": [
+        "ring",
+        512,
+        1,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "650c8933e8af4cf7da3283dc94de8e6a62b2d7866f68e7780c22770dc7cf73c9"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "f795bb5b5139077276810cad7ae83c03e9520c3d6a47399e09816f2dac6e7c05"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "adb2d89b82499aae1e2253d00c22aae26a1f16b30d0c5cacb15646ae6ea4b492"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "f68faa1ba759a764b93b60371b77a5318c5eac961fab35c5b8a16595a7f663de"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "6b9865363beea2c493aa1110870143e2d397be877d0fc6aa7082415ffe33dd83"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "4ab6b3e6c00aeaeeba9e0d1b1558be7494a438fb956e474150ce24c298edfcc2"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "7e4ae106bcea33a80b8df9162a99c95fa39366eb974edd927e8d1f56e182626c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "96f1928eef21fe7f5e47ed62db4eae63bbe409d09ef6cbce5f17cf8cfce4b027"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "508931a21336cd85ec51545441c8a2c8d1c5c8c80b314219e793865aa0c55e0e"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "86419b887a6568e7518f0114836c8f401dadddb813c209f9406bfcc430fff015"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "ced9705d0906bf9eee88d440e03974c28c497038ef399053bc1388913e4db7e6"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "fc71db09b0489cb5ca25571d65f5193043f488271d6efdff54de2d3cd78baa7c"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        0,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "2782441b658e285396910e9307ab74ee5c878584d4d62019ec1fbaad1399c97f"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "8cdaf2dc582f8cbc5573835e8aaafe1259d22de55dc5f86f17c4a5065035722f"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "d040ed97d95739c493fe969d5838d1758ccb598537b1dbe3324d66aafea005cd"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "966cb6834bf9857f277fb900ca6539ff813b5e240221f30aedbf507ee084f272"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "d1c4b65a8362ee7e2e09fc22cfb12d40772664482bddfbab62ddac16aed3258f"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "cb7406f27fa33509adb1f7d8055bb19a3b0321e7d533e2454c02d85d655f84a7"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "aad10b36a7df3b218213049a32204aafba214d810525ff1c49284704630bd9a2"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "f257f5e52d2562918f25aa83a9a20ed35cd718cc9b9fc2056c79c16ef8eabb16"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "b3ce1bfb4c88ae1f0ffeb9afee184c48ab39c2cce5974773f59bb018bf7032d0"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "6189081d3584dbf730ecf96a79e4f11cf5a4d2efc323fd991df285c4bdcbe116"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "88239898d824dc00b1492f6772565dc2756c9474b84538d33c5d7720b2617c85"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "b1557c894465acf69f438c486e75c5add9295aec19cce48689789c870ab66bc1"
+    },
+    {
+      "identity": [
+        "xor",
+        256,
+        1,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "a67931759a713ba34a534d2a3c9e621820713737dff66e15c05ac83035da03e4"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "624411f0ec7839d6e8efab15e7ba6b329dda32eeb677ee172b4abb28137ab6a5"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "30b6c497e5ca3c9dbe9c39e7d74de4a8a715a68a671cefc0c24a1d62ceb42bfd"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "966a5c3a18c483f77c5f6216534db16567f1596ef656c4ef02d301494e6e62dd"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "fe484c951a2b740d3d6ff588f0236d04baf8b065f571c9d8dc7bde6bf258b199"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "c72fc27bc768348dae163b415ceefc9f9cc64742e58aebb47a44683ad32eade7"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "c139cf0c0673b69e90f7ed4ce9c296cb43b37d645e8a77597507b11114268980"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "1cfdc7e13185ad64f2fe8248f23f4a625cd908cb444cb7288be559754739cd66"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "43cf708ef9e4c37e79e6ac4361499579809c296a4e632511e85a17827d8a8720"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "ae267a4d465c25c1cfb6518372c6a87f7b827ad3515ff4a9158a5134d62d9617"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "a49959ddda7b69c5e258b55ae6b94a936947b72a1f6d3565bce196d37ec37e40"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "3e98bb185492b8b6d13da6cea2ac8377ef24f702da6670261f6f18a8c453b8a1"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        0,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "ff17617ba35ef31920976c08fc8fd96be91a64b3aa6ed91ad379173564bb0003"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "c274a910bd8b760be1425a2becca00e0fd18ea825ba84846a9c32b8b936d2273"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        0,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "3992ab55adb5cb322bb5530274b0345a592b57e21e7ea5c2e47c5b2a25f955d6"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "568b6c86b9e7976e2f5991d8778a4ba594b1b5a341697ce224024a31c8fc96a6"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        1,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "2c7331f3886175934d2c39feeab8fb413ac65414bbaa6c6bfe5fe9f4282afbef"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "f4e3194020320da81e01beefa6c1743b3837f0ffd33cd8d10b7de9d4267f8fe7"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        2,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "326396ae1f172dbddefea289a27cfa739cc8cc54ddbb90955177364887ed8ccc"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "07452d110091be26a485992ea1671bb2568a95df23dfd75dce10d431480ccbdd"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        3,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "3ed6e0c0361b8da062ea8e410e0b736f1cc88bdacc6c6f01ca6574a9c7febe8c"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "4a6796f0058c71aa38d81728dd625dc5e4397bd7987ef4dc03a39401f7114676"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        4,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "6ea334c521861b9b99a5fdc5081cd2ba871c40f15276db9b1ea7c7df399532e9"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "LegacyC"
+      ],
+      "checkpoint_sha256": "2fb40ef64abd32eea2ce2bfbc55824bef70a1ef51c12b4522c8ec0bf0cf73cfb"
+    },
+    {
+      "identity": [
+        "xor",
+        512,
+        1,
+        5,
+        "LegacyCStage50"
+      ],
+      "checkpoint_sha256": "22106a9073d55b67bcf7b16269cd81e27d5da98d6ba4c0a424d4cccbe7c6e9d1"
+    }
+  ],
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "source_hashes": {
+    "experiments/ablation/run_current_minimal.py": "f3098187115bfde45d0fe6795b7b913e7a6f277b330200250ae4794a9bdc910a",
+    "experiments/ablation/run_legacy_weight_init_minimal.py": "166b276ded9ba0ddd8ac8d1a7991e54043cca8995eb735b67f00510106ddb628",
+    "experiments/ablation/legacy_default_weight_initialization.py": "50f91411387e2fa6d15eb42fd23c4abae06080b1588329d9542fc2b4a9827e00",
+    "experiments/ablation/minimal_warmstart.py": "f3f62d6e3e831a878e42a5e85848cfab43c141c09f256871435176a5e11a87fd",
+    "experiments/ablation/legacy_direct_square_basis.py": "1650d1e7f2a3529833fc38c689202bee10276fe5d2298b5a12222f45799b95bd",
+    "experiments/ablation/run_legacy_direct_square_minimal.py": "ad0667df690b6256299ae239a3fa74978b3936f13ec95c7351921f7c34af13be",
+    "experiments/ablation/legacy_input_dropout.py": "61f0ed5fbd619415eabd5a69768c9123d0ad532581221667e5cbff7e1fee4f96",
+    "experiments/ablation/minimal_dropout_control.py": "0a3301dd9309b74f6f4ae288ef126d93003794e8513d8a34f449bc3df0cfed1d",
+    "experiments/ablation/run_legacy_basis_dropout_minimal.py": "65eb3c506287f45bdba308bc69f895f0422beeb5cadb630555a2c9b02a04cf1d",
+    "experiments/ablation/legacy_square_basis_components.py": "9e78248ce11033d1b6fe91ea44a8a135183c53361557ff3d8c4b7bb22919c9d9",
+    "experiments/ablation/run_legacy_square_components_minimal.py": "e88ad7a90b0467fabe773fccc45fe500c7fa759034996e686535b62b04414ab3",
+    "experiments/ablation/run_legacy_hidden_square_components.py": "3be8179aee748efcc9a12be7fb66475be03ec3bfc0c2d12c262d1a3f094790bd",
+    "experiments/ablation/minimal_prox_numeric_candidate.py": "6ed77fc604592abeabf3ab3087ff937a04911c8f87a023279bd63c1c3615b0a6",
+    "experiments/ablation/minimal_numeric_training_bridge.py": "62e7ce2fb272c1e3f351dc2b591154036ef56134fadd2785938b6b6fe30f1804",
+    "experiments/ablation/legacy_weight_decay_diagnostic.py": "2bd8ab3384c7aac5188d00f8f368b8910216a66198253ca0ee6c9c9db084697e",
+    "experiments/ablation/run_legacy_weight_decay_diagnostic.py": "bffefdaf116810daa8978197cc7a6def3bdeb3ca8007fba74dcc35388627897e",
+    "experiments/ablation/run_current_minimal_confirmation.py": "0f5e6fe82b56cef279562d0360c7ae75adb7c59d5d2cd843d586e1cedfc60d44",
+    "experiments/ablation/legacy_wd_family_r58.py": "3030b0ce5fc0139b02218011a611d0c604c0689508aa851808794fb9f072f4ec",
+    "experiments/ablation/five_version_transfer_r61.py": "c505e8ec42398f6f07ae2bf58e4967b1ac1477d1e268f097652409e9feb8545a",
+    "experiments/ablation/r61_initialization_audit.py": "2e3d39ccf05cae315df5dadc403197a1e29911cf469576afb1e9a0dbc437f198",
+    "experiments/ablation/run_five_version_transfer_r61.py": "914ec79620bbcb636cd38c7c40913d911e3dc4d2044c8f05b348ed920176d7d9",
+    "experiments/ablation/verify_five_version_transfer_r61.py": "102b2a714767b39681e79baccb635d50e4fb5c6aff0e3d95393ff4a75a5b5817",
+    "experiments/utils/audit_five_version_transfer_r61.py": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+    "experiments/ablation/five_version_full_grid_r62.py": "cfd7803a2b7f8135d3cd4fd234148e067c60ee32c1885886b93dd9d9f27464f6",
+    "experiments/ablation/run_five_version_full_grid_r62.py": "bddff10660fda182415644ec1e6e16024e6d285db3b80d17af9f890de073f0a8",
+    "experiments/ablation/verify_five_version_full_grid_r62.py": "c38daf5362c173cdb77ebae8a72de309bb56997e662067c7fdbe2e3be91037c3",
+    "experiments/utils/audit_five_version_full_grid_r62.py": "d54f3e7cb8b83a28a1b1bc718c6b65a7fccf27fa125075a167c3bfa92954bb38",
+    "experiments/ablation/empirical_combinations_r67.py": "34d0f1f3824b874b4a3cf92f87ee2e8fe667d6f9ed9ceca14e6684a7fa3df009",
+    "experiments/ablation/run_empirical_combinations_r67.py": "ae645e69014b0abd0b0ae188bb21d359bc78f96a2bde23556a9b34190611a232",
+    "experiments/utils/audit_empirical_combinations_r67.py": "de4ca549eae0ebadf8087c440a3e8879a3d9925ecae89d9ece9b8c6f73eca775",
+    "experiments/ablation/five_forward_ladder_r68.py": "99abf8a15f2741e041a55f7141e66769aca4a102983ccc7266c2840c91eb42f7",
+    "experiments/ablation/run_five_forward_ladder_r68.py": "2a387d60c4db584199b84fecd405d499ad5326d37fa3949e4ec6b8d7571ae43d",
+    "experiments/utils/audit_five_forward_ladder_r68.py": "c99ae074901829de39474d6ef48ec804151e022cadc7a3d52d65a9177107bbd1",
+    "experiments/utils/report_five_forward_ladder_r68.py": "61ff4c4d8828e5d990947f3a48df2140f1365449276b1c7aef2e48d2e57103ec",
+    "docs/plans/PLAN_20260917_FIVE_FORWARD_LADDER_R68.md": "a4ff8d3ea6c9a47865f27fc10d33e5c86b3d05b21006d8c06a0375db6ca902c6"
+  },
+  "contract_sha256": "7ee0125cd6e203ed1fc664fb7ed319767f2e49ebced5d4068503b1b8b4a9add1",
+  "summary_sha256": "8e99488d225953d0c4f90b574b4a8a9d7de77b8aa98632b591b974474717775d",
+  "jsonl_sha256": "4e6db8ea497b87f6bdd1b93287e180a4d0aa78f5d1488dea02d6a38bf7213c6c"
+}

@@ -1,0 +1,2434 @@
+{
+  "status": "pass",
+  "mode": "independent",
+  "validated_checkpoints": 300,
+  "paired_identities": 150,
+  "independent_datasets": 25,
+  "records": [
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "ebfd0fed9e21be88cfac0569a5a34d761bb88475b2d9c6c7ce8da61bcb0d0a3e"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "36163fa2dc1ce4192494148025c9e377b65854c22e4e0dade9e74e4ee981d36f"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "64a66e835cbf5aa9f8ddb098f8e0b608a7915d2948bfe733c021c163fe42ad30"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "36aa5c518339dded51e1b294f66cfec5669778a8937680225b69cd992c6cbb0e"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "fa7d30f63e583c88e6932ac70fd86d77722230069000f11f42793c6e65648d5a"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fc90780e97a3f0973f2d470cb1370e8574dc0a6558400d747723faeeeae915b4"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "f803ff8aad8152eed3d71cc798374917ff423686e99024d070f81cf1da20a5f9"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "637fd46c208097147748624846e3d253ff19d89ba24c69a2d9231e8c0b3cb834"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "002487b10882b042edc155ed01ff4bd17ff55b2c293c0cbe64db4b8cf4a2c01f"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9486447e7871e90317e76cf1eca105c3c5e7a58526059f0fed6b1c8a9fce6888"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "95c5eab0d0fd5f6de00e4b15dad4ffab596a6c31639079a1f53aecb846e31b5b"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "6414bc525637326eba0b10a2179346db9d2224bda5b22234796437c9bac2ef33"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "d00567464c8d7f387346f1c3805c000a255cc6928dc51962ab6bbeb63309d630"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "5a4e8cd7c232e02f83a3b34ed8b74b3991f27d9b9fe9cfa2d486cee60d3c32b7"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "2d675685a4cb6651a2b17886f9584ee9f929b44a7c12929e5ca4204ab94470b5"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "2d3b4b21b4cd995d0d0022b6848731cb64b58ef151fccf26019e9e39fe19f8a3"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "5e77cc72f9c2b2233202c54c58444edfd272ec67588ad2274ec6c5778baf1c96"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "abe5f4ceb0f939fec4a652e86b83bc40fb7395157f205d570dcb2e3e6084b353"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "27efa8c4fce35e1bfaa49d205c23154a8ed102ead4d128005b1d956f152779de"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "11e01d80b38bd5b7791246ffcf032585264739f3ee59b3a4f7341890d6ee494f"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "9561838c724303c2dd5017393e679789d8ed821c669477c9445c68666c3142e6"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e6c8206c3b7c4ebb9162bc5bbd6f98d8cd34327e912b3108a87103e7b9e99cb6"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "7aa4a981c5891b196056d19b40dcdf839f5ea816e0e86992130cc3cbbe845064"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "1c18d60c09ec5d4136bd72ade9545ef94018c3ab85f81a6f920b1418dcbc73e3"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "c04606315b6595d9757446ecb20f9bc9b4f7c832a6e4144d91cd38c095e35c79"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9acadbb51cd0ba078432a4faad4716a576a8337c67ccb9c8793fd46ac7f590c2"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "91319f950114c12c8917820478f3929693999da47cce7108fc57af5f8e624aaa"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "87e0f6dd9e7046de109a15590593473bd4e43f567b18084d802f7460922e353c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "efd151e492e31c6d228f4034ddebb960e76065df4eb1056571a213a6313104b6"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c9acade092f27ee82af8089d5464697ded6eef9a5ec46325a495fe7168dc17e4"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "4a7417d5653e4f5a9f073699b5f0edd3ca9c87fdb6e191226213119df33352b2"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b9d9949c0acc6219df56c1d698fa17e25f694c1bc5406c435aa05c56e168e436"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "e8d8599aa202c36ebe4d650b1d076e4e197e15eb603d799ceb9dee7844560733"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "2afc888cb83ed554e4fdfef0fa8fe324fc248811fc2b445868343a20ea091849"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "c8feceebbdd52487e6816f6499ab202b202555e95e2c26605105e35f5f1e5bd9"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e37f375638a5319843d289a41807d4576b213618ff05ef62f6bf05eb736190ce"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "7fabb98db5a84174c184ac4207db5b059e1ffcf065c060ac13695c37732f850c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "1ceeae57bf4be5c82d93f41bac84d4c4c545bb4aab1f7c243053af5b3c248143"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "d483ce8256f6072cb7de5b7a83ab63434c0432ad88200e8989a93add82b3ef47"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "938f2a4d2392c118fca05702289245510728cf16ff331bda38fc938ffcceed58"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "a1255ffe6e4776a03aad9658d8a2b58a037603dd56b207f3026104cd634e859c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e4d8ce3bcbc0d623ff6c6de0205991ec19869c261831a74106cc417d9934bde2"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "44cf8be3400afa67279af3a2e34a877eca2f6dcba7b865ea2177bfb993b5634d"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "5c8e61fac92f566dc0bab078a5748e0e602ccfed5419ca0de7f8940b4ac8ac63"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "69ff385801fb7f6858423b9158bc612a0cd8a067f5ad1b1d28e1a3d39a33a4d1"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "38b2a1b2de52bc3666518e8779d6f895b1eee1bfe8e8569714a251fd9fe9321b"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "71047d432b8f672cca5955337b45a930c73c7da7ed687cd144a005ce40737043"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b3293a6203feeb3c44631fccfc26a1d089055a1457ff526c8accee39e53ebad4"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "11c0b6d59eb3561bb06532e29fb07e6a3f4d11502cf7b3a94874f7009e8cf11f"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c9ea8f6d2c8945b6e130c5e29c90eb856e209b41331eebe8f6e181ae4163fd36"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "54b42e4b43a250f81810de905c4ee98115bf87a3d5fb605ae3549c964dd756fe"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "cf701451e9dabb3db31e586427609c63ebe79aa2446422d13bbf96dcfcd4361f"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "01064396c47257b02701af2c38454feb7cc8b9d7b71daf4cf8d884ce2c300770"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e41dcdbf5e1fd33a0f7aa7b245f2046f6b1ee3a6afa5be7a39fc196b85f16fdc"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "c263108f3ade2092988b6b0e1b10c08abed504aea243ab6c400e2224117aafe6"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e46cf4ae05c4fc73492aab202bb796cceec3b1d36c290ab80a59dbb7347af11c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "2bf6e0e68a8e2da8039d49ce6bced77bf06ce8cba151d4984341a3f3a2f3952a"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "f37e1f17b26f71811f7437faa4439da6d73fdf2722aaf367ad9960aa69717732"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "365a4abc9f61c7fcc8c99cac6786079c3651af177a0f850206dd101a5eab55b4"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "769b4dbf41f8d5c59cece738f7e4de4097a744b52fe33abe057864dc55a3dfac"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "e3e95f48b7551351a00954a42e13969173f64439eb892c313ba1e7a9a51d486d"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e4f54939b807228575aa523f02200f6d39902b15d991d7cfd9dc779885f838aa"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "383218bec2a85937cb30705f166076b347d79922ca292ff28bbd2bde203db704"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "6dbc065046b37062cd38dca639e04a2a165d01e0a5002b6d135cf9e64b262dac"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "762d3435aee36498aa8d695edbcf55b77a9d4fa5afb44589a512db2206fb0d9c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "30a78f009aae9057b2b84bdfe2fa6f6cb19cf041e279860d84dca4f6847c8524"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "45ea6b9446b26e81074303880ead39498769c70ec13efeb1f6eda905ca3a26b9"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c31e814d386dfdd79bf25ce08672620fe3e95e237c10fd590876891c22ca5264"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "e73fa0a0ffecb72aaadf2fea09bcdc2ad1fdb820ddc574c38914bdac3c71a999"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "04cfb77be5236d4859c464aa5879e9e4704eb3bd57c91b5ba93314bac87e23c2"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "5db69a381aa0d49df59ba5d128710f163858e1946e6e820cfdce842446ceb45c"
+    },
+    {
+      "dataset": "xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "f7f60253d618feeb811bc14b752f82d58fa5415bc45d5715119083cd892c4de4"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "005d9cb5732baa789cfda3b0964140a9fd7436afc09bae8ebcac69429a74603c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "32bd7989e84136e0c0d3817cc05fe68aa8f6e97e613657ad4f482b02bd7a6890"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "48b24c09796b653804ebdee74c83a0435aa6b621fdf2b6938169d3ea0c61f2da"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "eb2875ef946ac5379854879a9be062ae8871d5303fbfef451cc5fa77b4458738"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "a215e71f61a6f091a277e07e4113b412806ef6426af62bf86c6844d480d27d2c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "db226bf2f18f8626671966a0c555edee76c0962b3d117498028c43964068d28a"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "f9c2b450baf46bdff2669d3f3956a5c93272b275f541e4d6547db437b29c2a1e"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "444c533981cf0d83282abd21fa1867fb5e6deb3d4c6b82689c936f99be3227bc"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "2ae30e1cb8d2e7e7839f30ec5ef3dd24e9de9ccc64b568ba844a14820c584050"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e1241d603f818e7d8e66e4e76a7544c7b4d8bc9f63e11819764ade682b966850"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "a0e7fb81ca24ad5e44c63522da8f4a564f97d624df4ec9af844d43bc1628768f"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "11fab45ec868a6e5a8cfdfed0c4349bc3ff75973e52d6fc22d430415d437645e"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "ba8d7624a03a72fe771445dcc5369823512e39e36cca8db5b4a257d42855ee80"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fce162275899b3099dd2039088495a41b24a8348be9e5f56812d1150c0440c76"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "e0f2ea4b7087517566a61a4966b72e23c897ca91693d08051b552d173633a112"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "941cc6f2136b4f99d856a0ae969bc699348bea5af6a41bf16ff62288639095ec"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "0c323cacc9d16ccf7c238f6d702871272a5fc03ae519a0fc6efcb766afa32be5"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ca072128f5c8b0ce588883d2a4c5bf5dadcc9fb017c1ab3c186a892940e7997c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "c88c3b80571fc01fc601476b7e3552369b7c582761fb4d65c9ca0ef8fbd55a13"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "82bfd1cc9a2ae044f11a2dccd89354f3c31966da239f13503300c19ab9a2db20"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "d4fd1ac50156b106aa82ae96c22bc8554efafce05e935b65161a316cdaefbada"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "28335fbf5bd0408607a799d5c28c60a221d467ef4a7dba37058b2ad08808b04c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "152418b578be325331c730762d2ab9df0c8244f30848cd4899ac5046e0c375af"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "685c18e6ddc7adaeb067d940300fbe00c6fd3d89f6119a1b96f9c258775cea0e"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "2dbc7e6cc8845ad543d3c59095c6d109257a4a93f691f9749bce4c619f80f784"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ed91e916fd6086b8c28ffe44ba6851bff8778d6b7c80fb24beb3039423c39b74"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "376a433422f91abd65a3493c89b5c346f2691e289407b0d741879f51ebdf0001"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9855db41eff345daf32e7a6e2e48686f64dcf8f978f79ae5952971bebe998419"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "a2addf9fb5113d2ae33923005e8e3dfebdea0f7be67f43c46136b6d6eacbbd3c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b44aedf739fb302208bdb6e08df3afe53a9d6f936e8d81a5fab02182ca88d307"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "c1f745232c865abd217dfe1327b4d3d451292bde37f888d0ff7b7d4175c6d631"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "775f24a84909fddc49c595e56f90546a5edc4f1d99eaa92baa88b119f97334f9"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "76e098a6213b0d01fffb38e1e21a60be90560e4182b032f1f4e317a295c2bc03"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "30d6f0ea8f95be044d6c207dd28ab43aa713bdb38064cab7ffccbd79fd7b876c"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "dd4d393487e620cfd56ab0ebc51114fca3d8bc9196f13f5364a4bc2325fde5a2"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e32180f75c74aee928c727e365bb438ec7fadc207e3498c7dd5a5ecd346c39b4"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "5d338b6268165b571130b1cf10fe207174656e21a1adcdc35377d73263b87ae4"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9887465179f88bb2d42412267d706b5c435351c96e1db1ebc6e56efabb70ddc8"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "28e351e3609184cfdb51415223c9321efd48a8f0cdba674a255a318a33193240"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "4836731ec0743f3d804f36fe5dc200e91bc4970cf58190bd7c0511cab8c9e215"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "5dee9338f0f7496d202ae7d9a37545fad88df08bad1188c17c21dc0ed1ee70b8"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "2d90a0e7141aaf19c650fca61d28ae936539feaa1e27bc004f73f1dd2b6a84bb"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "7576943fd5a0ac7471b55491dd493f186bb8ca8ad27d414b468221da5bfdc95b"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "17a5475589b29a838303220fd27f69c8ca6b83af019024b3a8ea180fdfcb9e6b"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "3ba6c82a958a489209fd327ce0e9cc53e766d3473f9ef1417b97a652ea35788a"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "10a4e73503a1000ebdec18d7fb96c3727d0decc2e07cc7499801aafa2002e6a0"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "e1e018567b1ccd2e6ce92de5e3d08c0ec9fd64182fd19a9805ba9f73fbcaf5b6"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "704a8d20d63d4c1e97189f1e8ba33d4dff7ff7f9781d22d93d3becc4270c0a1f"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "18bb7544935f35770ffac62fb76b329e550c5bd1c471280b456c2610fa60d4d7"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "832aade754a23928e16cb3f64605c6ec9261408cea45bcec94f6325fd8488495"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "7c71839a6e5acb3849d25a6b740e31d29ed279bba7597acb64f0fa3bed2f9883"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "3ffe26eb0d9f664663362396891ecc213528d1ae4f4de1debaffc1a3e2f3815f"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "b1d66b7aa4e0a59d66f9564e588cf6a69d6eb1a48fb880452202ae9b63143403"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "25168fcc51fdc3924e61910e520f83e5c83e41c57834585be9f447c6a6f490f1"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "55aa347ef8b689b95404201d5f34dca9d80147d882e04d801524950ad8dd3d94"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "cadcecf7466867831c1fdb02bee6e71c7ee9b5822b2a11545411bec9846e60ef"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "f2ec662b863d1db0a8099b3d80578e8117af611bed4f6feb5d173d0cbe3fca8a"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "01e0c5a48b191517175ad49154427570c7db38c8dfac1460fa89bbfe86dfa34d"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "8b759381babb5d50358bc0bd8c3357fde2f6701aa45d415537c0263cf2cae618"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "6f09d6f75a5fa1e0a881d8743d43c818b1c9984831b3b20ddf8b9e5b233dfe56"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "88a2c4c75d2720b6a01e2974b9f55d09b8d9131f8f383e90ae838fb137b73435"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "5b1f7c740aef76c852ce537dab5286592dfd72e97348cc9a1e54d4584ff26747"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "7b6d6a90a24c1c4f44999507178669980aa68ed9897d7707d8950322ef3ac113"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "bd9f3e674ddbc2481127fec3e27660d7283419dc07e6c9e1206f7a78b0ab4247"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "d7088d39561a4dbe1a29c0bb9ecff01330f422353b6a4dc7ff823b864d672367"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ee1fca1f0b344a47c02dc020c130e2e871cfb65f1e55e01ad3a9f11c5a1691cf"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "171a79c9b589a371ca0be56e2ed6bb81c139148d18bc08f1050e5d8fbe5cade5"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "878db4d02591f5f483354cd6815aeed860640b4282e71735f00cf7aa20f70512"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "0946ffdb89d6ea3461651cbd501226bbca36cf7eb40966c52c42904f8eb32651"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "5fcda77c84fb6f80497a7ddd2fc752a770a431ef01a035e528e49272b0800b65"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "4cfb93bb85a19d7978ebe0ca7a1b41ad23f4f618131226f1bb084a6eea6b8563"
+    },
+    {
+      "dataset": "ring",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "14ab06040b67fa7bf72bb24fe7ef446747bc5b52cc57674da8207b7531985701"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "b8bb420e9d4d7d470004208df7cb846779a8cf18f224cc1ae434b286b6841123"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "2fde0743790229ca9359c8721cfe575564bb71b598e9361db26ce749251e095d"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "a6f5a6683be3e6e17b5db314367b8370146340a4dfba77fd2bc67310e908f5c9"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "0410f60efb2164a566ad6d76547f6fd8611d92d3be0542be5f3421445e9a73c5"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "4fb411505356e3a920f4571bb7646d4953f936df003f717eceec6baaff1e1789"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b6a76e1ac7dfc87c4911129e5b74eb4493cbeaba0f5e45ff9468d5da6d3ca3cf"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "4e2ff3a1dac2af302997189759dba65521cdc05fb5645dda823c03da99da7a0c"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "215bb19f9c37c2568bd213788cc3e83abe1c59d7edda6f2ce775eeb47f9037a4"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "82f6b86d717472967fc15059f9f4e527d8430448f487b44f22e437378779c3cf"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "4c1f12c4e59c8616445720b66edd70131dd7e271e82071635a1c313ba1ee9538"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "e4cead37caf163e6f002d5e79010dac9b30e9f5361f70401c9683b19cdde4ef2"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "86de8691f784b62b20da886e87751bad0a2d8d4fe6adace177bd5ecf95f288a5"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "9086067a4adce1dc983dfd3d1033e517d3519a45b3dd80a896bb1a737ba95666"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "7ab51c9089a1782f77825392709fd277e8aa0e9cf6fce7fe0802251bbff8a79f"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "96b66da6b234b50aa4a5d5981c07b16a55424b5970a9a5749b9a377e0f3b06b2"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "79f39fb11e45601c301aa19af98efc1f5611b493d26b88b0bd8682cf301e282b"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "85dc4e9bf409de861c29a5afa915b6ae5eaaae3eb2bb484528aa6882d20adac4"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "010da1d83159e2d8cfc461b5514fd69f2214daba5e114a13d2153bac0805f9c1"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "d1e5ca90a464ddc676d33daa4f59cec8b92505e42aca8a53f0315e10ed7b7fb8"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ec575ad207299f312c837c83093dc4d8d6ac6ccb876276cbf2d03e42da89b3e8"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "232ee4e5de7037c4df86cb030b34e1a15afce9397ad15412554ed05205b78e45"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "d3149496444f0b49fc7a5236e22d32956484a379f0261695f86711352c2e6e5a"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "2c960056775aee2bf3bb7664e74d590e14ccf016489c5420f3a565ee4feaf901"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b06ce4995daa118fc0fecb567d198eff27b3add8273d0caa6c47a7461261a2d0"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "68de47bab16c9f387e1123cec46b5fa6ad6bf63423978e6fc1acae62a685ca30"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "1eb11d448c17891955f0c905b0ccb93cab593927bf42443d20fce3f0af4c2f54"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "002546ad78fa075df1e2ef380b4861129f77dc412a198ec2922679a6eccb70c5"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "2a2a86de09b9c1a9b0d38672a0c52fc220376f0d93966a6dccfe08e7915b05c7"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "8334f1731188b9317e3f358d43e4d4139fcc3c059f1a72c0e5efeeb4d6676d9e"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "17b9f38532237bb470c9a013484b865f702ef69a3886d3d07eb07da602784373"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "198290fb8374e8fec0b23b96ee1be735cc7589c478f3f5203124c09602b14cc7"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "6f20f2830373c8ff99463a3caa233cfbac154d5f39af62c7a400f4331894bf36"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "f52ae941273cf074e2defd048ce9ca9457af71700e12bcae3c67ac0ea842e542"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "3840f471082aef4a4074b4c22bd11bcb513b6c9d044e8eb403718909a546014f"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "069c65a7143bd32667ff4112b1e21d67b2ebaad096ac47c4124ff33a28092411"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "70e5256638d3ac8891a82ec191ae96c0fb9504c7cb19cf33e1298b88ecb4fa6e"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "0d00890921b91af07f1feac48ff0f1ec61ac50252db9c2a710c35ad09debb917"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "7012464397e73eae0c82741c33f02a4801555efc27944f03af5e4b644b6e679c"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "91dc56e7b47235b1aa4711ceafd3f8bd9138e81b4a2819eceffa3f552da33ffb"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9385c142d4f9b374342d33438d5528b0dac61eb70cd4dea279e8e0e93a091b71"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "3c2b1bb5a88b5e73fd11b1eb323a5e9c8f0506ed3ba236ef0df6d4fddb9af15a"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "953ced46d29a9dffe5df223c2d1db2bd83cab11b8c93ca7b248291b676aa3f12"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "133bf394563f9f5d3f75bc175ef142adec165ff4175cf2ec05e4617490cd08d6"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fa3a7216cc0e989c34c3624f165aab11aec47f65c846b9b719fd74399b2c9585"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "44ee2339c280e237bc80ed98561e18b1a6ea8aefb08a9ec5e02ffd8e72ca412b"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b8c44352c3fdd5481c9bc11c68ddd23b990eb816c61bc2af780952cc6809b8c7"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "b0cd9ff07d032bddd5f9bdc4abf11cf8052ae7ec6900bb041e87a451d821e3db"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "aec89c85df75d9813f31436736b4c1c69b577e9506a859105b0f570ba1b24a68"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "281c6e5c6301410d9468f51f4a683e48f6d8d07adebbba443bd695d0f258977a"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "e402482d5eef60ee3d843c9f6f61786fbe56b1eb66a40e12007a1d2adaa4e8f5"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "d079cd99eed9e7dccecaf928a3002704c172d65384809d6383578cb618532ae1"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b4a6fc7421ad4dfdcd3a81e0053e5729468544a0f390cbc387621971d55abf98"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "0107261843e04527ef1313ee0178bf30f4b347437ef6402b48b1fcca8eea2a6d"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "cf75fe683918057f2b6f4d010c72ebe70fbd38364580b0168aa20c5ead759de8"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "0413baa6464ba260deb0d9a89817578a6a2b4268d0bad5ddabf7ba88a27da265"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "79726ade76dd6b754ea49855dcb44848bff950ccb479d093d52ee3e38771db51"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "4adcd367a8f6d61a4382ef27ecd144fb78f794f00dee774cfb64abfd88259fb5"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c01ab59401b903ce61b1330a24026d5db3f20e2315ddaa8222db99288b633c7e"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "7fd316cd38cc90ccb69786a1e7c83dbd3b31cc69c5b92e92f36bda713f3d69d9"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "330af7f89d18730398efe052d53cf6492576a852360b166fde5b558c18569e23"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "0d0b2998b8097aa4e7b281b03278360922624f262e1160712498efe37e2f39a0"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ceefb0067c8455481a51c096e8607a3ed25d615e68dde07356a0d53e8ee2bbc6"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "7d6e009dda634727612f8148d5099a7f261fd753ecb231eba602c3c41bfce45f"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "391afee3b6ea9e58997acfe14b074b77aa6d99c4a623533bc6fd966932db3e2e"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "3cdaee087b9f5412168c9bc7b5b80140e61d0d1725fc7c1bde0cd803ff36b017"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "51bc9f101a6a06e6830cbbd66e7f1290be4d9bdc89dcaf62cab4ce602e1869f7"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "93fd7ac5edf75a2629a3a77f4a486ba0a40ecced9ef8e3ae5a52b2367d25da46"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "285d743fe12b247dacccf31af4cdf5c36c7d553143115061881039a8881c7e49"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "4241a19ce1989d0dd3dbcbc0b53404cf89a2d0cf71d53139123126ccb9560e54"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "051b4ab31bc46bb2b344bbb4b948a0e9d991929dcb406c18983b46b88515ab3e"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "9e3935403f4e64084971987b34a649ee8792379c345f7439721ba529c777dde9"
+    },
+    {
+      "dataset": "ring+xor",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ff42eee30098df9411a71611ad85c30e11d4fe09cf79b1b3f504cd6c4a82d211"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "fd6bfcd9f79766beaa2162042db183eddc5b071a0f266778241541232d7b1004"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "29bf725b3b0de3a011d961a56c9cbb2d82227ebca89355556011aa57d473d834"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "7c46974edd632d2f2ae60b40f110518506444b84712ce6ce825d212995c9e784"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c20956763253949476f4ae67dbce38db126b75472ebc6ba94e02a5d8850db18d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "76a212de1abbac8a0d8230acdaa59d5084d8412f2f70dc69b287bb7cf83ce8cd"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "eb3e52fe50d1cf1dbc173a52b98390978056b71481d9ba2fb66fc49df474615a"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "f1c16f1a82c72c70636e104a31b83327ea048604f6c0542a2ff440525a73d655"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ce72ac0ad68c818259ce8017b848ded6ef67cdcdb76ae8b27f52a2381b953d06"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "63c1ba68f9ca9febf8fe5df6e00b8a0c83ab546f309cfd46ef69b24ba784235e"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "26e0f7d9385491dc3a47f185c8fadbcc1eb4e872c6783d33fe6d2efa5aee5dad"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "50ca15b4f34668fb22a4b93b1dc157722c95198694e1330bbb53407ae7fbf716"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fa3f3fe4825b4ee33399eec4dd96d636d134c40b57dd725f85d05f057dee46ee"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "ee8484abc604192df37d8575dc1e152de6b9f76d920bfb791a26470ba4973e78"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "5ef3ea2dab147989baddda88fe3443fcc91bfec09020e8235f362ef686a9b257"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "871cfd7153f335fe1bc985b352a45480493bc1b7739a94c597b50f2b55c6fdb5"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ef58a1f019612b2e74ea06ba3333c230dc84f7b618b293aea78843167da48c80"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "cc35b01cf6cec1c240e459fb703e34d0bc4cf9674b1a3acbe02c0c3a71225988"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "9c34ac1f344e65f5e37956abd127351368e5273f81ad27cd7d5119a477adc991"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "c560d2693c62558c3e9907ae3a0d5e921eabcd993a34f97cdb339c9df9a59579"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b748f35442d29c4d2529d26c444646ca30e2d1da3cf36cf53e18c16bb80a19f1"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "33b405855f5fb4943bcb65cfa1bc1d0d2081d45cbfd0928dcc81e45202b59cf6"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "d5659fe85e2223c8364f2d18b17d882f2c84718263539d00c3b2b535fe07f576"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "028e802bb46e3c0f8a6bffa5455e0a7ce3cd2e802050d92791a5a69aa705c715"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 128,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "8abcfbb2b09bc39da38a0a3b94f64852b8418de0c581d2cc91d19cb54772d853"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "969bc39d7a2fcbccbec08eb8571bba9f088691e768eb07b10bef8d9ab4b24b29"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "0d5d707d5db4f2eaa422c904c00c19161923a88af4761cbf5006f941740be0ed"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "aee6ddf75ba2d610975985791deb39995ea93cfe8d03d066f041e3141d768df2"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ff23190b86898e5d8d00c93740ab555ae2ba819377ce748235b0e97c896416e6"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "84f6cd126f7e9766ebbfef655f38da24d2f72d8cb4bd5d449b22773b14c8c402"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "102d67c5624f72954ebe0f9946a5471e9e8bbe8ed4a6f20a3fd9dcc2222de07e"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "257a09c3fda2ad30bbbfd2ba9679ef385b968b660c1beb7db5bcc2d0204f77a1"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "a6eb9bc94d071f8a4860eda6569d60eafcf3f689506cccd1c359250d11c3782d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "03102d0037634494392fb3a7124421a8f3d486b51cf79603fbc3d8f2e0052c5c"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "f59f51fd00e0dea2d17f5d7075c7950759221f3553f6b690bcb828343d8f0193"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "70dafbc65a10ad471ce9451e3f15436d0486557c6b0ffc7f20bf1f7bf3c68d06"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "b87fe0c85eb55cff41eeaaa9ae993f73fbbf8de57ed0b5b9c4ab7de4941a0749"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "cd195c09d9c80f2768fd83f28f1ffaa8118f75338b42962d9d8992a6d38e05c5"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "df5b3e67841a539ba7839f666562ce0ced8c7833153247088e419201db596b00"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "e4bbb3d88116c07bbf0454bf817389107da68244f1fd1b09ac10c72af37413d3"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "eaace635707086b5bda61d50f61967139749f1a9d8a81dc14b6d6796f06abab8"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "f163e8a2df3a23c09a5674eb9c18373ab1f0a6c11ebee11f55884343fc2b4098"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "6494182d71074941904ac90057f745be18e80ae27a315f6faf36a4b2dc230e63"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "b70e55629ef8ca9bfe1666f7c8a46688c9f5e6fec5fb894a2812e73fe1dc6042"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "36a787ec2d86109fea8fd5d0f7e8d4dab5860d61f011198605138c6dedd21302"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "3dec5318f92b69095c22a96227552c5be11a1963a27927255ca72890d33a168b"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "16b6d308f8eaa85afd78c92350d49fb4ad9649055d438a8acd218e37390de023"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "1018b527fe9cadac8450a92c7a4ae741d6463b46da947d3217da096774f8a12d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 512,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "06762a24d345aac6e48545634251a2ea97435a7842453e97cd0b8b017860e30d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "a5b13b0cab6d93a612736126ad49cb98aaf8e9bce0e33c4dcdf19a3b0deaf7e0"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "809b118fb24ae56f4b13d0f512f17c02c482ac7a94eb6319bfaf42ffbb79f14d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "2e7f6063abffc139a876cdde6aa0a0f761b723f79d194adcd8ea4a507519b0e6"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "d1cf402536df3e569787e169956b7aa9551ac168e0f58949e57a21cecebe3220"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "1b87ea99f37bbb93a1402f0d2bc435282f71d213b7a2e5644bde7ed7e5c671e3"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "bcda99f7db510d96f642836a390082cb027dcde246de4906b55fae78b885955b"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "a1063e8915ee80a34b5961e2fd52da9ba6cf6374bab929a250053c7b18fe28d7"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "7b50d84dcc50120f11f2b9444851705c322389cab9b4403bd5988fcbb9f8292a"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "db25d4b944f6e26b0ec7a995925c72a2cf76441f8854394fac0cf6a0103dc217"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "ae17ddc877b3600c64fb4ecefe606a8f0e0c186bce2b61ce8cd372f3e29b8b4e"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "b0a47d8df0b3b24c2f0ad1b45b1094083952ab64770e9e68026fbb8ea06fa825"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "85ca8571056aa8f2afdecd3ea3aa6a8a97acd56b80783955e850cc5a3f09860b"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "4ed57c028b036247a5ce6ad7d9ca43b87e0ae3814d7bd844cd36f50619d6edd1"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "8831a96939c156444374826940fd8e9080aabdacf400d224f453773ddfa44b48"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "48d5aadceb0e810b0be9172fa05a131481352c582603701ff0b34a8f7233d973"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "48a894b9efaab67c71d2fda0663ac54027872f8208173590d0bee6b78e1bdf22"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "4a4b5e77c2ee700e2c84ceedf198d20b0cc34bbbdc79cd0a042341878052e63f"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "f7449c2029c01694986a4fd0c17a97e1f98e656516b2b10d9763aa41174f5fb0"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "f1b4e8f892ad8dd931cb8c08316f98e06dac43d11750f428bdc3d6f91ba7f54f"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fe702d001ab280f3b704393ed1fa408d63a078d4f8000b103a1ceeb761edde8a"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "fef4871d7072875cf16805f382e683056cb426040c42a689bd4b315fa4c49ee0"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "db929c686e189c161be6b693eda524d31dcd55de37b154fa3afe1807f0ae475d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "122e6a6e2315e319d71724835f309eca7c542b64ab55a01e083e111bffcccb0d"
+    },
+    {
+      "dataset": "ring+xor+sum",
+      "n_features": 2048,
+      "instance": 1,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "002be55d7dfc50bab83f0e84685086c121e86dfdd94ff2e8757a42ba3c4ba8c8"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Base",
+      "checkpoint_sha256": "4859fef03b41c871d2539adfcfc940666ff013d7319c2ab30c1f3118bcf45f0e"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 0,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "a0ae3499a93cff80ee19a7c8950be2f4030a5fe1000bd24d48743ead9ee9559f"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Base",
+      "checkpoint_sha256": "59540535a9969807eef6ea2c60cf9aa3376b82c69bdf37cd3146dc785031502c"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 1,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "fdf93f2039416604ddb0abda4c37e089ae74b50c8349dfadd713df542b841e8f"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Base",
+      "checkpoint_sha256": "4ddbbc030a3cc64ec196a076b8daece45a4a45ab0105be62b7ad1cb69651ece6"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 2,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "63b7838299ef589871e40dd078fe5d2ed54168c413fc6476f2510efba594d538"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Base",
+      "checkpoint_sha256": "4440f087b2c9598e32d8c83f780ff81b803f187c38b83a851b2f5414b18136f4"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 3,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "4ec349f938185dac70ec93ed47bc4de94f8754417200e08d4426c99fe08a5531"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Base",
+      "checkpoint_sha256": "f8a44a0f20229a72467b2908332a5367a8b9c7f6ff22ac80641e1e5eaddf484c"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 4,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "14c6961404aae0116273e95b4774612f356cb628a48c24c091b14bee72ed800d"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Base",
+      "checkpoint_sha256": "e5a18e9d663e43f7d5834f8aa797a9fc43dfb00ce4b25f5d1b8168bf6bb2f44f"
+    },
+    {
+      "dataset": "dag",
+      "n_features": 2000,
+      "instance": 0,
+      "fold": 5,
+      "arm": "Five-v1",
+      "checkpoint_sha256": "c735294a8dfcfa23de8090c209e45dd96d9b9e148386ed0112bd6b2ce7bbd89a"
+    }
+  ],
+  "runtime": {
+    "training_device": "cuda:0",
+    "required_device_type": "cuda",
+    "cuda_device_index": 0,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "mixed_precision": false,
+    "full_restart_from_zero": true,
+    "reuse_partial_trajectories": false,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "actual_cuda_probe_device": "cuda:0",
+    "torch_version": "2.5.1+cu121",
+    "torch_cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "torch_deterministic_algorithms": true
+  },
+  "run_jsonl_sha256": "2833142fb4d8824b1cca72ab81a992acb5ae5f8e21c32f6083bb501f4f5afa89",
+  "summary_sha256": "e9f2126421bfbce5aeddd5ec287438071ddc956945c5a6fddbdcff01a16d55dd",
+  "auditor_sha256": "dbcded7e1ce8d4299caafa072c6319b710a116a5ac159bc9352c3ceb3159b0d2",
+  "contract_sha256": "4a899f5644dff155e988605420cc818ac0b9bc80a9f46b2391927bca618b88f5"
+}

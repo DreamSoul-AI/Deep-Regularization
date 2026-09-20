@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "report_sha256": "228d406e90e0d931243ba218a6f3c216363a464f727934e2f22447ed8b104a28",
+  "evidence_sha256": "b2b31ec45f39b42174d0b285922a02d0c69e3cb93f488b6bc2d3b58d937b2e02",
+  "figure_sha256": {
+    "candidate_comparison.png": "f16ae52cb0e18fa70447a5bbf40110b32882ee2aa0de4f2f648c22a979e7436b",
+    "dimension_recovery.png": "0242425bd7c4c5fae868d641c3622e656810e0cc23a715f44f543205f02d190a"
+  },
+  "visual_review": "passed: both newly generated figures inspected; R70 figure reuses its completed visual audit",
+  "checked_numeric_table_rows": 28,
+  "source_files_unchanged": 24,
+  "links_checked": 32,
+  "new_training": 0,
+  "new_inference": 0,
+  "new_selectors": 0,
+  "ledger_unchanged": 4080,
+  "experiment_status": "paused at user request",
+  "deliverable_format": "Markdown with linked figures",
+  "word_export": "not created; document skill workspace dependency loader and required renderer unavailable"
+}

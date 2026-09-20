@@ -1,0 +1,392 @@
+{
+  "aggregate": {
+    "SelectedTop2": {
+      "train": {
+        "auroc": 0.9764270723200683,
+        "auprc": 0.9760993187394068,
+        "bce": 0.11185355329265197
+      },
+      "test": {
+        "auroc": 0.9821331357000825,
+        "auprc": 0.985546611156578,
+        "bce": 0.1173224641631047
+      },
+      "instance_test_auroc": [
+        0.968315328095446,
+        0.9959509433047189
+      ]
+    },
+    "OracleTop2": {
+      "train": {
+        "auroc": 0.99749313058072,
+        "auprc": 0.9976877376343508,
+        "bce": 0.06801368047793706
+      },
+      "test": {
+        "auroc": 0.9976024843590864,
+        "auprc": 0.9978266123419234,
+        "bce": 0.07509010626624028
+      },
+      "instance_test_auroc": [
+        0.9992540254134537,
+        0.9959509433047189
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "instance": 0,
+      "fold": 0,
+      "same_support": true,
+      "selected": [
+        49,
+        98
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.5765718226883978,
+        "auroc": 0.6216954022988506,
+        "bce": 2.8762717247009277
+      },
+      "selected_refit_test": {
+        "bce": 0.04093942046165466,
+        "auroc": 1.0,
+        "auprc": 0.9999999999999999
+      },
+      "oracle_refit_test": {
+        "bce": 0.04093942046165466,
+        "auroc": 1.0,
+        "auprc": 0.9999999999999999
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 0,
+      "fold": 1,
+      "same_support": true,
+      "selected": [
+        49,
+        98
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.5939103974723976,
+        "auroc": 0.5982758620689655,
+        "bce": 3.3706142902374268
+      },
+      "selected_refit_test": {
+        "bce": 0.03929392620921135,
+        "auroc": 0.9998563218390805,
+        "auprc": 0.999869383490073
+      },
+      "oracle_refit_test": {
+        "bce": 0.03929392620921135,
+        "auroc": 0.9998563218390805,
+        "auprc": 0.999869383490073
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 0,
+      "fold": 2,
+      "same_support": true,
+      "selected": [
+        49,
+        98
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.6526299387317839,
+        "auroc": 0.7069683908045977,
+        "bce": 2.1237306594848633
+      },
+      "selected_refit_test": {
+        "bce": 0.06164930760860443,
+        "auroc": 0.9975574712643678,
+        "auprc": 0.9978702405069864
+      },
+      "oracle_refit_test": {
+        "bce": 0.06164930760860443,
+        "auroc": 0.9975574712643678,
+        "auprc": 0.9978702405069864
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 0,
+      "fold": 3,
+      "same_support": false,
+      "selected": [
+        49,
+        76
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.571416101547088,
+        "auroc": 0.6132183908045977,
+        "bce": 2.904691457748413
+      },
+      "selected_refit_test": {
+        "bce": 0.5663716793060303,
+        "auroc": 0.8142241379310345,
+        "auprc": 0.8525093692659294
+      },
+      "oracle_refit_test": {
+        "bce": 0.0595833845436573,
+        "auroc": 0.9998563218390805,
+        "auprc": 0.9998693834900731
+      },
+      "selected_minus_oracle_test_auroc": -0.18563218390804592
+    },
+    {
+      "instance": 0,
+      "fold": 4,
+      "same_support": true,
+      "selected": [
+        49,
+        98
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.5768518051390932,
+        "auroc": 0.5678015422668412,
+        "bce": 3.1511902809143066
+      },
+      "selected_refit_test": {
+        "bce": 0.060107067227363586,
+        "auroc": 0.9982540375381929,
+        "auprc": 0.9984923625744592
+      },
+      "oracle_refit_test": {
+        "bce": 0.060107067227363586,
+        "auroc": 0.9982540375381929,
+        "auprc": 0.9984923625744592
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 0,
+      "fold": 5,
+      "same_support": true,
+      "selected": [
+        49,
+        98
+      ],
+      "truth": [
+        49,
+        98
+      ],
+      "full_network_test": {
+        "auprc": 0.6395313399454424,
+        "auroc": 0.6264367816091955,
+        "bce": 2.7896840572357178
+      },
+      "selected_refit_test": {
+        "bce": 0.0339740589261055,
+        "auroc": 1.0,
+        "auprc": 0.9999999999999999
+      },
+      "oracle_refit_test": {
+        "bce": 0.0339740589261055,
+        "auroc": 1.0,
+        "auprc": 0.9999999999999999
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 0,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.6119103759294914,
+        "auroc": 0.6470545977011495,
+        "bce": 3.1201374530792236
+      },
+      "selected_refit_test": {
+        "bce": 0.34176909923553467,
+        "auroc": 0.9795977011494252,
+        "auprc": 0.9819951567631536
+      },
+      "oracle_refit_test": {
+        "bce": 0.34176909923553467,
+        "auroc": 0.9795977011494252,
+        "auprc": 0.9819951567631536
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 1,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.5575683234739905,
+        "auroc": 0.6346375143843498,
+        "bce": 3.3636410236358643
+      },
+      "selected_refit_test": {
+        "bce": 0.05764944478869438,
+        "auroc": 0.9982738780207135,
+        "auprc": 0.9980931458165602
+      },
+      "oracle_refit_test": {
+        "bce": 0.05764944478869438,
+        "auroc": 0.9982738780207135,
+        "auprc": 0.9980931458165602
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 2,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.5062946504738508,
+        "auroc": 0.5693325661680092,
+        "bce": 3.308239459991455
+      },
+      "selected_refit_test": {
+        "bce": 0.05515415221452713,
+        "auroc": 0.9994246260069045,
+        "auprc": 0.9993766633708636
+      },
+      "oracle_refit_test": {
+        "bce": 0.05515415221452713,
+        "auroc": 0.9994246260069045,
+        "auprc": 0.9993766633708636
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 3,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.5800301852603196,
+        "auroc": 0.6659953970080552,
+        "bce": 2.7401123046875
+      },
+      "selected_refit_test": {
+        "bce": 0.05162978172302246,
+        "auroc": 0.9991369390103568,
+        "auprc": 0.9991064780342517
+      },
+      "oracle_refit_test": {
+        "bce": 0.05162978172302246,
+        "auroc": 0.9991369390103568,
+        "auprc": 0.9991064780342517
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 4,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.5535239813317919,
+        "auroc": 0.6062127164265968,
+        "bce": 3.1450135707855225
+      },
+      "selected_refit_test": {
+        "bce": 0.04919787123799324,
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "oracle_refit_test": {
+        "bce": 0.04919787123799324,
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    },
+    {
+      "instance": 1,
+      "fold": 5,
+      "same_support": true,
+      "selected": [
+        91,
+        108
+      ],
+      "truth": [
+        91,
+        108
+      ],
+      "full_network_test": {
+        "auprc": 0.5157342116952168,
+        "auroc": 0.5910082933216936,
+        "bce": 3.4514365196228027
+      },
+      "selected_refit_test": {
+        "bce": 0.05013376101851463,
+        "auroc": 0.9992725156409137,
+        "auprc": 0.9992465340566605
+      },
+      "oracle_refit_test": {
+        "bce": 0.05013376101851463,
+        "auroc": 0.9992725156409137,
+        "auprc": 0.9992465340566605
+      },
+      "selected_minus_oracle_test_auroc": 0.0
+    }
+  ],
+  "same_support_exact_refit_pairs": 11,
+  "original_full_network_mean_test_auroc": 0.6207197879052418,
+  "new_refits": 24,
+  "new_selectors": 0,
+  "original_four_task_gate_evaluated": false,
+  "boundary": "Retrospective fixed-support diagnostic on existing folds; oracle support is unavailable to deployed selection. Plain refit changes selector parameterization/objective/regularization as well as input count, so it does not isolate noise as the sole cause of original low AUC. No original four-task gate evaluation or default promotion."
+}

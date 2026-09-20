@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "sources": 178,
+  "artifacts": 13,
+  "main_document_links": 265,
+  "methods": 25,
+  "table_cells": 100,
+  "unique_plot_points": 476,
+  "new_training": 0,
+  "new_inference": 0,
+  "selector_ledger": 4080,
+  "manifest_sha256": "d25a73c875a0c9c5f230c2a7520d39a130ccfbf7ccb2e7dfd05aa650f67ca007"
+}

@@ -1,0 +1,346 @@
+{
+  "table": [
+    {
+      "arm": "AdamReset",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "previous": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "coordinate_delta_from_previous": -1,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.5292894119963896,
+      "training_seconds": 178.01790770003572
+    },
+    {
+      "arm": "AdamReset",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "previous": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "coordinate_delta_from_previous": -1,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.4876076277394426,
+      "training_seconds": 210.50982179993298
+    },
+    {
+      "arm": "AdamReset",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5854104694954877,
+      "training_seconds": 175.44192750006914
+    },
+    {
+      "arm": "AdamReset",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 20,
+        "exact_folds": 8,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 10
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "coordinate_delta_from_previous": 2,
+      "exact_delta_from_previous": 2,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.7323384332107995,
+      "training_seconds": 202.23665720009012
+    },
+    {
+      "arm": "AdamZUReset",
+      "dataset": "xor",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "reference": {
+        "coordinates": 2,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 2
+        }
+      },
+      "previous": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.5252876641320329,
+      "training_seconds": 179.65707980003208
+    },
+    {
+      "arm": "AdamZUReset",
+      "dataset": "xor",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reference": {
+        "coordinates": 1,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      "previous": {
+        "coordinates": 0,
+        "exact_folds": 0,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": false,
+      "mean_test_auroc": 0.491507888536324,
+      "training_seconds": 210.1753642000258
+    },
+    {
+      "arm": "AdamZUReset",
+      "dataset": "ring",
+      "n_features": 256,
+      "actual": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "previous": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 7,
+          "1": 11
+        }
+      },
+      "coordinate_delta_from_previous": 0,
+      "exact_delta_from_previous": 0,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.5746771331897477,
+      "training_seconds": 175.31596120004542
+    },
+    {
+      "arm": "AdamZUReset",
+      "dataset": "ring",
+      "n_features": 512,
+      "actual": {
+        "coordinates": 21,
+        "exact_folds": 9,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 11
+        }
+      },
+      "reference": {
+        "coordinates": 18,
+        "exact_folds": 6,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 9,
+          "1": 9
+        }
+      },
+      "previous": {
+        "coordinates": 20,
+        "exact_folds": 8,
+        "opportunities": 24,
+        "folds": 12,
+        "instance_coordinates": {
+          "0": 10,
+          "1": 10
+        }
+      },
+      "coordinate_delta_from_previous": 1,
+      "exact_delta_from_previous": 1,
+      "screen_cell_pass": true,
+      "mean_test_auroc": 0.6338025687512178,
+      "training_seconds": 203.63035889988532
+    }
+  ],
+  "decisions": {
+    "AdamReset": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    },
+    "AdamZUReset": {
+      "worth_fresh_confirmation": false,
+      "highdim_xor_numeric_target_met": false
+    }
+  },
+  "selected_for_fresh_confirmation": null,
+  "trajectories": 96,
+  "epochs": 11520,
+  "gradient_updates": 161280,
+  "default_promoted": false,
+  "empirical_screen_only": true,
+  "cumulative_order": [
+    "Five-v1",
+    "AdamReset",
+    "AdamZUReset"
+  ],
+  "lassonet_comparison": "Paused; R63 uses a different fit split"
+}

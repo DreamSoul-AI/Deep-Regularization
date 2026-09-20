@@ -1,0 +1,473 @@
+{
+  "status": "completed",
+  "new_trajectories": 48,
+  "results": {
+    "table": [
+      {
+        "n_features": 256,
+        "arm": "Base",
+        "epochs": 120,
+        "coordinates": 11,
+        "opportunities": 24,
+        "exact_folds": 4,
+        "instance_coordinates": [
+          8,
+          3
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 256,
+        "arm": "Base",
+        "epochs": 300,
+        "coordinates": 11,
+        "opportunities": 24,
+        "exact_folds": 3,
+        "instance_coordinates": [
+          7,
+          4
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 1,
+        "same": 10,
+        "worse": 1
+      },
+      {
+        "n_features": 256,
+        "arm": "Base",
+        "epochs": 600,
+        "coordinates": 11,
+        "opportunities": 24,
+        "exact_folds": 3,
+        "instance_coordinates": [
+          7,
+          4
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 1,
+        "same": 10,
+        "worse": 1
+      },
+      {
+        "n_features": 256,
+        "arm": "Base",
+        "epochs": 1200,
+        "coordinates": 13,
+        "opportunities": 24,
+        "exact_folds": 5,
+        "instance_coordinates": [
+          8,
+          5
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "better": 3,
+        "same": 8,
+        "worse": 1
+      },
+      {
+        "n_features": 256,
+        "arm": "Five-v1",
+        "epochs": 120,
+        "coordinates": 3,
+        "opportunities": 24,
+        "exact_folds": 1,
+        "instance_coordinates": [
+          1,
+          2
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 256,
+        "arm": "Five-v1",
+        "epochs": 300,
+        "coordinates": 2,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          1,
+          1
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 11,
+        "worse": 1
+      },
+      {
+        "n_features": 256,
+        "arm": "Five-v1",
+        "epochs": 600,
+        "coordinates": 2,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          1,
+          1
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 11,
+        "worse": 1
+      },
+      {
+        "n_features": 256,
+        "arm": "Five-v1",
+        "epochs": 1200,
+        "coordinates": 1,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          1
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 10,
+        "worse": 2
+      },
+      {
+        "n_features": 512,
+        "arm": "Base",
+        "epochs": 120,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Base",
+        "epochs": 300,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Base",
+        "epochs": 600,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Base",
+        "epochs": 1200,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Five-v1",
+        "epochs": 120,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Five-v1",
+        "epochs": 300,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Five-v1",
+        "epochs": 600,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      },
+      {
+        "n_features": 512,
+        "arm": "Five-v1",
+        "epochs": 1200,
+        "coordinates": 0,
+        "opportunities": 24,
+        "exact_folds": 0,
+        "instance_coordinates": [
+          0,
+          0
+        ],
+        "paired_deltas_from120": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "better": 0,
+        "same": 12,
+        "worse": 0
+      }
+    ],
+    "boundary": "Same R63 data, prefix exact, C tail only; 1200 terminal; no truth-selected checkpoint or independent confirmation"
+  }
+}
