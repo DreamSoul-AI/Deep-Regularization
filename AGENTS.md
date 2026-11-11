@@ -13,3 +13,7 @@ The user requested summarizing this research thread into main. The bounded integ
 - Source snapshots preserve original bytes and may contain links specific to their original workspace. They are evidence, not runnable main modules. Full checkpoints and runtime artifacts remain in the integration research workspace.
 
 The original research workspace is `E:/Projects/NEW_Pruning_20251110_integration`, with retained research under `research/legacy-migration/`. Do not alter or retire that workspace as incidental cleanup. This main worktree contains a portable report/evidence package with a standard-library verifier; see its README for the verification command.
+
+## Documentation changes
+
+Scope documentation edits to the reader’s task. Reorganize the relevant sections when needed, preserve provenance and evidence links, and record the validation performed. Group related edits into a reviewable documentation milestone.
