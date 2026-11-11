@@ -13,3 +13,7 @@
 ```sh
 python docs/research/20260920-xor-ring-thread/verify_bundle.py
 ```
+
+## Repository maintenance
+
+See [repository conventions](REPO.md) and the [engineering document index](docs/README.md) for maintenance.
