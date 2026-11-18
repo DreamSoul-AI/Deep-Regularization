@@ -20,3 +20,7 @@ The user requested summarizing this research thread into main. The bounded integ
 - Source snapshots preserve original bytes and may contain links specific to their original workspace. They are evidence, not runnable main modules. Full checkpoints and runtime artifacts remain in the integration research workspace.
 
 The original research workspace keeps retained research under `research/legacy-migration/`. Do not alter or retire that workspace as incidental cleanup. This main worktree contains a portable report/evidence package with a standard-library verifier; see its README for the verification command.
+
+## Workspace 采用记录
+
+- 来源 [Workspace 098bd2e](https://github.com/DreamSoul-AI/workspace/tree/098bd2eccf23eb1e6d77a3eec6db51e6bc387daf)。采用范围为Learnings 命名与分发、文档规范配置、长作业检查点与恢复、调研、研究计划与研究结论归档。项目专用流程见本文件。
