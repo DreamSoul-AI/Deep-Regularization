@@ -219,6 +219,21 @@ def main():
         comparison += ['',
             '表中是四任务平均恢复率（%）。按软阈值后的值排名，只用正分项填 Top-k，剩余名额按未找回计。z 用 q / Aq 两列最终用各自相同的左边公式做 soft 再排名。原训练在 z 步使用 s+u。三个训练轨迹的 A 和 ρ 可以随参数变化，阈值公式一致。', '',
             '未做最终 soft 的读出、全零折和训练诊断见 [固定阈值对照证据](ranking-dashboard/fixed-threshold-512/README.md)。', '']
+        uniform_file=fixed_dir/'uniform-readout/comparison.json'
+        if uniform_file.exists():
+            uniform_records=json.loads(uniform_file.read_text(encoding='utf-8'))
+            comparison += ['#### 左边固定为 Aq，右边是否除以 A', '',
+                '512维原训练 checkpoint 配对比较，四任务平均恢复率（%）。最终 ρ 都为50，共用阈值 C/ρ 为0.001。', '',
+                '| 评分 | C/(ρA) | C/ρ | 直接按 Aq 排 |',
+                '| --- | ---: | ---: | ---: |']
+            for label,_,weighted in pairs:
+                matched=[r for r in uniform_records if r['mode']==weighted]
+                if len(matched)!=24:
+                    raise ValueError(f'Expected 24 uniform-threshold cases for {weighted}')
+                values=[percent(sum(r[f'{variant}_positive_recall'] for r in matched)/len(matched))
+                        for variant in ('divided','uniform','raw')]
+                comparison.append('| '+' | '.join([label,*values])+' |')
+            comparison += ['', '同一批 checkpoint 的逐折对比和 Top-k 变更见 [读出证据](ranking-dashboard/fixed-threshold-512/uniform-readout/comparison.json)。', '']
         position=head.index('### 旧对照：改变阈值分母') if '### 旧对照：改变阈值分母' in head else head.index('## 128维')
         head[position:position]=comparison
         position=head.index('## 怎么读结果')

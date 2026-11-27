@@ -5,6 +5,7 @@
 - `readout/` 复用原训练（z 步输入 s+u，初始ρ50），固定最终模型，同时读出 q、Aq、soft(q) 和 soft(Aq)
 - `score/` 在训练 z 步直接用 q 或 Aq，右边仍按原方法设阈值，最终按同一左边公式读出原分数及其 soft 版本
 - `weighted_consensus/` 在训练 z 步用 A(s+u)，与原训练的 s+u 比较，同样保存所有评分读出
+- `uniform-readout/` 固定原训练和最终左边 Aq，配对比较原阈值 C/(ρA)、共用阈值 C/ρ 和直接排名。`comparison.json` 包含逐折正分召回、非零数及 Top-k 集合变化。脚本 `experiments/rescore_uniform_threshold.py` 校验原 checkpoint 与此前两种读出后，计算共用阈值结果。
 
 训练中的 A 沿用原方法在每个 ADMM epoch 开始时计算。梯度评分每10个 epoch 在训练样本上刷新，Gate 在 z 步用当前幅度。各训练分支保留相同的 cubic 公共缩放、对偶更新和ρ更新规则。改用非负 q 的训练是对 z 输入的直接消融，含义不同于把 q 用作共识分母。
 

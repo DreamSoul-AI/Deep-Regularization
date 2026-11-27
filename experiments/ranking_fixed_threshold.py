@@ -18,11 +18,16 @@ from src.feature_scores import ranking_score
 from src.feature_selection import RankingConfig, fit_ranking
 
 
-def save_readout(state, mode, case, apply_soft):
+def save_readout(state, mode, case, apply_soft, *, divide_by_a=True):
     score = ranking_score(state["model"], mode, state["first_moment"], state["second_moment"])
     if apply_soft:
-        a = state["model"]["layers.1.weight"].norm(dim=0)
-        threshold = (state["config"]["penalty"] / (a + 1e-8)).clamp(1e-8, 0.5) / state["rho"]
+        penalty = state["config"]["penalty"]
+        if divide_by_a:
+            a = state["model"]["layers.1.weight"].norm(dim=0)
+            penalty = penalty / (a + 1e-8)
+        else:
+            penalty = score.new_tensor(penalty)
+        threshold = penalty.clamp(1e-8, 0.5) / state["rho"]
         score = (score - threshold).clamp_min(0)
     score = score.numpy()
     k = len(case["support"])
