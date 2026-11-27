@@ -154,7 +154,7 @@ TabReD 采用 [官方预处理版本和划分](https://github.com/yandex-researc
 | 全局门控 | CancelOut sigmoid、CancelOut softmax、STG | CancelOut有历史结果，softmax保持历史secondary身份；STG在根src接入，嵌套benchmark未注册，先补入口验证 |
 | 端到端选择 | E2E-FS | 嵌套benchmark有分派及vendor包装器，根core未接同名分支，现有历史主表无完整对应结果 |
 | 输出归因 | Saliency、Input×Gradient、IG_noMul、SmoothGrad、GuidedBackprop、DeepLift、Deconvolution、FeatureAblation、FeaturePermutation、ShapleyValueSampling | 10个Captum分支均可定位。先保留原生读出，核对目标输出、类别与样本范围，按mean(abs(attr))聚合；不把target=0写成多分类损失归因 |
-| 树归因与控制 | TreeSHAP、普通NN / No-FS、随机排名 | TreeSHAP虽放在FS分派中但属归因；随机分支不是已核验的命令入口，作为控制时需先接入 |
+| 树归因与控制 | TreeSHAP、普通NN / No-FS、随机排名 | TreeSHAP虽放在FS分派中但属归因；随机排名已在11月28日128维配对比较中接入并核验。普通NN已作为归因骨干拟合和诊断，No-FS下游重训练仍待B阶段 |
 | 新增重点 | LassoFlexNet、Localized Lasso | 均纳入正式baseline。前者当前官方仓库仅README且code coming soon；后者方法已核读，原实现、回归/分类适配及局部到全局读出待核验 |
 | B的原生对照 | Deep Lasso、First-Layer Lasso、Adaptive Group Lasso、Univariate、XGBoost、RF、Transformer attention | 沿十二数据集上游实现接入，不因A未包含这些方法就省略；Deep Lasso已有输入梯度正则实现 |
 | 本研究对照 | 原方案、候选1/2/3、原版LassoNet、ADMM-Lasso、ADMM-PQI及明确标记的必要组合 | 固定版本、读出与调参协议后分别比较，避免同时改多个因素却归因为单项 |
@@ -207,7 +207,7 @@ A与B都固定数据身份、划分、随机性和任务定义。报告原始分
 3. 接通B的六数据集先行子集，再补齐12数据集与48个主设置。用固定k和统一下游验证选模，保留LassoFlexNet原生整模型行
 4. 汇总A与B的独立确认结果、资源与失败，必要时做少量机制诊断。自动预算、corrupted、TabZilla、TabReD只按标记扩展
 
-正式成果包括两块主结果表、逐数据集/任务明细、搜索与选模依据、参数及数据版本、独立确认结果和必要诊断。负责人、执行期限、可用GPU及全批总预算尚未分配，不编造承诺。当前工作完成计划与资料交付，尚未启动训练。
+正式成果包括两块主结果表、逐数据集/任务明细、搜索与选模依据、参数及数据版本、独立确认结果和必要诊断。完整计划的负责人、执行期限及全批总预算尚未分配，不编造承诺。计划初次交付时尚未启动训练；11月27日至28日用户进一步授权候选一及128维 ranking baseline 的代码实现与配对实验，实际状态见下方实施记录，不扩展为全部候选或下游实验已经开展。
 
 ## 九、通读复核、实施依赖与资料入口
 
@@ -228,5 +228,7 @@ A与B都固定数据身份、划分、随机性和任务定义。报告原始分
 
 
 ## 沟通与同步入口
+
+11月28日的 [Ranking Baseline 全量对照](<研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>) 记录本轮实际设置、完整结果入口、Localized Lasso 的适配与数值核验，以及 LassoFlexNet 论文追加的比较清单。它是A部分128维、四任务六折的固定设置运行，不替代B部分12数据集的调参与下游协议。Localized Lasso 的任务适配及 STG/E2E-FS 等接口已在该范围内落实；LassoFlexNet 官方实现和 mRMR 编译依赖的限制仍须保留。
 
 [AI 沟通流程](https://dreamsoul.feishu.cn/docx/BXz0dmV0QoNkjyxcO6Ec6ijencm) 保留讨论和决定的演进。完整沟通原件、用户配置、工具回执及论文 PDF 不随此文档提交。

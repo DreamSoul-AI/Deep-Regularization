@@ -68,3 +68,7 @@ The original research workspace keeps retained research under `research/legacy-m
 ## 原方案复现与候选一排名对照，2026年11月28日
 
 用户随后要求先复现原方案，再比较一阶及一阶加二阶。已完成固定公开版本的128维四任务、6折、500/120轮排名复现，并逐参数核验24个原训练结果；[本轮记录](<docs/研究记录 Research Record/2026年11月28日 原方案复现与候选一 Ranking 对照.md>)保留总表、实施差异和证据。范围仍限ranking，不改变下游、其他候选或默认提升的执行边界。
+
+## Ranking baseline 扩展授权，2026年11月28日
+
+用户进一步要求跑齐原有 baseline、Localized Lasso，以及 LassoFlexNet 论文中应补的特征筛选比较对象。执行限定为上述同一批四任务、128维、六折的 ranking 比较，使用固定参数并登记原版/迁移设置、失败和缺失实现。可按实际空闲情况使用CPU或GPU；不干预其他任务，不启动下游重训练、其他候选或自动调参搜索。实现、全表与复跑入口见 [Ranking Baseline 全量对照](<docs/研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>)。LassoFlexNet 缺少官方代码时保留待复现，不用猜写结果补行。

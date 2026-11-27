@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "successful_score_vectors": 816,
+  "complete_method_lines": 34,
+  "verified_metrics": [
+    "recall_at_k",
+    "average_precision",
+    "auroc",
+    "top_k"
+  ],
+  "independent_verifier": "experiments/verify_baseline_evidence.py; standard-library implementation independent of NumPy/sklearn",
+  "targeted_tests": {
+    "status": "passed",
+    "count": 8,
+    "modules": [
+      "tests.test_feature_scores",
+      "tests.test_localized_lasso_solver",
+      "tests.test_baseline_metrics"
+    ]
+  },
+  "source_preparation": {
+    "status": "passed",
+    "note": "Prepared pinned source ASTs match all staged legacy source ASTs after declared patches"
+  },
+  "localized_linear_solves": {
+    "completed_cases": 23,
+    "completed_irls_solves": 230,
+    "max_relative_residual": 9.801680430127684e-14
+  },
+  "relief_readout": {
+    "status": "corrected_and_verified",
+    "note": "Retained signed relevance; recalculated all metrics from preserved raw scores. Original incorrect abs-based metrics excluded and retained locally."
+  },
+  "remaining_limitations": [
+    "No complete LassoFlexNet official implementation was available.",
+    "pymrmre native dependency failed to build; no mRMR ranking numbers are reported.",
+    "Fixed native/transfer settings, not full paper hyperparameter searches.",
+    "Six overlapping CV folds of one seed0 realization per task; not six independent generation seeds.",
+    "Metric verification does not establish baseline training correctness or paper-level performance parity."
+  ],
+  "orchestration_resume_check": {
+    "method": "rf",
+    "completed": 24,
+    "returncode": 0,
+    "note": "Resumed from copied successful results, without refitting"
+  }
+}

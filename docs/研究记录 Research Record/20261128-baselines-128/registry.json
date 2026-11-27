@@ -1,0 +1,149 @@
+{
+  "Deconvolution": {
+    "status": "complete",
+    "completed": 24
+  },
+  "DeepLift": {
+    "status": "complete",
+    "completed": 24
+  },
+  "FeatureAblation": {
+    "status": "complete",
+    "completed": 24
+  },
+  "FeaturePermutation": {
+    "status": "complete",
+    "completed": 24
+  },
+  "GuidedBackprop": {
+    "status": "complete",
+    "completed": 24
+  },
+  "IG_noMul": {
+    "status": "complete",
+    "completed": 24
+  },
+  "InputXGradient": {
+    "status": "complete",
+    "completed": 24
+  },
+  "Saliency": {
+    "status": "complete",
+    "completed": 24
+  },
+  "ShapleyValueSampling": {
+    "status": "complete",
+    "completed": 24
+  },
+  "SmoothGrad": {
+    "status": "complete",
+    "completed": 24
+  },
+  "adaptive_group_lasso": {
+    "status": "complete",
+    "completed": 24
+  },
+  "attention_maps": {
+    "status": "complete",
+    "completed": 24
+  },
+  "cae_keras": {
+    "status": "complete",
+    "completed": 24
+  },
+  "canceloutsigmoid": {
+    "status": "complete",
+    "completed": 24
+  },
+  "canceloutsoftmax": {
+    "status": "complete",
+    "completed": 24
+  },
+  "deep_lasso": {
+    "status": "complete",
+    "completed": 24
+  },
+  "deeppink": {
+    "status": "complete",
+    "completed": 24
+  },
+  "e2efs": {
+    "status": "complete",
+    "completed": 24
+  },
+  "first_layer_lasso": {
+    "status": "complete",
+    "completed": 24
+  },
+  "fsnet": {
+    "status": "complete",
+    "completed": 24
+  },
+  "lasso": {
+    "status": "complete",
+    "completed": 24
+  },
+  "lassonet": {
+    "status": "complete",
+    "completed": 24
+  },
+  "localized_lasso": {
+    "status": "complete",
+    "completed": 24
+  },
+  "mi": {
+    "status": "complete",
+    "completed": 24
+  },
+  "mrmr": {
+    "status": "blocked_dependency",
+    "completed": 0,
+    "reason": "pymrmre build requires Microsoft Visual C++ 14+; no compatible build toolchain detected"
+  },
+  "ours_column_norm": {
+    "status": "complete",
+    "completed": 24
+  },
+  "ours_taylor_first": {
+    "status": "complete",
+    "completed": 24
+  },
+  "ours_taylor_fisher": {
+    "status": "complete",
+    "completed": 24
+  },
+  "relief": {
+    "status": "complete",
+    "completed": 24
+  },
+  "rf": {
+    "status": "complete",
+    "completed": 24
+  },
+  "stg": {
+    "status": "complete",
+    "completed": 24
+  },
+  "treeshap": {
+    "status": "complete",
+    "completed": 24
+  },
+  "univariate": {
+    "status": "complete",
+    "completed": 24
+  },
+  "xgboost": {
+    "status": "complete",
+    "completed": 24
+  },
+  "lassoflexnet": {
+    "status": "blocked_missing_implementation",
+    "completed": 0,
+    "reason": "Official repository only contains README: code coming soon; checked 2026-11-28"
+  },
+  "random": {
+    "status": "complete",
+    "completed": 24,
+    "kind": "random ranking control"
+  }
+}
