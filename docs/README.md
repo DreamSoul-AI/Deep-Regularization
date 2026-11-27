@@ -18,3 +18,5 @@ Research evidence and reproducibility notes. Consult the retained research index
 - [四候选文献、baseline 与 benchmark 对照](<调研 Search/文献调研 Literature Search/文献调研 Literature Search Deep Regularization.md>)
 
 当前计划包含四个候选，以及 feature ranking、LassoFlexNet 协议下游效果两块正式实验。文档中的实现、参数与求解器依赖仍待落实，实验暂停状态保持原约定。
+
+- [候选一 ranking 初测与实现记录](<研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)

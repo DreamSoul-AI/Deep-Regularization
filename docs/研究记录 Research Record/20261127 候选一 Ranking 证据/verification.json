@@ -1,0 +1,9 @@
+{
+  "historical_model_forward_parity": true,
+  "checkpoints_reloaded": 36,
+  "moments_recomputed": true,
+  "train_test_disjoint": true,
+  "unit_tests_passed": 4,
+  "scope": "CPU 128-dimension XOR/Ring ranking pilot; no downstream refits",
+  "no_parameter_search": true
+}

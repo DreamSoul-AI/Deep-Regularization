@@ -60,3 +60,7 @@ The original research workspace keeps retained research under `research/legacy-m
 - 单项更新：[Workspace f020aa5](https://github.com/DreamSoul-AI/workspace/tree/f020aa5b6965766f7308fa31b0836e478c9da914)。采用加粗只包文字、所有标点放在外面的统一写法，移除未采用的本机配置默认目录及专门忽略项；配置位置和相应保护沿用项目约定，保留其他规则及原整版基线。
 - 单项更新：[Workspace a9da11e](https://github.com/DreamSoul-AI/workspace/tree/a9da11e30412aa3ec52a88cf76150da129b5063b)。文档按用途和目标读者组织正文，补齐独立阅读所需的背景与依据；保留原整版采用基线及项目约定。
 - 本轮适用更新：[Workspace 84f9696](https://github.com/DreamSoul-AI/workspace/tree/84f969679eb06b7d742ee7b384c13e371df9d425)。核对并合并当前适用的共用规则，补充新对话项目选择和按场景理解输入的约定，保留项目专有内容、个人配置、现有布局及原整版采用基线。
+
+## 候选一代码与排名初测，2026年11月27日
+
+本次用户明确授权建立独立分支、修复代码并测试候选一，只做 feature ranking。新增[运行入口](experiments/ranking_taylor_fisher.py)及[实现与结果记录](<docs/研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)。已完成128维 XOR/Ring 的配对初测；这项授权不扩展为候选二至四、下游重训、完整参数搜索或默认版本提升，原历史证据不改写。

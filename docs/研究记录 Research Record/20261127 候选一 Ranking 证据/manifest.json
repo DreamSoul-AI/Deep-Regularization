@@ -1,0 +1,45 @@
+{
+  "arguments": {
+    "tasks": [
+      "xor",
+      "ring"
+    ],
+    "dimensions": 128,
+    "samples": 1000,
+    "folds": 6,
+    "seed": 20261127,
+    "epochs": 120,
+    "warmup": 40,
+    "output": ".tmp/ranking-taylor-fisher/pilot-128-v1"
+  },
+  "config": {
+    "epochs": 120,
+    "warmup_epochs": 40,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.001,
+    "penalty": 0.05,
+    "rho": 50.0,
+    "score_interval": 10,
+    "score_samples": 128,
+    "score_batch_size": 32,
+    "hidden_size": 32,
+    "dropout": 0.04308691548552568,
+    "feature_dropout": 0.6
+  },
+  "device": "cpu",
+  "torch": "2.11.0+cu130",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "primary_readout": "gate",
+  "downstream_refits": false,
+  "source_baseline": "555ba11e8872bd6618cd721bd3b08f7128db9e6b",
+  "scope": "128-dimension paired ranking pilot; no search or test-label selection",
+  "files": {
+    "src/feature_scores.py": "608bbfa2d5304d0299400daeb9a75dc79651c93bc04337ccb57693ee1b711e4e",
+    "src/feature_selection.py": "23e1c890ca9d22a315b895de7896e101432993bda79277f4465975b1b0f25d6d",
+    "src/feature_selection_data.py": "d50d1c19b73fba0626cce66a56a4de0a84c45ad65b4407a933cee2427bb01022",
+    "experiments/ranking_taylor_fisher.py": "d40e90a6174f226c26111b20be47a2c252ea57774b2c60ec5b8fef485b133e65"
+  },
+  "python_executable": "existing project host interpreter (not committed machine path)"
+}

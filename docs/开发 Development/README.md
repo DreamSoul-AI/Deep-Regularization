@@ -6,3 +6,6 @@ Use these sources to interpret the preserved evidence. Existing execution limits
 
 - [Regularizers](../../src/regularizers.py)
 - [Training and evaluation implementation](../../src/train_test.py)
+
+- [候选一 ranking 初测与实现记录](<../研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)
+- [Ranking 运行入口](../../experiments/ranking_taylor_fisher.py)
