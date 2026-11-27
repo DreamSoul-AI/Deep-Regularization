@@ -1,0 +1,44 @@
+{
+  "arguments": {
+    "cases": ".tmp\\baseline-repairs-20261128\\reproduction-512",
+    "output": ".tmp\\baseline-repairs-20261128\\flex-v2-512\\part0",
+    "device": "cuda",
+    "start": 0,
+    "limit": 6,
+    "pretrain_epochs": 200,
+    "path_epochs": 100,
+    "path_size": 12,
+    "patience": 20,
+    "mode": "sequential_feasible",
+    "tasks": [
+      "xor",
+      "ring"
+    ]
+  },
+  "model": {
+    "bins": 8,
+    "pfe_width": 8,
+    "pfe_layers": 2,
+    "embedding": 8,
+    "mixer_hidden": 64,
+    "mixer_blocks": 2,
+    "dropout": 0.1,
+    "tau": 0.1,
+    "hierarchy": 10.0
+  },
+  "architecture_revision": "figure8-feature-bottleneck-channel-residual-v2",
+  "paper": "https://proceedings.mlr.press/v306/lui26a.html",
+  "label": "local numerical/binary reimplementation; not author code",
+  "seed": 1,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 512,
+  "ema_decay": 0.99,
+  "lambda_start": 1e-07,
+  "lambda_multiplier": 10000.0,
+  "path_power": 0.5,
+  "source_hashes": {
+    "src/lassoflexnet.py": "ed476eea67c31550b18f195a7001fb8984d65a79e9c7525cde5d7ee0e7b5d8a6",
+    "experiments/ranking_lassoflexnet.py": "ed2c07585072078e36ecfec5af2ab38871423abfa56ae4aa438440ceb9337ecb"
+  }
+}

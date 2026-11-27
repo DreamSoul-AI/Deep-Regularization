@@ -12,10 +12,10 @@ import subprocess
 import sys
 
 LEGACY=['random','rf','mi','relief','attributions','stg','canceloutsigmoid','canceloutsoftmax',
-        'deeppink','treeshap','xgboost','fsnet','lassonet','mrmr']
+        'deeppink','treeshap','xgboost','fsnet','lassonet','mrmr','mrmr_fullrank']
 SUPPLEMENT=['univariate','lasso','e2efs','cae_keras']
 NEURAL=['first_layer_lasso','adaptive_group_lasso','deep_lasso','attention_maps']
-METHODS=LEGACY+SUPPLEMENT+NEURAL+['localized_lasso','lassoflexnet']
+METHODS=LEGACY+SUPPLEMENT+NEURAL+['localized_lasso','lassoflexnet_reimpl','lassoflexnet']
 
 
 def main():
@@ -26,6 +26,8 @@ def main():
     p.add_argument('--methods',nargs='+',choices=METHODS,default=METHODS)
     p.add_argument('--cae-python',type=Path)
     p.add_argument('--device',choices=['cpu','cuda'],default='cpu')
+    p.add_argument('--tasks',nargs='+',choices=['xor','ring','ring+xor','ring+xor+sum'],
+                   default=['xor','ring','ring+xor','ring+xor+sum'])
     args=p.parse_args()
     root=Path(__file__).resolve().parents[1]
     args.assets=args.assets.resolve()
@@ -47,20 +49,27 @@ def main():
             if method in LEGACY:
                 script='baseline_suite.py'
                 source_args=['--stage',str(args.assets/'legacy')]
+            elif method=='lassoflexnet_reimpl':
+                script='ranking_lassoflexnet.py'
+                source_args=[]
             else:
                 script=('baseline_neural.py' if method in NEURAL else
                         'baseline_localized.py' if method=='localized_lasso' else 'baseline_supplement.py')
                 source_args=['--assets',str(args.assets)]
             command=[executable,'-u',str(root/'experiments'/script),*source_args,
-                     '--cases',str(args.cases),'--output',str(directory),'--method',method]
+                     '--cases',str(args.cases),'--output',str(directory),'--tasks',*args.tasks]
+            if method!='lassoflexnet_reimpl':
+                command+=['--method',method]
+            else:
+                command+=['--device',args.device]
             if method=='lassonet':
                 command+=['--device',args.device]
             with (directory/'worker.log').open('a',encoding='utf-8') as log:
                 returncode=subprocess.call(command,cwd=root,env=env,stdout=log,stderr=subprocess.STDOUT)
-            result=directory/(method+'.jsonl')
+            result=directory/('results.jsonl' if method=='lassoflexnet_reimpl' else method+'.jsonl')
             rows=list(map(json.loads,result.read_text(encoding='utf-8').splitlines())) if result.exists() else []
             successful={(r['task'],r['fold'],r['method']) for r in rows if r['status']=='ok'}
-            expected=240 if method=='attributions' else 24
+            expected=6*len(args.tasks)*(10 if method=='attributions' else 1)
             status[method]=dict(status='complete' if len(successful)==expected else 'incomplete',
                 completed=len(successful),expected=expected,returncode=returncode)
         (args.output/'run_status.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8')

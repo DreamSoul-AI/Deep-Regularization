@@ -17,7 +17,10 @@ def main():
     p.add_argument('--cases',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--ours',type=Path)
+    p.add_argument('--tasks',nargs='+',choices=['xor','ring','ring+xor','ring+xor+sum'],
+                   default=['xor','ring','ring+xor','ring+xor+sum'])
     args=p.parse_args()
+    tasks=args.tasks
     records={}
     failures=defaultdict(list)
     streams=[list(map(json.loads,file.read_text().splitlines())) for file in sorted(args.results.rglob('*.jsonl'))]
@@ -27,10 +30,12 @@ def main():
                         for r in map(json.loads,args.ours.read_text().splitlines())])
     for stream in streams:
         for row in stream:
+            if row['task'] not in tasks:
+                continue
             key=(row['method'],row['task'],row['fold'])
             if row['status']=='ok':
                 data=np.load(args.cases/f"{row['task']}-fold{row['fold']}.npz")
-                actual=metrics(row['scores'],data['support'])
+                actual=metrics(row['scores'],data['support'],expected_dim=len(data['permutation']))
                 for metric in ['recall_at_k','average_precision','auroc']:
                     if not np.isclose(actual[metric],row['metrics'][metric],atol=1e-12,rtol=0):
                         raise ValueError((key,metric,'metric mismatch'))
@@ -41,12 +46,11 @@ def main():
                 records[key]=row
             else:
                 failures[row['method']].append(dict(task=row['task'],fold=row['fold'],error=row['error']))
-    tasks=['xor','ring','ring+xor','ring+xor+sum']
     methods=sorted(set(key[0] for key in records)|set(failures))
     summary={}
     for method in methods:
         rows=[r for key,r in records.items() if key[0]==method]
-        complete=len(rows)==24
+        complete=len(rows)==6*len(tasks)
         task_metrics={}
         for task in tasks:
             rr=[r for r in rows if r['task']==task]
@@ -66,8 +70,9 @@ def main():
         for key in sorted(records):
             f.write(json.dumps(records[key])+'\n')
     (args.output/'failures.json').write_text(json.dumps(failures,indent=2)+'\n')
-    table=['| Method | XOR | Ring | Ring+XOR | Ring+XOR+Sum | Macro | AP | Status |',
-           '| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |']
+    labels={'xor':'XOR','ring':'Ring','ring+xor':'Ring+XOR','ring+xor+sum':'Ring+XOR+Sum'}
+    table=['| Method | '+' | '.join(labels[t] for t in tasks)+' | Macro | AP | Status |',
+           '| --- | '+' | '.join('---:' for _ in tasks)+' | ---: | ---: | --- |']
     def fmt(value):
         if value is None:
             return '—'
@@ -76,7 +81,7 @@ def main():
     for method in sorted(methods,key=lambda m:-(summary[m]['macro_recall'] or -1)):
         s=summary[method]
         vals=[fmt(s['tasks'][t]['recall_at_k']) if s['tasks'][t]['n']==6 else f"{s['tasks'][t]['n']}/6" for t in tasks]
-        table.append('| '+' | '.join([method,*vals,fmt(s['macro_recall']),fmt(s['macro_ap']),f"{s['completed']}/24"])+ ' |')
+        table.append('| '+' | '.join([method,*vals,fmt(s['macro_recall']),fmt(s['macro_ap']),f"{s['completed']}/{6*len(tasks)}"])+ ' |')
     (args.output/'table.md').write_text('\n'.join(table)+'\n',encoding='utf-8')
     print(f'Verified {len(records)} successful cases; {sum(s["status"]=="complete" for s in summary.values())} complete methods.')
     print('\n'.join(table))

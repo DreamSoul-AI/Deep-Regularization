@@ -22,12 +22,13 @@ def score_neural(method, x, y, k, assets, output, case):
     torch.manual_seed(1)
     np.random.seed(1)
     model_dir = assets/'upstream/deep_tabular/models'
+    dimension=x.shape[1]
     if method == 'attention_maps':
         cls = suite.load_module(model_dir/'ft_transformer_attention_map.py','upstream_ft').FTTransformerAttentionMap
-        net = cls(128,1,None,192,True,3,8,1.3333333333,.2,.1,0.,'reglu',True,'kaiming',None,None)
+        net = cls(dimension,1,None,192,True,3,8,1.3333333333,.2,.1,0.,'reglu',True,'kaiming',None,None)
     else:
         cls = suite.load_module(model_dir/'mlp.py','upstream_mlp').MLP
-        net = cls(128,1,None,100,[100,100],.1)
+        net = cls(dimension,1,None,100,[100,100],.1)
     net = net.to(DEVICE)
     fit, valid = train_test_split(np.arange(len(x)),test_size=.2,random_state=1,stratify=y)
     tx, ty = torch.tensor(x,dtype=torch.float32,device=DEVICE), torch.tensor(y,dtype=torch.float32,device=DEVICE)

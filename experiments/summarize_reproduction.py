@@ -21,10 +21,12 @@ def main():
     p = args.directory
     torch.set_num_threads(2)
     rows = [json.loads(line) for line in (p/"results.jsonl").read_text().splitlines()]
-    tasks = ["xor", "ring", "ring+xor", "ring+xor+sum"]
+    manifest=json.loads((p/"manifest.json").read_text(encoding="utf-8"))
+    tasks = manifest.get("tasks",["xor", "ring", "ring+xor", "ring+xor+sum"])
+    dimensions=manifest["dimensions"]
     modes = ["column_norm", "taylor_first", "taylor_fisher"]
     keys = {(r["task"], r["fold"], r["mode"]) for r in rows}
-    assert len(rows) == len(keys) == 72
+    assert len(rows) == len(keys) == len(tasks)*6*len(modes)
     assert keys == {(task, fold, mode) for task in tasks for fold in range(6) for mode in modes}
     diagnostics = []
     for row in rows:
@@ -35,7 +37,7 @@ def main():
         assert len(data["train"]) + len(data["test"]) == 1000
         k = 2 if row["task"] in ["xor", "ring"] else (4 if row["task"] == "ring+xor" else 6)
         np.testing.assert_array_equal(data["support"], np.flatnonzero(data["permutation"] < k))
-        model = GatedMLP(128, config=RankingConfig(**state["config"]))
+        model = GatedMLP(dimensions, config=RankingConfig(**state["config"]))
         model.load_state_dict(state["model"])
         x = data["x"][data["train"]][:, data["permutation"]]
         x = torch.as_tensor((x-state["mean"].numpy()) / state["std"].numpy(), dtype=torch.float32)
@@ -71,8 +73,9 @@ def main():
             pairs.append(dict(task=task, reference=reference, wins=sum(b[i]>a[i] for i in a),
                               ties=sum(b[i]==a[i] for i in a), losses=sum(b[i]<a[i] for i in a)))
     result = dict(summary=summary, paired_recall=pairs, fixed_model_diagnostics=diagnostics,
-                  verified=dict(original_parameter_parity_cases=24, reloaded_checkpoints=96,
-                                recomputed_score_moments=72, train_test_disjoint=True))
+                  verified=dict(original_parameter_parity_cases=len(tasks)*6,
+                                reloaded_checkpoints=len(rows)+len(tasks)*6,
+                                recomputed_score_moments=len(rows), train_test_disjoint=True))
     (p/"summary.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     print("task | column norm | first | first+Fisher")
     for task in tasks:

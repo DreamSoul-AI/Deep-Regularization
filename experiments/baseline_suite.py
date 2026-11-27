@@ -15,7 +15,8 @@ import time
 import traceback
 
 # Keep this comparison on CPU; do not contend with unrelated active GPU jobs.
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
+if __name__ == "__main__":
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
 import torch
 import numpy as np
 from sklearn.metrics import average_precision_score, roc_auc_score
@@ -24,13 +25,16 @@ ATTRIBUTIONS = ["Saliency", "InputXGradient", "IG_noMul", "SmoothGrad", "GuidedB
                 "DeepLift", "Deconvolution", "FeatureAblation", "FeaturePermutation", "ShapleyValueSampling"]
 
 
-def metrics(scores, support):
+def metrics(scores, support, expected_dim=None):
     # Adapters supply their native importance convention. Relief is signed:
     # negative relevance must not become positive importance through abs().
     values = np.asarray(scores).reshape(-1)
-    if values.shape != (128,) or not np.isfinite(values).all():
+    dimension = len(values)
+    if not dimension or (expected_dim is not None and dimension != expected_dim) or not np.isfinite(values).all():
         raise ValueError(f"Invalid feature score shape/values: {values.shape}")
-    truth = np.zeros(128, dtype=int)
+    if not 0 < len(support) < dimension or min(support)<0 or max(support)>=dimension:
+        raise ValueError("Invalid support for feature dimension")
+    truth = np.zeros(dimension, dtype=int)
     truth[support] = 1
     order = np.argsort(-values, kind="stable")
     k = len(support)
@@ -48,6 +52,8 @@ def main():
     parser.add_argument("--start", type=int, default=0)
     parser.add_argument("--limit", type=int, default=24)
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+    parser.add_argument("--tasks",nargs="+",choices=["xor","ring","ring+xor","ring+xor+sum"],
+                        default=["xor","ring","ring+xor","ring+xor+sum"])
     args = parser.parse_args()
     if args.device == "cuda":
         os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -76,8 +82,10 @@ def main():
         print(record["task"], record["fold"], record["method"], record["status"],
               record.get("metrics",record.get("error")),flush=True)
     for task in ["xor", "ring", "ring+xor", "ring+xor+sum"]:
+        if task not in args.tasks:
+            continue
         for fold in range(6):
-            case_index = ["xor", "ring", "ring+xor", "ring+xor+sum"].index(task)*6+fold
+            case_index = args.tasks.index(task)*6+fold
             if not args.start <= case_index < args.start+args.limit:
                 continue
             names = ATTRIBUTIONS if args.method=="attributions" else [args.method]
@@ -86,6 +94,7 @@ def main():
             data = np.load(args.cases/f"{task}-fold{fold}.npz")
             train, test = data["train"], data["test"]
             raw = data["x"][:,data["permutation"]]
+            dimension=raw.shape[1]
             mean, std = raw[train].mean(0), raw[train].std(0)+1e-8
             x, xt = (raw[train]-mean)/std, (raw[test]-mean)/std
             y = data["y"][train]
@@ -96,7 +105,7 @@ def main():
             # Reconstruct original synthetic knockoffs with the original generator.
             rng = np.random.get_state()
             np.random.seed(0)
-            _, knockoffs, _ = importlib.import_module("src.data").generate_dataset(task,1000,128)
+            _, knockoffs, _ = importlib.import_module("src.data").generate_dataset(task,len(raw),dimension)
             np.random.set_state(rng)
             knockoffs = 2.0*knockoffs[:,data["permutation"]]-1.0
             knockoff_train = (knockoffs[train]-mean)/std
@@ -107,7 +116,7 @@ def main():
                     with contextlib.redirect_stdout(log), contextlib.redirect_stderr(log):
                         wrapper = None
                         if args.method=="attributions":
-                            wrapper = core.NNwrapper.create(task,128,2)
+                            wrapper = core.NNwrapper.create(task,dimension,2)
                             wrapper.fit(x,y)
                             torch.save(wrapper.model.state_dict(),args.output/f"{task}-{fold}-nn.pt")
                     for name in names:
@@ -122,19 +131,31 @@ def main():
                                     clf.fit(x,y)
                                     attribution=np.asarray(shap.TreeExplainer(clf).shap_values(calibration))
                                     # New SHAP returns [sample, feature, class], old versions a list per class.
-                                    if attribution.shape==(128,128,2): attribution=attribution[:,:,1]
-                                    elif attribution.shape==(2,128,128): attribution=attribution[1]
+                                    if attribution.shape==(len(calibration),dimension,2): attribution=attribution[:,:,1]
+                                    elif attribution.shape==(2,len(calibration),dimension): attribution=attribution[1]
                                     else: raise ValueError(f"Unexpected SHAP shape: {attribution.shape}")
                                     score=np.abs(attribution).mean(0)
                                 elif name=="xgboost":
                                     from xgboost import XGBClassifier
                                     clf=XGBClassifier(n_estimators=100,max_depth=6,learning_rate=0.3,n_jobs=2,random_state=seed)
                                     clf.fit(x,y);score=clf.feature_importances_
+                                elif name=="mrmr_fullrank":
+                                    from pymrmre import mrmr
+                                    import pandas as pd
+                                    columns=[f"x{j}" for j in range(x.shape[1])]
+                                    order=mrmr.mrmr_ensemble(features=pd.DataFrame(x,columns=columns),
+                                        targets=pd.DataFrame({"y":y}),solution_length=x.shape[1],
+                                        solution_count=1).iloc[0][0]
+                                    if len(order)!=x.shape[1] or set(order)!=set(columns):
+                                        raise ValueError("mRMR did not return a complete feature permutation")
+                                    score=np.empty(x.shape[1])
+                                    for rank,column in enumerate(order):
+                                        score[int(column[1:])]=x.shape[1]-rank
                                 elif name=="stg":
                                     _,_,score,_=core.run_stg_fs(x,y,calibration,2,device="cpu")
                                 elif name=="fsnet":
                                     # The legacy wrapper's second 2k fit only serves separate 2k metrics/predictions.
-                                    selector=core.FSNet(core.Model(len(support),2),128,30,len(support),2)
+                                    selector=core.FSNet(core.Model(len(support),2),dimension,30,len(support),2)
                                     selector.fit(x,y)
                                     score=selector.get_feature_importances()
                                 else:
@@ -146,7 +167,7 @@ def main():
                                         _,_,score,_=core.run_fs_method(task,name,x,knockoff_train,y,calibration,
                                                                       knockoff_calibration,len(support))
                             save(dict(task=task,fold=fold,method=name,status="ok",seed=seed,device=args.device,
-                                      seconds=time.perf_counter()-start,metrics=metrics(score,support),
+                                      seconds=time.perf_counter()-start,metrics=metrics(score,support,expected_dim=dimension),
                                       scores=np.asarray(score).reshape(-1).tolist()))
                         except Exception as error:
                             traceback.print_exc(file=log)

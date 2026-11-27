@@ -1,0 +1,5 @@
+{
+  "cases": 24,
+  "same_top_k_sets": true,
+  "readout": "Full native greedy order replaces random in-support jitter for complete ranking metrics"
+}

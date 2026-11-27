@@ -1,5 +1,7 @@
 # Ranking Baseline 全量对照
 
+本页保留首次816条记录的历史状态。后续已修复 mRMR、完成 LassoFlexNet 本地实现并扩展512维 XOR/Ring，更新的36方法总表、版本核对与证据见 [Baseline 修复与512维复核](<2026年11月28日 Baseline 修复与512维复核.md>)。本页“原方案”均限定为公开 raw-gate 快照500/120轮，不能等同于10月有效 gate GRN-FS 或11月 A—L。
+
 本轮按照新增授权，在候选一已经使用的同一批数据上补跑全部既有 ranking baseline，并接入 Localized Lasso 和 LassoFlexNet 论文中的其他特征筛选方法。范围为四个合成任务、128维、每任务六折；不包含真实数据下游重训练、其他维度网格或候选二至四。
 
 ## 一、比较范围与解释边界

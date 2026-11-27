@@ -22,3 +22,6 @@ Research evidence and reproducibility notes. Consult the retained research index
 - [候选一 ranking 初测与实现记录](<研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)
 - [原方案500轮复现与四任务ranking总表](<研究记录 Research Record/2026年11月28日 原方案复现与候选一 Ranking 对照.md>)
 - [全部 ranking baseline、论文新增方法与运行限制](<研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>)
+- [mRMR 修复、LassoFlexNet 本地实现与512维版本复核](<研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md>)
+
+后续新增授权已完成 mRMR、本地 LassoFlexNet 数值二分类实现，以及512维 XOR/Ring 的固定设置比较。后者使用公开 raw-gate 500/120轮参照；飞书10月报告的有效 gate GRN-FS 及11月 A—L 源码尚未取得，不能以公开快照成功替代其高维失败复核。候选二至四与下游仍未执行。

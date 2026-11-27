@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "cases": 1,
+  "checks": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "mode": "paper_literal",
+      "dimensions": 128,
+      "checkpoint_beta_scores_exact": true,
+      "training_only_tree_knots_exact": true,
+      "best_positive_path_checkpoint_verified": true,
+      "cpu_validation_bce_error": 5.960464477539063e-08,
+      "hierarchy_violation": 0.09202378988265991,
+      "zero_feature_deletion_tested": false,
+      "actual_training_epochs": 290
+    }
+  ],
+  "max_cpu_validation_bce_error": 5.960464477539063e-08,
+  "max_selected_hierarchy_violation": 0.09202378988265991,
+  "deletion_tests": 0
+}

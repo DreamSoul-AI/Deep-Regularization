@@ -86,6 +86,8 @@ def main():
     p.add_argument('--method', required=True)
     p.add_argument('--limit', type=int, default=24)
     p.add_argument('--start', type=int, default=0)
+    p.add_argument('--tasks',nargs='+',choices=['xor','ring','ring+xor','ring+xor+sum'],
+                   default=['xor','ring','ring+xor','ring+xor+sum'])
     args = p.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     result = args.output/(args.method+'.jsonl')
@@ -93,7 +95,7 @@ def main():
     if result.exists():
         done = {(r['task'],r['fold']) for r in map(json.loads,result.read_text().splitlines()) if r['status']=='ok'}
     torch.set_num_threads(1)
-    cases = [(t,f) for t in ['xor','ring','ring+xor','ring+xor+sum'] for f in range(6)]
+    cases = [(t,f) for t in args.tasks for f in range(6)]
     for task, fold in cases[args.start:args.start+args.limit]:
         if (task,fold) in done:
             continue
@@ -110,7 +112,7 @@ def main():
                 with contextlib.redirect_stdout(log), contextlib.redirect_stderr(log):
                     scores = score_model(args.method,x,y,len(data['support']),args.assets,args.output,f'{task}-{fold}')
                 record.update(status='ok', seconds=time.perf_counter()-start,
-                              metrics=metrics(scores,data['support']),scores=np.asarray(scores).tolist())
+                              metrics=metrics(scores,data['support'],expected_dim=x.shape[1]),scores=np.asarray(scores).tolist())
             except Exception as error:
                 traceback.print_exc(file=log)
                 record.update(status='failed',error=str(error))

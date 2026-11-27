@@ -7,4 +7,6 @@ stg==0.1.2
 lightning==2.6.6
 pytorch-lightning==2.6.6
 # CAE uses a separate environment: concrete-autoencoder==0.0.1, tf-keras==2.21.0.
-# mRMR additionally needs pymrmre and a compatible native C++ build toolchain.
+# Optional native mRMR: pymrmre==1.0.7, Cython and a compatible C++ build toolchain.
+# Install it explicitly with --no-build-isolation, then run experiments/patch_pymrmre.py.
+# See docs/研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md.

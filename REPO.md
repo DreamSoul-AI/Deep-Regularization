@@ -72,3 +72,7 @@ The original research workspace keeps retained research under `research/legacy-m
 ## Ranking baseline 扩展授权，2026年11月28日
 
 用户进一步要求跑齐原有 baseline、Localized Lasso，以及 LassoFlexNet 论文中应补的特征筛选比较对象。执行限定为上述同一批四任务、128维、六折的 ranking 比较，使用固定参数并登记原版/迁移设置、失败和缺失实现。可按实际空闲情况使用CPU或GPU；不干预其他任务，不启动下游重训练、其他候选或自动调参搜索。实现、全表与复跑入口见 [Ranking Baseline 全量对照](<docs/研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>)。LassoFlexNet 缺少官方代码时保留待复现，不用猜写结果补行。
+
+## Baseline 修复与高维复核新增授权，2026年11月28日
+
+用户随后要求修复 mRMR 编译依赖、自行实现 LassoFlexNet，并核对会议所述512维失败及飞书项目文件夹。已完成 mRMR 原生构建与两个包装接口修复、数值二分类 LassoFlexNet 本地可行变体，以及公开 raw-gate 512维 XOR/Ring 对照；[记录与证据](<docs/研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md>)区分官方代码、本地文本变体和历史版本。128维补齐为36方法、864条记录。飞书数学定义/10月报告使用有效 gate、canonical prox 等不同协议；11月 A—L 源码未找到，本次公开快照不替代其精确复现。范围仍为ranking，不包含下游、候选二至四、无界搜索或默认提升。

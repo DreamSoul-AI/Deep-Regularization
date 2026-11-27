@@ -9,14 +9,15 @@ import math
 from pathlib import Path
 
 
-def score_metrics(scores, support):
+def score_metrics(scores, support, expected_dim=None):
     values=[float(x) for x in scores]
-    if len(values)!=128 or not all(math.isfinite(x) for x in values):
+    dimension=len(values)
+    if not dimension or (expected_dim is not None and dimension!=expected_dim) or not all(math.isfinite(x) for x in values):
         raise ValueError('Invalid score vector')
     positive=set(support)
-    if not positive or not positive.issubset(range(128)):
+    if not 0<len(positive)<dimension or not positive.issubset(range(dimension)):
         raise ValueError('Invalid support')
-    order=sorted(range(128),key=lambda j:(-values[j],j))
+    order=sorted(range(dimension),key=lambda j:(-values[j],j))
     k=len(positive)
     recall=sum(j in positive for j in order[:k])/k
     ap,tp,offset=0.,0,0
@@ -28,15 +29,15 @@ def score_metrics(scores, support):
         tp+=group_tp
         ap+=(group_tp/k)*(tp/end)
         offset=end
-    ascending=sorted(range(128),key=lambda j:values[j])
+    ascending=sorted(range(dimension),key=lambda j:values[j])
     rank_sum,offset=0.,0
-    while offset<128:
+    while offset<dimension:
         end=offset+1
-        while end<128 and values[ascending[end]]==values[ascending[offset]]:
+        while end<dimension and values[ascending[end]]==values[ascending[offset]]:
             end+=1
         rank_sum+=sum(j in positive for j in ascending[offset:end])*(offset+1+end)/2
         offset=end
-    auroc=(rank_sum-k*(k+1)/2)/(k*(128-k))
+    auroc=(rank_sum-k*(k+1)/2)/(k*(dimension-k))
     return dict(recall_at_k=recall,average_precision=ap,auroc=auroc,top_k=order[:k])
 
 
@@ -46,7 +47,18 @@ def main():
     args=p.parse_args()
     cases=json.loads((args.evidence/'cases.json').read_text(encoding='utf-8'))
     summary=json.loads((args.evidence/'summary.json').read_text(encoding='utf-8'))
-    records=[json.loads(line) for line in (args.evidence/'verified_results.jsonl').read_text(encoding='utf-8').splitlines()]
+    source_manifest=args.evidence/'record_sources.json'
+    if source_manifest.exists():
+        names=json.loads(source_manifest.read_text(encoding='utf-8'))
+        if not isinstance(names,list) or not 0<len(names)<=10:
+            raise ValueError('Invalid record source manifest')
+        sources=[(args.evidence/name).resolve() for name in names]
+        repository=Path(__file__).resolve().parents[1]
+        if any(p.suffix!='.jsonl' or not p.is_relative_to(repository) for p in sources):
+            raise ValueError('Referenced evidence must be JSONL inside this repository')
+    else:
+        sources=[args.evidence/'verified_results.jsonl']
+    records=[json.loads(line) for source in sources for line in source.read_text(encoding='utf-8').splitlines()]
     by_method=defaultdict(list)
     seen=set()
     def close(a,b,label):
@@ -57,7 +69,8 @@ def main():
         if key in seen:
             raise ValueError(('Duplicate case',key))
         seen.add(key)
-        actual=score_metrics(row['scores'],cases[f"{row['task']}-fold{row['fold']}"]['support'])
+        case=cases[f"{row['task']}-fold{row['fold']}"]
+        actual=score_metrics(row['scores'],case['support'],expected_dim=case.get('dimensions',128))
         for metric in ['recall_at_k','average_precision','auroc']:
             close(actual[metric],row['metrics'][metric],(key,metric))
         if actual['top_k']!=row['metrics']['top_k']:
@@ -76,9 +89,9 @@ def main():
                     close(sum(r['metrics'][metric] for r in selected)/len(selected),task_report[metric],(method,task,metric))
         for overall,metric in [('macro_recall','recall_at_k'),('macro_ap','average_precision'),('macro_auroc','auroc')]:
             if report['status']=='complete':
-                if len(rows)!=24:
+                if len(rows)!=6*len(report['tasks']):
                     raise ValueError(('Incomplete method marked complete',method))
-                close(sum(report['tasks'][task][metric] for task in report['tasks'])/4,report[overall],(method,overall))
+                close(sum(report['tasks'][task][metric] for task in report['tasks'])/len(report['tasks']),report[overall],(method,overall))
             elif report[overall] is not None:
                 raise ValueError(('Partial method has macro score',method))
     count=sum(bool(rows) for rows in by_method.values())

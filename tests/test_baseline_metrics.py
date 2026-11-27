@@ -25,6 +25,16 @@ class BaselineMetricTests(unittest.TestCase):
             for name in ['recall_at_k','average_precision','auroc']:
                 self.assertAlmostEqual(actual[name],expected[name],places=12)
 
+    def test_high_dimensional_vectors_are_not_truncated_to_128(self):
+        values=np.zeros(512)
+        values[300],values[511]=2.,1.
+        expected=metrics(values,[300,511],expected_dim=512)
+        actual=score_metrics(values,[300,511],expected_dim=512)
+        self.assertEqual(actual,expected)
+        self.assertEqual(actual['top_k'],[300,511])
+        with self.assertRaises(ValueError):
+            metrics(values,[300,511],expected_dim=128)
+
 
 if __name__=='__main__':
     unittest.main()
