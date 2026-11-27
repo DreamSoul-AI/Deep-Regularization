@@ -168,6 +168,27 @@ def main():
         position=head.index('## 当前判断')
         head[position]='## 单种子全量对照'
         head[position:position]=section
+    penalty_file=args.dashboard.parent/'ranking-dashboard/penalty-sweep/summary.json'
+    if penalty_file.exists():
+        penalty_sweep=json.loads(penalty_file.read_text(encoding='utf-8'))
+        modes=('column_norm_gate','column_norm_taylor_first','column_norm_taylor_second','column_norm_taylor_fisher')
+        reports=penalty_sweep['by_penalty']
+        best_penalty,best=max(reports.items(),key=lambda pair:pair[1]['raw'][modes[0]])
+        best_rf_gap=best['contrasts']['raw']['gate_minus_rf']
+        section=['## 512维训练正则强度对照', '',
+            '固定原训练与数据折，只改训练里的 C。同一模型读出四种分数，指标为四任务等权 Top-k 真实特征恢复率。', '',
+            f'Random Forest 按完全相同的 {penalty_sweep["rf_folds"]} 折重新评估，均值为 **{percent(best["rf"])}%**。A × Gate 在 C={best_penalty} 时的均值最高，为 **{percent(best["raw"][modes[0]])}%**，配对胜／平／负为 {best_rf_gap["wins"]}/{best_rf_gap["ties"]}/{best_rf_gap["losses"]}。', '']
+        for kind,title in [('raw','按原始分数排名'),('soft','加最终软阈值后排名')]:
+            section += [f'### {title}', '', '| 训练 C | A × Gate | A × 一阶 | A × 纯二阶 | A ×（一阶＋二阶） |',
+                        '| ---: | ---: | ---: | ---: | ---: |']
+            for penalty,report in reports.items():
+                scores=[percent(report[kind][mode])+'%' for mode in modes]
+                section.append('| '+' | '.join([penalty,*scores])+' |')
+            section.append('')
+        section += ['本轮 C 扫描用于描述敏感性。原始分数用 Aq，加软阈值的一组使用各自训练 C 和终点 A、ρ。配对差值、逐种子和逐折记录见 [训练正则强度对照证据](ranking-dashboard/penalty-sweep/README.md)。', '']
+        old_heading='## 单种子全量对照' if sweep_file.exists() else '## 当前判断'
+        position=head.index(old_heading)
+        head[position:position]=section
     priority=['public_512_defaults_rho200','effective_gate_oct9_reference','raw_snapshot_column_norm',
               'gate_only','column_norm_gate','raw_snapshot_taylor_first','taylor_second',
               'raw_snapshot_taylor_fisher','column_norm_taylor_first','column_norm_taylor_second',
