@@ -80,3 +80,7 @@ The original research workspace keeps retained research under `research/legacy-m
 ## 有效 gate 512维参照新增授权，2026年11月28日
 
 用户要求按10月9日报告和数学定义恢复有效 gate 参照，再与 LassoNet 和现有一阶加二阶方案比较；随后明确“保持方法，只做512维对照”。新增独立参照入口，复用仓内保留的 canonical 数值求解器，不改既有方法或调参。完成512维 XOR/Ring 六折，现有两个方法复用同数据已验证分数，结果见 [有效 gate 的512维 Ranking 对照](<docs/研究记录 Research Record/2026年11月28日 有效 gate 的512维 Ranking 对照.md>)。这是按报告恢复，未取得10月原驱动，不能称为历史逐位复现；执行范围仍不包含下游或额外算法改动。
+
+## 当前统一看板与512维全量授权，2026年11月28日
+
+用户要求512维四任务跑齐全部已接入 baseline、核对原仓库commit，并采用一个持续更新的当前看板。[实验看板](<docs/实验看板 Deep Regularization.md>)为唯一当前汇总入口，日期记录保留追溯。范围为四任务×六折，既有方法和参数不改，新增原公开包装器的512维ρ200默认参照；旧ρ50行明确标作固定128配方扩维。所有完整/缺折/失败按实际证据显示，不以部分任务均值冒充四任务Macro，不扩展到下游、自动调参或其他候选。刷新入口为 `experiments/update_ranking_dashboard.py`。

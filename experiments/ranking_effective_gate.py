@@ -20,12 +20,13 @@ def main():
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--start',type=int,default=0)
     p.add_argument('--limit',type=int,default=12)
+    p.add_argument('--tasks',nargs='+',choices=['xor','ring','ring+xor','ring+xor+sum'],default=['xor','ring'])
     args=p.parse_args()
     torch.set_num_threads(1)
     torch.use_deterministic_algorithms(True)
     args.output.mkdir(parents=True,exist_ok=True)
     config=EffectiveGateConfig()
-    manifest=dict(config=asdict(config),dimensions=512,tasks=['xor','ring'],seed=0,device='cpu',
+    manifest=dict(config=asdict(config),dimensions=512,tasks=args.tasks,seed=0,device='cpu',
         changes='Only new reference; existing LassoNet and raw-gate Taylor-Fisher methods unchanged',
         source_hashes={name:hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in
             ['src/effective_gate.py','experiments/ranking_effective_gate.py']},
@@ -42,7 +43,7 @@ def main():
     result=args.output/'results.jsonl'
     done={(r['task'],r['fold']) for r in map(json.loads,result.read_text().splitlines())} if result.exists() else set()
     _,topk=load_retained_prox()
-    cases=[(task,fold) for task in ['xor','ring'] for fold in range(6)]
+    cases=[(task,fold) for task in args.tasks for fold in range(6)]
     for task,fold in cases[args.start:args.start+args.limit]:
         if (task,fold) in done:
             continue

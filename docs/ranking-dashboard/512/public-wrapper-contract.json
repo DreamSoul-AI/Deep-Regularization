@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "task": "xor",
+  "fold": 0,
+  "source_commit": "555ba11e8872bd6618cd721bd3b08f7128db9e6b",
+  "full_original_wrapper_scores_exact": true,
+  "max_difference": 0.0,
+  "rho_init": 200,
+  "device": "cpu"
+}

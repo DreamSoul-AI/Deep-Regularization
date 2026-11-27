@@ -13,6 +13,8 @@ from pathlib import Path
 import sys
 import time
 import traceback
+from functools import partial
+from unittest.mock import patch
 
 # Keep this comparison on CPU; do not contend with unrelated active GPU jobs.
 if __name__ == "__main__":
@@ -163,10 +165,19 @@ def main():
                                     if name=="rf":
                                         clf=core.RandomForestClassifier(n_estimators=500,n_jobs=2,random_state=seed)
                                         clf.fit(x,y);score=clf.feature_importances_
+                                    elif name=="lassonet":
+                                        import lassonet
+                                        # The native constructor otherwise auto-selects CUDA even
+                                        # when an empty CUDA_VISIBLE_DEVICES is ignored on Windows.
+                                        constructor=partial(lassonet.LassoNetClassifier,device=args.device)
+                                        with patch.object(lassonet,"LassoNetClassifier",constructor):
+                                            _,_,score,_=core.run_fs_method(task,name,x,knockoff_train,y,calibration,
+                                                                          knockoff_calibration,len(support))
                                     else:
                                         _,_,score,_=core.run_fs_method(task,name,x,knockoff_train,y,calibration,
                                                                       knockoff_calibration,len(support))
                             save(dict(task=task,fold=fold,method=name,status="ok",seed=seed,device=args.device,
+                                      device_bound_explicitly=name=="lassonet",
                                       seconds=time.perf_counter()-start,metrics=metrics(score,support,expected_dim=dimension),
                                       scores=np.asarray(score).reshape(-1).tolist()))
                         except Exception as error:

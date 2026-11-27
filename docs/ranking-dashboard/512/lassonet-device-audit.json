@@ -1,0 +1,7 @@
+{
+  "empty_python_cuda_visibility": true,
+  "native_default_device": "cuda",
+  "explicit_cpu_device": "cpu",
+  "source": "D:\\GitHub\\DreamSoul\\Deep-Regularization\\.tmp\\all-baselines-20261128\\env\\Lib\\site-packages\\lassonet\\interfaces.py",
+  "finding": "Original core constructor does not pass device; requested CPU metadata was inaccurate on this Windows runtime"
+}

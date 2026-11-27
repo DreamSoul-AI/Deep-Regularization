@@ -18,6 +18,17 @@ if DEVICE == 'cuda':
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 
+def backward_attention_batch(net,x,y,criterion,microbatch):
+    """Preserve the batch-mean objective and one optimizer step per full batch."""
+    loss_sum=0.
+    for start in range(0,len(x),microbatch):
+        xx,yy=x[start:start+microbatch],y[start:start+microbatch]
+        loss=criterion(net(xx,None),yy)*(len(xx)/len(x))
+        loss.backward()
+        loss_sum+=float(loss.detach())
+    return loss_sum
+
+
 def score_neural(method, x, y, k, assets, output, case):
     torch.manual_seed(1)
     np.random.seed(1)
@@ -34,6 +45,8 @@ def score_neural(method, x, y, k, assets, output, case):
     tx, ty = torch.tensor(x,dtype=torch.float32,device=DEVICE), torch.tensor(y,dtype=torch.float32,device=DEVICE)
     criterion = nn.BCEWithLogitsLoss()
     history = []
+    default_microbatch='16' if dimension==512 else '0'
+    microbatch=int(os.environ.get('RANKING_ATTENTION_MICROBATCH',default_microbatch)) if method=='attention_maps' else 0
 
     def train(stage, adaptive=None):
         opt = torch.optim.AdamW(net.parameters(),lr=.001,weight_decay=2e-4)
@@ -44,6 +57,11 @@ def score_neural(method, x, y, k, assets, output, case):
             for group in opt.param_groups:
                 group['lr'] = lr
             for ids in torch.tensor(fit)[torch.randperm(len(fit))].split(512):
+                if microbatch:
+                    opt.zero_grad()
+                    backward_attention_batch(net,tx[ids],ty[ids],criterion,microbatch)
+                    opt.step()
+                    continue
                 xx = tx[ids].clone().requires_grad_(method=='deep_lasso')
                 loss = criterion(net(xx,None),ty[ids])
                 if method == 'deep_lasso':
@@ -76,7 +94,8 @@ def score_neural(method, x, y, k, assets, output, case):
     if method == 'adaptive_group_lasso':
         weights = net.layers[0].weight.detach().square().sum(0).clamp_min(1e-8).reciprocal()
         train('adaptive',weights)
-    torch.save(dict(state_dict=net.state_dict(),history=history),output/(case+'-'+method+'.pt'))
+    torch.save(dict(state_dict=net.state_dict(),history=history,effective_batch=512,
+                    attention_microbatch=microbatch,device=DEVICE),output/(case+'-'+method+'.pt'))
     net.eval()
     calibration = torch.tensor(np.linspace(0,len(x)-1,128).astype(int))
     if method == 'deep_lasso':

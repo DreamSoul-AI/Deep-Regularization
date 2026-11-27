@@ -15,11 +15,14 @@ def main():
     p.add_argument('--runs',type=Path,required=True)
     p.add_argument('--cases',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--runner-source',type=Path,help='Optional archived runner text for runs preceding task-list CLI extension')
     args=p.parse_args()
     torch.set_num_threads(1)
     manifest=json.loads((args.runs/'manifest.json').read_text(encoding='utf-8'))
     for name,expected in manifest['source_hashes'].items():
         raw=Path(name).read_bytes()
+        if name=='experiments/ranking_effective_gate.py' and args.runner_source is not None:
+            raw=args.runner_source.read_bytes()
         assert expected in (hashlib.sha256(raw).hexdigest(),hashlib.sha256(raw.replace(b'\r\n',b'\n')).hexdigest())
     prox,topk=load_retained_prox()
     checks=[]

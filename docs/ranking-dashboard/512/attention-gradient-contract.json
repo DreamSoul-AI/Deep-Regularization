@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "actual_upstream_ft": true,
+  "dropout_disabled": true,
+  "effective_batch": 9,
+  "microbatch": 4,
+  "loss_difference": 0.0,
+  "max_gradient_difference": 1.1102230246251565e-16,
+  "training_note": "Dropout-on trajectories differ in RNG ordering; objective/batch/update count unchanged"
+}

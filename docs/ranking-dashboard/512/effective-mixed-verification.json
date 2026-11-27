@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "certified_updates": 1440,
+  "checks": [
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.5751250982284546,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7536768317222595,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7352527379989624,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7591547966003418,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.6865447759628296,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 4,
+        "selected_count": 4,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7159287333488464,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7831883430480957,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.5166678428649902,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.6063047051429749,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.5740967392921448,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7825530171394348,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 6,
+        "selected_count": 6,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.623730480670929,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    }
+  ]
+}
