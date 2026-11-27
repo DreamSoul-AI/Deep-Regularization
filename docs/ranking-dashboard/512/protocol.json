@@ -16,7 +16,7 @@
     "initial_full_cpu_attempt": "Stopped before first successful case for memory26GiB; raw stop record retained locally"
   },
   "current_source_hashes": {
-    "experiments/update_ranking_dashboard.py": "f93da472e3b5bf49fc269302ecde96d9205df5853b19df57f07b75a5cc8ed05e",
+    "experiments/update_ranking_dashboard.py": "560485850208df7660421df66538ec5b2152d5b610b44ec302d6f1a1c4d140a4",
     "experiments/ranking_public_defaults.py": "2ccbb21a0801be56ad638002eb2e72aa576254d00481e4a83fb79a6ce13be8dd",
     "experiments/baseline_suite.py": "872285717692dd14b8c35a1e274b4cae354108ef2e73f7b7052c833c5e7d39d1",
     "experiments/baseline_supplement.py": "545c13b1fb887f9c793ff45361e2e6317422caeada332816ab35232ee9100ebb",
