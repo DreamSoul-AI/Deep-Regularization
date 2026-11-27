@@ -94,3 +94,5 @@ The original research workspace keeps retained research under `research/legacy-m
 最新512维消融固定原方法阈值 C/(ρA) 及其数值保护，乘 A 与否只改变 soft 左边的输入。分别验证原训练后的排名评分、在 z 步改用评分、以及在 z 步改用 A(s+u)。前面的评分进阈值分母一组作为历史对照。新增结果及失败状态见 [固定阈值对照](docs/ranking-dashboard/fixed-threshold-512/README.md)。
 
 用户明确要求在训练 z 步去掉右侧分母的 A。512维继续用同一组 Aq 左输入和原训练配方，将 C/(ρA) 与 C/ρ 配对重训。最终两组用相同的软阈值公式读出，结果与此前只改最终读出的实验分开记录。
+
+后续用户要求固定原训练并用独立数据种子比较排名。使用数据种子1–5及128、256、512、1024维，每折只训练一个原方法模型，复用既有评分与 soft 读出。按数据种子汇总 Gate、一阶、纯二阶和一阶加二阶的配对差值。旧512维种子0仅用于复现核验。看板汇总，逐折证据见 [多种子对照](docs/ranking-dashboard/seed-sweep/README.md)。

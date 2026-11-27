@@ -33,7 +33,7 @@ def save_readout(state, mode, case, apply_soft, *, divide_by_a=True):
     k = len(case["support"])
     nonzero = int(np.count_nonzero(score))
     stable = np.argsort(-score, kind="stable")[:k]
-    return dict(scores=score.tolist(), metrics=metrics(score, case["support"], expected_dim=512),
+    return dict(scores=score.tolist(), metrics=metrics(score, case["support"], expected_dim=len(score)),
                 nonzero=nonzero, positive_recall=np.isin(stable[score[stable] > 0], case["support"]).sum().item()/k)
 
 

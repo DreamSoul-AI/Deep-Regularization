@@ -133,6 +133,41 @@ def main():
       '## 512维','',
       '| 方法 | XOR | Ring | Ring+XOR | Ring+XOR+Sum | 四任务 Macro | 完成状态 |',
       '| --- | ---: | ---: | ---: | ---: | ---: | --- |']
+    sweep_file=args.dashboard.parent/'ranking-dashboard/seed-sweep/summary.json'
+    if sweep_file.exists():
+        sweep=json.loads(sweep_file.read_text(encoding='utf-8'))
+        modes=('column_norm_gate','column_norm_taylor_first','column_norm_taylor_second','column_norm_taylor_fisher')
+
+        def pp(value):
+            value=round(value,12)
+            return ('−' if value<0 else '+' if value>0 else '')+percent(abs(value))
+
+        dim512=sweep['by_dimension']['512']
+        against_gate=dim512['contrasts']['fisher_minus_gate']
+        against_first=dim512['contrasts']['fisher_minus_first']
+        section=['## 原方法训练，多种子排名对照', '',
+            f'使用{len(sweep["independent_data_seeds"])}个独立数据种子、四个任务、每任务六折。共核验{sweep["models_verified"]}个模型与{sweep["rankings_verified"]}个排名读出。每个模型训练一次，四种方法只更换最终排序的 q。旧512维种子0留作复现参考。', '',
+            f'512维上，一阶＋二阶相对 Gate 平均变化 {pp(against_gate["mean"])} 个百分点，相对单用一阶平均变化 {pp(against_first["mean"])} 个百分点。', '',
+            '| 维数 | A × Gate | A × 一阶 | A × 纯二阶 | A ×（一阶＋二阶） | 一阶＋二阶对 Gate | 二阶加到一阶后的变化 |',
+            '| ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
+        for d in sweep['dimensions']:
+            dim=sweep['by_dimension'][str(d)]
+            values=[percent(dim['macro'][m])+'%' for m in modes]
+            deltas=[pp(dim['contrasts'][key]['mean'])+'点' for key in ('fisher_minus_gate','fisher_minus_first')]
+            section.append('| '+' | '.join([str(d),*values,*deltas])+' |')
+        section += ['', '### 512维逐种子', '',
+            '| 数据种子 | A × Gate | A × 一阶 | A × 纯二阶 | A ×（一阶＋二阶） | 一阶＋二阶对 Gate | 二阶加到一阶后的变化 |',
+            '| ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
+        for seed,report in dim512['by_seed'].items():
+            values=[percent(report['macro'][m])+'%' for m in modes]
+            deltas=[pp(report['deltas'][key])+'点' for key in ('fisher_minus_gate','fisher_minus_first')]
+            section.append('| '+' | '.join([seed,*values,*deltas])+' |')
+        section += ['',
+            f'512维上，一阶＋二阶相对 Gate 的逐种子差值范围为 {pp(against_gate["minimum"])} 至 {pp(against_gate["maximum"])} 个百分点，胜／平／负为 {against_gate["wins"]}/{against_gate["ties"]}/{against_gate["losses"]}。相对一阶为 {against_first["wins"]}/{against_first["ties"]}/{against_first["losses"]}。统计单位是数据种子。', '',
+            '指标是四任务等权的 Top-k 真实特征恢复率。跨维数沿用同一批样本和标签，增减输入噪声列并重新置换。固定模型随机种子0、原方法500轮、warm-up 120、C=0.05、初始ρ50，并沿用原有ρ更新。训练的 soft 左边为 s+u，右边为 C/(ρA)。训练结束后按 soft(Aq, C/(ρA)) 的正分输出排名。逐任务、逐折结果和复跑入口见 [多种子证据](ranking-dashboard/seed-sweep/README.md)。', '']
+        position=head.index('## 当前判断')
+        head[position]='## 单种子全量对照'
+        head[position:position]=section
     priority=['public_512_defaults_rho200','effective_gate_oct9_reference','raw_snapshot_column_norm',
               'gate_only','column_norm_gate','raw_snapshot_taylor_first','taylor_second',
               'raw_snapshot_taylor_fisher','column_norm_taylor_first','column_norm_taylor_second',
@@ -252,7 +287,7 @@ def main():
         head[position:position]=comparison
         position=head.index('## 怎么读结果')
         if uniform_training_file.exists():
-            head[position:position]=['最新重训固定左边 Aq，在训练中配对比较右边 C/(ρA) 和 C/ρ。见 [训练中右边是否除以 A](#训练中左边固定-aq右边是否除以-a)。', '']
+            head[position:position]=['另有训练阈值消融，固定左边 Aq，在训练中配对比较右边 C/(ρA) 和 C/ρ。见 [训练中右边是否除以 A](#训练中左边固定-aq右边是否除以-a)。', '']
         else:
             head[position:position]=['512维消融固定原方法右边的软阈值。左边乘 A 的三种位置对照见 [固定软阈值，比较左边输入](#512维固定软阈值比较左边输入)。', '']
     head += ['', '## 表外说明','',
