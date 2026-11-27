@@ -1,0 +1,98 @@
+{
+  "ring-fold0": {
+    "support": [
+      143,
+      195
+    ],
+    "sha256": "9125987de2b3a8858b307a3a6fcbcadf25714f8d15b191e194da6d23e57a81d7",
+    "dimensions": 512
+  },
+  "ring-fold1": {
+    "support": [
+      209,
+      245
+    ],
+    "sha256": "52ac03c8a20c2df7a46f0e3f2cdb41f312614d4776899bf362ef1e4a1712a65a",
+    "dimensions": 512
+  },
+  "ring-fold2": {
+    "support": [
+      110,
+      399
+    ],
+    "sha256": "f98f019eb0ad3c423255d64c9965386f478ccd626642010d689e498cdaa7cb31",
+    "dimensions": 512
+  },
+  "ring-fold3": {
+    "support": [
+      305,
+      356
+    ],
+    "sha256": "94b126d0fdde1db551ae7c8355597876f06e6e2f0bbf2db5bd14abec7f505fb8",
+    "dimensions": 512
+  },
+  "ring-fold4": {
+    "support": [
+      96,
+      436
+    ],
+    "sha256": "204622b5f7ae68aed3779d824614ab69dbf3fe8a4f97337e5897e196fe4cb5b4",
+    "dimensions": 512
+  },
+  "ring-fold5": {
+    "support": [
+      20,
+      183
+    ],
+    "sha256": "103df915d0a18074d4bce21692c02938ee96b4b07f478e76513a28a83cdbb2f4",
+    "dimensions": 512
+  },
+  "xor-fold0": {
+    "support": [
+      143,
+      195
+    ],
+    "sha256": "60018dc68a833d30b47f51e9aef7dc941581f1ff577d5463708d29e145c2d4fb",
+    "dimensions": 512
+  },
+  "xor-fold1": {
+    "support": [
+      209,
+      245
+    ],
+    "sha256": "a2aa81854431d6f04ed1aa80d6afd270fcb67e49ec3c5c0e4c7c1843f47b385e",
+    "dimensions": 512
+  },
+  "xor-fold2": {
+    "support": [
+      110,
+      399
+    ],
+    "sha256": "2e572312d8e65db0e5577420aa37b64237a1c4c1e62bb00eaac4176f99158e1c",
+    "dimensions": 512
+  },
+  "xor-fold3": {
+    "support": [
+      305,
+      356
+    ],
+    "sha256": "c954e0b09654b0e5e0376c2221bde858a1166db580307fd657f4d34fca3461c4",
+    "dimensions": 512
+  },
+  "xor-fold4": {
+    "support": [
+      96,
+      436
+    ],
+    "sha256": "a5479c1e0bac6b5d49c8557532cceeb1d9f4fcfe949e59c10d3b448db8d29144",
+    "dimensions": 512
+  },
+  "xor-fold5": {
+    "support": [
+      20,
+      183
+    ],
+    "sha256": "1c1b387b74caa6ff851c1fd99174cb04afb861246b3902bdc4cacc9228454659",
+    "dimensions": 512
+  }
+}

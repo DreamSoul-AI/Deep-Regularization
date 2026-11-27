@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "certified_updates": 1440,
+  "checks": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.712385356426239,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7367203235626221,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 1.0758429765701294,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.7989997863769531,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.6493360996246338,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.6908325552940369,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.8744075894355774,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.8214262127876282,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.9742588996887207,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 1.0699262619018555,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 0.9604747891426086,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "effective_scores_exact": true,
+      "train_only_scaler_exact": true,
+      "zero_square_initialization": true,
+      "certified_prox_updates": 120,
+      "final_prox_recomputed": true,
+      "structural_deletion_both_channels": true,
+      "selection": {
+        "readout": "effective_gate",
+        "status": "ok",
+        "requested_k": 2,
+        "selected_count": 2,
+        "nonzero_count": 512,
+        "zero_tol": 0.0,
+        "cutoff": 1.218464970588684,
+        "cutoff_tie_count": 1,
+        "cutoff_tie_crosses_budget": false,
+        "tie_rule": "score_desc_then_original_index_asc"
+      }
+    }
+  ]
+}

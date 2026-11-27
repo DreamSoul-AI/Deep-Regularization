@@ -1,0 +1,11 @@
+{
+  "existing_scores": "docs\\\u7814\u7a76\u8bb0\u5f55 Research Record\\20261128-baseline-repairs\\512\\verified_results.jsonl",
+  "existing_scores_sha256": "15b96471e186e012c19721bbcd20d6c183d3317f741eda9773dd6d3e5f07cd2f",
+  "reused_methods": [
+    "lassonet",
+    "raw_snapshot_taylor_fisher"
+  ],
+  "reused_records": 24,
+  "new_records": 12,
+  "existing_training_unchanged": true
+}

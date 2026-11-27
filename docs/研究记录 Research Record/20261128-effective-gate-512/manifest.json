@@ -1,0 +1,29 @@
+{
+  "config": {
+    "epochs": 120,
+    "batch_size": 64,
+    "hidden_size": 32,
+    "penalty": 0.003172,
+    "rho": 0.18857,
+    "learning_rate": 0.002084
+  },
+  "dimensions": 512,
+  "tasks": [
+    "xor",
+    "ring"
+  ],
+  "seed": 0,
+  "device": "cpu",
+  "changes": "Only new reference; existing LassoNet and raw-gate Taylor-Fisher methods unchanged",
+  "source_hashes": {
+    "src/effective_gate.py": "0e93ba395adf561b8f8eab66d6b112e02bcbfe8436b71a939de2f4949b01c456",
+    "experiments/ranking_effective_gate.py": "29da1ea805b104b82c2a5f6e74fba2663a6a008f822ddfea113ae1ee9335dd43"
+  },
+  "square": "Shared parent gate; square of train-standardized input, train mean centered only",
+  "preprocessing": "Original train fold only; same saved 512-D cases as existing comparisons",
+  "budget": "120 epochs, no warmup/WD/dropout, constant C/rho/lr, no search",
+  "source_report": "https://my.feishu.cn/docx/AXzzdP73Go5VhUxIdw7coClanEb",
+  "source_math": "https://dreamsoul.feishu.cn/docx/Bxa7dPa32oF4hvxwk1Pcnm3Pnvf",
+  "torch": "2.11.0+cu130",
+  "numpy": "2.3.5"
+}

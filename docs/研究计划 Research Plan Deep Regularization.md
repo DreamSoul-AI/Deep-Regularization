@@ -229,6 +229,8 @@ A与B都固定数据身份、划分、随机性和任务定义。报告原始分
 
 ## 沟通与同步入口
 
+用户进一步确认保持方法、只做512维 ranking 对照后，已按10月报告恢复独立有效 gate 参照，复用保留的 canonical prox；与同数据上不改方法的现有一阶＋Fisher、LassoNet 比较，见 [有效 gate 的512维 Ranking 对照](<研究记录 Research Record/2026年11月28日 有效 gate 的512维 Ranking 对照.md>)。结果为有效 gate 的 XOR0%、Ring100%；并非历史驱动的逐位复现，也没有将外部 score 插入 canonical 目标。
+
 后续实施更新见 [Baseline 修复与512维复核](<研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md>)：mRMR 已修复并跑通；LassoFlexNet 完成本地数值二分类的文本可行变体，保留印刷算法2诊断，官方精确实现仍未取得；128维现为36条完整方法线，512维仅 XOR/Ring 的7条方法线。新512维采用公开 raw-gate 500/120轮，不能替代飞书10月有效 gate GRN-FS 或11月 A—L。现有报告和数学定义可支持有明确命名的后续重建，但本轮未实现 canonical 有效 gate 参照。
 
 11月28日的 [Ranking Baseline 全量对照](<研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>) 记录本轮实际设置、完整结果入口、Localized Lasso 的适配与数值核验，以及 LassoFlexNet 论文追加的比较清单。它是A部分128维、四任务六折的固定设置运行，不替代B部分12数据集的调参与下游协议。Localized Lasso 的任务适配及 STG/E2E-FS 等接口已在该范围内落实；LassoFlexNet 官方实现和 mRMR 编译依赖的限制仍须保留。

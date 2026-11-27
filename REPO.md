@@ -76,3 +76,7 @@ The original research workspace keeps retained research under `research/legacy-m
 ## Baseline 修复与高维复核新增授权，2026年11月28日
 
 用户随后要求修复 mRMR 编译依赖、自行实现 LassoFlexNet，并核对会议所述512维失败及飞书项目文件夹。已完成 mRMR 原生构建与两个包装接口修复、数值二分类 LassoFlexNet 本地可行变体，以及公开 raw-gate 512维 XOR/Ring 对照；[记录与证据](<docs/研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md>)区分官方代码、本地文本变体和历史版本。128维补齐为36方法、864条记录。飞书数学定义/10月报告使用有效 gate、canonical prox 等不同协议；11月 A—L 源码未找到，本次公开快照不替代其精确复现。范围仍为ranking，不包含下游、候选二至四、无界搜索或默认提升。
+
+## 有效 gate 512维参照新增授权，2026年11月28日
+
+用户要求按10月9日报告和数学定义恢复有效 gate 参照，再与 LassoNet 和现有一阶加二阶方案比较；随后明确“保持方法，只做512维对照”。新增独立参照入口，复用仓内保留的 canonical 数值求解器，不改既有方法或调参。完成512维 XOR/Ring 六折，现有两个方法复用同数据已验证分数，结果见 [有效 gate 的512维 Ranking 对照](<docs/研究记录 Research Record/2026年11月28日 有效 gate 的512维 Ranking 对照.md>)。这是按报告恢复，未取得10月原驱动，不能称为历史逐位复现；执行范围仍不包含下游或额外算法改动。

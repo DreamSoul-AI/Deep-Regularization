@@ -1,0 +1,74 @@
+{
+  "effective_gate_oct9_reference": {
+    "status": "complete",
+    "completed": 12,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 0.0,
+        "average_precision": 0.00847811055303759,
+        "auroc": 0.5379084967320261
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 1.0,
+        "average_precision": 1.0,
+        "auroc": 1.0
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 512,
+    "macro_recall": 0.5,
+    "macro_ap": 0.5042390552765188,
+    "macro_auroc": 0.768954248366013
+  },
+  "lassonet": {
+    "status": "complete",
+    "completed": 12,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 0.8333333333333334,
+        "average_precision": 0.8341440551993434,
+        "auroc": 0.9047385620915033
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 0.0,
+        "average_precision": 0.006344817084510245,
+        "auroc": 0.45383986928104575
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 79,
+    "macro_recall": 0.4166666666666667,
+    "macro_ap": 0.42024443614192686,
+    "macro_auroc": 0.6792892156862745
+  },
+  "raw_snapshot_taylor_fisher": {
+    "status": "complete",
+    "completed": 12,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 1.0,
+        "average_precision": 1.0,
+        "auroc": 1.0
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 0.16666666666666666,
+        "average_precision": 0.24726074100486437,
+        "auroc": 0.806372549019608
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 512,
+    "macro_recall": 0.5833333333333334,
+    "macro_ap": 0.6236303705024322,
+    "macro_auroc": 0.903186274509804
+  }
+}
