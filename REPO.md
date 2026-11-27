@@ -90,3 +90,5 @@ The original research workspace keeps retained research under `research/legacy-m
 后续软阈值实验分别比较四种评分乘 A 或不乘 A，在训练中启用或跳过软阈值。沿用上述数据、模型及预算。每对最终用同一评分排名，另保存统一 |s| 的读出以衔接上轮结果。跳过软阈值时各评分共用同一个训练模型，并保留 ADMM 的其余更新。结果仍在 [实验看板](<docs/实验看板 Deep Regularization.md>)。
 
 当前读出约定为在训练终点计算设阈值的评分，从大到小排名。关闭软阈值时仍沿用同一公式。共有阈值的纯 gate 对照按 |s| 排，外部方法按原生评分排。既有128维、512维主表已从保存模型重算，旧 |s| 证据保留为历史。有软阈值的512维训练模型分别追加 q 和 Aq 的同模型排名对照。详见 [评分证据](docs/ranking-dashboard/score-readout/README.md)。
+
+最新512维消融固定原方法阈值 C/(ρA) 及其数值保护，乘 A 与否只改变 soft 左边的输入。分别验证原训练后的排名评分、在 z 步改用评分、以及在 z 步改用 A(s+u)。前面的评分进阈值分母一组作为历史对照。新增结果及失败状态见 [固定阈值对照](docs/ranking-dashboard/fixed-threshold-512/README.md)。

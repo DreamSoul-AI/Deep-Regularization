@@ -1,0 +1,267 @@
+{
+  "arm": "weighted_consensus",
+  "config": {
+    "epochs": 500,
+    "warmup_epochs": 120,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.001,
+    "penalty": 0.05,
+    "rho": 50.0,
+    "score_interval": 10,
+    "score_samples": 128,
+    "score_batch_size": 32,
+    "hidden_size": 32,
+    "dropout": 0.04308691548552568,
+    "feature_dropout": 0.6,
+    "protocol": "legacy"
+  },
+  "source_sha256": {
+    "src/feature_selection.py": "a7a06c0af1e14a8f10491ebf76b45b1d02ec4be953108ebedd266a38c2fbd9f9",
+    "src/feature_scores.py": "a8b7c4cb37cbc4d11eaa949de51b6966bce7b34d81728f3494dfebcd683306fb",
+    "experiments/ranking_fixed_threshold.py": "60c8be154d7dc3ea277b3cbbd75cc38eed653fd6182a23bad3194cdf82677f03"
+  },
+  "checkpoint_verification": {
+    "xor-fold0-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "3b20fb7c71eb15afbf95cdaed75bd0019ef03f5c9cea42a0e6877eaee760612f",
+      "final_rho": 50.0,
+      "final_z_nonzero": 2,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 33.90231704711914,
+      "final_median_a": 0.00048390074516646564,
+      "final_primal_residual": 0.3306804299354553
+    },
+    "xor-fold1-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "b9968653c6a34f659b049f80123c033a9262551c264cc6149bd34376aacf5c40",
+      "final_rho": 50.0,
+      "final_z_nonzero": 10,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 35.70399856567383,
+      "final_median_a": 0.0006715261260978878,
+      "final_primal_residual": 0.3312326967716217
+    },
+    "xor-fold2-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "6e53d943bd339527b45e0f78e2c0855f8aeee50d2ace0a9913dd7753564e6790",
+      "final_rho": 50.0,
+      "final_z_nonzero": 8,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 35.985572814941406,
+      "final_median_a": 0.0014254203997552395,
+      "final_primal_residual": 0.3257606029510498
+    },
+    "xor-fold3-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "80df32fc1b87b328d61d6508a0e58b977cc0f7b19c01f7e23819e1845293eded",
+      "final_rho": 50.0,
+      "final_z_nonzero": 11,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 35.35546112060547,
+      "final_median_a": 0.0006939339218661189,
+      "final_primal_residual": 0.28284329175949097
+    },
+    "xor-fold4-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "a34aa81bdaf56b7356e003cdfe7e905463a197ec6e300af044a7b0b26095484c",
+      "final_rho": 50.0,
+      "final_z_nonzero": 5,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 36.40945053100586,
+      "final_median_a": 0.0008163386955857277,
+      "final_primal_residual": 0.30283811688423157
+    },
+    "xor-fold5-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "7e95f3c13f82d3304c545b23169d02bad863d132a3f3c9598bc2ab0242412576",
+      "final_rho": 50.0,
+      "final_z_nonzero": 6,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 34.245609283447266,
+      "final_median_a": 0.0003279158263467252,
+      "final_primal_residual": 0.303512841463089
+    },
+    "ring+xor-fold0-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "aa00d831db353b142b6a33db2c1022fdcfea9cb621727d22bf69e34f2ec1ef66",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 1,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.0026524157728999853,
+      "final_median_a": 6.90503554778843e-07,
+      "final_primal_residual": 0.005731937009841204
+    },
+    "ring+xor-fold1-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "0f519d286b63b3b88d20f0f472abce5521beecdbe684c6d7d182afb584a93056",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.015405920334160328,
+      "final_median_a": 2.497886786301251e-09,
+      "final_primal_residual": 0.015548421069979668
+    },
+    "ring+xor-fold2-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "0ea476c845fdd9c3a6cc97e55f0711eae4329250b0cd57063df2bca3fcd5118a",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.018752412870526314,
+      "final_median_a": 1.0748607337518479e-08,
+      "final_primal_residual": 0.02793309837579727
+    },
+    "ring+xor-fold3-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "5499c991ba5dff9ebf3c99b882e10bf60d8e5e59cfc2cd1570bdd321c189e4e7",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.05401742085814476,
+      "final_median_a": 2.599908899281189e-10,
+      "final_primal_residual": 0.05405953899025917
+    },
+    "ring+xor-fold4-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "25d7f960bc8e8da6e2c5382cbfef43caa93f1f4248901705a3433ce5cecd8106",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.010980194434523582,
+      "final_median_a": 3.422757188786818e-08,
+      "final_primal_residual": 0.011779573746025562
+    },
+    "ring+xor-fold5-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "db68a8d68fc434f3b675da365f223e7cbd1f2753e945109e35312737bbe77901",
+      "final_rho": 50.0,
+      "final_z_nonzero": 9,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.9081083536148071,
+      "final_median_a": 0.0016434257850050926,
+      "final_primal_residual": 0.2774653434753418
+    },
+    "ring+xor+sum-fold0-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "13469312c83d25da752136c44d46c95bd05d267eeb77efd63b271ec330799717",
+      "final_rho": 50.0,
+      "final_z_nonzero": 8,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.33521732687950134,
+      "final_median_a": 0.002736929338425398,
+      "final_primal_residual": 0.2507563531398773
+    },
+    "ring+xor+sum-fold1-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "d7258cbd26f900653577b53a8a9fecf73f1a95b3f7625b38a0e973c83ca518ec",
+      "final_rho": 50.0,
+      "final_z_nonzero": 12,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.09424889087677,
+      "final_median_a": 0.0033077094703912735,
+      "final_primal_residual": 0.29850542545318604
+    },
+    "ring+xor+sum-fold2-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "e07c94fbf54d82a0705bdd33193c0d6d9a9dacf25983359dba4f2f31836d3b59",
+      "final_rho": 50.0,
+      "final_z_nonzero": 5,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.7299933433532715,
+      "final_median_a": 0.003559524891898036,
+      "final_primal_residual": 0.28073105216026306
+    },
+    "ring+xor+sum-fold3-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "29bee170229e8e16cde566847e61ff69b7d3a43c3a081366156abab854cd6b26",
+      "final_rho": 50.0,
+      "final_z_nonzero": 16,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.37246355414390564,
+      "final_median_a": 0.009111206978559494,
+      "final_primal_residual": 0.3103505074977875
+    },
+    "ring+xor+sum-fold4-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "df4e9ab1303fe46775c4d8bdc834b336a13a0cad71e0103588cc7e08df3591d7",
+      "final_rho": 50.0,
+      "final_z_nonzero": 13,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.5868939161300659,
+      "final_median_a": 0.0017678322037681937,
+      "final_primal_residual": 0.291923463344574
+    },
+    "ring+xor+sum-fold5-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "aca03454b11790aa36eb9908be7ef811a6b0ac3995629a66a375b5dfe06b52e7",
+      "final_rho": 50.0,
+      "final_z_nonzero": 16,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.36311674118042,
+      "final_median_a": 0.0054930527694523335,
+      "final_primal_residual": 0.2978791892528534
+    },
+    "ring-fold0-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "ed2d55019afc400160a20a68f3c289757a7da9cb992212dbd772585275667b8c",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.0009306099964305758,
+      "final_median_a": 2.7233428845363505e-09,
+      "final_primal_residual": 0.002618080237880349
+    },
+    "ring-fold1-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "420c40fcecdb7141909409241e915bfb9044029b7c25ca665cc14071171ae86f",
+      "final_rho": 400.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.0001749430230120197,
+      "final_median_a": 1.5690580779104124e-11,
+      "final_primal_residual": 0.0001749533839756623
+    },
+    "ring-fold2-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "31b6fec25dcc3bfcae0c92e1160e12ed9a38a07426157945cb6c65c627f069e5",
+      "final_rho": 10000.0,
+      "final_z_nonzero": 0,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 0.004074014723300934,
+      "final_median_a": 9.961369507038853e-09,
+      "final_primal_residual": 0.004432925023138523
+    },
+    "ring-fold3-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "c57e6921a03fc8ac237ededf65d381b51716d683e9e0b9a15c3dcbc629d9d139",
+      "final_rho": 50.0,
+      "final_z_nonzero": 10,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.0258543491363525,
+      "final_median_a": 0.0034062210470438004,
+      "final_primal_residual": 0.28325384855270386
+    },
+    "ring-fold4-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "34777444b983f1acaec94bafc7eff9820e6a2b22c623e70ce4db664cb1e28d2f",
+      "final_rho": 50.0,
+      "final_z_nonzero": 15,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.814213514328003,
+      "final_median_a": 0.00491781160235405,
+      "final_primal_residual": 0.27631521224975586
+    },
+    "ring-fold5-gate_only": {
+      "status": "ok",
+      "checkpoint_sha256": "3263d80c59fb840cad84a9fc2e7921f4c0de5c1b410906ef23585c51b5973d79",
+      "final_rho": 50.0,
+      "final_z_nonzero": 9,
+      "final_gate_nonzero": 512,
+      "final_max_gate_abs": 1.659999132156372,
+      "final_median_a": 0.003972455393522978,
+      "final_primal_residual": 0.2570042312145233
+    }
+  },
+  "failures": {}
+}

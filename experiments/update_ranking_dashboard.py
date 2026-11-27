@@ -177,7 +177,7 @@ def main():
                ('一阶','taylor_first','column_norm_taylor_first'),
                ('纯二阶','taylor_second','column_norm_taylor_second'),
                ('一阶＋二阶','taylor_fisher','column_norm_taylor_fisher')]
-        comparison=['### 512维软阈值对照', '',
+        comparison=['### 旧对照：改变阈值分母', '',
             '四任务平均恢复率（%）。每个格子按该行 score 排名，同一列范数设置下，训练时有无软阈值的最终排名公式相同。', '',
             '| 评分 | 无软阈值 | 有软阈值 | 无软阈值 × A | 有软阈值 × A |',
             '| --- | ---: | ---: | ---: | ---: |']
@@ -198,6 +198,31 @@ def main():
         comparison += ['']
         position=head.index('## 128维')
         head[position:position]=comparison
+    fixed_dir=args.dashboard.parent/'ranking-dashboard/fixed-threshold-512'
+    if (fixed_dir/'score/summary.json').exists():
+        arms=('readout','score','weighted_consensus')
+        fixed={arm:json.loads((fixed_dir/arm/'summary.json').read_text(encoding='utf-8')) for arm in arms}
+        pairs=[('Gate','gate_adaptive','column_norm_gate'),('一阶','taylor_first','column_norm_taylor_first'),
+               ('纯二阶','taylor_second','column_norm_taylor_second'),('一阶＋二阶','taylor_fisher','column_norm_taylor_fisher')]
+        comparison=['### 512维固定软阈值，比较左边输入', '',
+            '各组右边阈值都使用原方法 C/(ρA)。左边的 q 和 Aq 不归一化。有训练改动的组仍沿用原公共缩放和对偶更新。', '',
+            '| 评分 | 原训练，soft(q) 排名 | 原训练，soft(Aq) 排名 | z 用 q | z 用 Aq | z 用 A(s+u)，soft(q) 排名 | z 用 A(s+u)，soft(Aq) 排名 |',
+            '| --- | ---: | ---: | ---: | ---: | ---: | ---: |']
+        for label,base,weighted in pairs:
+            values=[]
+            for arm in arms:
+                for mode in (base,weighted):
+                    report=fixed[arm][f'{arm}_{mode}_soft']
+                    value=report['macro_positive_recall']
+                    values.append(percent(value) if value is not None else f'—（{report["completed"]}/24）')
+            comparison.append('| '+' | '.join([label,*values])+' |')
+        comparison += ['',
+            '表中是四任务平均恢复率（%）。按软阈值后的值排名，只用正分项填 Top-k，剩余名额按未找回计。z 用 q / Aq 两列最终用各自相同的左边公式做 soft 再排名。原训练在 z 步使用 s+u。三个训练轨迹的 A 和 ρ 可以随参数变化，阈值公式一致。', '',
+            '未做最终 soft 的读出、全零折和训练诊断见 [固定阈值对照证据](ranking-dashboard/fixed-threshold-512/README.md)。', '']
+        position=head.index('### 旧对照：改变阈值分母') if '### 旧对照：改变阈值分母' in head else head.index('## 128维')
+        head[position:position]=comparison
+        position=head.index('## 怎么读结果')
+        head[position:position]=['最新的512维消融固定原方法右边的软阈值。左边乘 A 的三种位置对照见 [固定软阈值，比较左边输入](#512维固定软阈值比较左边输入)。', '']
     head += ['', '## 表外说明','',
       'LassoFlexNet这一行是非官方自实现，采用论文正文的可行更新；mRMR使用原生完整贪心顺序评价排名。这些实现说明不再放进方法名。两张表中的原方案分别采用该维数的公开默认值：128维初始ρ50，512维初始ρ200；512维的列范数对照则保持ρ50。','',
       '## 原实验仓库到底是什么基线','',

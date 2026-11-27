@@ -8,6 +8,26 @@ from src.feature_scores import gate_score_moments, score_from_moments, classific
 
 
 class ScoreTests(unittest.TestCase):
+    def test_weighted_left_input_keeps_the_original_threshold(self):
+        x = torch.arange(24, dtype=torch.float32).reshape(6, 4)
+        y = torch.tensor([0, 1, 0, 1, 0, 1])
+        config = RankingConfig(epochs=1, warmup_epochs=0, batch_size=6, dropout=0, feature_dropout=0)
+        torch.manual_seed(5)
+        initial = GatedMLP(4, config=config)
+        norm = initial.layers[1].weight.detach().norm(dim=0)
+        threshold = (config.penalty / (norm + 1e-8)).clamp(1e-8, .5) / config.rho
+        for left, mode in (("default", "column_norm"), ("weighted_consensus", "gate_only"),
+                           ("score", "gate_adaptive"), ("score", "column_norm_gate")):
+            _, result = fit_ranking(x, y, mode=mode, seed=5, config=config, prox_input=left)
+            gate = result["model"]["gate"]
+            value = gate.abs() if left == "score" else gate
+            if left == "weighted_consensus" or mode == "column_norm_gate":
+                value = value * norm
+            shrunk = value.sign() * (value.abs() - threshold).clamp_min(0)
+            coefficient = ((config.penalty/config.rho) * shrunk.abs().sum()
+                           / (shrunk.norm() + 1e-8).pow(3).clamp_min(1e-10))
+            torch.testing.assert_close(result["z"], cubic_scale(coefficient) * shrunk)
+
     def test_ranking_uses_threshold_formula_and_column_norm_once(self):
         parameters = {"gate": torch.tensor([.5, 2.]), "layers.1.weight": torch.tensor([[3., 0.], [4., 2.]])}
         first, second = torch.tensor([-2., 1.]), torch.tensor([4., 8.])

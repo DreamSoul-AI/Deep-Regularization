@@ -84,7 +84,7 @@ def legacy_cubic_scale(coefficient):
     return 2.0 * torch.cos(torch.acos((3.0 * sqrt3 * d / 2.0).clamp(-1, 1)) / 3.0) / sqrt3
 
 
-def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True):
+def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True, prox_input="default"):
     """Fit only on supplied training rows; never consume support truth or test labels.
 
     No validation-based checkpoint selection, hard pruning, or downstream refit.
@@ -95,6 +95,10 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
         raise ValueError("Unknown training protocol")
     if mode not in RANKING_MODES:
         raise ValueError(f"Unknown score mode: {mode}")
+    if prox_input not in ("default", "score", "weighted_consensus"):
+        raise ValueError(f"Unknown proximal input: {prox_input}")
+    if prox_input != "default" and not soft_threshold:
+        raise ValueError("Left-input ablations require the original soft threshold")
     taylor_mode = mode.removeprefix("column_norm_")
     if not (0 <= config.warmup_epochs < config.epochs) or config.score_interval < 1:
         raise ValueError("Require 0 <= warmup < epochs and positive score interval")
@@ -135,6 +139,7 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
     rho = config.rho
     trace = []
     scale = torch.ones_like(z)
+    left_score = None
     for epoch in range(config.epochs):
         admm_epoch = epoch - config.warmup_epochs
         if admm_epoch == 0:
@@ -143,7 +148,14 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
                                          weight_decay=config.weight_decay)
             z = model.gate.detach().clone()
         if admm_epoch >= 0 and soft_threshold:
-            if mode == "column_norm":
+            if prox_input != "default":
+                column_norm = model.layers[1].weight.detach().norm(dim=0)
+                scale = column_norm + 1e-8
+                if prox_input == "score" and taylor_mode in TAYLOR_MODES and admm_epoch % config.score_interval == 0:
+                    first, second = gate_score_moments(model, calibration_x, calibration_y,
+                                                       config.score_batch_size)
+                    left_score = score_from_moments(first, second, taylor_mode).abs()
+            elif mode == "column_norm":
                 scale = model.layers[1].weight.detach().norm(dim=0) + 1e-8
             elif mode == "gate_adaptive":
                 scale = importance_scaling(model.gate)
@@ -179,6 +191,14 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
             with torch.no_grad():
                 old_z = z.clone()
                 v = model.gate + dual
+                if prox_input == "weighted_consensus":
+                    v = column_norm * v
+                elif prox_input == "score":
+                    v = left_score if taylor_mode in TAYLOR_MODES else model.gate.abs()
+                    if mode.startswith("column_norm_"):
+                        v = column_norm * v
+                if prox_input != "default" and not torch.isfinite(v).all():
+                    raise FloatingPointError(f"Non-finite proximal input at epoch {epoch}")
                 if soft_threshold:
                     thresholds = (config.penalty / scale).clamp(1e-8, 0.5) / rho
                     z = v.sign() * (v.abs() - thresholds).clamp_min(0)
@@ -217,5 +237,5 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
     state = dict(model=model.state_dict(), z=z.detach(), dual=dual.detach(), rho=rho,
                  optimizer=optimizer.state_dict(), mean=mean, std=std,
                  calibration_ids=calibration_ids, first_moment=first, second_moment=second,
-                 config=asdict(config), mode=mode, seed=seed, trace=trace)
+                 config=asdict(config), mode=mode, seed=seed, trace=trace, prox_input=prox_input)
     return scores, state
