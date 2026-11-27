@@ -8,6 +8,17 @@ from src.feature_scores import gate_score_moments, score_from_moments, classific
 
 
 class ScoreTests(unittest.TestCase):
+    def test_without_soft_threshold_training_is_independent_of_score_mode(self):
+        x = torch.arange(24, dtype=torch.float32).reshape(6, 4)
+        y = torch.tensor([0, 1, 0, 1, 0, 1])
+        config = RankingConfig(epochs=3, warmup_epochs=1, batch_size=3)
+        _, gate = fit_ranking(x, y, mode="gate_only", seed=4, config=config, soft_threshold=False)
+        _, weighted = fit_ranking(x, y, mode="column_norm_taylor_second", seed=4,
+                                  config=config, soft_threshold=False)
+        for name, parameter in gate["model"].items():
+            torch.testing.assert_close(parameter, weighted["model"][name], rtol=0, atol=0)
+        torch.testing.assert_close(gate["z"], weighted["z"], rtol=0, atol=0)
+
     def test_legacy_training_matches_fixed_original_parameters(self):
         from experiments.legacy_ranking_reference import COMMIT, load_reference, train_reference
         root = Path(__file__).resolve().parents[1]

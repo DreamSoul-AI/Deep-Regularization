@@ -1,0 +1,152 @@
+{
+  "conventions": "No-soft skips shrinkage only. Soft remains score-adaptive. Same formula to rank in either arm. Raw-gate diagnostic saved separately.",
+  "config": {
+    "epochs": 500,
+    "warmup_epochs": 120,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.001,
+    "penalty": 0.05,
+    "rho": 50.0,
+    "score_interval": 10,
+    "score_samples": 128,
+    "score_batch_size": 32,
+    "hidden_size": 32,
+    "dropout": 0.04308691548552568,
+    "feature_dropout": 0.6,
+    "protocol": "legacy"
+  },
+  "seed": 0,
+  "device": "cpu",
+  "torch": "2.11.0+cu130",
+  "numpy": "2.3.5",
+  "source_sha256": {
+    "experiments/ranking_threshold_ablation.py": "9ab6ca64e4eed8224f4ea2ae8a02ab325653fd24b9d50528f99e6ec730b9bf11",
+    "src/feature_selection.py": "dd6ebb64467038e3a7172b3d24c9a60bde36a13788488c2d143e052cfda239f7",
+    "src/feature_scores.py": "6983be5526f2b34741fe9b5edc055990d69d71e9e5aeefe016477c3f2bf3b6fa",
+    "experiments/ranking_score_ablation.py": "62e62835c0d987c0e6597218d07155fa7def4a2c48eddccd3c79033fc282e2fe"
+  },
+  "case_results_sha256": {
+    "xor-fold0": "a89b3897f93f1d6f096ec82e40c8a9380a8a992781cac0d69d67bcca2505796b",
+    "xor-fold1": "6e8149a0abd97adda8182c028911ddefe07aad6d298be5e8410364f5e8cc701b",
+    "xor-fold2": "c9490363837410d2798bf91b6938327bb82e728d67982cb766fc63e189707181",
+    "xor-fold3": "cff7b88b4404c8abf4229e1a91cfaf78df1e41283c0ed626384b74735b68ca7a",
+    "xor-fold4": "655914cc2e66fa288b7d4badc0aa7f824bee0edeef986f49128e1906c277d15e",
+    "xor-fold5": "f25388c86e28eb9b0cb9e3c918fe77bfeb57f301079271dddaaf363e4846f974",
+    "ring-fold0": "33c40b418f1dfce0da077c96fc5827dbbcfefea6738a554a59cef2965021870b",
+    "ring-fold1": "178f4e29eafcb83ae3496e1b929e509e3024e13469930b5371ca5c70e5d274a9",
+    "ring-fold2": "03fb4e9fa2fcf77e911fb86800a13277be85180dffc603664bc2d5ed5de68214",
+    "ring-fold3": "f934e08330bcfc616a9469105ed99be49a173a2359957f3d84b1d14f182b500a",
+    "ring-fold4": "5077a1bb967c71bda4395e9bd6e5926a83c965e9bbaf5e6235d6585596f4e0e2",
+    "ring-fold5": "157777dc29189c0256069d3882a56d99b9556b8c38ed6579ef7a013f370c2d59",
+    "ring+xor-fold0": "184bea70f3f83b937561bc6f8465e7adb530d62df0e6b27060b8a63aed497084",
+    "ring+xor-fold1": "d32f4c9135f6e05859ce6607d97eb1177608be24b1f1547b4a452da78fdff4fb",
+    "ring+xor-fold2": "405e5c883c3a7c88c81cf5ab36563d6c495907c9affcde6a87df73832afa5e3a",
+    "ring+xor-fold3": "d25bb6fb598aba0a87204d27490d73064f59c9ac761333aa7ceca46283f1a33b",
+    "ring+xor-fold4": "7682b1bcc8f7d90f7e7b509899af77513a7a12c6942b3e680e815b07069f8e02",
+    "ring+xor-fold5": "8fce8d64fde72547d6af11791eaa59946cf113489abaa27c12261ae637e8a55a",
+    "ring+xor+sum-fold0": "5d82a6133e389fe0de11954b7c41ad970a54557cf29a573b2e6c14d0f00238bf",
+    "ring+xor+sum-fold1": "1ece65e2b33640793677f80a55345637d2bdadfe7235b4173f2cdf4847cd37b0",
+    "ring+xor+sum-fold2": "970fc2f4830bdf993f5752d1b557dcb2281e86f293a7c23626f24a187283fe4f",
+    "ring+xor+sum-fold3": "b9d2152eb63c55dec3f3e531e6ae4042c4182700adf501da75df8a51fb0215e2",
+    "ring+xor+sum-fold4": "1e1861329f803c0c3bfc79c98e364758e7190bd41316f94829ac1cf1559b93ba",
+    "ring+xor+sum-fold5": "cd6a3e272d37f8a20d2701d19c6a117c06a3a28d98e2ef8fb77d1ca0747f9652"
+  },
+  "fresh_no_soft_models": 24,
+  "fresh_soft_models": 24,
+  "prior_soft_models_gate_vectors_matched": 168,
+  "final_no_soft_prox_steps_verified": 24,
+  "evaluations": 384,
+  "raw_gate_macro_recall": {
+    "none_gate_adaptive": 0.4201388888888889,
+    "soft_gate_adaptive": 0.40625,
+    "none_taylor_first": 0.4201388888888889,
+    "soft_taylor_first": 0.4201388888888889,
+    "none_taylor_second": 0.4201388888888889,
+    "soft_taylor_second": 0.4548611111111111,
+    "none_taylor_fisher": 0.4201388888888889,
+    "soft_taylor_fisher": 0.4131944444444444,
+    "none_column_norm_gate": 0.4201388888888889,
+    "soft_column_norm_gate": 0.4305555555555555,
+    "none_column_norm_taylor_first": 0.4201388888888889,
+    "soft_column_norm_taylor_first": 0.4340277777777778,
+    "none_column_norm_taylor_second": 0.4201388888888889,
+    "soft_column_norm_taylor_second": 0.4548611111111111,
+    "none_column_norm_taylor_fisher": 0.4201388888888889,
+    "soft_column_norm_taylor_fisher": 0.4548611111111111
+  },
+  "original_rho50_models_same_readout": {
+    "gate_adaptive": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.4166666666666667,
+        "ring+xor": 0.20833333333333334,
+        "ring+xor+sum": 0.5
+      },
+      "macro_recall": 0.53125
+    },
+    "taylor_first": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.5833333333333334,
+        "ring+xor": 0.25,
+        "ring+xor+sum": 0.4166666666666667
+      },
+      "macro_recall": 0.5625
+    },
+    "taylor_second": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.3333333333333333,
+        "ring+xor": 0.125,
+        "ring+xor+sum": 0.5277777777777778
+      },
+      "macro_recall": 0.4965277777777778
+    },
+    "taylor_fisher": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.5833333333333334,
+        "ring+xor": 0.25,
+        "ring+xor+sum": 0.47222222222222215
+      },
+      "macro_recall": 0.5763888888888888
+    },
+    "column_norm_gate": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.5,
+        "ring+xor": 0.3333333333333333,
+        "ring+xor+sum": 0.5555555555555555
+      },
+      "macro_recall": 0.5972222222222222
+    },
+    "column_norm_taylor_first": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.6666666666666666,
+        "ring+xor": 0.2916666666666667,
+        "ring+xor+sum": 0.4444444444444444
+      },
+      "macro_recall": 0.6006944444444444
+    },
+    "column_norm_taylor_second": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.4166666666666667,
+        "ring+xor": 0.16666666666666666,
+        "ring+xor+sum": 0.5277777777777778
+      },
+      "macro_recall": 0.5277777777777778
+    },
+    "column_norm_taylor_fisher": {
+      "task_recall": {
+        "xor": 1.0,
+        "ring": 0.6666666666666666,
+        "ring+xor": 0.2916666666666667,
+        "ring+xor+sum": 0.4444444444444444
+      },
+      "macro_recall": 0.6006944444444444
+    }
+  }
+}

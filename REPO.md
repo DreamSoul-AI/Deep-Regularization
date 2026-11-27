@@ -86,3 +86,5 @@ The original research workspace keeps retained research under `research/legacy-m
 用户要求512维四任务跑齐全部已接入 baseline、核对原仓库commit，并采用一个持续更新的当前看板。[实验看板](<docs/实验看板 Deep Regularization.md>)为唯一当前汇总入口，日期记录保留追溯。范围为四任务×六折，既有方法和参数不改，新增原公开包装器的512维ρ200默认参照；旧ρ50行明确标作固定128配方扩维。所有完整/缺折/失败按实际证据显示，不以部分任务均值冒充四任务Macro，不扩展到下游、自动调参或其他候选。刷新入口为 `experiments/update_ranking_dashboard.py`。
 
 用户随后要求保留原方案并运行 gate 阈值对照。沿用512维四任务六折和ρ50配方，先跑统一阈值，再比较 A × gate 与一阶、纯二阶、一阶加二阶各自乘 A 的结果。所有方法统一按最终 |s| 排名。原列范数、一阶和一阶加二阶复用同配方已核验分数。公式与结果写入现有看板，逐折数据见 [score 对照汇总](docs/ranking-dashboard/score-ablation-512/summary.json)。
+
+后续软阈值实验分别比较四种评分乘 A 或不乘 A，在训练中启用或跳过软阈值。沿用上述数据、模型及预算。每对最终用同一评分排名，另保存统一 |s| 的读出以衔接上轮结果。跳过软阈值时各评分共用同一个训练模型，并保留 ADMM 的其余更新。结果仍在 [实验看板](<docs/实验看板 Deep Regularization.md>)。

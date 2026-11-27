@@ -162,6 +162,26 @@ def main():
         label='原方案' if method=='ours_column_norm' else LABELS.get(key,key)
         values=[percent(report['tasks'][t]['recall_at_k']) for t in TASKS]
         head.append('| '+' | '.join([label,*values,percent(report['macro_recall']),f"{report['completed']}/24 完成"])+ ' |')
+    threshold_file=args.dashboard.parent/'ranking-dashboard/threshold-ablation-512/summary.json'
+    if threshold_file.exists():
+        threshold=json.loads(threshold_file.read_text(encoding='utf-8'))
+        original_readout=json.loads(threshold_file.with_name('manifest.json').read_text(encoding='utf-8'))['original_rho50_models_same_readout']
+        pairs=[('Gate','gate_adaptive','column_norm_gate'),
+               ('一阶','taylor_first','column_norm_taylor_first'),
+               ('纯二阶','taylor_second','column_norm_taylor_second'),
+               ('一阶＋二阶','taylor_fisher','column_norm_taylor_fisher')]
+        comparison=['### 512维软阈值对照', '',
+            '四任务平均恢复率（%）。每个格子按该行 score 排名，同一列范数设置下，训练时有无软阈值的最终排名公式相同。', '',
+            '| 评分 | 无软阈值 | 有软阈值 | 无软阈值 × A | 有软阈值 × A |',
+            '| --- | ---: | ---: | ---: | ---: |']
+        for label,plain,weighted in pairs:
+            keys=[f'{kind}_{mode}' for mode in (plain,weighted) for kind in ('none','soft')]
+            comparison.append('| '+' | '.join([label,*[percent(threshold[key]['macro_recall']) for key in keys]])+' |')
+        comparison += ['',
+            '上一轮的仅 gate 训练用了共用软阈值 C/ρ。此处无软阈值组直接跳过软阈值步骤，保留 ADMM 的公共缩放和对偶更新，所以每折只训练一个模型，再按八种 score 读出排名。有软阈值组由对应 score 调阈值。', '',
+            f'原列范数方案按 |s| 排名为{percent(original_readout["gate_adaptive"]["macro_recall"])}%。用同一组原方法的训练模型改按 A|s| 排名，结果为{percent(original_readout["column_norm_gate"]["macro_recall"])}%。这一读出也高于上表 A × Gate 的新训练结果。全量主表沿用统一 |s| 的读出协议。新对照的任务及读出核对见 [逐折证据](ranking-dashboard/threshold-ablation-512/README.md)。', '']
+        position=head.index('## 128维')
+        head[position:position]=comparison
     head += ['', '## 表外说明','',
       'LassoFlexNet这一行是非官方自实现，采用论文正文的可行更新；mRMR使用原生完整贪心顺序评价排名。这些实现说明不再放进方法名。两张表中的原方案分别采用该维数的公开默认值：128维初始ρ50，512维初始ρ200；512维的列范数对照则保持ρ50。','',
       '## 原实验仓库到底是什么基线','',

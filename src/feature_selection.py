@@ -15,7 +15,7 @@ from .feature_scores import (
 )
 
 TAYLOR_MODES = ("taylor_first", "taylor_second", "taylor_fisher")
-RANKING_MODES = ("column_norm", "gate_only", "column_norm_gate", *TAYLOR_MODES,
+RANKING_MODES = ("column_norm", "gate_only", "gate_adaptive", "column_norm_gate", *TAYLOR_MODES,
                  *(f"column_norm_{mode}" for mode in TAYLOR_MODES))
 
 
@@ -84,7 +84,7 @@ def legacy_cubic_scale(coefficient):
     return 2.0 * torch.cos(torch.acos((3.0 * sqrt3 * d / 2.0).clamp(-1, 1)) / 3.0) / sqrt3
 
 
-def fit_ranking(inputs, targets, *, mode, seed, config=None):
+def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True):
     """Fit only on supplied training rows; never consume support truth or test labels.
 
     No validation-based checkpoint selection, hard pruning, or downstream refit.
@@ -142,9 +142,11 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
             optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate,
                                          weight_decay=config.weight_decay)
             z = model.gate.detach().clone()
-        if admm_epoch >= 0:
+        if admm_epoch >= 0 and soft_threshold:
             if mode == "column_norm":
                 scale = model.layers[1].weight.detach().norm(dim=0) + 1e-8
+            elif mode == "gate_adaptive":
+                scale = importance_scaling(model.gate)
             elif mode == "column_norm_gate":
                 column_norm = model.layers[1].weight.detach().norm(dim=0)
                 scale = importance_scaling(column_norm * model.gate.detach())
@@ -177,8 +179,11 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
             with torch.no_grad():
                 old_z = z.clone()
                 v = model.gate + dual
-                thresholds = (config.penalty / scale).clamp(1e-8, 0.5) / rho
-                z = v.sign() * (v.abs() - thresholds).clamp_min(0)
+                if soft_threshold:
+                    thresholds = (config.penalty / scale).clamp(1e-8, 0.5) / rho
+                    z = v.sign() * (v.abs() - thresholds).clamp_min(0)
+                else:
+                    z = v
                 l2 = z.norm() + 1e-8
                 l1 = torch.norm(z, p=1)
                 if l1 > 1e-8:
