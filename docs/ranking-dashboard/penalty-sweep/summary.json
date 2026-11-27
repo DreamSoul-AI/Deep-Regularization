@@ -1,0 +1,2027 @@
+{
+  "dimension": 512,
+  "data_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "model_seed": 0,
+  "base_config": {
+    "epochs": 500,
+    "warmup_epochs": 120,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.001,
+    "penalty": 0.05,
+    "rho": 50.0,
+    "score_interval": 10,
+    "score_samples": 128,
+    "score_batch_size": 32,
+    "hidden_size": 32,
+    "dropout": 0.04308691548552568,
+    "feature_dropout": 0.6,
+    "protocol": "legacy"
+  },
+  "n_models": 480,
+  "rf_folds": 120,
+  "by_penalty": {
+    "0.0125": {
+      "raw": {
+        "column_norm_gate": 0.5506944444444444,
+        "column_norm_taylor_first": 0.4930555555555555,
+        "column_norm_taylor_second": 0.47430555555555554,
+        "column_norm_taylor_fisher": 0.4944444444444444
+      },
+      "soft": {
+        "column_norm_gate": 0.5506944444444444,
+        "column_norm_taylor_first": 0.4930555555555556,
+        "column_norm_taylor_second": 0.14791666666666667,
+        "column_norm_taylor_fisher": 0.49444444444444446
+      },
+      "rf": 0.638888888888889,
+      "mean_active_z": 476.1333333333333,
+      "by_seed": {
+        "1": {
+          "raw": {
+            "column_norm_gate": 0.5347222222222222,
+            "column_norm_taylor_first": 0.4444444444444445,
+            "column_norm_taylor_second": 0.4756944444444444,
+            "column_norm_taylor_fisher": 0.4513888888888889
+          },
+          "soft": {
+            "column_norm_gate": 0.5347222222222222,
+            "column_norm_taylor_first": 0.4444444444444445,
+            "column_norm_taylor_second": 0.1701388888888889,
+            "column_norm_taylor_fisher": 0.4513888888888889
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.16666666666666666
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.375,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.125,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 1.0
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5555555555555556,
+                "column_norm_taylor_first": 0.3611111111111111,
+                "column_norm_taylor_second": 0.4444444444444444,
+                "column_norm_taylor_fisher": 0.3888888888888889
+              },
+              "soft": {
+                "column_norm_gate": 0.5555555555555556,
+                "column_norm_taylor_first": 0.3611111111111111,
+                "column_norm_taylor_second": 0.05555555555555555,
+                "column_norm_taylor_fisher": 0.3888888888888889
+              },
+              "rf": 0.6666666666666666
+            }
+          },
+          "rf": 0.7083333333333334
+        },
+        "2": {
+          "raw": {
+            "column_norm_gate": 0.517361111111111,
+            "column_norm_taylor_first": 0.5138888888888888,
+            "column_norm_taylor_second": 0.47916666666666663,
+            "column_norm_taylor_fisher": 0.5138888888888888
+          },
+          "soft": {
+            "column_norm_gate": 0.517361111111111,
+            "column_norm_taylor_first": 0.5208333333333334,
+            "column_norm_taylor_second": 0.11805555555555555,
+            "column_norm_taylor_fisher": 0.5208333333333334
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.08333333333333333
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "soft": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.4444444444444444,
+                "column_norm_taylor_first": 0.4722222222222222,
+                "column_norm_taylor_second": 0.41666666666666663,
+                "column_norm_taylor_fisher": 0.4722222222222222
+              },
+              "soft": {
+                "column_norm_gate": 0.4444444444444444,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.05555555555555555,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.5277777777777778
+            }
+          },
+          "rf": 0.6006944444444444
+        },
+        "3": {
+          "raw": {
+            "column_norm_gate": 0.5729166666666666,
+            "column_norm_taylor_first": 0.5243055555555556,
+            "column_norm_taylor_second": 0.4965277777777778,
+            "column_norm_taylor_fisher": 0.5243055555555556
+          },
+          "soft": {
+            "column_norm_gate": 0.5729166666666666,
+            "column_norm_taylor_first": 0.5173611111111112,
+            "column_norm_taylor_second": 0.17708333333333331,
+            "column_norm_taylor_fisher": 0.5173611111111112
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.375,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.041666666666666664,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "rf": 0.8333333333333334
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.41666666666666663,
+                "column_norm_taylor_first": 0.3888888888888889,
+                "column_norm_taylor_second": 0.3611111111111111,
+                "column_norm_taylor_fisher": 0.3888888888888889
+              },
+              "soft": {
+                "column_norm_gate": 0.41666666666666663,
+                "column_norm_taylor_first": 0.3611111111111111,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.3611111111111111
+              },
+              "rf": 0.7777777777777778
+            }
+          },
+          "rf": 0.6527777777777778
+        },
+        "4": {
+          "raw": {
+            "column_norm_gate": 0.5868055555555556,
+            "column_norm_taylor_first": 0.4756944444444444,
+            "column_norm_taylor_second": 0.4236111111111111,
+            "column_norm_taylor_fisher": 0.4756944444444444
+          },
+          "soft": {
+            "column_norm_gate": 0.5868055555555556,
+            "column_norm_taylor_first": 0.4756944444444444,
+            "column_norm_taylor_second": 0.10763888888888888,
+            "column_norm_taylor_fisher": 0.4756944444444444
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.041666666666666664,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "rf": 0.75
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.4722222222222222,
+                "column_norm_taylor_first": 0.19444444444444442,
+                "column_norm_taylor_second": 0.2777777777777778,
+                "column_norm_taylor_fisher": 0.19444444444444442
+              },
+              "soft": {
+                "column_norm_gate": 0.4722222222222222,
+                "column_norm_taylor_first": 0.19444444444444442,
+                "column_norm_taylor_second": 0.05555555555555555,
+                "column_norm_taylor_fisher": 0.19444444444444442
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6111111111111112
+        },
+        "5": {
+          "raw": {
+            "column_norm_gate": 0.5416666666666666,
+            "column_norm_taylor_first": 0.5069444444444444,
+            "column_norm_taylor_second": 0.4965277777777778,
+            "column_norm_taylor_fisher": 0.5069444444444444
+          },
+          "soft": {
+            "column_norm_gate": 0.5416666666666666,
+            "column_norm_taylor_first": 0.5069444444444444,
+            "column_norm_taylor_second": 0.16666666666666669,
+            "column_norm_taylor_fisher": 0.5069444444444444
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.9166666666666666,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.9166666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.9166666666666666,
+                "column_norm_taylor_second": 0.5833333333333334,
+                "column_norm_taylor_fisher": 0.9166666666666666
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "soft": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.375,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.08333333333333333,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.5277777777777778,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6215277777777778
+        }
+      },
+      "contrasts": {
+        "raw": {
+          "second_minus_gate": {
+            "mean": -0.0763888888888,
+            "stdev": 0.050675414997518445,
+            "minimum": -0.163194444444,
+            "maximum": -0.038194444444,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_gate": {
+            "mean": -0.0562499999998,
+            "stdev": 0.04198374722276844,
+            "minimum": -0.111111111111,
+            "maximum": -0.003472222222,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_second": {
+            "mean": 0.0201388888888,
+            "stdev": 0.028988377034400877,
+            "minimum": -0.024305555556,
+            "maximum": 0.052083333333,
+            "wins": 4,
+            "ties": 0,
+            "losses": 1
+          },
+          "combined_minus_first": {
+            "mean": 0.0013888888888,
+            "stdev": 0.0031056499685509463,
+            "minimum": 0.0,
+            "maximum": 0.006944444444,
+            "wins": 1,
+            "ties": 4,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.0881944444444,
+            "stdev": 0.05371293223692937,
+            "minimum": -0.173611111111,
+            "maximum": -0.024305555556,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          }
+        },
+        "soft": {
+          "second_minus_gate": {
+            "mean": -0.4027777777778,
+            "stdev": 0.04507206592294934,
+            "minimum": -0.479166666667,
+            "maximum": -0.364583333333,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_gate": {
+            "mean": -0.05625,
+            "stdev": 0.04408491735570846,
+            "minimum": -0.111111111111,
+            "maximum": 0.003472222222,
+            "wins": 1,
+            "ties": 0,
+            "losses": 4
+          },
+          "combined_minus_second": {
+            "mean": 0.346527777778,
+            "stdev": 0.04462852503638481,
+            "minimum": 0.28125,
+            "maximum": 0.402777777778,
+            "wins": 5,
+            "ties": 0,
+            "losses": 0
+          },
+          "combined_minus_first": {
+            "mean": 0.0013888888888,
+            "stdev": 0.0031056499685509463,
+            "minimum": 0.0,
+            "maximum": 0.006944444444,
+            "wins": 1,
+            "ties": 4,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.0881944444444,
+            "stdev": 0.05371293223692937,
+            "minimum": -0.173611111111,
+            "maximum": -0.024305555556,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          }
+        }
+      }
+    },
+    "0.025": {
+      "raw": {
+        "column_norm_gate": 0.5715277777777777,
+        "column_norm_taylor_first": 0.5256944444444445,
+        "column_norm_taylor_second": 0.5340277777777778,
+        "column_norm_taylor_fisher": 0.5277777777777778
+      },
+      "soft": {
+        "column_norm_gate": 0.5715277777777777,
+        "column_norm_taylor_first": 0.5215277777777778,
+        "column_norm_taylor_second": 0.2923611111111111,
+        "column_norm_taylor_fisher": 0.5243055555555556
+      },
+      "rf": 0.638888888888889,
+      "mean_active_z": 357.09166666666664,
+      "by_seed": {
+        "1": {
+          "raw": {
+            "column_norm_gate": 0.5243055555555556,
+            "column_norm_taylor_first": 0.4791666666666667,
+            "column_norm_taylor_second": 0.4722222222222222,
+            "column_norm_taylor_fisher": 0.4791666666666667
+          },
+          "soft": {
+            "column_norm_gate": 0.5243055555555556,
+            "column_norm_taylor_first": 0.4652777777777778,
+            "column_norm_taylor_second": 0.2777777777777778,
+            "column_norm_taylor_fisher": 0.4791666666666667
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.16666666666666666
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 1.0
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.4722222222222222,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.1111111111111111,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.6666666666666666
+            }
+          },
+          "rf": 0.7083333333333334
+        },
+        "2": {
+          "raw": {
+            "column_norm_gate": 0.5416666666666666,
+            "column_norm_taylor_first": 0.5138888888888888,
+            "column_norm_taylor_second": 0.5347222222222222,
+            "column_norm_taylor_fisher": 0.5138888888888888
+          },
+          "soft": {
+            "column_norm_gate": 0.5416666666666666,
+            "column_norm_taylor_first": 0.5034722222222222,
+            "column_norm_taylor_second": 0.3159722222222222,
+            "column_norm_taylor_fisher": 0.5034722222222222
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 0.9166666666666666,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.08333333333333333
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.16666666666666666,
+                "column_norm_taylor_first": 0.08333333333333333,
+                "column_norm_taylor_second": 0.08333333333333333,
+                "column_norm_taylor_fisher": 0.08333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.125,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4722222222222222,
+                "column_norm_taylor_second": 0.4722222222222222,
+                "column_norm_taylor_fisher": 0.4722222222222222
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4722222222222222,
+                "column_norm_taylor_second": 0.1388888888888889,
+                "column_norm_taylor_fisher": 0.4722222222222222
+              },
+              "rf": 0.5277777777777778
+            }
+          },
+          "rf": 0.6006944444444444
+        },
+        "3": {
+          "raw": {
+            "column_norm_gate": 0.6006944444444444,
+            "column_norm_taylor_first": 0.5694444444444444,
+            "column_norm_taylor_second": 0.5868055555555556,
+            "column_norm_taylor_fisher": 0.5694444444444444
+          },
+          "soft": {
+            "column_norm_gate": 0.6006944444444444,
+            "column_norm_taylor_first": 0.5694444444444444,
+            "column_norm_taylor_second": 0.3090277777777778,
+            "column_norm_taylor_fisher": 0.5694444444444444
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.4583333333333333,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.20833333333333334,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.8333333333333334
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.4444444444444444,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.4722222222222222,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "soft": {
+                "column_norm_gate": 0.4444444444444444,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.027777777777777776,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "rf": 0.7777777777777778
+            }
+          },
+          "rf": 0.6527777777777778
+        },
+        "4": {
+          "raw": {
+            "column_norm_gate": 0.5659722222222222,
+            "column_norm_taylor_first": 0.5277777777777778,
+            "column_norm_taylor_second": 0.5277777777777778,
+            "column_norm_taylor_fisher": 0.5277777777777778
+          },
+          "soft": {
+            "column_norm_gate": 0.5659722222222222,
+            "column_norm_taylor_first": 0.5277777777777778,
+            "column_norm_taylor_second": 0.28125,
+            "column_norm_taylor_fisher": 0.5277777777777778
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.08333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.125,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.75
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.4722222222222222,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.4444444444444444,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "soft": {
+                "column_norm_gate": 0.4722222222222222,
+                "column_norm_taylor_first": 0.4444444444444444,
+                "column_norm_taylor_second": 0.08333333333333333,
+                "column_norm_taylor_fisher": 0.4444444444444444
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6111111111111112
+        },
+        "5": {
+          "raw": {
+            "column_norm_gate": 0.625,
+            "column_norm_taylor_first": 0.5381944444444444,
+            "column_norm_taylor_second": 0.548611111111111,
+            "column_norm_taylor_fisher": 0.5486111111111112
+          },
+          "soft": {
+            "column_norm_gate": 0.625,
+            "column_norm_taylor_first": 0.5416666666666666,
+            "column_norm_taylor_second": 0.2777777777777778,
+            "column_norm_taylor_fisher": 0.5416666666666666
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.9166666666666666,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 0.9166666666666666,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 0.9166666666666666,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.0,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5277777777777778,
+                "column_norm_taylor_second": 0.611111111111111,
+                "column_norm_taylor_fisher": 0.5277777777777778
+              },
+              "soft": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.027777777777777776,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6215277777777778
+        }
+      },
+      "contrasts": {
+        "raw": {
+          "second_minus_gate": {
+            "mean": -0.0374999999998,
+            "stdev": 0.028357662484943858,
+            "minimum": -0.076388888889,
+            "maximum": -0.006944444444,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_gate": {
+            "mean": -0.04375,
+            "stdev": 0.019425834348228317,
+            "minimum": -0.076388888889,
+            "maximum": -0.027777777778,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_second": {
+            "mean": -0.00625,
+            "stdev": 0.012127950830706924,
+            "minimum": -0.020833333333,
+            "maximum": 0.006944444444,
+            "wins": 1,
+            "ties": 2,
+            "losses": 2
+          },
+          "combined_minus_first": {
+            "mean": 0.0020833333334,
+            "stdev": 0.004658474953273633,
+            "minimum": 0.0,
+            "maximum": 0.010416666667,
+            "wins": 1,
+            "ties": 4,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.0673611111112,
+            "stdev": 0.06968707613505098,
+            "minimum": -0.184027777778,
+            "maximum": 0.003472222222,
+            "wins": 1,
+            "ties": 0,
+            "losses": 4
+          }
+        },
+        "soft": {
+          "second_minus_gate": {
+            "mean": -0.2791666666666,
+            "stdev": 0.04675266959436318,
+            "minimum": -0.347222222222,
+            "maximum": -0.225694444444,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_gate": {
+            "mean": -0.047222222221999996,
+            "stdev": 0.02077538236335392,
+            "minimum": -0.083333333333,
+            "maximum": -0.03125,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_second": {
+            "mean": 0.2319444444446,
+            "stdev": 0.03518785016719774,
+            "minimum": 0.1875,
+            "maximum": 0.263888888889,
+            "wins": 5,
+            "ties": 0,
+            "losses": 0
+          },
+          "combined_minus_first": {
+            "mean": 0.0027777777778,
+            "stdev": 0.006211299937549107,
+            "minimum": 0.0,
+            "maximum": 0.013888888889,
+            "wins": 1,
+            "ties": 4,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.0673611111112,
+            "stdev": 0.06968707613505098,
+            "minimum": -0.184027777778,
+            "maximum": 0.003472222222,
+            "wins": 1,
+            "ties": 0,
+            "losses": 4
+          }
+        }
+      }
+    },
+    "0.05": {
+      "raw": {
+        "column_norm_gate": 0.6201388888888889,
+        "column_norm_taylor_first": 0.5659722222222222,
+        "column_norm_taylor_second": 0.611111111111111,
+        "column_norm_taylor_fisher": 0.5854166666666667
+      },
+      "soft": {
+        "column_norm_gate": 0.6201388888888889,
+        "column_norm_taylor_first": 0.55625,
+        "column_norm_taylor_second": 0.5868055555555556,
+        "column_norm_taylor_fisher": 0.5784722222222223
+      },
+      "rf": 0.638888888888889,
+      "mean_active_z": 152.54166666666666,
+      "by_seed": {
+        "1": {
+          "raw": {
+            "column_norm_gate": 0.5798611111111112,
+            "column_norm_taylor_first": 0.5763888888888888,
+            "column_norm_taylor_second": 0.5902777777777778,
+            "column_norm_taylor_fisher": 0.5833333333333334
+          },
+          "soft": {
+            "column_norm_gate": 0.5798611111111112,
+            "column_norm_taylor_first": 0.5763888888888888,
+            "column_norm_taylor_second": 0.5833333333333334,
+            "column_norm_taylor_fisher": 0.5833333333333334
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.16666666666666666
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.4583333333333333,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 1.0
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.611111111111111,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.6944444444444444,
+                "column_norm_taylor_fisher": 0.6666666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.611111111111111,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 0.6666666666666666
+              },
+              "rf": 0.6666666666666666
+            }
+          },
+          "rf": 0.7083333333333334
+        },
+        "2": {
+          "raw": {
+            "column_norm_gate": 0.59375,
+            "column_norm_taylor_first": 0.5868055555555556,
+            "column_norm_taylor_second": 0.59375,
+            "column_norm_taylor_fisher": 0.59375
+          },
+          "soft": {
+            "column_norm_gate": 0.59375,
+            "column_norm_taylor_first": 0.5868055555555556,
+            "column_norm_taylor_second": 0.5590277777777778,
+            "column_norm_taylor_fisher": 0.5868055555555556
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.08333333333333333
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.25,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "soft": {
+                "column_norm_gate": 0.25,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5416666666666666,
+                "column_norm_taylor_second": 0.5416666666666666,
+                "column_norm_taylor_fisher": 0.5416666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5416666666666666,
+                "column_norm_taylor_second": 0.5416666666666666,
+                "column_norm_taylor_fisher": 0.5416666666666666
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5555555555555556,
+                "column_norm_taylor_second": 0.5833333333333333,
+                "column_norm_taylor_fisher": 0.5833333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5555555555555556,
+                "column_norm_taylor_second": 0.5277777777777778,
+                "column_norm_taylor_fisher": 0.5555555555555556
+              },
+              "rf": 0.5277777777777778
+            }
+          },
+          "rf": 0.6006944444444444
+        },
+        "3": {
+          "raw": {
+            "column_norm_gate": 0.6111111111111112,
+            "column_norm_taylor_first": 0.5694444444444444,
+            "column_norm_taylor_second": 0.642361111111111,
+            "column_norm_taylor_fisher": 0.6180555555555556
+          },
+          "soft": {
+            "column_norm_gate": 0.6111111111111112,
+            "column_norm_taylor_first": 0.5416666666666666,
+            "column_norm_taylor_second": 0.6111111111111112,
+            "column_norm_taylor_fisher": 0.6111111111111112
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5416666666666666,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.8333333333333334
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5277777777777778,
+                "column_norm_taylor_first": 0.5277777777777778,
+                "column_norm_taylor_second": 0.611111111111111,
+                "column_norm_taylor_fisher": 0.5555555555555556
+              },
+              "soft": {
+                "column_norm_gate": 0.5277777777777778,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5277777777777778,
+                "column_norm_taylor_fisher": 0.5277777777777778
+              },
+              "rf": 0.7777777777777778
+            }
+          },
+          "rf": 0.6527777777777778
+        },
+        "4": {
+          "raw": {
+            "column_norm_gate": 0.6493055555555556,
+            "column_norm_taylor_first": 0.5416666666666666,
+            "column_norm_taylor_second": 0.6041666666666666,
+            "column_norm_taylor_fisher": 0.5694444444444444
+          },
+          "soft": {
+            "column_norm_gate": 0.6493055555555556,
+            "column_norm_taylor_first": 0.5208333333333334,
+            "column_norm_taylor_second": 0.5763888888888888,
+            "column_norm_taylor_fisher": 0.5486111111111112
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5833333333333334,
+                "column_norm_taylor_first": 0.25,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5833333333333334,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.25
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.75
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.5833333333333333,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 0.611111111111111
+              },
+              "soft": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.5833333333333333,
+                "column_norm_taylor_second": 0.6388888888888888,
+                "column_norm_taylor_fisher": 0.611111111111111
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6111111111111112
+        },
+        "5": {
+          "raw": {
+            "column_norm_gate": 0.6666666666666666,
+            "column_norm_taylor_first": 0.5555555555555556,
+            "column_norm_taylor_second": 0.625,
+            "column_norm_taylor_fisher": 0.5625
+          },
+          "soft": {
+            "column_norm_gate": 0.6666666666666666,
+            "column_norm_taylor_first": 0.5555555555555556,
+            "column_norm_taylor_second": 0.6041666666666666,
+            "column_norm_taylor_fisher": 0.5625
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5833333333333334,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.5833333333333334,
+                "column_norm_taylor_first": 0.16666666666666666,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.16666666666666666
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5555555555555556,
+                "column_norm_taylor_second": 0.5833333333333333,
+                "column_norm_taylor_fisher": 0.5833333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5833333333333333,
+                "column_norm_taylor_first": 0.5555555555555556,
+                "column_norm_taylor_second": 0.5833333333333333,
+                "column_norm_taylor_fisher": 0.5833333333333333
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6215277777777778
+        }
+      },
+      "contrasts": {
+        "raw": {
+          "second_minus_gate": {
+            "mean": -0.0090277777778,
+            "stdev": 0.033358642012591984,
+            "minimum": -0.045138888889,
+            "maximum": 0.03125,
+            "wins": 2,
+            "ties": 1,
+            "losses": 2
+          },
+          "combined_minus_gate": {
+            "mean": -0.0347222222224,
+            "stdev": 0.0530580096872364,
+            "minimum": -0.104166666667,
+            "maximum": 0.006944444444,
+            "wins": 2,
+            "ties": 1,
+            "losses": 2
+          },
+          "combined_minus_second": {
+            "mean": -0.0256944444444,
+            "stdev": 0.02474795789062082,
+            "minimum": -0.0625,
+            "maximum": 0.0,
+            "wins": 0,
+            "ties": 1,
+            "losses": 4
+          },
+          "combined_minus_first": {
+            "mean": 0.0194444444442,
+            "stdev": 0.01863389981270322,
+            "minimum": 0.006944444444,
+            "maximum": 0.048611111111,
+            "wins": 5,
+            "ties": 0,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.01875,
+            "stdev": 0.07076010648478585,
+            "minimum": -0.128472222222,
+            "maximum": 0.045138888889,
+            "wins": 2,
+            "ties": 0,
+            "losses": 3
+          }
+        },
+        "soft": {
+          "second_minus_gate": {
+            "mean": -0.0333333333334,
+            "stdev": 0.03494718788916181,
+            "minimum": -0.072916666667,
+            "maximum": 0.003472222222,
+            "wins": 1,
+            "ties": 1,
+            "losses": 3
+          },
+          "combined_minus_gate": {
+            "mean": -0.0416666666666,
+            "stdev": 0.05560978256266308,
+            "minimum": -0.104166666667,
+            "maximum": 0.003472222222,
+            "wins": 1,
+            "ties": 1,
+            "losses": 3
+          },
+          "combined_minus_second": {
+            "mean": -0.0083333333334,
+            "stdev": 0.027074428735797053,
+            "minimum": -0.041666666667,
+            "maximum": 0.027777777778,
+            "wins": 1,
+            "ties": 2,
+            "losses": 2
+          },
+          "combined_minus_first": {
+            "mean": 0.022222222222,
+            "stdev": 0.028378912141199163,
+            "minimum": 0.0,
+            "maximum": 0.069444444444,
+            "wins": 4,
+            "ties": 1,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": -0.01875,
+            "stdev": 0.07076010648478585,
+            "minimum": -0.128472222222,
+            "maximum": 0.045138888889,
+            "wins": 2,
+            "ties": 0,
+            "losses": 3
+          }
+        }
+      }
+    },
+    "0.1": {
+      "raw": {
+        "column_norm_gate": 0.6520833333333333,
+        "column_norm_taylor_first": 0.6229166666666667,
+        "column_norm_taylor_second": 0.6354166666666666,
+        "column_norm_taylor_fisher": 0.6229166666666667
+      },
+      "soft": {
+        "column_norm_gate": 0.6520833333333333,
+        "column_norm_taylor_first": 0.6270833333333333,
+        "column_norm_taylor_second": 0.5798611111111112,
+        "column_norm_taylor_fisher": 0.6291666666666667
+      },
+      "rf": 0.638888888888889,
+      "mean_active_z": 20.55,
+      "by_seed": {
+        "1": {
+          "raw": {
+            "column_norm_gate": 0.5972222222222222,
+            "column_norm_taylor_first": 0.5659722222222222,
+            "column_norm_taylor_second": 0.5763888888888888,
+            "column_norm_taylor_fisher": 0.5659722222222222
+          },
+          "soft": {
+            "column_norm_gate": 0.5972222222222222,
+            "column_norm_taylor_first": 0.5868055555555556,
+            "column_norm_taylor_second": 0.4895833333333333,
+            "column_norm_taylor_fisher": 0.5868055555555556
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.16666666666666666
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.4166666666666667,
+                "column_norm_taylor_first": 0.4166666666666667,
+                "column_norm_taylor_second": 0.16666666666666666,
+                "column_norm_taylor_fisher": 0.4166666666666667
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.4583333333333333,
+                "column_norm_taylor_second": 0.4583333333333333,
+                "column_norm_taylor_fisher": 0.4583333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.6388888888888888,
+                "column_norm_taylor_fisher": 0.6388888888888888
+              },
+              "soft": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.6388888888888888
+              },
+              "rf": 0.6666666666666666
+            }
+          },
+          "rf": 0.7083333333333334
+        },
+        "2": {
+          "raw": {
+            "column_norm_gate": 0.5902777777777778,
+            "column_norm_taylor_first": 0.5902777777777778,
+            "column_norm_taylor_second": 0.5902777777777778,
+            "column_norm_taylor_fisher": 0.5902777777777778
+          },
+          "soft": {
+            "column_norm_gate": 0.5902777777777778,
+            "column_norm_taylor_first": 0.5902777777777778,
+            "column_norm_taylor_second": 0.5416666666666666,
+            "column_norm_taylor_fisher": 0.5902777777777778
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.08333333333333333
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "soft": {
+                "column_norm_gate": 0.3333333333333333,
+                "column_norm_taylor_first": 0.3333333333333333,
+                "column_norm_taylor_second": 0.25,
+                "column_norm_taylor_fisher": 0.3333333333333333
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.5277777777777778,
+                "column_norm_taylor_first": 0.5277777777777778,
+                "column_norm_taylor_second": 0.5277777777777778,
+                "column_norm_taylor_fisher": 0.5277777777777778
+              },
+              "soft": {
+                "column_norm_gate": 0.5277777777777778,
+                "column_norm_taylor_first": 0.5277777777777778,
+                "column_norm_taylor_second": 0.41666666666666663,
+                "column_norm_taylor_fisher": 0.5277777777777778
+              },
+              "rf": 0.5277777777777778
+            }
+          },
+          "rf": 0.6006944444444444
+        },
+        "3": {
+          "raw": {
+            "column_norm_gate": 0.6527777777777778,
+            "column_norm_taylor_first": 0.6527777777777778,
+            "column_norm_taylor_second": 0.6631944444444444,
+            "column_norm_taylor_fisher": 0.6527777777777778
+          },
+          "soft": {
+            "column_norm_gate": 0.6527777777777778,
+            "column_norm_taylor_first": 0.6527777777777778,
+            "column_norm_taylor_second": 0.6180555555555556,
+            "column_norm_taylor_fisher": 0.6631944444444444
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.4166666666666667,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5416666666666666,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5416666666666666
+              },
+              "rf": 0.8333333333333334
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.611111111111111,
+                "column_norm_taylor_first": 0.611111111111111,
+                "column_norm_taylor_second": 0.611111111111111,
+                "column_norm_taylor_fisher": 0.611111111111111
+              },
+              "soft": {
+                "column_norm_gate": 0.611111111111111,
+                "column_norm_taylor_first": 0.611111111111111,
+                "column_norm_taylor_second": 0.5555555555555556,
+                "column_norm_taylor_fisher": 0.611111111111111
+              },
+              "rf": 0.7777777777777778
+            }
+          },
+          "rf": 0.6527777777777778
+        },
+        "4": {
+          "raw": {
+            "column_norm_gate": 0.6770833333333333,
+            "column_norm_taylor_first": 0.625,
+            "column_norm_taylor_second": 0.6666666666666666,
+            "column_norm_taylor_fisher": 0.625
+          },
+          "soft": {
+            "column_norm_gate": 0.6770833333333333,
+            "column_norm_taylor_first": 0.625,
+            "column_norm_taylor_second": 0.6458333333333334,
+            "column_norm_taylor_fisher": 0.625
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.8333333333333334,
+                "column_norm_taylor_second": 0.8333333333333334,
+                "column_norm_taylor_fisher": 0.8333333333333334
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.6666666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.6666666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5833333333333334,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5416666666666666,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.75
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.6666666666666666,
+                "column_norm_taylor_first": 0.6666666666666666,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 0.6666666666666666
+              },
+              "soft": {
+                "column_norm_gate": 0.6666666666666666,
+                "column_norm_taylor_first": 0.6666666666666666,
+                "column_norm_taylor_second": 0.6666666666666666,
+                "column_norm_taylor_fisher": 0.6666666666666666
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6111111111111112
+        },
+        "5": {
+          "raw": {
+            "column_norm_gate": 0.7430555555555556,
+            "column_norm_taylor_first": 0.6805555555555556,
+            "column_norm_taylor_second": 0.6805555555555556,
+            "column_norm_taylor_fisher": 0.6805555555555556
+          },
+          "soft": {
+            "column_norm_gate": 0.7430555555555556,
+            "column_norm_taylor_first": 0.6805555555555556,
+            "column_norm_taylor_second": 0.6041666666666666,
+            "column_norm_taylor_fisher": 0.6805555555555556
+          },
+          "tasks": {
+            "xor": {
+              "raw": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "soft": {
+                "column_norm_gate": 1.0,
+                "column_norm_taylor_first": 1.0,
+                "column_norm_taylor_second": 1.0,
+                "column_norm_taylor_fisher": 1.0
+              },
+              "rf": 0.0
+            },
+            "ring": {
+              "raw": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.5833333333333334,
+                "column_norm_taylor_second": 0.5833333333333334,
+                "column_norm_taylor_fisher": 0.5833333333333334
+              },
+              "soft": {
+                "column_norm_gate": 0.8333333333333334,
+                "column_norm_taylor_first": 0.5833333333333334,
+                "column_norm_taylor_second": 0.3333333333333333,
+                "column_norm_taylor_fisher": 0.5833333333333334
+              },
+              "rf": 1.0
+            },
+            "ring+xor": {
+              "raw": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "soft": {
+                "column_norm_gate": 0.5,
+                "column_norm_taylor_first": 0.5,
+                "column_norm_taylor_second": 0.5,
+                "column_norm_taylor_fisher": 0.5
+              },
+              "rf": 0.7916666666666666
+            },
+            "ring+xor+sum": {
+              "raw": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.6388888888888888,
+                "column_norm_taylor_fisher": 0.6388888888888888
+              },
+              "soft": {
+                "column_norm_gate": 0.6388888888888888,
+                "column_norm_taylor_first": 0.6388888888888888,
+                "column_norm_taylor_second": 0.5833333333333333,
+                "column_norm_taylor_fisher": 0.6388888888888888
+              },
+              "rf": 0.6944444444444444
+            }
+          },
+          "rf": 0.6215277777777778
+        }
+      },
+      "contrasts": {
+        "raw": {
+          "second_minus_gate": {
+            "mean": -0.0166666666666,
+            "stdev": 0.0281442835127708,
+            "minimum": -0.0625,
+            "maximum": 0.010416666667,
+            "wins": 1,
+            "ties": 1,
+            "losses": 3
+          },
+          "combined_minus_gate": {
+            "mean": -0.029166666666599998,
+            "stdev": 0.028905076928083116,
+            "minimum": -0.0625,
+            "maximum": 0.0,
+            "wins": 0,
+            "ties": 2,
+            "losses": 3
+          },
+          "combined_minus_second": {
+            "mean": -0.0125000000002,
+            "stdev": 0.01711632992215816,
+            "minimum": -0.041666666667,
+            "maximum": 0.0,
+            "wins": 0,
+            "ties": 2,
+            "losses": 3
+          },
+          "combined_minus_first": {
+            "mean": 0.0,
+            "stdev": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "wins": 0,
+            "ties": 5,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": 0.0131944444444,
+            "stdev": 0.0876142882359357,
+            "minimum": -0.111111111111,
+            "maximum": 0.121527777778,
+            "wins": 2,
+            "ties": 1,
+            "losses": 2
+          }
+        },
+        "soft": {
+          "second_minus_gate": {
+            "mean": -0.0722222222222,
+            "stdev": 0.048325051174300936,
+            "minimum": -0.138888888889,
+            "maximum": -0.03125,
+            "wins": 0,
+            "ties": 0,
+            "losses": 5
+          },
+          "combined_minus_gate": {
+            "mean": -0.0229166666666,
+            "stdev": 0.03244252396330659,
+            "minimum": -0.0625,
+            "maximum": 0.010416666667,
+            "wins": 1,
+            "ties": 1,
+            "losses": 3
+          },
+          "combined_minus_second": {
+            "mean": 0.0493055555556,
+            "stdev": 0.044628525036100826,
+            "minimum": -0.020833333333,
+            "maximum": 0.097222222222,
+            "wins": 4,
+            "ties": 0,
+            "losses": 1
+          },
+          "combined_minus_first": {
+            "mean": 0.0020833333334,
+            "stdev": 0.004658474953273633,
+            "minimum": 0.0,
+            "maximum": 0.010416666667,
+            "wins": 1,
+            "ties": 4,
+            "losses": 0
+          },
+          "gate_minus_rf": {
+            "mean": 0.0131944444444,
+            "stdev": 0.0876142882359357,
+            "minimum": -0.111111111111,
+            "maximum": 0.121527777778,
+            "wins": 2,
+            "ties": 1,
+            "losses": 2
+          }
+        }
+      }
+    }
+  }
+}

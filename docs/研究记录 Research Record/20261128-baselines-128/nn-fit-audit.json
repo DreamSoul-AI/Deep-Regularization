@@ -1,0 +1,166 @@
+{
+  "rows": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "train_auroc": 0.7445276564269698,
+      "test_auroc": 0.45765144989951195
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "train_auroc": 0.8690216324220691,
+      "test_auroc": 0.5639701663798048
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "train_auroc": 0.7960338146422475,
+      "test_auroc": 0.5252113086563683
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "train_auroc": 0.7152373695391152,
+      "test_auroc": 0.5681883433821419
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "train_auroc": 0.7216931216931217,
+      "test_auroc": 0.462484993997599
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "train_auroc": 0.7895539018433951,
+      "test_auroc": 0.5374358974358975
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "train_auroc": 0.7560444259528928,
+      "test_auroc": 0.46396784381280504
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "train_auroc": 0.8435038802596833,
+      "test_auroc": 0.5342034203420343
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "train_auroc": 0.8087390977877895,
+      "test_auroc": 0.556674338319908
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "train_auroc": 0.8167652266493848,
+      "test_auroc": 0.4797588285960379
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "train_auroc": 0.8349287127913083,
+      "test_auroc": 0.460075493612079
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "train_auroc": 0.81799732484664,
+      "test_auroc": 0.49818445896877267
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "train_auroc": 0.7840813261710853,
+      "test_auroc": 0.4694749694749695
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "train_auroc": 0.8292487920186324,
+      "test_auroc": 0.477913397268236
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "train_auroc": 0.7037221706864564,
+      "test_auroc": 0.47845575477154423
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "train_auroc": 0.6500844250363902,
+      "test_auroc": 0.53847258110824
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "train_auroc": 0.7639769201774479,
+      "test_auroc": 0.491869918699187
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "train_auroc": 0.7455864374569072,
+      "test_auroc": 0.46177325581395345
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "train_auroc": 0.8690011547344111,
+      "test_auroc": 0.5633074935400517
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "train_auroc": 0.8548498805277556,
+      "test_auroc": 0.5647295742232451
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "train_auroc": 0.7927715848507928,
+      "test_auroc": 0.5406926406926407
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "train_auroc": 0.8502817031495338,
+      "test_auroc": 0.5623563218390805
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "train_auroc": 0.8432120500782472,
+      "test_auroc": 0.535277655030196
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "train_auroc": 0.8648475398475398,
+      "test_auroc": 0.48600732600732605
+    }
+  ],
+  "summary": {
+    "xor": {
+      "train_auroc": 0.7726779160944863,
+      "test_auroc": 0.5191570266252206
+    },
+    "ring": {
+      "train_auroc": 0.8129964447146166,
+      "test_auroc": 0.4988107306086061
+    },
+    "ring+xor": {
+      "train_auroc": 0.7461166785911533,
+      "test_auroc": 0.486326646189355
+    },
+    "ring+xor+sum": {
+      "train_auroc": 0.8458273188647135,
+      "test_auroc": 0.54206183522209
+    }
+  }
+}

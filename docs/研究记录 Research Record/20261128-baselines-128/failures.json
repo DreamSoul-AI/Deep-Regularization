@@ -1,0 +1,639 @@
+{
+  "e2efs": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "error": "Missing local vendor directory: <repo>\\.tmp\\all-baselines-20261128\\vendor_pkgs"
+    }
+  ],
+  "mrmr": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "error": "No module named 'pymrmre'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "error": "No module named 'pymrmre'"
+    }
+  ],
+  "stg": [
+    {
+      "task": "xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Sequence'"
+    },
+    {
+      "task": "xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 0,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 1,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 2,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 3,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 4,
+      "error": "module 'collections' has no attribute 'Set'"
+    },
+    {
+      "task": "ring+xor+sum",
+      "fold": 5,
+      "error": "module 'collections' has no attribute 'Set'"
+    }
+  ],
+  "Deconvolution": [],
+  "DeepLift": [],
+  "FeatureAblation": [],
+  "FeaturePermutation": [],
+  "GuidedBackprop": [],
+  "IG_noMul": [],
+  "InputXGradient": [],
+  "Saliency": [],
+  "ShapleyValueSampling": [],
+  "SmoothGrad": [],
+  "adaptive_group_lasso": [],
+  "attention_maps": [],
+  "cae_keras": [],
+  "canceloutsigmoid": [],
+  "canceloutsoftmax": [],
+  "deep_lasso": [],
+  "deeppink": [],
+  "first_layer_lasso": [],
+  "fsnet": [],
+  "lasso": [],
+  "lassonet": [],
+  "localized_lasso": [],
+  "mi": [],
+  "ours_column_norm": [],
+  "ours_taylor_first": [],
+  "ours_taylor_fisher": [],
+  "relief": [],
+  "rf": [],
+  "treeshap": [],
+  "univariate": [],
+  "xgboost": []
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "task": "xor",
+    "mode": "column_norm",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "elapsed_seconds": 6.378484999760985
+  },
+  {
+    "task": "xor",
+    "mode": "taylor_first",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "elapsed_seconds": 6.516306100063957
+  },
+  {
+    "task": "xor",
+    "mode": "taylor_fisher",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "auroc": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "elapsed_seconds": 6.522589899948798
+  },
+  {
+    "task": "ring",
+    "mode": "column_norm",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 0.08333333333333333,
+          "std": 0.2041241452319315
+        },
+        "average_precision": {
+          "mean": 0.1701303351455735,
+          "std": 0.17254841180050332
+        },
+        "auroc": {
+          "mean": 0.7526455026455027,
+          "std": 0.13907395078161922
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 0.3333333333333333,
+          "std": 0.4082482904638631
+        },
+        "average_precision": {
+          "mean": 0.408591907690857,
+          "std": 0.34606709779380534
+        },
+        "auroc": {
+          "mean": 0.8293650793650794,
+          "std": 0.16642083154486292
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 0.4166666666666667,
+          "std": 0.3763863263545405
+        },
+        "average_precision": {
+          "mean": 0.4231977908805436,
+          "std": 0.33533640125562053
+        },
+        "auroc": {
+          "mean": 0.833994708994709,
+          "std": 0.1609256236694628
+        }
+      }
+    },
+    "elapsed_seconds": 6.398157900082879
+  },
+  {
+    "task": "ring",
+    "mode": "taylor_first",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "average_precision": {
+          "mean": 0.14695208103489024,
+          "std": 0.06720879089881318
+        },
+        "auroc": {
+          "mean": 0.7308201058201059,
+          "std": 0.16131656043276543
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 0.4166666666666667,
+          "std": 0.3763863263545405
+        },
+        "average_precision": {
+          "mean": 0.3558342781557067,
+          "std": 0.3379395700603745
+        },
+        "auroc": {
+          "mean": 0.7559523809523809,
+          "std": 0.1941567356401962
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 0.4166666666666667,
+          "std": 0.3763863263545405
+        },
+        "average_precision": {
+          "mean": 0.36198507180650036,
+          "std": 0.33249570548693363
+        },
+        "auroc": {
+          "mean": 0.7572751322751322,
+          "std": 0.19301248996269402
+        }
+      }
+    },
+    "elapsed_seconds": 6.526702799950726
+  },
+  {
+    "task": "ring",
+    "mode": "taylor_fisher",
+    "folds": 6,
+    "metrics": {
+      "gate": {
+        "recall_at_k": {
+          "mean": 0.08333333333333333,
+          "std": 0.2041241452319315
+        },
+        "average_precision": {
+          "mean": 0.19925168012117278,
+          "std": 0.16583279571187762
+        },
+        "auroc": {
+          "mean": 0.6964285714285715,
+          "std": 0.19103341114144298
+        }
+      },
+      "taylor_first": {
+        "recall_at_k": {
+          "mean": 0.4166666666666667,
+          "std": 0.3763863263545405
+        },
+        "average_precision": {
+          "mean": 0.4059293026559947,
+          "std": 0.3158842886821754
+        },
+        "auroc": {
+          "mean": 0.7433862433862434,
+          "std": 0.19345662049349874
+        }
+      },
+      "taylor_fisher": {
+        "recall_at_k": {
+          "mean": 0.4166666666666667,
+          "std": 0.3763863263545405
+        },
+        "average_precision": {
+          "mean": 0.4098825820809722,
+          "std": 0.3109349511300066
+        },
+        "auroc": {
+          "mean": 0.7427248677248678,
+          "std": 0.19284924973505288
+        }
+      }
+    },
+    "elapsed_seconds": 6.5957645998569205
+  }
+]

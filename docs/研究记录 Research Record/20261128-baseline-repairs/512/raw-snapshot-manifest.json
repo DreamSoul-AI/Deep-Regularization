@@ -1,0 +1,46 @@
+{
+  "source_commit": "555ba11e8872bd6618cd721bd3b08f7128db9e6b",
+  "source_sha256": "ac7d118998d1d436fb2c2220a9ab67413f520fe5e806c1281490c8be68117838",
+  "config": {
+    "epochs": 500,
+    "warmup_epochs": 120,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.001,
+    "penalty": 0.05,
+    "rho": 50.0,
+    "score_interval": 10,
+    "score_samples": 128,
+    "score_batch_size": 32,
+    "hidden_size": 32,
+    "dropout": 0.04308691548552568,
+    "feature_dropout": 0.6,
+    "protocol": "legacy"
+  },
+  "seed": 0,
+  "dimensions": 512,
+  "tasks": [
+    "xor",
+    "ring"
+  ],
+  "samples": 1000,
+  "folds": 6,
+  "split": "KFold(6), shuffle=False",
+  "permutation": "per-fold NumPy shuffle, continuous seed-0 state",
+  "device": "cpu",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "torch": "2.11.0+cu130",
+  "numpy": "2.3.5",
+  "primary_readout": "gate",
+  "scoring_readouts": "also stored for frozen-model diagnostics",
+  "downstream_refits": false,
+  "hyperparameter_search": false,
+  "files": {
+    "src/feature_selection.py": "9d8a78881d9073385c10d7dfa9962981197a7781730a14c08bc816a21085beee",
+    "src/feature_scores.py": "608bbfa2d5304d0299400daeb9a75dc79651c93bc04337ccb57693ee1b711e4e",
+    "src/feature_selection_data.py": "d50d1c19b73fba0626cce66a56a4de0a84c45ad65b4407a933cee2427bb01022",
+    "experiments/reproduce_ranking.py": "5fbe0d48f0b642b250486b9df5216f968994085e3475057c715e3439126538b9",
+    "experiments/legacy_ranking_reference.py": "f5281921455727f1dc49676be01d95b6ae2076e496c9e86aacf7662b0b5171ac",
+    "experiments/ranking_taylor_fisher.py": "d40e90a6174f226c26111b20be47a2c252ea57774b2c60ec5b8fef485b133e65"
+  }
+}

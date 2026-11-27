@@ -1,0 +1,110 @@
+{
+  "ours_column_norm": {
+    "status": "complete",
+    "completed": 24,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 1.0,
+        "average_precision": 1.0,
+        "auroc": 1.0
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 0.75,
+        "average_precision": 0.713803861381734,
+        "auroc": 0.7976190476190476
+      },
+      "ring+xor": {
+        "n": 6,
+        "recall_at_k": 0.7083333333333334,
+        "average_precision": 0.7976418757467144,
+        "auroc": 0.9371639784946236
+      },
+      "ring+xor+sum": {
+        "n": 6,
+        "recall_at_k": 0.6666666666666666,
+        "average_precision": 0.7512514935877549,
+        "auroc": 0.9191712204007286
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 126,
+    "macro_recall": 0.78125,
+    "macro_ap": 0.8156743076790508,
+    "macro_auroc": 0.9134885616285999
+  },
+  "ours_taylor_first": {
+    "status": "complete",
+    "completed": 24,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 1.0,
+        "average_precision": 1.0,
+        "auroc": 1.0
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 0.4166666666666667,
+        "average_precision": 0.5139070475291264,
+        "auroc": 0.8359788359788359
+      },
+      "ring+xor": {
+        "n": 6,
+        "recall_at_k": 0.5416666666666666,
+        "average_precision": 0.565397905602718,
+        "auroc": 0.7728494623655915
+      },
+      "ring+xor+sum": {
+        "n": 6,
+        "recall_at_k": 0.6666666666666666,
+        "average_precision": 0.6960228103433125,
+        "auroc": 0.8294626593806921
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 128,
+    "macro_recall": 0.65625,
+    "macro_ap": 0.6938319408687893,
+    "macro_auroc": 0.8595727394312799
+  },
+  "ours_taylor_fisher": {
+    "status": "complete",
+    "completed": 24,
+    "failed_attempts": 0,
+    "tasks": {
+      "xor": {
+        "n": 6,
+        "recall_at_k": 1.0,
+        "average_precision": 1.0,
+        "auroc": 1.0
+      },
+      "ring": {
+        "n": 6,
+        "recall_at_k": 0.5,
+        "average_precision": 0.6098805629893943,
+        "auroc": 0.806878306878307
+      },
+      "ring+xor": {
+        "n": 6,
+        "recall_at_k": 0.5416666666666666,
+        "average_precision": 0.577917668406032,
+        "auroc": 0.760752688172043
+      },
+      "ring+xor+sum": {
+        "n": 6,
+        "recall_at_k": 0.6666666666666666,
+        "average_precision": 0.6957892793444959,
+        "auroc": 0.7916666666666666
+      }
+    },
+    "constant_score_cases": 0,
+    "min_distinct_scores": 128,
+    "macro_recall": 0.6770833333333333,
+    "macro_ap": 0.7208968776849806,
+    "macro_auroc": 0.8398244154292541
+  }
+}

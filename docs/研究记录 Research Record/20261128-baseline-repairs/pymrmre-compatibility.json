@@ -1,0 +1,19 @@
+[
+  {
+    "file": "MrmreFilter.py",
+    "package": "pymrmre",
+    "version": "1.0.7",
+    "before_sha256": "74804c1b243d67ab4fe5b12f3636647245f8c43b17093ed19dfaead7e5bf92d1",
+    "after_sha256": "04fb1824fef1fefd12f826411e142de5527f815d299533b5ee25dbc52d57f51d",
+    "change": "Test empty NumPy priors by .size, not ambiguous array truth"
+  },
+  {
+    "package": "pymrmre",
+    "version": "1.0.7",
+    "file": "MrmreData.py",
+    "before_sha256": "07d7d6dea6dc83bf8f562ddb4327fd42efb3b7b741be39b232a3f056a2086278",
+    "after_sha256": "aec05580768f720b5cfec2f82a176ba3c74d071627d894f0a7129827fa411a59",
+    "old": ".iteritems()",
+    "new": ".items()"
+  }
+]

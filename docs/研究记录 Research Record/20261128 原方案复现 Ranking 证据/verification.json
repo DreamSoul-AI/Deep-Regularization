@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-28",
+  "original_parameter_parity_cases": 24,
+  "reloaded_checkpoints": 96,
+  "recomputed_score_moments": 72,
+  "train_test_disjoint": true,
+  "source_fingerprints_match": true,
+  "document_links_resolve": true,
+  "unit_tests_passed": 5,
+  "github_visual_preview": false,
+  "scope": "fixed original public 128-D four-task ranking reproduction; no downstream refits"
+}

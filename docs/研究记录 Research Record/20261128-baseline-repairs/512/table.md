@@ -1,0 +1,9 @@
+| Method | XOR | Ring | Macro | AP | Status |
+| --- | ---: | ---: | ---: | ---: | --- |
+| raw_snapshot_column_norm | 100.00 | 41.67 | 70.83 | 72.82 | 12/12 |
+| raw_snapshot_taylor_first | 100.00 | 16.67 | 58.33 | 63.22 | 12/12 |
+| raw_snapshot_taylor_fisher | 100.00 | 16.67 | 58.33 | 62.36 | 12/12 |
+| lassonet | 83.33 | 0.00 | 41.67 | 42.02 | 12/12 |
+| lassoflexnet_reimpl_sequential_feasible | 0.00 | 25.00 | 12.50 | 13.40 | 12/12 |
+| mrmr_fullrank | 0.00 | 0.00 | 0.00 | 0.42 | 12/12 |
+| random | 0.00 | 0.00 | 0.00 | 0.78 | 12/12 |

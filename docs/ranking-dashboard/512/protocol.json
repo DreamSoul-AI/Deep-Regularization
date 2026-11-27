@@ -1,0 +1,85 @@
+{
+  "scope": "512 dimensions; four tasks, six unshuffled folds, one generated instance per task; ranking only",
+  "baseline_commit": "555ba11e8872bd6618cd721bd3b08f7128db9e6b",
+  "localized_author_commit": "f7944f2913696a3fd0fb67d4e43552af69797d52",
+  "deep_lasso_source": "a02a7ee6989549738ec5924ec006839007342771",
+  "primary": "Recall@k with k=2,2,4,6; Macro only after all24 cases",
+  "budget_knowledge": "True feature identities never enter training; native budget selectors receive true k",
+  "seed_and_split": "Same saved npz for every method; seed0 generation; KFold(6,shuffle=False), continuous per-fold column permutation",
+  "fixed_settings": "Original migrated128 recipes preserved; extra public512 default rho200 line; effective-gate report120-epoch recipe; no outer search",
+  "attention": {
+    "effective_batch": 512,
+    "physical_microbatch": 16,
+    "device": "cuda",
+    "optimizer_steps_unchanged": true,
+    "dropout_rng_order": "Changed by chunking; no bitwise trajectory equivalence claim",
+    "initial_full_cpu_attempt": "Stopped before first successful case for memory26GiB; raw stop record retained locally"
+  },
+  "current_source_hashes": {
+    "experiments/update_ranking_dashboard.py": "560485850208df7660421df66538ec5b2152d5b610b44ec302d6f1a1c4d140a4",
+    "experiments/ranking_public_defaults.py": "2ccbb21a0801be56ad638002eb2e72aa576254d00481e4a83fb79a6ce13be8dd",
+    "experiments/baseline_suite.py": "872285717692dd14b8c35a1e274b4cae354108ef2e73f7b7052c833c5e7d39d1",
+    "experiments/baseline_supplement.py": "545c13b1fb887f9c793ff45361e2e6317422caeada332816ab35232ee9100ebb",
+    "experiments/baseline_neural.py": "806542495f720c8f08b5ef73f07caf39626cda5e6e2c8559b4d4ffb4f1e2d78f",
+    "experiments/localized_lasso_solver.py": "d0cd66169a71a9210f4b05d85716761ba2bf1e17642871d15f3a606ee162fba4",
+    "src/effective_gate.py": "0e93ba395adf561b8f8eab66d6b112e02bcbfe8436b71a939de2f4949b01c456",
+    "src/feature_selection.py": "9d8a78881d9073385c10d7dfa9962981197a7781730a14c08bc816a21085beee",
+    "src/feature_scores.py": "608bbfa2d5304d0299400daeb9a75dc79651c93bc04337ccb57693ee1b711e4e",
+    "src/lassoflexnet.py": "ed476eea67c31550b18f195a7001fb8984d65a79e9c7525cde5d7ee0e7b5d8a6"
+  },
+  "pre_attention_neural_source": {
+    "commit": "fa2ea84a6a4fa897299d84bddab7b9aec289b477",
+    "path": "experiments/baseline_neural.py",
+    "sha256": "16f7792fc4b453dfb8411e60cc866d7164cdac955a425022a76782ad9de4549d",
+    "methods": [
+      "first_layer_lasso",
+      "adaptive_group_lasso",
+      "deep_lasso"
+    ]
+  },
+  "packages": {
+    "torch": "2.11.0+cu130",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "captum": "0.9.0",
+    "lassonet": "0.0.22",
+    "shap": "0.54.1",
+    "xgboost": "3.4.1",
+    "stg": "0.1.2",
+    "pymrmre": "1.0.7"
+  },
+  "original_wrapper_contract": "public-wrapper-contract.json",
+  "exclusions": [
+    "attr-t",
+    "bootstrap attr-b",
+    "prediction-only NN",
+    "DAG2000",
+    "downstream refits",
+    "outer hyperparameter search"
+  ],
+  "reuse": "Earlier completed XOR/Ring npz bytes and scores preserved; stopped CPU Flex transfer excluded in favor of fresh GPU partition",
+  "pymrmre_native_build": {
+    "version": "1.0.7",
+    "wheel_sha256": "49f0db24af79033a73ccbfdf6e92907bff2a06ee4cdcb939ebc426ac85fcbb2e",
+    "wrapper_patches": "pymrmre-compatibility.json",
+    "estimator": "Default Pearson/Gaussian mutual-information proxy; not another nonlinear MI estimator"
+  },
+  "lassonet_device_correction": {
+    "actual_device": "cuda",
+    "requested_metadata": "cpu",
+    "proof": "lassonet-device-audit.json",
+    "training_source": "fa2ea84:experiments/baseline_suite.py",
+    "all_current_results": "Native original auto-selected CUDA; scores preserved",
+    "future_runner": "Explicit native constructor device now honors CLI; current running modules retain original code"
+  },
+  "training_baseline_suite_source": {
+    "commit": "fa2ea84a6a4fa897299d84bddab7b9aec289b477",
+    "sha256": "7a2c639a2f4e0d8fee8a40798ca9037016224873a98c43d895fff71ff7deb24a",
+    "note": "All current baseline-suite workers loaded this before the future explicit-device correction"
+  },
+  "repeat_lassonet_device": "cuda explicitly; current native auto-selected CUDA, despite original requested CPU label",
+  "completed_methods": 38,
+  "verified_records": 912,
+  "attention_training_execution": "Explicit RANKING_ATTENTION_MICROBATCH=16; current same-setting default also16 at512, all other dimensions retain prior default"
+}

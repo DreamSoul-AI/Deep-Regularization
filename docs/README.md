@@ -1,5 +1,7 @@
 # 研发文档导航
 
+当前统一入口：[Deep Regularization 实验看板](<实验看板 Deep Regularization.md>)。512维全部方法、四任务逐格结果、完成状态、原commit审计和证据入口在此持续更新；日期记录保留为历史，不再承担当前总表。
+
 Research evidence and reproducibility notes. Consult the retained research index and existing execution restrictions below.
 
 | 任务 | 入口 |
@@ -17,4 +19,12 @@ Research evidence and reproducibility notes. Consult the retained research index
 - [输入门控、LassoNet 与 ADMM 方法推导](<调研 Search/通用调研 General Search/通用调研 General Search Deep Regularization 输入门控与 LassoNet.md>)
 - [四候选文献、baseline 与 benchmark 对照](<调研 Search/文献调研 Literature Search/文献调研 Literature Search Deep Regularization.md>)
 
-当前计划包含四个候选，以及 feature ranking、LassoFlexNet 协议下游效果两块正式实验。文档中的实现、参数与求解器依赖仍待落实，实验暂停状态保持原约定。
+当前计划包含四个候选，以及 feature ranking、LassoFlexNet 协议下游效果两块正式实验。按11月27日至28日新增授权，已实施候选一并开展128维 ranking 配对复现与全 baseline 比较；其他候选、维度网格与下游实验仍按原范围待执行。
+
+- [候选一 ranking 初测与实现记录](<研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)
+- [原方案500轮复现与四任务ranking总表](<研究记录 Research Record/2026年11月28日 原方案复现与候选一 Ranking 对照.md>)
+- [全部 ranking baseline、论文新增方法与运行限制](<研究记录 Research Record/2026年11月28日 Ranking Baseline 全量对照.md>)
+- [mRMR 修复、LassoFlexNet 本地实现与512维版本复核](<研究记录 Research Record/2026年11月28日 Baseline 修复与512维复核.md>)
+- [保持方法的有效 gate 512维 ranking 对照](<研究记录 Research Record/2026年11月28日 有效 gate 的512维 Ranking 对照.md>)
+
+此前已完成 mRMR、本地 LassoFlexNet 数值二分类实现，以及512维 XOR/Ring 的固定设置比较；随后按报告恢复有效 gate 参照，并获准扩展到512维四任务全部既定方法。最新覆盖与结果统一见当前看板，不再从日期记录推断当前总表。10月原驱动及11月 A—L 源码仍未取得，候选二至四与下游仍未执行。

@@ -1,0 +1,206 @@
+{
+  "ring+xor+sum-fold0": {
+    "support": [
+      32,
+      41,
+      48,
+      55,
+      70,
+      120
+    ],
+    "sha256": "c7c1a7eb62a44b329c2fac99dd411b897096bebbae066b0b81ff14af81d7d3bd"
+  },
+  "ring+xor+sum-fold1": {
+    "support": [
+      4,
+      44,
+      61,
+      67,
+      83,
+      127
+    ],
+    "sha256": "6d933dcfa4a3f5b02584256a004086982144209209ff581ded39c4059469e49a"
+  },
+  "ring+xor+sum-fold2": {
+    "support": [
+      9,
+      27,
+      62,
+      64,
+      96,
+      100
+    ],
+    "sha256": "c3e95a39935f7b9850d35cfb5340968d444a1af1b3728a7bd7527c65af139958"
+  },
+  "ring+xor+sum-fold3": {
+    "support": [
+      15,
+      34,
+      63,
+      70,
+      81,
+      100
+    ],
+    "sha256": "c93cc254e36bfbbcf23ec19c1049a87d253d298f9ddcf4d1d02d7bcf43d2a342"
+  },
+  "ring+xor+sum-fold4": {
+    "support": [
+      12,
+      22,
+      67,
+      95,
+      111,
+      121
+    ],
+    "sha256": "afb01160dc7fd144a8d152814f84256d5d65920183ad44a764ef5292f1b40fa2"
+  },
+  "ring+xor+sum-fold5": {
+    "support": [
+      51,
+      58,
+      72,
+      77,
+      82,
+      99
+    ],
+    "sha256": "fca8d7eb1823052be2416a435d8adad7ff2232a30ba01e6263a8a5906c48db56"
+  },
+  "ring+xor-fold0": {
+    "support": [
+      3,
+      17,
+      79,
+      89
+    ],
+    "sha256": "9796585fe2afa7b19feeb286b3f06f1e5eb6ba335d50166aadd520f2b5ecb4a9"
+  },
+  "ring+xor-fold1": {
+    "support": [
+      5,
+      23,
+      89,
+      98
+    ],
+    "sha256": "c3eab3c22d919253fc5eda70c24ce20c8699f705c4fb204e2839e416dfa173a4"
+  },
+  "ring+xor-fold2": {
+    "support": [
+      46,
+      59,
+      62,
+      89
+    ],
+    "sha256": "d3f15d63bae395c317b49b13a7221a1a1ef200c0c83d40c3a84d4ee519a67730"
+  },
+  "ring+xor-fold3": {
+    "support": [
+      7,
+      26,
+      97,
+      122
+    ],
+    "sha256": "3b6cd0a72c6bd3a7b7b72edaafb26126e23f29bbdaa291a0a627211044636a0a"
+  },
+  "ring+xor-fold4": {
+    "support": [
+      25,
+      52,
+      88,
+      123
+    ],
+    "sha256": "db0796bac4566ed028956f53304558dbfa231859dc347bb370bcac1afb5b1a8d"
+  },
+  "ring+xor-fold5": {
+    "support": [
+      34,
+      52,
+      53,
+      60
+    ],
+    "sha256": "ddb7b3f9fae5dd8d11d6b5e1bd52497d915560ae0f8de3009de15a3ce587823f"
+  },
+  "ring-fold0": {
+    "support": [
+      3,
+      17
+    ],
+    "sha256": "7ce4f619c4232d8e3361f759f1858a96ee9440ba9afb3dc5aeb6c6cdf0e3d856"
+  },
+  "ring-fold1": {
+    "support": [
+      5,
+      98
+    ],
+    "sha256": "82e4ce219cd33d5df530a32045c5d1c7abe9526d6a629c3190ebb378f5f3c13d"
+  },
+  "ring-fold2": {
+    "support": [
+      46,
+      62
+    ],
+    "sha256": "6f60d2a679b9d660c397926122d48dbe7d6862958c037cfa03d4d39278e90afe"
+  },
+  "ring-fold3": {
+    "support": [
+      26,
+      122
+    ],
+    "sha256": "f0c59331d9d633fba017e48621f53979213eecf50fc54b43763eeebf86b4169d"
+  },
+  "ring-fold4": {
+    "support": [
+      25,
+      88
+    ],
+    "sha256": "582745e03251870209e629efb63bc8b7518b8e5efa591980b572666e009b9ee9"
+  },
+  "ring-fold5": {
+    "support": [
+      34,
+      52
+    ],
+    "sha256": "f00b8a67a374db10dd14360080ceb7e3c9e413a9ad06daf226a48e4ceaaf24a5"
+  },
+  "xor-fold0": {
+    "support": [
+      3,
+      17
+    ],
+    "sha256": "7582a36a1188481090d2f4ceaf6ff481a88fcaf07cc86cb74662a58c78a971e6"
+  },
+  "xor-fold1": {
+    "support": [
+      5,
+      98
+    ],
+    "sha256": "d9a69da80e2028e86f8e00c5db913c4a2a8d374f703db6e9533ade5fa12060ad"
+  },
+  "xor-fold2": {
+    "support": [
+      46,
+      62
+    ],
+    "sha256": "fc176ab5d1662b9c30ad3205911ec43d9cf95133f62c9de48fef1bfdf65dffd2"
+  },
+  "xor-fold3": {
+    "support": [
+      26,
+      122
+    ],
+    "sha256": "04b2e81a1750c15d9f2d65e386b7375a35830dbe7a4f1c8f14d0118c423c97e0"
+  },
+  "xor-fold4": {
+    "support": [
+      25,
+      88
+    ],
+    "sha256": "5ec23ec1af71d767f061fec00706b381aadd4236229004563f483b8bcd34b453"
+  },
+  "xor-fold5": {
+    "support": [
+      34,
+      52
+    ],
+    "sha256": "c1e288deeee8a79953fbd4c624d0c43b97b51933d842c10aae5161cee84f128d"
+  }
+}

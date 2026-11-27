@@ -1,0 +1,10 @@
+{
+  "src/lassoflexnet.py": "ed476eea67c31550b18f195a7001fb8984d65a79e9c7525cde5d7ee0e7b5d8a6",
+  "experiments/ranking_lassoflexnet.py": "ed2c07585072078e36ecfec5af2ab38871423abfa56ae4aa438440ceb9337ecb",
+  "experiments/verify_lassoflexnet.py": "f9d935dbe43a8d3a52af912bda2166581955a6edab68113b38953dffebb520b5",
+  "experiments/patch_pymrmre.py": "0c83f9f40a98ae232006c5fcec1b66f2d063811e050d3cde19482bf3449a9aae",
+  "experiments/baseline_suite.py": "7a2c639a2f4e0d8fee8a40798ca9037016224873a98c43d895fff71ff7deb24a",
+  "experiments/reproduce_ranking.py": "5fbe0d48f0b642b250486b9df5216f968994085e3475057c715e3439126538b9",
+  "experiments/summarize_baselines.py": "674037305d3a5b319d2cad9135f653a3302b687c679b40d2fcd653d29d424c13",
+  "experiments/verify_baseline_evidence.py": "928aaedb708a4d03db73009b2c6a6d0434bc5d04eae48e3c51478737cbdad387"
+}

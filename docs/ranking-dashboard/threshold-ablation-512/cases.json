@@ -1,0 +1,230 @@
+{
+  "ring+xor+sum-fold0": {
+    "support": [
+      42,
+      79,
+      365,
+      404,
+      459,
+      505
+    ],
+    "dimensions": 512,
+    "sha256": "2b0524d8062e5abfab83f70b318f980de4808279445b9abe6596f82ba24c7b0e"
+  },
+  "ring+xor+sum-fold1": {
+    "support": [
+      60,
+      261,
+      281,
+      331,
+      353,
+      490
+    ],
+    "dimensions": 512,
+    "sha256": "a2344294f0600484ab7b3009b37c1c5b6177888654207046cffd85b3ca6b0ad2"
+  },
+  "ring+xor+sum-fold2": {
+    "support": [
+      127,
+      136,
+      224,
+      308,
+      357,
+      424
+    ],
+    "dimensions": 512,
+    "sha256": "b2a65bfb02c103c9b03581df26fd7ffd9cf5102f31d81fe95bd04fc8063d8c50"
+  },
+  "ring+xor+sum-fold3": {
+    "support": [
+      69,
+      160,
+      261,
+      276,
+      330,
+      452
+    ],
+    "dimensions": 512,
+    "sha256": "5f9cb7d9b96ce9b3269b95e9e597750da376f8371d9d2bf6d6026bac443acb9a"
+  },
+  "ring+xor+sum-fold4": {
+    "support": [
+      142,
+      187,
+      189,
+      287,
+      408,
+      450
+    ],
+    "dimensions": 512,
+    "sha256": "1ef269432403bc3281ec54b4ae1a226d95328705280be137b2ab8432b954f6f8"
+  },
+  "ring+xor+sum-fold5": {
+    "support": [
+      68,
+      171,
+      214,
+      307,
+      342,
+      410
+    ],
+    "dimensions": 512,
+    "sha256": "7d67f07a7943e0babdcc8ddad9546d755c93066c5c24adff9583f7bc95cfa211"
+  },
+  "ring+xor-fold0": {
+    "support": [
+      82,
+      143,
+      195,
+      335
+    ],
+    "dimensions": 512,
+    "sha256": "2717fe0ef9d445a39a1dbe56c9dafb3f25e1b240d564295866b0cc8e016ef4d9"
+  },
+  "ring+xor-fold1": {
+    "support": [
+      73,
+      209,
+      245,
+      264
+    ],
+    "dimensions": 512,
+    "sha256": "2f4ee1432642cb668c4923f30bf7521d9a79b853b10f5b610bd7dfb6b1a2b762"
+  },
+  "ring+xor-fold2": {
+    "support": [
+      110,
+      191,
+      366,
+      399
+    ],
+    "dimensions": 512,
+    "sha256": "54f0e65877dd7c16da5a5252dc1879cbef17d4f2e165a58421c66a4b43ac793b"
+  },
+  "ring+xor-fold3": {
+    "support": [
+      305,
+      323,
+      333,
+      356
+    ],
+    "dimensions": 512,
+    "sha256": "f944d051763a5cdb2f8588f9dbf3323d317d1bcb1427646e81f94d60633842a5"
+  },
+  "ring+xor-fold4": {
+    "support": [
+      96,
+      132,
+      421,
+      436
+    ],
+    "dimensions": 512,
+    "sha256": "3b3c120b36b6a92db598df45f1ada37c4e149f1e041abb3f7968b471436b9a76"
+  },
+  "ring+xor-fold5": {
+    "support": [
+      20,
+      72,
+      132,
+      183
+    ],
+    "dimensions": 512,
+    "sha256": "3b136dfa890110ce0e821e58839a672c221e74e2d13f62e65341f4e6aca7ca80"
+  },
+  "ring-fold0": {
+    "support": [
+      143,
+      195
+    ],
+    "dimensions": 512,
+    "sha256": "9125987de2b3a8858b307a3a6fcbcadf25714f8d15b191e194da6d23e57a81d7"
+  },
+  "ring-fold1": {
+    "support": [
+      209,
+      245
+    ],
+    "dimensions": 512,
+    "sha256": "52ac03c8a20c2df7a46f0e3f2cdb41f312614d4776899bf362ef1e4a1712a65a"
+  },
+  "ring-fold2": {
+    "support": [
+      110,
+      399
+    ],
+    "dimensions": 512,
+    "sha256": "f98f019eb0ad3c423255d64c9965386f478ccd626642010d689e498cdaa7cb31"
+  },
+  "ring-fold3": {
+    "support": [
+      305,
+      356
+    ],
+    "dimensions": 512,
+    "sha256": "94b126d0fdde1db551ae7c8355597876f06e6e2f0bbf2db5bd14abec7f505fb8"
+  },
+  "ring-fold4": {
+    "support": [
+      96,
+      436
+    ],
+    "dimensions": 512,
+    "sha256": "204622b5f7ae68aed3779d824614ab69dbf3fe8a4f97337e5897e196fe4cb5b4"
+  },
+  "ring-fold5": {
+    "support": [
+      20,
+      183
+    ],
+    "dimensions": 512,
+    "sha256": "103df915d0a18074d4bce21692c02938ee96b4b07f478e76513a28a83cdbb2f4"
+  },
+  "xor-fold0": {
+    "support": [
+      143,
+      195
+    ],
+    "dimensions": 512,
+    "sha256": "60018dc68a833d30b47f51e9aef7dc941581f1ff577d5463708d29e145c2d4fb"
+  },
+  "xor-fold1": {
+    "support": [
+      209,
+      245
+    ],
+    "dimensions": 512,
+    "sha256": "a2aa81854431d6f04ed1aa80d6afd270fcb67e49ec3c5c0e4c7c1843f47b385e"
+  },
+  "xor-fold2": {
+    "support": [
+      110,
+      399
+    ],
+    "dimensions": 512,
+    "sha256": "2e572312d8e65db0e5577420aa37b64237a1c4c1e62bb00eaac4176f99158e1c"
+  },
+  "xor-fold3": {
+    "support": [
+      305,
+      356
+    ],
+    "dimensions": 512,
+    "sha256": "c954e0b09654b0e5e0376c2221bde858a1166db580307fd657f4d34fca3461c4"
+  },
+  "xor-fold4": {
+    "support": [
+      96,
+      436
+    ],
+    "dimensions": 512,
+    "sha256": "a5479c1e0bac6b5d49c8557532cceeb1d9f4fcfe949e59c10d3b448db8d29144"
+  },
+  "xor-fold5": {
+    "support": [
+      20,
+      183
+    ],
+    "dimensions": 512,
+    "sha256": "1c1b387b74caa6ff851c1fd99174cb04afb861246b3902bdc4cacc9228454659"
+  }
+}

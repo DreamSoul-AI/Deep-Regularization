@@ -1,0 +1,25 @@
+[
+  {
+    "file": "nn_wrapper.py",
+    "before_sha256": "db343accaa234e61b92130f6146d9c87844e428b85f645728081df5c9705418b",
+    "after_sha256": "8b2242efa77837487bd1f463597ff9dde0e6aca67509f576cba2ea471b3c3732",
+    "changes": [
+      "remove unsupported scheduler verbose argument",
+      "clone validation checkpoint state"
+    ]
+  },
+  {
+    "file": "fsnet.py",
+    "before_sha256": "1030fa6e1a1467b514d279493695a3e1822df9924dfa0329accf165732b86ad7",
+    "after_sha256": "1f6679eeb699449c0ca66fd8a3b764b48e9af196e814e12f4cc272bdc2e07f51",
+    "changes": [
+      "remove unsupported scheduler verbose argument"
+    ]
+  },
+  {
+    "file": "legacy/src/e2efs_wrapper.py",
+    "change": "Resolve staged vendor directory from parents[1] rather than parents[2]",
+    "before": "dbd5bb5f2ddf0fdb5a1c47fa4b6f3961331ae685e26e3dfc32e144e38691ed89",
+    "after": "81e3e592b95b6901230b08a4034c796b33bf2e9b10f24d5b53341412dc0ccf87"
+  }
+]
