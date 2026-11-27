@@ -63,6 +63,20 @@ def score_from_moments(first, second, mode):
     raise ValueError(f"Unknown score mode: {mode}")
 
 
+def ranking_score(parameters, mode, first=None, second=None):
+    """Evaluate the threshold score at the final model for feature ranking."""
+    if mode == "column_norm":
+        return parameters["layers.1.weight"].detach().norm(dim=0) + 1e-8
+    base_mode = mode.removeprefix("column_norm_")
+    if base_mode in ("gate", "gate_only", "gate_adaptive"):
+        score = parameters["gate"].detach().abs()
+    else:
+        score = score_from_moments(first, second, base_mode).detach().abs()
+    if mode.startswith("column_norm_"):
+        score = score * parameters["layers.1.weight"].detach().norm(dim=0)
+    return score
+
+
 def importance_scaling(signed_score):
     """Detached mean-one magnitude; an all-zero score gives uniform scaling."""
     magnitude = signed_score.detach().abs()

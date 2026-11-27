@@ -55,7 +55,7 @@ def main():
     manifest = dict(arguments={**vars(args), "output": str(args.output)},
                     config=asdict(config), device="cpu", torch=torch.__version__,
                     python=sys.version, numpy=np.__version__,
-                    primary_readout="gate", downstream_refits=False,
+                    primary_readout="ranking", downstream_refits=False,
                     source_baseline="555ba11e8872bd6618cd721bd3b08f7128db9e6b",
                     scope="128-dimension paired ranking pilot; no search or test-label selection",
                     files={})
@@ -91,7 +91,7 @@ def main():
                               metrics={name: ranking_metrics(score.numpy(), support) for name, score in scores.items()})
                 with result_file.open("a", encoding="utf-8") as f:
                     f.write(json.dumps(record) + "\n")
-                print(task, fold, mode, record["metrics"]["gate"], f"{elapsed:.1f}s", flush=True)
+                print(task, fold, mode, record["metrics"]["ranking"], f"{elapsed:.1f}s", flush=True)
     print("Completed ranking-only pilot.", flush=True)
 
 

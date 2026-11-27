@@ -4,10 +4,18 @@ from pathlib import Path
 import subprocess
 import torch
 from src.feature_selection import GatedMLP, RankingConfig, cubic_scale, fit_ranking
-from src.feature_scores import gate_score_moments, score_from_moments, classification_loss, importance_scaling
+from src.feature_scores import gate_score_moments, score_from_moments, classification_loss, importance_scaling, ranking_score
 
 
 class ScoreTests(unittest.TestCase):
+    def test_ranking_uses_threshold_formula_and_column_norm_once(self):
+        parameters = {"gate": torch.tensor([.5, 2.]), "layers.1.weight": torch.tensor([[3., 0.], [4., 2.]])}
+        first, second = torch.tensor([-2., 1.]), torch.tensor([4., 8.])
+        torch.testing.assert_close(ranking_score(parameters, "column_norm"), torch.tensor([5., 2.]))
+        torch.testing.assert_close(ranking_score(parameters, "column_norm_gate"), torch.tensor([2.5, 4.]))
+        torch.testing.assert_close(ranking_score(parameters, "taylor_fisher", first, second), torch.tensor([4., 3.]))
+        torch.testing.assert_close(ranking_score(parameters, "column_norm_taylor_fisher", first, second), torch.tensor([20., 6.]))
+
     def test_without_soft_threshold_training_is_independent_of_score_mode(self):
         x = torch.arange(24, dtype=torch.float32).reshape(6, 4)
         y = torch.tensor([0, 1, 0, 1, 0, 1])

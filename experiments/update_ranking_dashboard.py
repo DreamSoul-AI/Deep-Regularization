@@ -111,6 +111,12 @@ def main():
     complete=sum(s['status']=='complete' for s in summary.values())
     ablation_file=args.dashboard.parent/'ranking-dashboard/score-ablation-512/summary.json'
     ablation=json.loads(ablation_file.read_text(encoding='utf-8')) if ablation_file.exists() else {}
+    readout_dir=args.dashboard.parent/'ranking-dashboard/score-readout'
+    corrected={dim:json.loads((readout_dir/dim/'summary.json').read_text(encoding='utf-8')) for dim in ('128','512')}
+    for table, dimension in ((previous,'128'),(summary,'512'),(ablation,'512')):
+        for method in table.keys() & corrected[dimension].keys():
+            if table[method]['status']=='complete':
+                table[method]=corrected[dimension][method]
     def percent(value):
         return str(Decimal(f'{100*value:.10f}').quantize(Decimal('.01'),rounding=ROUND_HALF_UP))
     now=datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
@@ -118,7 +124,8 @@ def main():
       f'512维全量任务：**{complete}/{len(planned)}条方法线完成**，已核验{len(records)}/{len(planned)*24}个逐折结果。范围为 XOR、Ring、Ring+XOR、Ring+XOR+Sum，各1000样本、普通六折，只做ranking，不调参或下游重训。全量指本轮声明的方法清单，不扩到原CLI的attr-t、10模型bootstrap attr-b、普通NN预测或DAG2000维。','',
       '128维也已完成36条方法线、864个逐折结果。下方并列保留两张完整表；方法名只写名称，实现和参数差异统一放在表后。有效 gate 重建参照尚未跑128维，不用旧报告数字填入本轮表。','',
       '## 当前判断','',
-      ('四任务已完成的原仓库默认平均为'+percent(summary['public_512_defaults_rho200']['macro_recall'])+'%，一阶为'+percent(summary['raw_snapshot_taylor_first']['macro_recall'])+'%，一阶＋Fisher为'+percent(summary['raw_snapshot_taylor_fisher']['macro_recall'])+'%。这批固定数据与配方下，换评分没有改善；不能认为二阶总不会差。' if all(summary[m]['status']=='complete' for m in ['public_512_defaults_rho200','raw_snapshot_taylor_first','raw_snapshot_taylor_fisher']) else '完整结论等待对应四任务齐全，不使用未齐方法的部分均值作总排名。'),'',
+      '主表默认按阈值评分从高到低排。关闭软阈值时使用同一评分公式。分数在每折训练终点计算：原列范数方案按 A 排，梯度组按各自的梯度分排，乘 A 的组按乘积排。共用阈值的仅 gate 组按 |s| 排。各外部 baseline 保留自己的评分。','',
+      ('512维四任务平均为原仓库默认 '+percent(summary['public_512_defaults_rho200']['macro_recall'])+'%、一阶 '+percent(summary['raw_snapshot_taylor_first']['macro_recall'])+'%、一阶＋二阶 '+percent(summary['raw_snapshot_taylor_fisher']['macro_recall'])+'%。' if all(summary[m]['status']=='complete' for m in ['public_512_defaults_rho200','raw_snapshot_taylor_first','raw_snapshot_taylor_fisher']) else '完整结论等待对应四任务齐全。'),'',
       ('全部方法已跑齐。本轮四任务均值最高为 '+LABELS.get(max(summary,key=lambda m:summary[m]['macro_recall']),max(summary,key=lambda m:summary[m]['macro_recall']))+'，'+percent(max(s['macro_recall'] for s in summary.values()))+'%；结论只适用于本轮固定设置，不替代多种子或充分调参后的比较。' if complete==len(planned) else '其余方法尚未齐全，暂不宣布全表最优方法。'),'',
       '## 怎么读结果','',
       '每列是 Top-k 相关特征恢复率：k依次为2、2、4、6。100%表示找回该任务全部真实特征，0%表示一个也没找回。它不是分类准确率。四任务均完成后才计算 Macro；缺折不当作0，也不生成部分任务总排名。','',
@@ -179,15 +186,24 @@ def main():
             comparison.append('| '+' | '.join([label,*[percent(threshold[key]['macro_recall']) for key in keys]])+' |')
         comparison += ['',
             '上一轮的仅 gate 训练用了共用软阈值 C/ρ。此处无软阈值组直接跳过软阈值步骤，保留 ADMM 的公共缩放和对偶更新，所以每折只训练一个模型，再按八种 score 读出排名。有软阈值组由对应 score 调阈值。', '',
-            f'原列范数方案按 |s| 排名为{percent(original_readout["gate_adaptive"]["macro_recall"])}%。用同一组原方法的训练模型改按 A|s| 排名，结果为{percent(original_readout["column_norm_gate"]["macro_recall"])}%。这一读出也高于上表 A × Gate 的新训练结果。全量主表沿用统一 |s| 的读出协议。新对照的任务及读出核对见 [逐折证据](ranking-dashboard/threshold-ablation-512/README.md)。', '']
+            f'原列范数方案（初始ρ50）按 A 排名为{percent(summary["raw_snapshot_column_norm"]["macro_recall"])}%。同一模型按 |s| 和 A|s| 排分别为{percent(original_readout["gate_adaptive"]["macro_recall"])}%和{percent(original_readout["column_norm_gate"]["macro_recall"])}%。软阈值对照证据见 [逐折结果](ranking-dashboard/threshold-ablation-512/README.md)。', '',
+            '### 有软阈值时，最终排名是否乘 A', '',
+            '每一对数字来自同一训练模型。左半边是训练用 q 调阈值，右半边是训练用 Aq 调阈值。q 表示该行基础评分，包含 Gate 的 |s|。', '',
+            '| 评分 | 训练 q，按 q 排 | 训练 q，按 Aq 排 | 训练 Aq，按 q 排 | 训练 Aq，按 Aq 排 |',
+            '| --- | ---: | ---: | ---: | ---: | ---: |']
+        for label,plain,weighted in pairs:
+            values=[percent(corrected['512'][f'soft_{mode}__rank_{weight}']['macro_recall'])
+                    for mode in (plain,weighted) for weight in ('q','aq')]
+            comparison.append('| '+' | '.join([label,*values])+' |')
+        comparison += ['']
         position=head.index('## 128维')
         head[position:position]=comparison
     head += ['', '## 表外说明','',
       'LassoFlexNet这一行是非官方自实现，采用论文正文的可行更新；mRMR使用原生完整贪心顺序评价排名。这些实现说明不再放进方法名。两张表中的原方案分别采用该维数的公开默认值：128维初始ρ50，512维初始ρ200；512维的列范数对照则保持ρ50。','',
       '## 原实验仓库到底是什么基线','',
       '固定来源为 [feature-selection@555ba11（2026-07-10）](https://github.com/DreamSoul-AI/Deep-Regularization/tree/555ba11e8872bd6618cd721bd3b08f7128db9e6b)。main/dev根模型与研究分支不同，9月模型以证据快照保留；未发现10月9日或11月A—L的新源码分支。','',
-      '- 原公开512默认：Mish32×32、500轮/120 warm-up、C=.05、lr=.005、初始ρ200、batch64、WD=.001、feature dropout=.6。维数分段ρ见 [原包装器](https://github.com/DreamSoul-AI/Deep-Regularization/blob/555ba11e8872bd6618cd721bd3b08f7128db9e6b/src/admm_input_group_wrapper.py#L1338)。本轮新增该行，直接执行固定Git对象内的原模型/训练函数','- 先前公开快照三条线是固定128维配方扩到512，初始ρ50；旧结果保留，不能冒充原512默认','- 10月有效gate参照：共享线性/平方父gate、ReLU32×32、120轮、全局C=.003172、ρ=.18857、lr=.002084；canonical prox，零warm/WD/dropout。按报告恢复，未取得历史原驱动','- 我们的一阶和一阶＋Fisher保持原已实现方法：在raw gate路径上更新score scaling，最终仍按训练后gate排名；本轮没有移植到有效gate骨干或改近端目标','',
-      'ρ50和ρ200本轮四任务的恢复率恰好一致，但不是重复结果：24折中只有13折的Top-k集合相同，分数向量全部不同，见 [逐折核对](ranking-dashboard/512/rho-reference-comparison.json)。','',
+      '- 原公开512默认采用 Mish32×32、500轮/120 warm-up、C=.05、lr=.005、初始ρ200、batch64、WD=.001、feature dropout=.6。训练直接调用固定Git对象内的原函数，主表按本轮约定用最终 A 排名。维数分段ρ见 [原包装器](https://github.com/DreamSoul-AI/Deep-Regularization/blob/555ba11e8872bd6618cd721bd3b08f7128db9e6b/src/admm_input_group_wrapper.py#L1338)。','- 先前公开快照三条线是固定128维配方扩到512，初始ρ50。','- 10月有效gate参照采用共享线性/平方父gate、ReLU32×32、120轮、全局C=.003172、ρ=.18857、lr=.002084、canonical prox、零warm/WD/dropout。该行沿用有效 gate 的排序。','- 一阶和一阶＋Fisher沿用 raw gate 训练，每折按对应梯度评分排序。','',
+      '旧版按 |s| 排时，ρ50和ρ200的四任务恢复率恰好一致。旧结果见 [逐折核对](ranking-dashboard/512/rho-reference-comparison.json)。','',
       '原清单含RF、TreeSHAP、Relief、FSNet、E2E-FS、mRMR、MI、LassoNet、CAE、两种CancelOut、DeepPINK及10种归因；普通NN是归因骨干。STG、随机控制、XGBoost、Localized Lasso、LassoFlexNet及论文补充选择器也纳入本轮。LassoFlexNet是明确标记的本地文本可行变体，官方代码未取得，不另造官方成绩。','',
       '## 原commit保存的历史512维结果','',
       '原commit携带的历史均值文件仅作追溯；缺少执行版本/环境和逐折分数，不混入上面两张本轮结果表。','',
@@ -197,13 +213,13 @@ def main():
       'Attention Maps的512维物理batch512曾占用约26GB内存，已保留停止记录并改为GPU上16样本分块累积：有效batch仍为512，每批仍只更新一次，模型/学习率不变。实际上游FT模型在关闭dropout时的完整/分块梯度一致；dropout开启会改变随机数次序，不声称逐位同轨迹。Localized Lasso仅按不同任务/折分片并行，求解目标和数值门限不变。','',
       '本轮baseline统一训练折z-score；原benchmark先2*x-1、各wrapper自行预处理。Relief保留原生符号；原benchmark统一取abs。mRMR用原生完整贪心顺序，原k集合包装器内部随机分数只留作诊断。LassoNet排名来自路径 feature_importances_，不是最低val_loss checkpoint的β；best-val模型只用于预测。见 [原LassoNet调用](https://github.com/DreamSoul-AI/Deep-Regularization/blob/555ba11e8872bd6618cd721bd3b08f7128db9e6b/src/core.py#L175)。','',
       '所有方法复用相同保存的数据/划分/支持真值。六折训练集重叠且来自一个生成实例，不能冒充多个独立数据生成种子。不同结构与预算是方法间比较，不能作为只换评分的消融。真实相关坐标不参与训练或选正则参数；评价使用真值k，FSNet、CAE和E2E-FS等原生预算选择器也预先给定相同k。128维和512维并非只追加噪声列的嵌套数据，跨维数差异不能全部归因于新增噪声。','',
-      '[逐折分数与机器汇总](ranking-dashboard/512/summary.json)、[原始分数](ranking-dashboard/512/verified_results.jsonl)、[数据身份](ranking-dashboard/512/cases.json)、[失败记录](ranking-dashboard/512/failures.json)。标准库核验：`python experiments/verify_baseline_evidence.py docs/ranking-dashboard/512`。刷新看板：`python experiments/update_ranking_dashboard.py`。','',
+      '[当前分数读出证据](ranking-dashboard/score-readout/README.md)、[512维旧读出与外部baseline](ranking-dashboard/512/summary.json)、[数据身份](ranking-dashboard/512/cases.json)。刷新看板用 `python experiments/update_ranking_dashboard.py`。','',
       '128维原始汇总见 [既有证据](<研究记录 Research Record/20261128-baseline-repairs/128/table.md>)，不与512维成绩合并。方法推导与旧运行细节从 [研究计划](<研究计划 Research Plan Deep Regularization.md>) 查阅。']
     if ablation:
         position=head.index('## 原实验仓库到底是什么基线')
         head[position:position]=[
             '512维 score 对照统一使用已有的初始ρ50、500轮及120轮 warm-up 配方。仅 gate 组共用软阈值 C/ρ，ρ仍按原 ADMM 规则全局更新。列范数对照用第一层列范数 A 调节各特征阈值。A × gate 组用 A|s|，其余组用一阶、纯二阶或一阶加二阶的删除评分，可再乘 A。', '',
-            '令 t 为逐样本的 gate 值乘上任务损失对 gate 的梯度。一阶取 |mean(-t)|，纯二阶取 mean(t²)/2，两项合用时先相加和求均值再取绝对值。A × gate 和各梯度评分在求阈值前归一化到平均为1，列范数对照按原方法使用原始尺度。乘 A 的各组先求乘积，再归一化。最终排名统一按训练所得 |s|。', '',
+            '令 t 为逐样本的 gate 值乘上任务损失对 gate 的梯度。一阶取 |mean(-t)|，纯二阶取 mean(t²)/2，两项合用时先相加和求均值再取绝对值。A × gate 和各梯度评分在求阈值前归一化到平均为1，列范数对照按原方法使用原始尺度。乘 A 的各组先求乘积，再归一化。最终用同一评分公式，在训练终点计算。', '',
             '逐折验证与运行配置见 [score 对照证据](ranking-dashboard/score-ablation-512/README.md)。', '',
         ]
     args.dashboard.write_text('\n'.join(head)+'\n',encoding='utf-8')

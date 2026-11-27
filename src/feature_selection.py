@@ -11,7 +11,7 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 from .feature_scores import (
-    classification_loss, gate_score_moments, importance_scaling, score_from_moments,
+    classification_loss, gate_score_moments, importance_scaling, ranking_score, score_from_moments,
 )
 
 TAYLOR_MODES = ("taylor_first", "taylor_second", "taylor_fisher")
@@ -211,6 +211,7 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
     first, second = gate_score_moments(model, calibration_x, calibration_y,
                                       config.score_batch_size)
     scores = {"gate": model.gate.detach().abs(),
+              "ranking": ranking_score(model.state_dict(), mode, first, second),
               "taylor_first": score_from_moments(first, second, "taylor_first").abs(),
               "taylor_fisher": score_from_moments(first, second, "taylor_fisher").abs()}
     state = dict(model=model.state_dict(), z=z.detach(), dual=dual.detach(), rho=rho,

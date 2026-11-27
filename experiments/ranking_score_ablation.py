@@ -71,11 +71,12 @@ def main():
                 continue
             scores, state = fit_ranking(torch.from_numpy(x), torch.from_numpy(y),
                                         mode=mode, seed=0, config=config)
-            gate = scores["gate"].numpy()
+            ranking = scores["ranking"].numpy()
             checkpoint = f"{name}-{mode}.pt"
             torch.save(state, args.output / checkpoint)
-            row = dict(task=task, fold=fold, method=mode, status="ok", scores=gate.tolist(),
-                       metrics=metrics(gate, support, expected_dim=x.shape[1]),
+            row = dict(task=task, fold=fold, method=mode, status="ok", scores=ranking.tolist(),
+                       metrics=metrics(ranking, support, expected_dim=x.shape[1]),
+                       gate_metrics=metrics(scores["gate"].numpy(), support, expected_dim=x.shape[1]),
                        dimensions=x.shape[1], data_sha256=case_hashes[name], checkpoint=checkpoint)
             with results.open("a", encoding="utf-8") as stream:
                 stream.write(json.dumps(row) + "\n")

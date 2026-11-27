@@ -13,7 +13,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baseline_suite import metrics
 from ranking_score_ablation import TASKS
-from src.feature_scores import score_from_moments
+from src.feature_scores import ranking_score
 from src.feature_selection import RankingConfig, TAYLOR_MODES, fit_ranking
 
 SOFT_MODES = ("gate_adaptive", *TAYLOR_MODES, "column_norm_gate",
@@ -21,14 +21,7 @@ SOFT_MODES = ("gate_adaptive", *TAYLOR_MODES, "column_norm_gate",
 
 
 def readout(state, mode):
-    score_mode = mode.removeprefix("column_norm_")
-    if score_mode in TAYLOR_MODES:
-        score = score_from_moments(state["first_moment"], state["second_moment"], score_mode).abs()
-    else:
-        score = state["model"]["gate"].abs()
-    if mode.startswith("column_norm_"):
-        score = score * state["model"]["layers.1.weight"].norm(dim=0)
-    return score.numpy()
+    return ranking_score(state["model"], mode, state.get("first_moment"), state.get("second_moment")).numpy()
 
 
 def main():
