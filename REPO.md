@@ -92,3 +92,5 @@ The original research workspace keeps retained research under `research/legacy-m
 当前读出约定为在训练终点计算设阈值的评分，从大到小排名。关闭软阈值时仍沿用同一公式。共有阈值的纯 gate 对照按 |s| 排，外部方法按原生评分排。既有128维、512维主表已从保存模型重算，旧 |s| 证据保留为历史。有软阈值的512维训练模型分别追加 q 和 Aq 的同模型排名对照。详见 [评分证据](docs/ranking-dashboard/score-readout/README.md)。
 
 最新512维消融固定原方法阈值 C/(ρA) 及其数值保护，乘 A 与否只改变 soft 左边的输入。分别验证原训练后的排名评分、在 z 步改用评分、以及在 z 步改用 A(s+u)。前面的评分进阈值分母一组作为历史对照。新增结果及失败状态见 [固定阈值对照](docs/ranking-dashboard/fixed-threshold-512/README.md)。
+
+用户明确要求在训练 z 步去掉右侧分母的 A。512维继续用同一组 Aq 左输入和原训练配方，将 C/(ρA) 与 C/ρ 配对重训。最终两组用相同的软阈值公式读出，结果与此前只改最终读出的实验分开记录。

@@ -219,10 +219,24 @@ def main():
         comparison += ['',
             '表中是四任务平均恢复率（%）。按软阈值后的值排名，只用正分项填 Top-k，剩余名额按未找回计。z 用 q / Aq 两列最终用各自相同的左边公式做 soft 再排名。原训练在 z 步使用 s+u。三个训练轨迹的 A 和 ρ 可以随参数变化，阈值公式一致。', '',
             '未做最终 soft 的读出、全零折和训练诊断见 [固定阈值对照证据](ranking-dashboard/fixed-threshold-512/README.md)。', '']
+        uniform_training_file=fixed_dir/'uniform_training/summary.json'
+        if uniform_training_file.exists():
+            uniform_training=json.loads(uniform_training_file.read_text(encoding='utf-8'))
+            comparison += ['#### 训练中左边固定 Aq，右边是否除以 A', '',
+                '512维配对重训。左右两列只改变训练时的软阈值。训练完成后统一用 soft(Aq, C/(ρA)) 排名。', '',
+                '| 评分 | 训练用 C/(ρA) | 训练用 C/ρ |',
+                '| --- | ---: | ---: |']
+            for label,_,weighted in pairs:
+                original=fixed['score'][f'score_{weighted}_soft']
+                shared=uniform_training[f'uniform_training_{weighted}_soft']
+                values=[percent(r['macro_positive_recall']) if r['status']=='complete'
+                        else f'—（{r["completed"]}/24）' for r in (original,shared)]
+                comparison.append('| '+' | '.join([label,*values])+' |')
+            comparison += ['', '恢复率只计正分 Top-k。各折软阈值前的评分、全零折和训练状态见 [重训证据](ranking-dashboard/fixed-threshold-512/uniform_training/summary.json)。', '']
         uniform_file=fixed_dir/'uniform-readout/comparison.json'
         if uniform_file.exists():
             uniform_records=json.loads(uniform_file.read_text(encoding='utf-8'))
-            comparison += ['#### 左边固定为 Aq，右边是否除以 A', '',
+            comparison += ['#### 仅最终排名时，右边是否除以 A', '',
                 '512维原训练 checkpoint 配对比较，四任务平均恢复率（%）。最终 ρ 都为50，共用阈值 C/ρ 为0.001。', '',
                 '| 评分 | C/(ρA) | C/ρ | 直接按 Aq 排 |',
                 '| --- | ---: | ---: | ---: |']
@@ -237,7 +251,10 @@ def main():
         position=head.index('### 旧对照：改变阈值分母') if '### 旧对照：改变阈值分母' in head else head.index('## 128维')
         head[position:position]=comparison
         position=head.index('## 怎么读结果')
-        head[position:position]=['最新的512维消融固定原方法右边的软阈值。左边乘 A 的三种位置对照见 [固定软阈值，比较左边输入](#512维固定软阈值比较左边输入)。', '']
+        if uniform_training_file.exists():
+            head[position:position]=['最新重训固定左边 Aq，在训练中配对比较右边 C/(ρA) 和 C/ρ。见 [训练中右边是否除以 A](#训练中左边固定-aq右边是否除以-a)。', '']
+        else:
+            head[position:position]=['512维消融固定原方法右边的软阈值。左边乘 A 的三种位置对照见 [固定软阈值，比较左边输入](#512维固定软阈值比较左边输入)。', '']
     head += ['', '## 表外说明','',
       'LassoFlexNet这一行是非官方自实现，采用论文正文的可行更新；mRMR使用原生完整贪心顺序评价排名。这些实现说明不再放进方法名。两张表中的原方案分别采用该维数的公开默认值：128维初始ρ50，512维初始ρ200；512维的列范数对照则保持ρ50。','',
       '## 原实验仓库到底是什么基线','',

@@ -84,7 +84,8 @@ def legacy_cubic_scale(coefficient):
     return 2.0 * torch.cos(torch.acos((3.0 * sqrt3 * d / 2.0).clamp(-1, 1)) / 3.0) / sqrt3
 
 
-def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True, prox_input="default"):
+def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True,
+                prox_input="default", threshold_rule="adaptive"):
     """Fit only on supplied training rows; never consume support truth or test labels.
 
     No validation-based checkpoint selection, hard pruning, or downstream refit.
@@ -99,6 +100,10 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
         raise ValueError(f"Unknown proximal input: {prox_input}")
     if prox_input != "default" and not soft_threshold:
         raise ValueError("Left-input ablations require the original soft threshold")
+    if threshold_rule not in ("adaptive", "uniform"):
+        raise ValueError(f"Unknown soft threshold rule: {threshold_rule}")
+    if threshold_rule == "uniform" and (prox_input != "score" or not mode.startswith("column_norm_")):
+        raise ValueError("Uniform training threshold ablation requires Aq as the left input")
     taylor_mode = mode.removeprefix("column_norm_")
     if not (0 <= config.warmup_epochs < config.epochs) or config.score_interval < 1:
         raise ValueError("Require 0 <= warmup < epochs and positive score interval")
@@ -200,7 +205,8 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
                 if prox_input != "default" and not torch.isfinite(v).all():
                     raise FloatingPointError(f"Non-finite proximal input at epoch {epoch}")
                 if soft_threshold:
-                    thresholds = (config.penalty / scale).clamp(1e-8, 0.5) / rho
+                    threshold_scale = scale if threshold_rule == "adaptive" else scale.new_tensor(1.)
+                    thresholds = (config.penalty / threshold_scale).clamp(1e-8, 0.5) / rho
                     z = v.sign() * (v.abs() - thresholds).clamp_min(0)
                 else:
                     z = v
@@ -237,5 +243,6 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None, soft_threshold=True
     state = dict(model=model.state_dict(), z=z.detach(), dual=dual.detach(), rho=rho,
                  optimizer=optimizer.state_dict(), mean=mean, std=std,
                  calibration_ids=calibration_ids, first_moment=first, second_moment=second,
-                 config=asdict(config), mode=mode, seed=seed, trace=trace, prox_input=prox_input)
+                 config=asdict(config), mode=mode, seed=seed, trace=trace, prox_input=prox_input,
+                 threshold_rule=threshold_rule)
     return scores, state

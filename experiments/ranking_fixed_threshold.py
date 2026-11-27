@@ -41,7 +41,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cases", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--arm", choices=("readout", "score", "weighted_consensus"), required=True)
+    parser.add_argument("--arm", choices=("readout", "score", "weighted_consensus", "uniform_training"), required=True)
     parser.add_argument("--start", type=int, default=0)
     parser.add_argument("--stop", type=int, default=24)
     args = parser.parse_args()
@@ -64,7 +64,10 @@ def main():
                 raise ValueError("This run expects 512 features")
             x = torch.from_numpy(case["x"][case["train"]][:, case["permutation"]])
             y = torch.from_numpy(case["y"][case["train"]])
-            models = SOFT_MODES if args.arm == "score" else ("gate_only",)
+            if args.arm == "uniform_training":
+                models = tuple(mode for mode in SOFT_MODES if mode.startswith("column_norm_"))
+            else:
+                models = SOFT_MODES if args.arm == "score" else ("gate_only",)
             for mode in models:
                 output = args.output / f"{name}-{mode}.json"
                 identity = dict(data_sha256=data_hash, source_sha256=hashes, config=asdict(config),
@@ -81,10 +84,13 @@ def main():
                         if state["mode"] != "column_norm" or state["config"] != asdict(config):
                             raise ValueError(f"Unexpected original checkpoint: {checkpoint}")
                     else:
-                        _, state = fit_ranking(x, y, mode=mode, seed=0, config=config, prox_input=args.arm)
+                        uniform_training = args.arm == "uniform_training"
+                        _, state = fit_ranking(x, y, mode=mode, seed=0, config=config,
+                                               prox_input="score" if uniform_training else args.arm,
+                                               threshold_rule="uniform" if uniform_training else "adaptive")
                         checkpoint = output.with_suffix(".pt")
                         torch.save(state, checkpoint)
-                    modes = (mode,) if args.arm == "score" else SOFT_MODES
+                    modes = (mode,) if args.arm in ("score", "uniform_training") else SOFT_MODES
                     rows = []
                     for score_mode in modes:
                         for apply_soft in (False, True):

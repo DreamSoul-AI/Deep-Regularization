@@ -16,14 +16,18 @@ class ScoreTests(unittest.TestCase):
         initial = GatedMLP(4, config=config)
         norm = initial.layers[1].weight.detach().norm(dim=0)
         threshold = (config.penalty / (norm + 1e-8)).clamp(1e-8, .5) / config.rho
-        for left, mode in (("default", "column_norm"), ("weighted_consensus", "gate_only"),
-                           ("score", "gate_adaptive"), ("score", "column_norm_gate")):
-            _, result = fit_ranking(x, y, mode=mode, seed=5, config=config, prox_input=left)
+        for left, mode, rule in (("default", "column_norm", "adaptive"),
+                                 ("weighted_consensus", "gate_only", "adaptive"),
+                                 ("score", "gate_adaptive", "adaptive"),
+                                 ("score", "column_norm_gate", "adaptive"),
+                                 ("score", "column_norm_gate", "uniform")):
+            _, result = fit_ranking(x, y, mode=mode, seed=5, config=config, prox_input=left, threshold_rule=rule)
             gate = result["model"]["gate"]
             value = gate.abs() if left == "score" else gate
             if left == "weighted_consensus" or mode == "column_norm_gate":
                 value = value * norm
-            shrunk = value.sign() * (value.abs() - threshold).clamp_min(0)
+            expected_threshold = threshold if rule == "adaptive" else config.penalty / config.rho
+            shrunk = value.sign() * (value.abs() - expected_threshold).clamp_min(0)
             coefficient = ((config.penalty/config.rho) * shrunk.abs().sum()
                            / (shrunk.norm() + 1e-8).pow(3).clamp_min(1e-10))
             torch.testing.assert_close(result["z"], cubic_scale(coefficient) * shrunk)
