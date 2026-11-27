@@ -14,6 +14,10 @@ from .feature_scores import (
     classification_loss, gate_score_moments, importance_scaling, score_from_moments,
 )
 
+TAYLOR_MODES = ("taylor_first", "taylor_second", "taylor_fisher")
+RANKING_MODES = ("column_norm", "gate_only", "column_norm_gate", *TAYLOR_MODES,
+                 *(f"column_norm_{mode}" for mode in TAYLOR_MODES))
+
 
 @dataclass(frozen=True)
 class RankingConfig:
@@ -89,8 +93,9 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
     config = config or RankingConfig()
     if config.protocol not in ("pilot", "legacy"):
         raise ValueError("Unknown training protocol")
-    if mode not in ("column_norm", "taylor_first", "taylor_fisher"):
+    if mode not in RANKING_MODES:
         raise ValueError(f"Unknown score mode: {mode}")
+    taylor_mode = mode.removeprefix("column_norm_")
     if not (0 <= config.warmup_epochs < config.epochs) or config.score_interval < 1:
         raise ValueError("Require 0 <= warmup < epochs and positive score interval")
     if config.score_samples < 1 or config.batch_size < 1 or config.rho <= 0:
@@ -140,10 +145,16 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
         if admm_epoch >= 0:
             if mode == "column_norm":
                 scale = model.layers[1].weight.detach().norm(dim=0) + 1e-8
-            elif admm_epoch % config.score_interval == 0:
+            elif mode == "column_norm_gate":
+                column_norm = model.layers[1].weight.detach().norm(dim=0)
+                scale = importance_scaling(column_norm * model.gate.detach())
+            elif taylor_mode in TAYLOR_MODES and admm_epoch % config.score_interval == 0:
                 first, second = gate_score_moments(model, calibration_x, calibration_y,
                                                    config.score_batch_size)
-                scale = importance_scaling(score_from_moments(first, second, mode))
+                signed_score = score_from_moments(first, second, taylor_mode)
+                if mode.startswith("column_norm_"):
+                    signed_score = model.layers[1].weight.detach().norm(dim=0) * signed_score
+                scale = importance_scaling(signed_score)
         model.train()
         if legacy_loader is not None:
             batches = (batch[0] for batch in legacy_loader)

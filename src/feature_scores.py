@@ -56,6 +56,8 @@ def score_from_moments(first, second, mode):
     """Aggregate signed terms before abs: abs(mean(-t + 0.5*t**2))."""
     if mode == "taylor_first":
         return -first
+    if mode == "taylor_second":
+        return 0.5 * second
     if mode == "taylor_fisher":
         return -first + 0.5 * second
     raise ValueError(f"Unknown score mode: {mode}")

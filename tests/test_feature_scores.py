@@ -39,6 +39,7 @@ class ScoreTests(unittest.TestCase):
         first, second = gate_score_moments(model, x, y)
         torch.testing.assert_close(first, torch.zeros_like(first), atol=1e-7, rtol=0)
         self.assertGreater(second.item(), .009)
+        torch.testing.assert_close(score_from_moments(first, second, "taylor_second"), 0.5 * second)
         self.assertGreater(score_from_moments(first, second, "taylor_fisher").item(), .004)
 
     def test_vectorized_matches_individual_autograd_and_preserves_state(self):

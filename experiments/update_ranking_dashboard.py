@@ -15,6 +15,9 @@ TASKS=['xor','ring','ring+xor','ring+xor+sum']
 LABELS={'raw_snapshot_column_norm':'列范数对照',
  'raw_snapshot_taylor_first':'一阶',
  'raw_snapshot_taylor_fisher':'一阶＋二阶',
+ 'gate_only':'仅 gate', 'column_norm_gate':'A × gate', 'taylor_second':'纯二阶',
+ 'column_norm_taylor_first':'A × 一阶', 'column_norm_taylor_second':'A × 纯二阶',
+ 'column_norm_taylor_fisher':'A ×（一阶＋二阶）',
  'public_512_defaults_rho200':'原方案',
  'effective_gate_oct9_reference':'有效 gate',
  'lassoflexnet_reimpl_sequential_feasible':'LassoFlexNet',
@@ -106,6 +109,8 @@ def main():
     write('summary.json',summary);write('cases.json',cases);write('failures.json',failures);write('sources.json',sources)
     (args.output/'verified_results.jsonl').write_text(''.join(json.dumps(records[k])+'\n' for k in sorted(records)),encoding='utf-8')
     complete=sum(s['status']=='complete' for s in summary.values())
+    ablation_file=args.dashboard.parent/'ranking-dashboard/score-ablation-512/summary.json'
+    ablation=json.loads(ablation_file.read_text(encoding='utf-8')) if ablation_file.exists() else {}
     def percent(value):
         return str(Decimal(f'{100*value:.10f}').quantize(Decimal('.01'),rounding=ROUND_HALF_UP))
     now=datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
@@ -121,7 +126,25 @@ def main():
       '## 512维','',
       '| 方法 | XOR | Ring | Ring+XOR | Ring+XOR+Sum | 四任务 Macro | 完成状态 |',
       '| --- | ---: | ---: | ---: | ---: | ---: | --- |']
-    priority=['public_512_defaults_rho200','effective_gate_oct9_reference','raw_snapshot_column_norm','raw_snapshot_taylor_first','raw_snapshot_taylor_fisher']
+    priority=['public_512_defaults_rho200','effective_gate_oct9_reference','raw_snapshot_column_norm',
+              'gate_only','column_norm_gate','raw_snapshot_taylor_first','taylor_second',
+              'raw_snapshot_taylor_fisher','column_norm_taylor_first','column_norm_taylor_second',
+              'column_norm_taylor_fisher']
+    if ablation:
+        if set(summary).intersection(ablation):
+            raise ValueError('Score ablation method names overlap existing results')
+        summary.update(ablation)
+        planned.extend(ablation)
+        count=sum(r['completed'] for r in ablation.values())
+        head[6:6]=[f'512维新增 score 对照{len(ablation)}条方法线，已核验{count}个逐折结果，合计{len(planned)}条方法线。', '']
+        focus=['gate_only','taylor_second','column_norm_taylor_fisher']
+        if all(ablation.get(method,{}).get('status')=='complete' for method in focus):
+            gate,second,weighted=(percent(ablation[method]['macro_recall']) for method in focus)
+            position=head.index('## 怎么读结果')
+            head[position:position]=[
+                f'新增对照中，仅 gate 的四任务平均为{gate}%，纯二阶为{second}%，A ×（一阶＋二阶）为{weighted}%。同配方的列范数对照为{percent(summary["raw_snapshot_column_norm"]["macro_recall"])}%。', '',
+            ]
+    priority=[method for method in priority if method in summary]
     order=priority+sorted([m for m in planned if m not in priority],key=lambda m:(summary[m]['status']!='complete',-(summary[m]['macro_recall'] or 0),m))
     for method in order:
         s=summary[method]
@@ -156,8 +179,16 @@ def main():
       '所有方法复用相同保存的数据/划分/支持真值。六折训练集重叠且来自一个生成实例，不能冒充多个独立数据生成种子。不同结构与预算是方法间比较，不能作为只换评分的消融。真实相关坐标不参与训练或选正则参数；评价使用真值k，FSNet、CAE和E2E-FS等原生预算选择器也预先给定相同k。128维和512维并非只追加噪声列的嵌套数据，跨维数差异不能全部归因于新增噪声。','',
       '[逐折分数与机器汇总](ranking-dashboard/512/summary.json)、[原始分数](ranking-dashboard/512/verified_results.jsonl)、[数据身份](ranking-dashboard/512/cases.json)、[失败记录](ranking-dashboard/512/failures.json)。标准库核验：`python experiments/verify_baseline_evidence.py docs/ranking-dashboard/512`。刷新看板：`python experiments/update_ranking_dashboard.py`。','',
       '128维原始汇总见 [既有证据](<研究记录 Research Record/20261128-baseline-repairs/128/table.md>)，不与512维成绩合并。方法推导与旧运行细节从 [研究计划](<研究计划 Research Plan Deep Regularization.md>) 查阅。']
+    if ablation:
+        position=head.index('## 原实验仓库到底是什么基线')
+        head[position:position]=[
+            '512维 score 对照统一使用已有的初始ρ50、500轮及120轮 warm-up 配方。仅 gate 组共用软阈值 C/ρ，ρ仍按原 ADMM 规则全局更新。列范数对照用第一层列范数 A 调节各特征阈值。A × gate 组用 A|s|，其余组用一阶、纯二阶或一阶加二阶的删除评分，可再乘 A。', '',
+            '令 t 为逐样本的 gate 值乘上任务损失对 gate 的梯度。一阶取 |mean(-t)|，纯二阶取 mean(t²)/2，两项合用时先相加和求均值再取绝对值。A × gate 和各梯度评分在求阈值前归一化到平均为1，列范数对照按原方法使用原始尺度。乘 A 的各组先求乘积，再归一化。最终排名统一按训练所得 |s|。', '',
+            '逐折验证与运行配置见 [score 对照证据](ranking-dashboard/score-ablation-512/README.md)。', '',
+        ]
     args.dashboard.write_text('\n'.join(head)+'\n',encoding='utf-8')
-    print(f'Dashboard refreshed: {complete}/{len(planned)} methods; {len(records)}/{len(planned)*24} records.')
+    extra=sum(r['completed'] for r in ablation.values())
+    print(f'Dashboard refreshed: {complete+sum(r["status"]=="complete" for r in ablation.values())}/{len(planned)} methods; {len(records)+extra}/{len(planned)*24} records.')
 
 
 if __name__=='__main__':
