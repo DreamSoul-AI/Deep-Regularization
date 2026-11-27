@@ -64,3 +64,7 @@ The original research workspace keeps retained research under `research/legacy-m
 ## 候选一代码与排名初测，2026年11月27日
 
 本次用户明确授权建立独立分支、修复代码并测试候选一，只做 feature ranking。新增[运行入口](experiments/ranking_taylor_fisher.py)及[实现与结果记录](<docs/研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)。已完成128维 XOR/Ring 的配对初测；这项授权不扩展为候选二至四、下游重训、完整参数搜索或默认版本提升，原历史证据不改写。
+
+## 原方案复现与候选一排名对照，2026年11月28日
+
+用户随后要求先复现原方案，再比较一阶及一阶加二阶。已完成固定公开版本的128维四任务、6折、500/120轮排名复现，并逐参数核验24个原训练结果；[本轮记录](<docs/研究记录 Research Record/2026年11月28日 原方案复现与候选一 Ranking 对照.md>)保留总表、实施差异和证据。范围仍限ranking，不改变下游、其他候选或默认提升的执行边界。

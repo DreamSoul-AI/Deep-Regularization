@@ -1,10 +1,33 @@
 import unittest
+import os
+from pathlib import Path
+import subprocess
 import torch
 from src.feature_selection import GatedMLP, RankingConfig, cubic_scale, fit_ranking
 from src.feature_scores import gate_score_moments, score_from_moments, classification_loss, importance_scaling
 
 
 class ScoreTests(unittest.TestCase):
+    def test_legacy_training_matches_fixed_original_parameters(self):
+        from experiments.legacy_ranking_reference import COMMIT, load_reference, train_reference
+        root = Path(__file__).resolve().parents[1]
+        available = subprocess.run(
+            ["git", "-c", f"safe.directory={root.as_posix()}", "cat-file", "-e",
+             f"{COMMIT}:src/admm_input_group_wrapper.py"], cwd=root,
+            env={**os.environ, "GIT_NO_LAZY_FETCH": "1"}, capture_output=True,
+        )
+        if available.returncode:
+            self.skipTest("Fixed historical Git object unavailable; no network fetch in unit tests")
+        import numpy as np
+        x = np.random.default_rng(0).random((60, 128))
+        y = ((x[:, 0]-.5)*(x[:, 1]-.5)>0).astype(int)
+        reference, _ = load_reference()
+        old = train_reference(reference, x, y, epochs=14, warmup=2)
+        _, state = fit_ranking(torch.from_numpy(x), torch.from_numpy(y), mode="column_norm",
+                               seed=0, config=RankingConfig(epochs=14, warmup_epochs=2, protocol="legacy"))
+        for key, value in old.state_dict().items():
+            torch.testing.assert_close(value, state["model"][key], rtol=0, atol=0)
+
     def test_per_sample_square_survives_gradient_cancellation(self):
         model = GatedMLP(1, config=RankingConfig(dropout=0, feature_dropout=0)).double()
         # Soft targets straddling sigmoid(logit) give equal opposite BCE gradients.

@@ -20,3 +20,4 @@ Research evidence and reproducibility notes. Consult the retained research index
 当前计划包含四个候选，以及 feature ranking、LassoFlexNet 协议下游效果两块正式实验。文档中的实现、参数与求解器依赖仍待落实，实验暂停状态保持原约定。
 
 - [候选一 ranking 初测与实现记录](<研究记录 Research Record/2026年11月27日 候选一 Ranking 初测.md>)
+- [原方案500轮复现与四任务ranking总表](<研究记录 Research Record/2026年11月28日 原方案复现与候选一 Ranking 对照.md>)

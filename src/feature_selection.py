@@ -9,6 +9,7 @@ an exact weighted L1/L2 proximal solution. New scores only change its scaling.
 from dataclasses import asdict, dataclass
 import torch
 from torch import nn
+from torch.utils.data import DataLoader, TensorDataset
 from .feature_scores import (
     classification_loss, gate_score_moments, importance_scaling, score_from_moments,
 )
@@ -29,6 +30,7 @@ class RankingConfig:
     hidden_size: int = 32
     dropout: float = 0.04308691548552568
     feature_dropout: float = 0.6
+    protocol: str = "pilot"
 
 
 class GatedMLP(nn.Module):
@@ -66,6 +68,18 @@ def cubic_scale(coefficient):
     return torch.where(discriminant >= 0, cardano, trigonometric).to(coefficient.dtype)
 
 
+def legacy_cubic_scale(coefficient):
+    """Original float32 Cardano arithmetic, retained only for source reproduction."""
+    d = coefficient.reshape(1)
+    discriminant = (d / 2.0) ** 2 - 1.0 / 27.0
+    if discriminant.item() >= 0:
+        root = discriminant.sqrt()
+        a, b = d / 2.0 + root, d / 2.0 - root
+        return a.sign() * a.abs() ** (1 / 3) + b.sign() * b.abs() ** (1 / 3)
+    sqrt3 = torch.sqrt(torch.tensor(3.0, device=d.device))
+    return 2.0 * torch.cos(torch.acos((3.0 * sqrt3 * d / 2.0).clamp(-1, 1)) / 3.0) / sqrt3
+
+
 def fit_ranking(inputs, targets, *, mode, seed, config=None):
     """Fit only on supplied training rows; never consume support truth or test labels.
 
@@ -73,6 +87,8 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
     The calibration subset is fixed by evenly spaced training-row indices.
     """
     config = config or RankingConfig()
+    if config.protocol not in ("pilot", "legacy"):
+        raise ValueError("Unknown training protocol")
     if mode not in ("column_norm", "taylor_first", "taylor_fisher"):
         raise ValueError(f"Unknown score mode: {mode}")
     if not (0 <= config.warmup_epochs < config.epochs) or config.score_interval < 1:
@@ -87,15 +103,26 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
     if not torch.equal(labels, torch.arange(len(labels), device=labels.device)):
         raise ValueError("Classification labels must be contiguous starting at zero")
     torch.manual_seed(seed)
-    mean = inputs.mean(0)
-    std = inputs.std(0, correction=0) + 1e-8
-    x = (inputs - mean) / std
+    if config.protocol == "legacy":
+        if inputs.device.type != "cpu":
+            raise ValueError("The legacy reproduction protocol is CPU-only")
+        # The historical scaler runs NumPy float64 arithmetic before float32 loading.
+        array = inputs.detach().numpy()
+        mean_array, std_array = array.mean(0), array.std(0) + 1e-8
+        mean, std = torch.from_numpy(mean_array), torch.from_numpy(std_array)
+        x = torch.as_tensor((array - mean_array) / std_array, dtype=torch.float32)
+    else:
+        mean = inputs.mean(0)
+        std = inputs.std(0, correction=0) + 1e-8
+        x = (inputs - mean) / std
     model = GatedMLP(x.shape[1], len(labels), config).to(x.device)
     calibration_ids = torch.linspace(
         0, len(x) - 1, min(config.score_samples, len(x)), device=x.device
     ).long()
     calibration_x, calibration_y = x[calibration_ids], targets[calibration_ids]
     generator = torch.Generator().manual_seed(seed + 1)
+    legacy_loader = DataLoader(TensorDataset(torch.arange(len(x))), batch_size=config.batch_size,
+                               shuffle=True, num_workers=0) if config.protocol == "legacy" else None
     optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate,
                                  weight_decay=config.weight_decay)
     z = model.gate.detach().clone()
@@ -118,9 +145,12 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
                                                    config.score_batch_size)
                 scale = importance_scaling(score_from_moments(first, second, mode))
         model.train()
-        order = torch.randperm(len(x), generator=generator).to(x.device)
+        if legacy_loader is not None:
+            batches = (batch[0] for batch in legacy_loader)
+        else:
+            batches = torch.randperm(len(x), generator=generator).to(x.device).split(config.batch_size)
         task_sum = 0.0
-        for ids in order.split(config.batch_size):
+        for ids in batches:
             optimizer.zero_grad(set_to_none=True)
             task_loss = classification_loss(model(x[ids]), targets[ids])
             total = task_loss
@@ -139,10 +169,16 @@ def fit_ranking(inputs, targets, *, mode, seed, config=None):
                 thresholds = (config.penalty / scale).clamp(1e-8, 0.5) / rho
                 z = v.sign() * (v.abs() - thresholds).clamp_min(0)
                 l2 = z.norm() + 1e-8
-                if z.abs().sum() > 1e-8:
-                    coefficient = (config.penalty / rho) * z.abs().sum() / l2.pow(3).clamp_min(1e-10)
-                    z = cubic_scale(coefficient) * z
-                dual += model.gate - z
+                l1 = torch.norm(z, p=1)
+                if l1 > 1e-8:
+                    coefficient = (config.penalty / rho) * l1 / l2.pow(3).clamp_min(1e-10)
+                    solver = legacy_cubic_scale if config.protocol == "legacy" else cubic_scale
+                    z = solver(coefficient) * z
+                if config.protocol == "legacy":
+                    # Match the original left-associated float32 arithmetic exactly.
+                    dual = dual + model.gate - z
+                else:
+                    dual += model.gate - z
                 primal = (model.gate - z).norm().item()
                 dual_residual = rho * (z - old_z).norm().item()
                 if admm_epoch > 0 and admm_epoch % 5 == 0:
